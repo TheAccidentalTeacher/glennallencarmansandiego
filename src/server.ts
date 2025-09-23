@@ -5,12 +5,9 @@ import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { testConnection } from './services/database';
 
-// ES module __dirname equivalent
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// __dirname is automatically available in CommonJS
 
 // Import route handlers
 import authRoutes from './api/routes/auth';
@@ -86,7 +83,7 @@ app.use('/api/content', contentRoutes);
 
 // In production, serve React app for all non-API routes
 if (process.env.NODE_ENV === 'production') {
-  app.get('*', (_req, res) => {
+  app.get(/^(?!\/api).*$/, (_req, res) => {
     const buildPath = path.join(__dirname, '../index.html');
     console.log(`📄 Serving index.html from: ${buildPath}`);
     res.sendFile(buildPath);

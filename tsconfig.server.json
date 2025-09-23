@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -13,13 +13,12 @@
     "rootDir": "./src",
     "declaration": false,
     "removeComments": true,
-    "noEmit": false,
-    "moduleDetection": "force"
+    "noEmit": false
   },
   "include": [
     "src/server.ts",
     "src/services/database.ts",
-    "src/services/userService.ts",
+    "src/services/userService.ts", 
     "src/services/authService.ts",
     "src/services/contentService.ts",
     "src/services/gameSessionService.ts",
@@ -40,6 +39,10 @@
     "src/components/**/*",
     "src/pages/**/*",
     "src/hooks/**/*",
+    "src/contexts/**/*",
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/vite-env.d.ts",
     "dist",
     "node_modules"
   ]
