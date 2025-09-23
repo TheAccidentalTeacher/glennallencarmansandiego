@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": false,
+    "removeComments": true,
+    "noEmit": false,
+    "moduleDetection": "force"
+  },
+  "include": [
+    "src/server.ts",
+    "src/services/database.ts",
+    "src/services/userService.ts",
+    "src/services/authService.ts",
+    "src/services/contentService.ts",
+    "src/services/gameSessionService.ts",
+    "src/services/gameSessionController.ts",
+    "src/services/clueRevealService.ts",
+    "src/services/scoringService.ts",
+    "src/services/warrantValidationService.ts",
+    "src/api/routes/**/*",
+    "src/api/middleware/**/*",
+    "src/api/websocket/gameSocket.ts",
+    "src/types/**/*"
+  ],
+  "exclude": [
+    "src/api/client.ts",
+    "src/api/websocket.ts",
+    "src/services/api.ts",
+    "src/services/gameStore.ts",
+    "src/components/**/*",
+    "src/pages/**/*",
+    "src/hooks/**/*",
+    "dist",
+    "node_modules"
+  ]
+}
