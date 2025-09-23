@@ -1,0 +1,11 @@
+{
+  "nixpacks": {
+    "app": "nodejs",
+    "plan": {
+      "providers": ["nodejs"],
+      "variables": {
+        "NODE_VERSION": "20.19.0"
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Railway Configuration for Sourdough Pete
+# Railway Configuration for Carmen Sandiego
 
 [build]
 builder = "nixpacks"
@@ -11,6 +11,7 @@ restartPolicyType = "always"
 [environment]
 NODE_ENV = "production"
 NPM_CONFIG_PRODUCTION = "false"
+NODE_VERSION = "20.19.0"
 
 [networking]
-serviceDomain = "sourdough-pete.railway.app"
+serviceDomain = "glennallencarmansandiego-production.railway.app"
