@@ -14,6 +14,11 @@ export const pool = new Pool(config);
 
 // Test the connection
 export const testConnection = async (): Promise<boolean> => {
+  if (!process.env.DATABASE_URL) {
+    console.log('⚠️ No DATABASE_URL configured');
+    return false;
+  }
+  
   try {
     const client = await pool.connect();
     await client.query('SELECT NOW()');

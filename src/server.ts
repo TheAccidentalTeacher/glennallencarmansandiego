@@ -68,18 +68,31 @@ if (process.env.NODE_ENV === 'production') {
 // Health check endpoint
 app.get('/health', async (_req, res) => {
   try {
-    const dbConnected = await testConnection();
+    let dbStatus = 'not_configured';
+    
+    if (process.env.DATABASE_URL) {
+      try {
+        const dbConnected = await testConnection();
+        dbStatus = dbConnected ? 'connected' : 'disconnected';
+      } catch (error) {
+        dbStatus = 'error';
+      }
+    }
+    
     res.json({
       status: 'ok',
       timestamp: new Date().toISOString(),
-      database: dbConnected ? 'connected' : 'disconnected',
+      database: dbStatus,
       environment: process.env.NODE_ENV || 'development',
+      server: 'running'
     });
   } catch (error) {
+    console.error('Health check error:', error);
     res.status(500).json({
       status: 'error',
       message: 'Health check failed',
       timestamp: new Date().toISOString(),
+      server: 'error'
     });
   }
 });
@@ -115,16 +128,20 @@ const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
-  // Test database connection on startup
-  try {
-    const dbConnected = await testConnection();
-    if (dbConnected) {
-      console.log('✅ Database connection successful');
-    } else {
-      console.log('❌ Database connection failed');
+  // Test database connection on startup (non-blocking)
+  if (process.env.DATABASE_URL) {
+    try {
+      const dbConnected = await testConnection();
+      if (dbConnected) {
+        console.log('✅ Database connection successful');
+      } else {
+        console.log('❌ Database connection failed - server will continue without database');
+      }
+    } catch (error) {
+      console.error('💥 Database connection error (server continuing):', error);
     }
-  } catch (error) {
-    console.error('💥 Database connection error:', error);
+  } else {
+    console.log('⚠️ No DATABASE_URL provided - database features will be disabled');
   }
 });
 
