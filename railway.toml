@@ -7,12 +7,9 @@ builder = "nixpacks"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "always"
-startCommand = "npm start"
 
 [environment]
 NODE_ENV = "production"
-NPM_CONFIG_PRODUCTION = "false"
-NODE_VERSION = "20.19.0"
 
 [networking]
 serviceDomain = "glennallencarmansandiego-production.railway.app"
