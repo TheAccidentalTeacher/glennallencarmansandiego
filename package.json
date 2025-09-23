@@ -9,7 +9,8 @@
     "build:frontend": "vite build --config vite.config.production.mjs",
     "build:server": "tsc --project tsconfig.server.json",
     "build:all": "npm run build",
-    "start": "node dist/server.js",
+    "start": "node test-simple-server.js",
+    "start:original": "node dist/server.js",
     "start:test": "node server-test.js",
     "lint": "eslint .",
     "preview": "vite preview"
