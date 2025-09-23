@@ -17,7 +17,7 @@ import { errorHandler, notFound } from './api/middleware/errorHandler';
 import { setupWebSocket } from './api/websocket/gameSocket';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = parseInt(process.env.PORT || '3001', 10);
 const isProduction = process.env.NODE_ENV === 'production';
 
 // Security and performance middleware
@@ -95,14 +95,40 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Start server
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+  console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
+  console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
+  
+  // Test database connection on startup
+  try {
+    const dbConnected = await testConnection();
+    if (dbConnected) {
+      console.log('✅ Database connection successful');
+    } else {
+      console.log('❌ Database connection failed');
+    }
+  } catch (error) {
+    console.error('💥 Database connection error:', error);
+  }
 });
 
 // Set up WebSocket server for real-time communication
 setupWebSocket(server);
+
+// Global error handlers
+process.on('uncaughtException', (error) => {
+  console.error('💥 Uncaught Exception:', error);
+  console.error('Stack:', error.stack);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('💥 Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1);
+});
 
 // Graceful shutdown
 process.on('SIGTERM', () => {
