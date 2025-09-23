@@ -20,6 +20,11 @@ const app = express();
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Ensure the app is serving on the correct port for Railway
+console.log(`🚀 Starting server on port ${PORT}`);
+console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+console.log(`🌐 Is Production: ${isProduction}`);
+
 // Security and performance middleware
 app.use(helmet());
 app.use(compression());
@@ -52,9 +57,12 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app build directory
-  const buildPath = path.join(__dirname, '../');
+  const buildPath = path.join(__dirname, './');
   console.log(`📁 Serving static files from: ${buildPath}`);
-  app.use(express.static(buildPath));
+  app.use(express.static(buildPath, {
+    maxAge: '1d',
+    etag: true
+  }));
 }
 
 // Health check endpoint
@@ -84,9 +92,14 @@ app.use('/api/content', contentRoutes);
 // In production, serve React app for all non-API routes
 if (process.env.NODE_ENV === 'production') {
   app.get(/^(?!\/api).*$/, (_req, res) => {
-    const buildPath = path.join(__dirname, '../index.html');
-    console.log(`📄 Serving index.html from: ${buildPath}`);
-    res.sendFile(buildPath);
+    const indexPath = path.join(__dirname, './index.html');
+    console.log(`📄 Serving index.html from: ${indexPath}`);
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        console.error('Error serving index.html:', err);
+        res.status(500).send('Internal Server Error');
+      }
+    });
   });
 }
 
@@ -98,7 +111,7 @@ app.use(errorHandler);
 const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+  console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
