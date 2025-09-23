@@ -7,6 +7,8 @@ import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { testConnection } from './services/database';
 
+// __dirname is automatically available in CommonJS
+
 // Import route handlers
 import authRoutes from './api/routes/auth';
 import gameRoutes from './api/routes/game';
@@ -17,11 +19,6 @@ import { setupWebSocket } from './api/websocket/gameSocket';
 const app = express();
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const isProduction = process.env.NODE_ENV === 'production';
-
-// Ensure the app is serving on the correct port for Railway
-console.log(`🚀 Starting server on port ${PORT}`);
-console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-console.log(`🌐 Is Production: ${isProduction}`);
 
 // Security and performance middleware
 app.use(helmet());
@@ -55,7 +52,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app build directory
-  const buildPath = path.join(__dirname, './');
+  const buildPath = path.join(__dirname, '../');
   console.log(`📁 Serving static files from: ${buildPath}`);
   app.use(express.static(buildPath));
 }
@@ -87,9 +84,9 @@ app.use('/api/content', contentRoutes);
 // In production, serve React app for all non-API routes
 if (process.env.NODE_ENV === 'production') {
   app.get(/^(?!\/api).*$/, (_req, res) => {
-    const indexPath = path.join(__dirname, './index.html');
-    console.log(`📄 Serving index.html from: ${indexPath}`);
-    res.sendFile(indexPath);
+    const buildPath = path.join(__dirname, '../index.html');
+    console.log(`📄 Serving index.html from: ${buildPath}`);
+    res.sendFile(buildPath);
   });
 }
 
@@ -101,7 +98,7 @@ app.use(errorHandler);
 const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
+  console.log(`🔗 Health check: http://localhost:${PORT}/health`);
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
