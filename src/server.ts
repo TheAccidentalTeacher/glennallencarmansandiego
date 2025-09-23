@@ -5,9 +5,6 @@ import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
-import { testConnection } from './services/database';
-
-// __dirname is automatically available in CommonJS
 
 // Import route handlers
 import authRoutes from './api/routes/auth';
@@ -72,10 +69,12 @@ app.get('/health', async (_req, res) => {
     
     if (process.env.DATABASE_URL) {
       try {
+        const { testConnection } = await import('./services/database');
         const dbConnected = await testConnection();
         dbStatus = dbConnected ? 'connected' : 'disconnected';
       } catch (error) {
         dbStatus = 'error';
+        console.error('Health check database error:', error);
       }
     }
     
@@ -121,28 +120,31 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Start server
-const server = app.listen(PORT, '0.0.0.0', async () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
-  // Test database connection on startup (non-blocking)
-  if (process.env.DATABASE_URL) {
-    try {
-      const dbConnected = await testConnection();
-      if (dbConnected) {
-        console.log('✅ Database connection successful');
-      } else {
-        console.log('❌ Database connection failed - server will continue without database');
+  // Test database connection after server starts (completely non-blocking)
+  setImmediate(async () => {
+    if (process.env.DATABASE_URL) {
+      try {
+        const { testConnection } = await import('./services/database');
+        const dbConnected = await testConnection();
+        if (dbConnected) {
+          console.log('✅ Database connection successful');
+        } else {
+          console.log('❌ Database connection failed - server will continue without database');
+        }
+      } catch (error) {
+        console.error('💥 Database connection error (server continuing):', error instanceof Error ? error.message : String(error));
       }
-    } catch (error) {
-      console.error('💥 Database connection error (server continuing):', error);
+    } else {
+      console.log('⚠️ No DATABASE_URL provided - database features will be disabled');
     }
-  } else {
-    console.log('⚠️ No DATABASE_URL provided - database features will be disabled');
-  }
+  });
 });
 
 // Set up WebSocket server for real-time communication
