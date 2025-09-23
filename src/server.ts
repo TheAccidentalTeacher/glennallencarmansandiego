@@ -31,7 +31,7 @@ app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 // CORS configuration for development and production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? process.env.RAILWAY_PUBLIC_DOMAIN ? [`https://${process.env.RAILWAY_PUBLIC_DOMAIN}`] : ['https://your-app.railway.app']
+    ? process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : true
     : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200,
@@ -55,7 +55,8 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app build directory
-  const buildPath = path.join(__dirname, '../dist');
+  const buildPath = path.join(__dirname, '../');
+  console.log(`📁 Serving static files from: ${buildPath}`);
   app.use(express.static(buildPath));
 }
 
@@ -86,7 +87,8 @@ app.use('/api/content', contentRoutes);
 // In production, serve React app for all non-API routes
 if (process.env.NODE_ENV === 'production') {
   app.get('*', (_req, res) => {
-    const buildPath = path.join(__dirname, '../dist/index.html');
+    const buildPath = path.join(__dirname, '../index.html');
+    console.log(`📄 Serving index.html from: ${buildPath}`);
     res.sendFile(buildPath);
   });
 }
