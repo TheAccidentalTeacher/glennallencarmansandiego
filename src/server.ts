@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
+import { testConnection } from './services/database';
 
 // Import route handlers
 import authRoutes from './api/routes/auth';
@@ -54,44 +55,26 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app build directory
-  const buildPath = path.join(__dirname, './');
+  const buildPath = path.join(__dirname, '../');
   console.log(`📁 Serving static files from: ${buildPath}`);
-  app.use(express.static(buildPath, {
-    maxAge: '1d',
-    etag: true
-  }));
+  app.use(express.static(buildPath));
 }
 
 // Health check endpoint
 app.get('/health', async (_req, res) => {
   try {
-    let dbStatus = 'not_configured';
-    
-    if (process.env.DATABASE_URL) {
-      try {
-        const { testConnection } = await import('./services/database');
-        const dbConnected = await testConnection();
-        dbStatus = dbConnected ? 'connected' : 'disconnected';
-      } catch (error) {
-        dbStatus = 'error';
-        console.error('Health check database error:', error);
-      }
-    }
-    
+    const dbConnected = await testConnection();
     res.json({
       status: 'ok',
       timestamp: new Date().toISOString(),
-      database: dbStatus,
+      database: dbConnected ? 'connected' : 'disconnected',
       environment: process.env.NODE_ENV || 'development',
-      server: 'running'
     });
   } catch (error) {
-    console.error('Health check error:', error);
     res.status(500).json({
       status: 'error',
       message: 'Health check failed',
       timestamp: new Date().toISOString(),
-      server: 'error'
     });
   }
 });
@@ -104,14 +87,9 @@ app.use('/api/content', contentRoutes);
 // In production, serve React app for all non-API routes
 if (process.env.NODE_ENV === 'production') {
   app.get(/^(?!\/api).*$/, (_req, res) => {
-    const indexPath = path.join(__dirname, './index.html');
-    console.log(`📄 Serving index.html from: ${indexPath}`);
-    res.sendFile(indexPath, (err) => {
-      if (err) {
-        console.error('Error serving index.html:', err);
-        res.status(500).send('Internal Server Error');
-      }
-    });
+    const buildPath = path.join(__dirname, '../index.html');
+    console.log(`📄 Serving index.html from: ${buildPath}`);
+    res.sendFile(buildPath);
   });
 }
 
@@ -120,31 +98,24 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Start server
-const server = app.listen(PORT, '0.0.0.0', () => {
+const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
-  // Test database connection after server starts (completely non-blocking)
-  setImmediate(async () => {
-    if (process.env.DATABASE_URL) {
-      try {
-        const { testConnection } = await import('./services/database');
-        const dbConnected = await testConnection();
-        if (dbConnected) {
-          console.log('✅ Database connection successful');
-        } else {
-          console.log('❌ Database connection failed - server will continue without database');
-        }
-      } catch (error) {
-        console.error('💥 Database connection error (server continuing):', error instanceof Error ? error.message : String(error));
-      }
+  // Test database connection on startup
+  try {
+    const dbConnected = await testConnection();
+    if (dbConnected) {
+      console.log('✅ Database connection successful');
     } else {
-      console.log('⚠️ No DATABASE_URL provided - database features will be disabled');
+      console.log('❌ Database connection failed');
     }
-  });
+  } catch (error) {
+    console.error('💥 Database connection error:', error);
+  }
 });
 
 // Set up WebSocket server for real-time communication
