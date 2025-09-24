@@ -2,7 +2,9 @@ import axios from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Prefer VITE_API_URL if provided at build time; else fall back to current origin at runtime.
+const RUNTIME_ORIGIN = typeof window !== 'undefined' && window.location ? window.location.origin : 'http://localhost:3001';
+const API_BASE_URL: string = (import.meta.env.VITE_API_URL as string | undefined) || RUNTIME_ORIGIN;
 
 // Token management
 export class TokenManager {
