@@ -1,32 +1,77 @@
 import { Pool } from 'pg';
 
-// Database configuration
-const config = {
-  connectionString: process.env.DATABASE_URL || 'postgresql://localhost:5432/sourdough_pete',
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
-};
+// Prefer DATABASE_URL, but allow individual PG* vars too
+const hasDatabaseUrl = !!process.env.DATABASE_URL;
+const usingUrl = hasDatabaseUrl ? 'DATABASE_URL' : 'PG* variables';
+
+// Decide if SSL should be used
+function resolveSSLOption(): false | { rejectUnauthorized: false } {
+  // Explicit overrides
+  const sslEnv = (process.env.DATABASE_SSL || '').toLowerCase();
+  if (['false', '0', 'off', 'disable'].includes(sslEnv)) return false;
+  if (['true', '1', 'on', 'require', 'enabled'].includes(sslEnv)) return { rejectUnauthorized: false };
+
+  const pgSslMode = (process.env.PGSSLMODE || '').toLowerCase();
+  if (pgSslMode === 'disable') return false;
+  if (pgSslMode === 'require') return { rejectUnauthorized: false };
+
+  const url = process.env.DATABASE_URL || '';
+  if (/sslmode=require/i.test(url) || /[?&]ssl=true/i.test(url)) {
+    return { rejectUnauthorized: false };
+  }
+
+  const host = (process.env.PGHOST || '').toLowerCase();
+  // For internal/private networks, SSL is usually unnecessary and sometimes unsupported
+  if (host.endsWith('.railway.internal') || host === 'localhost' || host === '127.0.0.1') {
+    return false;
+  }
+
+  // Default: use SSL only in production when not clearly internal
+  return process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false;
+}
+
+const sslOption = resolveSSLOption();
+
+// Build config from env
+const config = hasDatabaseUrl
+  ? {
+      connectionString: process.env.DATABASE_URL,
+      ssl: sslOption,
+      max: 20,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 2000,
+    }
+  : {
+      host: process.env.PGHOST || 'localhost',
+      port: process.env.PGPORT ? parseInt(process.env.PGPORT, 10) : 5432,
+      user: process.env.PGUSER || process.env.POSTGRES_USER,
+      password: process.env.PGPASSWORD || process.env.POSTGRES_PASSWORD,
+      database: process.env.PGDATABASE || process.env.POSTGRES_DB,
+      ssl: sslOption,
+      max: 20,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 2000,
+    } as any;
 
 // Create the connection pool
 export const pool = new Pool(config);
 
 // Test the connection
 export const testConnection = async (): Promise<boolean> => {
-  if (!process.env.DATABASE_URL) {
-    console.log('⚠️ No DATABASE_URL configured');
+  if (!hasDatabaseUrl && !process.env.PGHOST) {
+    console.log('⚠️ No database env configured (missing DATABASE_URL or PG* vars)');
     return false;
   }
-  
+
   try {
     const client = await pool.connect();
     await client.query('SELECT NOW()');
     client.release();
-    console.log('✅ Database connection successful');
+    console.log(`✅ Database connection successful via ${usingUrl}`);
     return true;
-  } catch (error) {
-    console.error('❌ Database connection failed:', error);
+  } catch (error: any) {
+    console.error('❌ Database connection failed:', error?.message || error);
+    if (error?.code) console.error('DB error code:', error.code);
     return false;
   }
 };
