@@ -32,7 +32,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const isAuthenticated = !!user;
+  const isAuthenticated = !!user || (import.meta.env.VITE_BYPASS_AUTH === 'true');
 
   // Initialize auth state on mount
   useEffect(() => {
@@ -66,23 +66,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const initializeAuth = async () => {
     try {
-      // Development auto-login (remove in production)
-      const isDevelopment = import.meta.env.DEV;
-      if (isDevelopment && !AuthService.isAuthenticated()) {
-        console.log('🔧 Development mode: Auto-logging in as teacher...');
-        
-        // Mock teacher user for development
+      // Bypass login if VITE_BYPASS_AUTH=true (for owner-only debugging)
+      if (import.meta.env.VITE_BYPASS_AUTH === 'true' && !AuthService.isAuthenticated()) {
         const mockTeacher: User = {
-          id: '550e8400-e29b-41d4-a716-446655440001',
+          id: '00000000-0000-0000-0000-000000000001',
           email: 'teacher@school.edu',
           displayName: 'Ms. Johnson',
           role: 'teacher',
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
         };
-        
         setUser(mockTeacher);
-        console.log('✅ Auto-login successful (mock user)!');
         setIsLoading(false);
         return;
       }

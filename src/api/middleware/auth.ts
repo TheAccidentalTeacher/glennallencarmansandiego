@@ -17,6 +17,16 @@ declare global {
 
 export const authenticateToken = (req: Request, _res: Response, next: NextFunction): void => {
   try {
+    // Bypass authentication for admin/teacher when BYPASS_AUTH is enabled (for owner-only debugging)
+    if ((process.env.BYPASS_AUTH || '').toLowerCase() === 'true') {
+      req.user = {
+        userId: '00000000-0000-0000-0000-000000000001',
+        email: process.env.BYPASS_AUTH_EMAIL || 'teacher@school.edu',
+        role: (process.env.BYPASS_AUTH_ROLE || 'teacher') as string,
+      };
+      return next();
+    }
+
     const authHeader = req.headers.authorization;
     const token = authHeader && authHeader.startsWith('Bearer ') ? authHeader.substring(7) : null;
 
