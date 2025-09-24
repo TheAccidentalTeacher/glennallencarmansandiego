@@ -15,11 +15,27 @@ import { errorHandler, notFound } from './api/middleware/errorHandler';
 import { setupWebSocket } from './api/websocket/gameSocket';
 
 const app = express();
-const PORT = parseInt(process.env.PORT || '3001', 10);
+
+// Sanitize env values (trim and remove wrapping quotes)
+const cleanEnv = (v?: string): string | undefined => {
+  if (!v) return undefined;
+  let s = v.trim();
+  if ((s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'"))) {
+    s = s.slice(1, -1);
+  }
+  return s;
+};
+
+const rawPort = cleanEnv(process.env.PORT);
+let PORT = Number.parseInt(rawPort || '', 10);
+if (!Number.isFinite(PORT)) {
+  // Default to common platform port if env is missing/malformed
+  PORT = 8080;
+}
 const isProduction = process.env.NODE_ENV === 'production';
 
 // Ensure the app is serving on the correct port for Railway
-console.log(`🚀 Starting server on port ${PORT}`);
+console.log(`🚀 Starting server on port ${PORT}${rawPort && !Number.isFinite(Number.parseInt(rawPort, 10)) ? ' (PORT env malformed, defaulted)' : ''}`);
 console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
 console.log(`🌐 Is Production: ${isProduction}`);
 
