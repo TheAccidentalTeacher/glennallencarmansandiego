@@ -59,13 +59,18 @@ try {
   }
 } catch {}
 
+// Tune timeouts so API fails fast instead of hanging the request
+const STATEMENT_TIMEOUT_MS = Number(process.env.PG_STATEMENT_TIMEOUT_MS || 8000); // server-side cancel
+const QUERY_TIMEOUT_MS = Number(process.env.PG_QUERY_TIMEOUT_MS || 8000); // client-side
+const CONNECT_TIMEOUT_MS = Number(process.env.PG_CONNECT_TIMEOUT_MS || 5000);
+
 const config = hasDatabaseUrl
   ? {
       connectionString: cleanedDatabaseUrl,
       ssl: sslOption,
       max: 20,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 10000,
+      idleTimeoutMillis: 15000,
+      connectionTimeoutMillis: CONNECT_TIMEOUT_MS,
     }
   : {
       host: clean(process.env.PGHOST) || 'localhost',
@@ -75,12 +80,24 @@ const config = hasDatabaseUrl
       database: clean(process.env.PGDATABASE) || clean(process.env.POSTGRES_DB),
       ssl: sslOption,
       max: 20,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 10000,
+      idleTimeoutMillis: 15000,
+      connectionTimeoutMillis: CONNECT_TIMEOUT_MS,
     } as any;
 
 // Create the connection pool
 export const pool = new Pool(config);
+
+// Apply default timeouts per-connection when checked out from the pool
+pool.on('connect', (client) => {
+  try {
+    // server-side timeout: cancel any statement running longer than STATEMENT_TIMEOUT_MS
+    client.query(`SET statement_timeout = ${STATEMENT_TIMEOUT_MS}`);
+    // Also set idle_in_transaction_session_timeout to avoid lingering transactions
+    client.query('SET idle_in_transaction_session_timeout = 8000');
+  } catch (e) {
+    console.warn('Failed to set per-connection timeouts:', (e as any)?.message || e);
+  }
+});
 
 // Test the connection
 export const testConnection = async (): Promise<boolean> => {
@@ -107,7 +124,7 @@ export const testConnection = async (): Promise<boolean> => {
 export const query = async (text: string, params?: any[]): Promise<any> => {
   const start = Date.now();
   try {
-    const result = await pool.query(text, params);
+    const result = await pool.query({ text, values: params, statement_timeout: STATEMENT_TIMEOUT_MS, query_timeout: QUERY_TIMEOUT_MS } as any);
     const duration = Date.now() - start;
     console.log('Executed query', { text, duration, rows: result.rowCount });
     return result;

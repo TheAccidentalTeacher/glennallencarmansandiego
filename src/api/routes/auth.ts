@@ -77,8 +77,29 @@ router.post('/login', loginValidation, asyncHandler(async (req: Request, res: Re
 
   const { email, password } = req.body;
 
-  // Validate user credentials
-  const user = await UserService.validatePassword(email, password);
+  // Validate user credentials with a safety timeout so the request doesn't hang forever
+  const LOGIN_TIMEOUT_MS = Number(process.env.LOGIN_TIMEOUT_MS || 8000);
+  const loginPromise = UserService.validatePassword(email, password);
+
+  let user: any;
+  try {
+    user = await Promise.race([
+      loginPromise,
+      new Promise((_, reject) =>
+        setTimeout(
+          () => reject(new AppError('Login temporarily unavailable. Please try again in a moment.', 503)),
+          LOGIN_TIMEOUT_MS
+        )
+      ),
+    ]);
+  } catch (err: any) {
+    // Map common timeout/cancel conditions to a friendlier message
+    const code = err?.code || '';
+    if (code === 'ETIMEDOUT' || code === '57014' /* query_canceled */) {
+      throw new AppError('Login request timed out. Please retry shortly.', 503);
+    }
+    throw err;
+  }
   if (!user) {
     throw new AppError('Invalid email or password', 401);
   }

@@ -38,7 +38,7 @@ export class TokenManager {
 const createApiClient = (): AxiosInstance => {
   const client = axios.create({
     baseURL: `${API_BASE_URL}/api`,
-    timeout: 10000,
+    timeout: 20000,
     headers: {
       'Content-Type': 'application/json',
     },
@@ -134,13 +134,16 @@ export class ApiClient {
       if (error.response?.data) {
         return error.response.data;
       }
-      
-      // Handle network errors
+
+      // Handle network or timeout errors
+      const isTimeout = error.code === 'ECONNABORTED' || /timeout/i.test(error.message || '');
       return {
         success: false,
         error: {
-          code: 'NETWORK_ERROR',
-          message: error.message || 'Network error occurred',
+          code: isTimeout ? 'TIMEOUT' : 'NETWORK_ERROR',
+          message: isTimeout
+            ? 'Request timed out. Please try again in a moment.'
+            : (error.message || 'Network error occurred'),
         },
       };
     }
