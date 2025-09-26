@@ -11,6 +11,7 @@ import { testConnection } from './services/database';
 import authRoutes from './api/routes/auth';
 import gameRoutes from './api/routes/game';
 import contentRoutes from './api/routes/content';
+import imageRoutes from './api/routes/images';
 import { errorHandler, notFound } from './api/middleware/errorHandler';
 import { setupWebSocket } from './api/websocket/gameSocket';
 
@@ -73,13 +74,15 @@ app.use('/api/', limiter);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-  // Serve static files from the React app build directory
-  const buildPath = path.join(__dirname, './');
-  console.log(`📁 Serving static files from: ${buildPath}`);
-  app.use(express.static(buildPath));
-}
+// Serve static files from the React app build directory
+const buildPath = path.join(__dirname, './');
+console.log(`📁 Serving static files from: ${buildPath}`);
+app.use(express.static(buildPath));
+
+// Serve villain images from content directory
+const villainImagesPath = path.join(__dirname, '../content/villains/images');
+console.log(`�️  Serving villain images from: ${villainImagesPath}`);
+app.use('/images/villains', express.static(villainImagesPath));
 
 // Health check endpoint (fast, DB check timeboxed)
 const withTimeout = async <T>(p: Promise<T>, ms: number, fallback: T): Promise<T> => {
@@ -113,15 +116,14 @@ app.get('/health', async (_req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
 app.use('/api/content', contentRoutes);
+app.use('/api/images', imageRoutes);
 
-// In production, serve React app for all non-API routes
-if (process.env.NODE_ENV === 'production') {
-  app.get(/^(?!\/api).*$/, (_req, res) => {
-    const indexPath = path.join(__dirname, './index.html');
-    console.log(`📄 Serving index.html from: ${indexPath}`);
-    res.sendFile(indexPath);
-  });
-}
+// Serve React app for all non-API routes (catch-all)
+app.get(/^(?!\/api|\/images).*$/, (_req, res) => {
+  const indexPath = path.join(__dirname, './index.html');
+  console.log(`📄 Serving index.html from: ${indexPath}`);
+  res.sendFile(indexPath);
+});
 
 // Error handling middleware (must be after routes)
 app.use(notFound);
