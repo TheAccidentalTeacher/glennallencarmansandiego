@@ -76,7 +76,7 @@ server: {
 
 **MongoDB Atlas Connection:**
 ```javascript
-MONGODB_URI=mongodb+srv://scosom:nonPhubic4@brainstorm-cluster.bg60my0.mongodb.net/carmen-sandiego
+MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@brainstorm-cluster.bg60my0.mongodb.net/carmen-sandiego
 ```
 
 ---
