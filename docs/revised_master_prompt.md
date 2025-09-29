@@ -1,6 +1,6 @@
 
 
-# MASTER D### 2. Core Personas
+# MASTER D### 2- **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content. Core Personas
 
 - **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.
 - **Detective Teams (3–4 students):** Collaborate to solve cases. Roles can be assigned within teams:**Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content. **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.LOPMENT PROMPT: Sourdough Pete's Geography Challenge
@@ -17,7 +17,7 @@ Build a web-based, teacher-facilitated geography deduction game for middle-grade
 
 ### 2. Core Personas
 
-- **Teacher (a.k.a. “Chief”):** Controls game pacing, reveals clues, enters scores, approves team submissions (warrants), and moderates all user-generated content.
+- **Teacher (a.k.a. “Coordinator”):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.
 - **Detective Teams (3–4 students):** Collaborate to solve cases. Roles can be assigned within teams:
     - Lead Detective
     - Research Specialist
@@ -36,7 +36,7 @@ The application must support two distinct timing modes to fit different classroo
     - **Round 2:** Cultural Context (language, heritage, practices)
     - **Round 3:** Economic & Political Intelligence (currency, governance, trade)
     - **Round 4:** Landmark & Specific Features (unique identifiers, wildcard clues)
-- **Phase 3: Resolution (10 min):** Teams present their final "warrants," the teacher reveals the correct answer, and team ranks are updated.
+- **Phase 3: Resolution (10 min):** Teams present their final "solutions," the teacher reveals the correct answer, and team ranks are updated.
 
 **B. Quick Case Mode (≈25 minutes)**
 - **Briefing:** 3 min
@@ -145,7 +145,7 @@ interface Case {
 }
 
 // Represents a team's submission at the end of the game
-interface WarrantSubmission {
+interface solutionsubmission {
   id: string; // UUID
   teamId: string;
   caseId: string;
@@ -331,7 +331,7 @@ _
     - A "Reveal Next Round" button that locks previous rounds.
     - A list of all clues revealed so far.
     - Buttons to manually award `researchQualityBonus` and `culturalInsightBonus` points to teams.
-    - A modal for reviewing and approving/rejecting team `WarrantSubmissions`.
+    - A modal for reviewing and approving/rejecting team `solutionsubmissions`.
 - **Scoreboard:** A real-time table showing each team's name, round-by-round points, total score, and rank badge. Must be exportable to CSV and JSON.
 - **Villain & Case Editor:** A form-based interface for creating and editing content. It should use tabs to separate metadata, clue entry, and the cultural review status.
 
@@ -542,4 +542,5 @@ This prompt provides a complete specification for building the "Sourdough Pete's
 - Create a scalable architecture that can support future enhancements.
 
 The application should be production-ready, educationally sound, and technically robust upon completion of all specified requirements.
+
 
