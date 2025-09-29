@@ -1,6 +1,9 @@
 
 
-# MASTER DEV- **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.LOPMENT PROMPT: Sourdough Pete's Geography Challenge
+# MASTER D### 2. Core Personas
+
+- **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.
+- **Detective Teams (3–4 students):** Collaborate to solve cases. Roles can be assigned within teams:**Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content. **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.LOPMENT PROMPT: Sourdough Pete's Geography Challenge
 
 ---
 
@@ -38,7 +41,7 @@ The application must support two distinct timing modes to fit different classroo
 **B. Quick Case Mode (≈25 minutes)**
 - **Briefing:** 3 min
 - **Investigation:** 16 min (4 rounds × 4 min each)
-- **Resolution:** 6 min (Warrant & Reveal)
+- **Resolution:** 6 min (solution & Reveal)
 
 ### 4. Pedagogical Foundations
 
@@ -218,18 +221,18 @@ The scoring system must be transparent, configurable, and apply bonuses and pena
 
 *   **Base Score Calculation:** `basePoints = categoryPoints * difficultyMultiplier`
 *   **Final Score:** `finalEventPoints = basePoints + bonuses - penalties`
-*   **Tie-Breaking:** In the event of a tie in total points, the team with the higher number of `researchQualityBonus` points will be ranked higher. If still tied, the team that submitted their final warrant earliest wins.
+*   **Tie-Breaking:** In the event of a tie in total points, the team with the higher number of `researchQualityBonus` points will be ranked higher. If still tied, the team that submitted their final solution earliest wins.
 
 **Default Scoring Profile (Full Period):**
 
 | Category | Points | Notes |
 | :--- | :--- | :--- |
 | `roundLocationPoints` | `[5, 8, 10, 15]` | Points for correct location in rounds 1-4 |
-| `villainIdentificationPoints` | `10` | Awarded for correct villain in the final warrant |
+| `villainIdentificationPoints` | `10` | Awarded for correct villain in the final solution |
 | `speedBonus` | `3` | Awarded to the first team to submit a correct location guess per round |
 | `researchQualityBonus` | `2` | Manually awarded by the teacher for excellent reasoning |
 | `culturalInsightBonus` | `2` | Manually awarded by the teacher for demonstrating deep cultural understanding |
-| `wrongArrestPenalty` | `-5` | Applied if the final warrant has the wrong villain or location |
+| `wrongArrestPenalty` | `-5` | Applied if the final solution has the wrong villain or location |
 
 **Difficulty Multipliers:**
 
@@ -301,7 +304,7 @@ Implement a RESTful API with the following endpoints. All endpoints should expec
 - `POST /api/sessions`: Start a new game session from a case.
 - `GET /api/sessions/:id`: Get the current state of a game session (including round, scores, etc.).
 - `POST /api/sessions/:id/round`: Advance the game to the next round.
-- `POST /api/sessions/:id/warrant`: Submit a final warrant for a team.
+- `POST /api/sessions/:id/solution`: Submit a final solution for a team.
 
 **Content Management**
 - `GET /api/villains`: Retrieve the list of all villains.
@@ -320,7 +323,7 @@ _
 
 ### 10. User Interface (UI) Requirements
 
-**Teacher (Chief) UI Panels:**
+**Teacher (coordinator) UI Panels:**
 
 - **Case Dashboard:** A filterable list of all cases, showing status, difficulty, and region tags, with a prominent "Launch Case" button.
 - **Live Case Control:** The main screen during a game. It must feature:
@@ -406,7 +409,7 @@ The following scenarios must be tested to ensure application stability and corre
 | :--- | :--- |
 | **High-Difficulty Case** | Clue obfuscation is active in early rounds for a case with difficulty 5. |
 | **Quick Mode Timing** | The game timer and round progression adhere to the shorter Quick Mode timings. |
-| **Invalid Warrant** | A warrant submitted with missing evidence or an incorrect villain is rejected or penalized. |
+| **Invalid solution** | A solution submitted with missing evidence or an incorrect villain is rejected or penalized. |
 | **Content Flagging** | A case created with a banned token is automatically flagged for review and cannot be published. |
 | **Tie-Breaking** | A tie in final scores is correctly broken first by the research bonus count, then by submission timestamp. |
 | **Offline Map** | The map interface successfully loads a fallback tile layer when network access is unavailable. |
@@ -422,7 +425,7 @@ Development will be considered complete when the following criteria are met:
 - [ ] **Rank Progression:** Team ranks are computed correctly and displayed on the scoreboard.
 - [ ] **Content Editors:** The villain and case editors are fully functional, including the cultural review flag workflow.
 - [ ] **Clue Obfuscation:** The clue engine correctly obfuscates clues for high-difficulty cases in early rounds.
-- [ ] **Warrant Workflow:** The complete warrant submission and teacher approval process is implemented.
+- [ ] **solution Workflow:** The complete solution submission and teacher approval process is implemented.
 - [ ] **Exportable Scoreboard:** The final scoreboard can be exported to both CSV and JSON formats.
 - [ ] **Accessibility Pass:** The application meets WCAG 2.1 AA standards, and the dyslexia-friendly font toggle is functional.
 - [ ] **Content Filter:** The server-side content filter is integrated and correctly flags content for review.
@@ -539,3 +542,4 @@ This prompt provides a complete specification for building the "Sourdough Pete's
 - Create a scalable architecture that can support future enhancements.
 
 The application should be production-ready, educationally sound, and technically robust upon completion of all specified requirements.
+

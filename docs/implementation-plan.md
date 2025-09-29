@@ -91,7 +91,7 @@ Implementation detail:
 
 ### Accessibility and Classroom Fit
 - Large typography and high‑contrast colors
-- Single‑button flows, keyboard shortcuts (N for next, G for guess, W for warrant)
+- Single‑button flows, keyboard shortcuts (N for next, G for guess, W for solution)
 - “Reset Game” and “Resume Last Session” buttons
 
 <a id="collaborative-authoring-workflow"></a>
@@ -128,7 +128,7 @@ This section documents how we will co‑author the season’s content with tight
 
 ### Definition of Done (DoD)
 - Dossier: 1–2 paragraph professional backstory; signature tools/calling card; respect note; 1 image prompt aligned to Content Guide; 4–6 educational tags; links to cultural review notes
-- Case: briefing; 3–4 rounds (clueHtml + answer lat/lng + explainHtml); warrant; resolution; passes cultural pre‑check
+- Case: briefing; 3–4 rounds (clueHtml + answer lat/lng + explainHtml); solution; resolution; passes cultural pre‑check
 
 ### Cadence
 - We propose → you approve (or tweak) → we draft small slice → you review → we iterate. Keep the loop to 24–48h per slice.
@@ -186,7 +186,7 @@ Open items (authoring, to be completed with teacher input):
 ### Milestone 3 – Teacher Control (/control) (1–2 days)
 - [ ] Case picker and Start Game
 - [ ] Clue reveal, map for guess, submit/score flow, advance
-- [ ] Final warrant submit + recap screen
+- [ ] Final solution submit + recap screen
 - Acceptance: Teacher can run an entire game end‑to‑end from one page
 
 ### Milestone 4 – Projector View (/projector) (0.5–1 day)
@@ -223,7 +223,7 @@ Open items (authoring, to be completed with teacher input):
 2) Open two browser windows:
    - Window A: http://localhost:5173/control (teacher controls)
    - Window B: http://localhost:5173/projector (projector view)
-3) Select case → Start → Reveal clue → Collect map guess → Submit → Advance → Final warrant → Recap
+3) Select case → Start → Reveal clue → Collect map guess → Submit → Advance → Final solution → Recap
 
 We’ll document this in README once Milestone 3 ships.
 
@@ -254,7 +254,7 @@ This section defines how a “case” should look and behave for the single‑ma
    - Round 2: Cultural context + first trait reveal
    - Round 3: Economic/Environmental clue + second trait
    - Round 4: Final identification + third trait
-4) Warrant/Guess Submission (teacher enters or selects the class’s final answer)
+4) solution/Guess Submission (teacher enters or selects the class’s final answer)
 5) Solution & Resolution (answer reveal, evidence summary)
 6) Learning Extensions (follow‑ups, cross‑curricular)
 
@@ -334,7 +334,7 @@ Minimal viable schema for MVP. Required fields marked with •.
       "scoring": { "base": 120, "distanceKmFull": 50 }
     }
   ],
-  "warrant": {                                 // final step (MVP: country + optional suspect)
+  "solution": {                                 // final step (MVP: country + optional suspect)
     "expectedCountry": "Norway",
     "suspect": { "name": "Kneemoi", "notes": "history fanatic, Vikings, sweater, ships" }
   },
@@ -381,7 +381,7 @@ Narrative paragraph(s).
 
 ### Round 2 ...
 
-## Warrant
+## solution
 - Expected Country: ...
 - Suspect (optional): name + notes
 
@@ -394,9 +394,9 @@ Narrative paragraph(s).
 ### UI & Controls (Teacher‑Led)
 - `/control`
   - Case picker, Start Game
-  - Buttons: Reveal Clue, Open Map for Guess, Submit Guess, Score & Show, Next Round, Final Warrant, Recap
+  - Buttons: Reveal Clue, Open Map for Guess, Submit Guess, Score & Show, Next Round, Final solution, Recap
   - Toggles: Show/Hide Suspect Lineup, Skip Round, Timer On/Off
-  - Keyboard shortcuts: N (next), G (guess), W (warrant), R (reveal), T (timer)
+  - Keyboard shortcuts: N (next), G (guess), W (solution), R (reveal), T (timer)
   - Timer: 8‑minute default per round with pause/reset
 - `/projector`
   - Large typography, limited controls
@@ -533,7 +533,7 @@ We will structure the 12 cases + 2‑part finale as a coherent arc that can be a
 - Interactive world map with Leaflet integration
 - Complete service layer (scoring, clues, warrants)
 - Distance-based gameplay with educational feedback
-- Enhanced warrant results with clue analysis
+- Enhanced solution results with clue analysis
 - REST API endpoints for content and game operations
 
 **Critical Missing for A-Z Gameplay:**
@@ -761,7 +761,7 @@ export class LiveGameSession {
 - Teacher can select a case and create a session
 - Students can join with team codes
 - Game progresses through clue reveals
-- Warrant submissions are processed
+- solution submissions are processed
 - Scores are calculated and displayed
 - One complete game can be played start to finish
 
@@ -1043,7 +1043,7 @@ class ScoringService {
 - Speed bonus: 3 points (first correct team per round)
 - Research quality bonus: 2 points (teacher awarded)
 - Cultural insight bonus: 2 points (teacher awarded)
-- Wrong arrest penalty: -5 points
+- Wrong capture penalty: -5 points
 
 #### 3.3 Content Filtering Service (`/src/services/contentFilter.ts`)
 ```typescript
@@ -1068,8 +1068,8 @@ class GameSessionService {
   // Advance to next round with timer management
   advanceRound(sessionId: string): Promise<RoundAdvanceResult>
   
-  // Handle warrant submissions
-  submitWarrant(sessionId: string, teamId: string, warrant: WarrantSubmission): Promise<void>
+  // Handle solution submissions
+  submitWarrant(sessionId: string, teamId: string, solution: WarrantSubmission): Promise<void>
   
   // Real-time state management
   getSessionState(sessionId: string): Promise<GameSessionState>
@@ -1118,7 +1118,7 @@ class GameSessionService {
 // POST /api/sessions - Start new game session
 // GET /api/sessions/:id - Get session state
 // POST /api/sessions/:id/round - Advance round
-// POST /api/sessions/:id/warrant - Submit warrant
+// POST /api/sessions/:id/solution - Submit solution
 ```
 
 **Content Management:**
@@ -1139,7 +1139,7 @@ interface WebSocketEvents {
   'score-update': ScoreUpdateEvent;
   'round-advance': RoundAdvanceEvent;
   'clue-reveal': ClueRevealEvent;
-  'warrant-submitted': WarrantSubmissionEvent;
+  'solution-submitted': WarrantSubmissionEvent;
   'game-complete': GameCompleteEvent;
 }
 ```
@@ -1215,7 +1215,7 @@ interface WebSocketEvents {
 // Performance analytics
 ```
 
-#### 5.4 Warrant Review System (`/src/components/teacher/WarrantReview.tsx`)
+#### 5.4 solution Review System (`/src/components/teacher/WarrantReview.tsx`)
 ```typescript
 // Review submitted warrants
 // Approve/reject with feedback
@@ -1237,13 +1237,13 @@ interface WebSocketEvents {
 - [ ] Complete teacher dashboard interface
 - [ ] Live game control panel with all features
 - [ ] Real-time scoreboard with export functionality
-- [ ] Warrant review and approval system
+- [ ] solution review and approval system
 - [ ] Content review and moderation tools
 
 ### Acceptance Criteria
 - Teachers can launch and control games seamlessly
 - Scoreboard updates in real-time across all clients
-- Warrant review process is efficient and comprehensive
+- solution review process is efficient and comprehensive
 - Content review workflow maintains cultural sensitivity
 - All teacher actions are logged for audit purposes
 
@@ -1558,7 +1558,7 @@ describe('ScoringService', () => {
 - Full Period mode (50 minutes)
 - Quick Case mode (25 minutes)
 - High-difficulty case obfuscation
-- Warrant submission and review
+- solution submission and review
 - Content flagging and review workflow
 
 #### 10.4 Performance & Security Testing
@@ -1710,7 +1710,7 @@ jobs:
 - [ ] Rank progression: Computed and displayed correctly
 - [ ] Content editors: Fully functional with review workflow
 - [ ] Clue obfuscation: Working for high-difficulty cases
-- [ ] Warrant workflow: Complete submission to approval process
+- [ ] solution workflow: Complete submission to approval process
 - [ ] Scoreboard export: CSV and JSON formats working
 - [ ] Accessibility: WCAG 2.1 AA compliance verified
 - [ ] Content filter: Integrated and functioning
@@ -1787,4 +1787,4 @@ jobs:
 4. **Establish regular check-ins and progress reviews**
 5. **Recruit teacher beta testers for classroom pilots**
 
-This implementation plan provides a comprehensive roadmap for building "Where in the World is Sourdough Pete?" while maintaining educational integrity, cultural sensitivity, and technical excellence.
+This implementation plan provides a comprehensive roadmap for building "Sourdough Pete's Geography Challenge" while maintaining educational integrity, cultural sensitivity, and technical excellence.

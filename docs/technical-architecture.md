@@ -240,7 +240,7 @@ CREATE TABLE score_events (
   ))
 );
 
--- Warrant submissions
+-- solution submissions
 CREATE TABLE warrant_submissions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   session_id UUID NOT NULL REFERENCES game_sessions(id) ON DELETE CASCADE,

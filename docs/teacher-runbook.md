@@ -23,13 +23,13 @@ Quickstart:
 1. Intro/Briefing
 2. Round 1: Reveal Clue → Class research → Collect one class guess on map → Submit → Show distance/score
 3. Round 2–3: Repeat with cultural/economic/environmental focus
-4. Round 4: Final identification → Submit warrant (country + optional suspect)
+4. Round 4: Final identification → Submit solution (country + optional suspect)
 5. Recap screen with evidence summary and learning extensions
 
 ## Controls (planned)
-- Buttons: Reveal, Guess, Submit, Score/Show, Next, Warrant, Recap
+- Buttons: Reveal, Guess, Submit, Score/Show, Next, solution, Recap
 - Toggles: Suspect lineup, Timer on/off, Skip round
-- Keyboard: N (next), G (guess), W (warrant), R (reveal), T (timer)
+- Keyboard: N (next), G (guess), W (solution), R (reveal), T (timer)
 
 ## After Class
 - Save/export session results (CSV + JSON snapshot) to `data/sessions/`
