@@ -1,4 +1,4 @@
-# Where in the World is Sourdough Pete?
+# Sourdough Pete's Geography Challenge
 
 An educational, teacher‑led geography game inspired by Carmen Sandiego, designed for whole‑class play on a single computer connected to a projector/Smart TV. Built with React + TypeScript + Vite (frontend) and Node/Express (backend).
 

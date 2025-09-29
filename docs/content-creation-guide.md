@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for creating culturally sensitive, educationally valuable content for "Where in the World is Sourdough Pete?" All content must adhere to our principles of respectful representation, educational integrity, and cultural sensitivity.
+This guide provides comprehensive instructions for creating culturally sensitive, educationally valuable content for "Sourdough Pete's Geography Challenge." All content must adhere to our principles of respectful representation, educational integrity, and cultural sensitivity.
 
 ## Cultural Sensitivity Guidelines
 
@@ -444,4 +444,4 @@ All content must be reviewed by experts in:
 - Incorporation of new educational research and best practices
 - Ongoing cultural sensitivity training for content creators
 
-This content creation guide ensures that all materials for "Where in the World is Sourdough Pete?" maintain the highest standards of educational value, cultural sensitivity, and respectful representation while providing engaging, effective learning experiences for students.
+This content creation guide ensures that all materials for "Sourdough Pete's Geography Challenge" maintain the highest standards of educational value, cultural sensitivity, and respectful representation while providing engaging, effective learning experiences for students.

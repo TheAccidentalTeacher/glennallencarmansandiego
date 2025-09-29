@@ -6,7 +6,7 @@
   "display": {
     "enable": {
       "suspectLineup": false,
-      "warrantStep": true,
+      "solutionStep": true,
       "learningExtensions": true
     },
     "theme": "default"
@@ -66,7 +66,7 @@
       "scoring": { "base": 120, "distanceKmFull": 50 }
     }
   ],
-  "warrant": {
+  "solution": {
     "expectedCountry": "Norway",
     "suspect": { "name": "TBD", "notes": "history enthusiast, sweater, ships" }
   },
@@ -84,3 +84,4 @@
     ]
   }
 }
+

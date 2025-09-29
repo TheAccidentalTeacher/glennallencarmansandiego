@@ -7,7 +7,7 @@
   "display": {
     "enable": {
       "suspectLineup": true,
-      "warrantStep": true,
+      "solutionStep": true,
       "learningExtensions": true
     },
     "theme": "african-savanna"

@@ -37,7 +37,7 @@
       "scoring": { "base": 120, "distanceKmFull": 50 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "sourdough-pete",
     "victim": "National Museum of Bread History",
     "item": "The Ancient Sourdough Starter"
@@ -54,3 +54,4 @@
     ]
   }
 }
+

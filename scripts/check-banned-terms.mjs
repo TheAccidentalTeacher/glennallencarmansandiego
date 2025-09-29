@@ -28,9 +28,11 @@ function walk(dir) {
     if (entry.isDirectory()) {
       walk(full);
     } else if (entry.isFile()) {
-      // Skip root README.md for now (project title legacy)
+      // Skip root README.md for now (project title legacy) and brand policy docs
       const rootReadme = path.join(root, 'README.md');
+      const brandDifferentiation = path.join(root, 'docs', 'brand', 'Differentiation.md');
       if (path.resolve(full) === path.resolve(rootReadme)) continue;
+      if (path.resolve(full) === path.resolve(brandDifferentiation)) continue;
       if (!/\.(md|mdx|txt|json)$/i.test(entry.name)) continue;
       const text = fs.readFileSync(full, 'utf8');
       banned.forEach((re) => {

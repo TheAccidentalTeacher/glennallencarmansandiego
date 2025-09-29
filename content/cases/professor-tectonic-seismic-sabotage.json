@@ -7,7 +7,7 @@
   "display": {
     "enable": {
       "suspectLineup": true,
-      "warrantStep": true,
+      "solutionStep": true,
       "learningExtensions": true
     },
     "theme": "volcanic"
@@ -140,7 +140,7 @@
       "scoring": { "base": 200, "distanceKmFull": 30 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "professor-tectonic-jin-wei-ming",
     "expectedCountry": "Japan",
     "victim": "Pacific Ring of Fire Seismic Monitoring Network",

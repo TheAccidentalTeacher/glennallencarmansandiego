@@ -136,7 +136,7 @@
       "scoring": { "base": 250, "distanceKmFull": 30 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "dr-pacific",
     "victim": "Pacific Ring of Fire Research Consortium", 
     "item": "Advanced Seismic and Volcanic Monitoring Equipment"

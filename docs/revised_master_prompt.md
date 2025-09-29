@@ -1,6 +1,6 @@
 
 
-# MASTER DEVELOPMENT PROMPT: Where in the World is Sourdough Pete?
+# MASTER DEV- **Teacher (a.k.a. "Coordinator"):** Controls game pacing, reveals clues, enters scores, approves team submissions (solutions), and moderates all user-generated content.LOPMENT PROMPT: Sourdough Pete's Geography Challenge
 
 ---
 

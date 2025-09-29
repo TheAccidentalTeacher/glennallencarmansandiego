@@ -2,7 +2,7 @@
 
 ## System Overview
 
-This document outlines the technical architecture for the "Where in the World is Sourdough Pete?" educational geography game.
+This document outlines the technical architecture for the "Sourdough Pete's Geography Challenge" educational geography game.
 
 **⚠️ IMPLEMENTATION STATUS:** This document reflects the planned full-scale architecture. Current MVP implementation focuses on teacher-led gameplay with simplified architecture (React frontend + Express backend + local file-based content + PostgreSQL database setup).
 

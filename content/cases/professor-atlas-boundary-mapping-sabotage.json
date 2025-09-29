@@ -136,7 +136,7 @@
       "scoring": { "base": 240, "distanceKmFull": 20 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "professor-atlas",
     "victim": "European Geographic Research Consortium",
     "item": "High-Precision GPS and Surveying Equipment"

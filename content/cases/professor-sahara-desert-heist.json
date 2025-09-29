@@ -7,7 +7,7 @@
   "display": {
     "enable": {
       "suspectLineup": true,
-      "warrantStep": true, 
+      "solutionStep": true, 
       "learningExtensions": true
     },
     "theme": "desert"
@@ -140,7 +140,7 @@
       "scoring": { "base": 200, "distanceKmFull": 30 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "professor-sahara-amira-hassan", 
     "expectedCountry": "Egypt",
     "victim": "North African Archaeological Museums Network",

@@ -136,7 +136,7 @@
       "scoring": { "base": 220, "distanceKmFull": 30 }
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "dr-qanat",
     "victim": "UNESCO World Heritage Water Systems",
     "item": "Ancient Hydraulic Monitoring Equipment"

@@ -2,7 +2,7 @@
 
 ## Pedagogical Framework
 
-This document outlines the educational design principles, learning objectives, and classroom integration strategies for "Where in the World is Sourdough Pete?"
+This document outlines the educational design principles, learning objectives, and classroom integration strategies for "Sourdough Pete's Geography Challenge."
 
 ## Learning Objectives
 
@@ -51,7 +51,7 @@ The game is built on constructivist principles where students actively build kno
 
 ### Inquiry-Based Learning
 Students engage in authentic inquiry through:
-- **Essential Questions:** "Where in the world could this crime have taken place?"
+- **Essential Questions:** "In which location could this geographic mystery have occurred?"
 - **Investigation Process:** Systematic analysis of clues and evidence
 - **Hypothesis Formation:** Making educated guesses and revising based on new evidence
 - **Collaborative Research:** Working together to pool knowledge and insights
@@ -155,7 +155,7 @@ Teacher Setup Checklist:
 - **Peer Assessment:** Teams evaluate their own collaboration and reasoning
 
 #### Summative Assessment Options
-- **Warrant Quality:** Evaluate the evidence and reasoning in final warrant submissions
+- **Evidence Quality:** Evaluate the evidence and reasoning in final solution submissions
 - **Reflection Essays:** Students write about their learning and the geographic reasoning process
 - **Map Skills Assessment:** Follow-up activities requiring map interpretation and geographic analysis
 - **Cultural Competency Check:** Students demonstrate respectful understanding of cultural elements
@@ -269,7 +269,7 @@ Teacher Setup Checklist:
 ### Short-Term Indicators (Per Game Session)
 - **Engagement Metrics:** Student participation rates and attention during gameplay
 - **Collaboration Quality:** Evidence of effective teamwork and role fulfillment
-- **Geographic Reasoning:** Quality of evidence-based reasoning in warrant submissions
+- **Geographic Reasoning:** Quality of evidence-based reasoning in solution submissions
 - **Cultural Sensitivity:** Respectful language and curiosity about different cultures
 
 ### Medium-Term Assessment (Unit/Semester Level)
@@ -284,4 +284,4 @@ Teacher Setup Checklist:
 - **21st Century Skills:** Enhanced collaboration, communication, and critical thinking abilities
 - **Cultural Competency:** Demonstrated ability to work respectfully across cultural differences
 
-This educational design framework ensures that "Where in the World is Sourdough Pete?" serves as more than entertainment—it becomes a powerful tool for developing globally-aware, culturally-competent, and geographically-literate citizens.
+This educational design framework ensures that "Sourdough Pete's Geography Challenge" serves as more than entertainment—it becomes a powerful tool for developing globally-aware, culturally-competent, and geographically-literate citizens.

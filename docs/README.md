@@ -2,7 +2,7 @@
 
 ## Document Organization
 
-This directory contains comprehensive documentation for the "Where in the World is Sourdough Pete?" educational geography game. All documentation is organized by audience and purpose for easy navigation.
+This directory contains comprehensive documentation for the "Sourdough Pete's Geography Challenge" educational geography game. All documentation is organized by audience and purpose for easy navigation.
 
 ## 📋 Complete Document Listing
 

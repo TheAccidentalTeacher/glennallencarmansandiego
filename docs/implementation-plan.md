@@ -1,4 +1,4 @@
-# Implementation Plan: Where in the World is Sourdough Pete?
+# Implementation Plan: Sourdough Pete's Geography Challenge
 
 <a id="teacher-led-mvp-plan-sept-26-2025"></a>
 ## Teacher‑Led MVP Plan (Sept 26, 2025)
@@ -9,7 +9,7 @@ This section supersedes earlier priorities. The original plan remains below as a
 
 ### Product Goals (MVP)
 - Play a complete, repeatable case end‑to‑end in front of the class using a single computer.
-- Teacher controls the flow: start game, reveal clues, collect a class guess on the map, submit warrant, show distance/score, advance rounds, show final results.
+- Teacher controls the flow: start game, reveal clues, collect a class guess on the map, submit solution, show distance/score, advance rounds, show final results.
 - No logins, no per‑student devices, no network dependencies beyond localhost.
 - Use existing filesystem content for villains and images; cases stored as simple JSON files.
 
@@ -45,7 +45,7 @@ Example case JSON (proposed):
       "explain": "Klondike Gold Rush gateway; White Pass & Yukon Route."
     }
   ],
-  "warrant": {
+  "solution": {
     "villainId": "sourdough-pete",
     "victim": "National Museum of Bread History",
     "item": "The Ancient Sourdough Starter"
@@ -61,7 +61,7 @@ Example case JSON (proposed):
 - GET `/api/session/:id` – fetch current session state
 - POST `/api/session/:id/advance` – move to next round
 - POST `/api/session/:id/guess` – record the class’s map guess {lat, lng, label}
-- POST `/api/session/:id/warrant` – submit warrant (villain confirmation)
+- POST `/api/session/:id/solution` – submit solution (villain confirmation)
 - GET `/api/session/:id/summary` – computed totals and recap
 
 Implementation detail:
@@ -76,7 +76,7 @@ Implementation detail:
   - Map interaction to collect a single class guess (lat/lng)
   - Submit guess → see distance line, score, explanation
   - Advance round → repeat until done
-  - Submit warrant → final score + recap
+  - Submit solution → final score + recap
   - Save/export session results
 
 - `/projector` (Read‑Only Projector View)
@@ -87,7 +87,7 @@ Implementation detail:
 ### Scoring (use what exists, minimum rules)
 - Distance‑based points per round
 - Bonus/penalty hooks available later (time, accuracy tiers)
-- Final score is sum of rounds; warrant correctness adds a bonus
+- Final score is sum of rounds; solution correctness adds a bonus
 
 ### Accessibility and Classroom Fit
 - Large typography and high‑contrast colors
@@ -255,7 +255,7 @@ This section defines how a “case” should look and behave for the single‑ma
    - Round 3: Economic/Environmental clue + second trait
    - Round 4: Final identification + third trait
 4) Warrant/Guess Submission (teacher enters or selects the class’s final answer)
-5) Arrest & Resolution (answer reveal, evidence summary)
+5) Solution & Resolution (answer reveal, evidence summary)
 6) Learning Extensions (follow‑ups, cross‑curricular)
 
 All screens are teacher‑advanced from `/control` and displayed on `/projector`. Teachers can toggle screens on/off and reorder rounds if desired.
