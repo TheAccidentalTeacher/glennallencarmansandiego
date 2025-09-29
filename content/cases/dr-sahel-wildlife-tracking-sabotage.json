@@ -1,0 +1,147 @@
+{
+  "id": "dr-sahel-wildlife-tracking-sabotage",
+  "title": "The Great Migration Tracking Sabotage",
+  "difficulty": "intermediate", 
+  "durationMinutes": 38,
+  "villainId": "dr-sahel-kwame-asante",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "african-savanna"
+  },
+  "briefing": {
+    "headline": "The Great Migration Tracking Sabotage",
+    "narrativeHtml": "<p><strong>Urgent Alert to All Route Runners!</strong> Wildlife tracking stations monitoring Africa's greatest animal migrations have been systematically sabotaged! Camera traps and GPS collars worth millions have been stolen by a Sourdough Syndicate operative targeting conservation research.</p><p>The saboteur left behind this threatening message: <em>'My ECOSYSTEM PROTOCOL will expose the truth about habitat destruction! The Grasslands & Transitions Division protects what governments ignore!'</em> - along with bread crumbs and coordinates near known wildlife corridors.</p><p><strong>Conservation Crisis:</strong> Dr. Sahel, master of the Syndicate's ecosystem operations, has disappeared into the world's most famous wildlife migration routes. Can you track him through the seasonal patterns before he disrupts critical conservation efforts protecting endangered species?</p>",
+    "assets": {
+      "image": "/images/cases/dr-sahel/briefing-migration-routes.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Sahel (Kwame Asante)", 
+      "tags": ["conservation-extremist", "wildlife-tracking", "ecosystem-specialist"],
+      "description": "Rogue conservation biologist with PhD from University of Oxford. Expert in large mammal migration research, now stealing tracking equipment to create unauthorized wildlife surveillance networks.",
+      "image": "/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (20).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "biomes", "climate-patterns"],
+      "image": "01-african-savanna-gps-field-research.jpg",
+      "clueHtml": "<p><strong>Ecosystem Intelligence:</strong> 'Dr. Sahel was spotted in the world's largest tropical grassland ecosystem - vast plains stretching across multiple countries where seasonal rainfall creates distinct wet and dry periods. He's targeting areas with the classic transition between grasslands and scattered drought-resistant trees.'</p><p><strong>Climate Evidence:</strong> 'Equipment theft concentrated in regions experiencing pronounced seasonal variations - heavy rains followed by extended dry periods that drive massive animal movements. The suspect appears to understand these seasonal migration triggers perfectly.'</p><p><strong>Research Challenge:</strong> Use your atlas to identify this distinctive African ecosystem and understand what drives the world's greatest wildlife migrations!</p>",
+      "researchPrompts": [
+        "Research 'African savanna grassland ecosystem largest tropical'",
+        "Investigate 'wet dry season rainfall patterns Africa'",
+        "Look up 'acacia trees scattered grassland savanna'",
+        "Study 'seasonal migration patterns wildlife Africa'"
+      ],
+      "expectedProcess": [
+        "Search 'largest grassland ecosystem' → African savanna identified",
+        "Research 'tropical climate patterns' → distinct wet/dry seasons",
+        "Connect 'acacia trees' → characteristic savanna vegetation",
+        "Verify 'animal migrations' → seasonal movement patterns"
+      ],
+      "reveal": { "trait": "Ecosystem migration specialist", "note": "Expert in seasonal patterns that drive wildlife movements" },
+      "answer": { "name": "African Savanna", "lat": -2.0469, "lng": 34.0372 },
+      "explainHtml": "<p><strong>Ecosystem Confirmed:</strong> The African Savanna! This massive grassland ecosystem spans multiple countries, characterized by seasonal rainfall patterns that create wet and dry periods. The scattered acacia trees and open grasslands provide perfect habitat for the world's greatest wildlife migrations that Dr. Sahel is tracking.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r2",
+      "minutes": 10,
+      "focus": ["geography", "countries", "east-africa", "atlas-skills"],
+      "image": "02-animal-tracking-equipment-analysis.jpg",
+      "clueHtml": "<p><strong>Regional Intelligence Update:</strong> 'Dr. Sahel's operations focus on East African countries sharing borders around massive freshwater lakes and the Great Rift Valley. Surveillance shows him coordinating across three specific countries where the world's most famous animal migrations cross international boundaries.'</p><p><strong>Migration Route Analysis:</strong> 'Stolen equipment concentrated in areas where millions of wildebeest, zebras, and gazelles cross between countries during seasonal movements. These nations cooperate on trans-boundary conservation but their borders create challenges for wildlife tracking research.'</p><p><strong>Atlas Investigation:</strong> Identify the three East African countries where the Great Migration crosses borders!</p>",
+      "researchPrompts": [
+        "Research 'East Africa Great Migration countries three nations'",
+        "Investigate 'Kenya Tanzania wildebeest migration border crossing'", 
+        "Look up 'Maasai Mara Serengeti ecosystem connection'",
+        "Study 'trans-boundary conservation East Africa'"
+      ],
+      "expectedProcess": [
+        "Search 'Great Migration countries' → Kenya, Tanzania, and sometimes Uganda",
+        "Research 'Serengeti-Mara' → ecosystem crossing borders",
+        "Connect 'wildebeest migration' → cross-border movement",
+        "Verify 'conservation cooperation' → international park management"
+      ],
+      "reveal": { "trait": "Cross-border conservation expert", "note": "Exploits international cooperation gaps in wildlife tracking" },
+      "answer": { "name": "Kenya-Tanzania-Uganda Triangle", "lat": -1.2921, "lng": 36.8219 },
+      "explainHtml": "<p><strong>Regional Pattern Identified:</strong> The Kenya-Tanzania-Uganda region! The famous Great Migration primarily moves between Kenya's Maasai Mara and Tanzania's Serengeti, with movements into Uganda's parks. Dr. Sahel exploits the complexity of coordinating wildlife research across these three countries' borders.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r3",
+      "minutes": 10,
+      "focus": ["wildlife", "conservation", "ecosystems", "migration-routes"],
+      "image": "03-community-education-heritage-site.jpg",
+      "clueHtml": "<p><strong>Conservation Intelligence:</strong> 'Dr. Sahel has targeted the world's most spectacular wildlife migration - an annual circular movement involving over 2 million animals traveling 1,800 miles following seasonal rains and fresh grass. His stolen GPS equipment is monitoring this massive ecosystem event.'</p><p><strong>Wildlife Pattern Analysis:</strong> 'He's particularly focused on river crossings where dramatic predator-prey interactions occur, and calving grounds where hundreds of thousands of young are born each year. His equipment theft coincides with critical research phases of this UNESCO World Heritage ecosystem.'</p><p><strong>Conservation Mission:</strong> Identify this specific migration system and understand why it's so important for global conservation!</p>",
+      "researchPrompts": [
+        "Research 'Serengeti Great Migration 2 million wildebeest annual'",
+        "Investigate 'Mara River crossing crocodiles dramatic wildlife'",
+        "Look up 'calving season Serengeti plains February March'",
+        "Study 'UNESCO World Heritage Serengeti ecosystem'"
+      ],
+      "expectedProcess": [
+        "Search 'Great Migration numbers' → 2+ million animals identified",
+        "Research 'Mara River' → famous crossing points with predators",
+        "Connect 'calving season' → birth timing in southern Serengeti", 
+        "Verify 'UNESCO status' → World Heritage ecosystem protection"
+      ],
+      "reveal": { "trait": "Migration timing specialist", "note": "Expert in critical phases of wildlife breeding and movement cycles" },
+      "answer": { "name": "Serengeti-Mara Great Migration", "lat": -2.3333, "lng": 34.8333 },
+      "explainHtml": "<p><strong>Migration System Confirmed:</strong> The Serengeti-Mara Great Migration! This incredible annual journey involves over 2 million wildebeest, zebras, and gazelles moving in a massive circle following seasonal rains. Dr. Sahel is stealing equipment to monitor this UNESCO World Heritage ecosystem.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["landmarks", "coordinates", "specific-location"],
+      "image": "04-herd-documentation-field-work.jpg",
+      "clueHtml": "<p><strong>Final Location Intelligence:</strong> 'Dr. Sahel photographed at coordinates 2°20'S, 34°50'E at a famous location where millions of wildebeest and zebras gather during calving season. He was installing unauthorized tracking equipment while declaring: \\\"From these southern plains, my monitoring network will document the truth about conservation failures!\\\"'</p><p><strong>Seasonal Timing Evidence:</strong> 'The location shows vast short-grass plains where 400,000 wildebeest calves are born each February-March. Dr. Sahel chose this critical wildlife nursery area for maximum impact on conservation research. The area is renowned for its predator-prey interactions during vulnerable calving period.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this crucial wildlife breeding area!</p>",
+      "researchPrompts": [
+        "Use coordinates 2°20'S, 34°50'E to find exact location",
+        "Research 'Serengeti southern plains calving grounds short grass'",
+        "Investigate 'Ndutu area wildebeest calving season February'",
+        "Look up 'predator prey interactions calving grounds'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Southern Serengeti/Ndutu region",
+        "Search 'calving grounds Serengeti' → southern plains identification",
+        "Research 'Ndutu' → specific area known for calving",
+        "Verify 'February-March timing' → seasonal breeding patterns"
+      ],
+      "reveal": { "trait": "MASTER WILDLIFE SURVEILLANCE COORDINATOR", "note": "FINAL PHASE: Creates unauthorized monitoring networks in critical wildlife nursery areas!" },
+      "answer": { "name": "Ndutu Plains, Southern Serengeti", "lat": -2.3333, "lng": 34.8333 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> The Ndutu Plains in southern Serengeti! This short-grass prairie becomes the world's largest wildlife nursery each February-March when 400,000 wildebeest calves are born. Dr. Sahel's unauthorized equipment threatens legitimate conservation research in this critical breeding area.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r5",
+      "minutes": 2,
+      "focus": ["advanced-conservation", "global-impact", "ethics"],
+      "image": "05-classroom-teaching-consultation.jpg",
+      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Dr. Sahel's ultimate scheme exposed: He's creating an unauthorized wildlife surveillance network by stealing GPS collars and camera traps throughout the Great Migration route. His goal is to document conservation failures he believes governments and NGOs are hiding from the public.'</p><p><strong>Conservation Threat Analysis:</strong> 'His stolen equipment disrupts legitimate research that protects endangered species and maintains ecosystem balance. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the delicate international cooperation essential for trans-boundary wildlife conservation.'</p><p><strong>Mission Accomplished:</strong> You've tracked Dr. Sahel from the broad African savanna to the specific Ndutu calving grounds, learning about ecosystems, migration patterns, conservation challenges, and international cooperation along the way!</p>",
+      "researchPrompts": [
+        "Research 'conservation ethics unauthorized wildlife monitoring'",
+        "Investigate 'international cooperation wildlife conservation'",
+        "Look up 'legitimate scientific research protocols'",
+        "Study 'trans-boundary conservation success stories'"
+      ],
+      "expectedProcess": [
+        "Research 'research ethics' → proper scientific protocols",
+        "Connect 'international cooperation' → conservation success requires coordination",
+        "Understand 'legitimate research' → authorized scientific methods",
+        "Verify 'conservation success' → positive outcomes from proper research"
+      ],
+      "reveal": { "trait": "SYNDICATE CONSERVATION EXTREMIST", "note": "Uses stolen wildlife tracking equipment to destabilize legitimate conservation efforts!" },
+      "answer": { "name": "Great Migration Conservation Network", "lat": -2.3333, "lng": 34.8333 },
+      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Dr. Sahel's theft of wildlife tracking equipment aimed to create unauthorized surveillance across the entire Great Migration route! While wildlife conservation is crucial, his illegal methods threaten the careful scientific research and international cooperation that actually protect endangered species.</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ]
+}

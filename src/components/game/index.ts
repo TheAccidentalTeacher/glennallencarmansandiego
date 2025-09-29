@@ -2,6 +2,7 @@
 export { default as GameLayout } from './GameLayout';
 export { default as TeacherDashboard } from './TeacherDashboard';
 export { default as StudentInterface } from './StudentInterface';
+export { default as StudentGameMap } from './StudentGameMap';
 export { default as RealTimeActivityFeed } from './RealTimeActivityFeed';
 export { default as LiveTeamStatus } from './LiveTeamStatus';
 export { default as GameTimer } from './GameTimer';

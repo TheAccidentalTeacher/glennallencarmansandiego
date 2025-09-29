@@ -4,9 +4,48 @@
 
 The Sourdough Pete API provides a comprehensive backend for the educational geography game. It follows RESTful principles and includes WebSocket support for real-time game interactions.
 
+**📋 IMPLEMENTATION STATUS:**
+- **✅ CURRENT:** Static file serving, villain images, basic content endpoints
+- **🚧 PLANNED:** JWT authentication, user management, game session management
+- **📋 IN DEVELOPMENT:** Teacher-led MVP (no authentication required initially)
+
 ## Base URL
 - Development: `http://localhost:3001`
 - Production: `https://your-app.railway.app`
+
+## Current Implemented Endpoints (September 2025)
+
+### GET /health
+Health check endpoint.
+
+**Response:**
+```json
+{
+  "status": "OK",
+  "timestamp": "2025-09-27T10:30:00.000Z"
+}
+```
+
+### GET /api/images/villains
+List available villain image directories.
+
+**Response:**
+```json
+[
+  "sourdough-pete",
+  "dr-meridian",
+  "professor-sahara",
+  ...
+]
+```
+
+### Static File Endpoints
+- `/images/*` - Serves villain images from content/villains/images/
+- `/content/*` - Serves static content files
+
+---
+
+## PLANNED FEATURES (Future Implementation)
 
 ## Authentication
 

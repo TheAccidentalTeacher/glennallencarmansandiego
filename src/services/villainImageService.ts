@@ -21,7 +21,7 @@ export interface ImageMetadata {
 }
 
 export class VillainImageService {
-  private static readonly BASE_IMAGE_PATH = '/content/villains/images';
+  private static readonly BASE_IMAGE_PATH = 'content/villains/images';
   
   /**
    * Villain image directory mapping
@@ -29,13 +29,13 @@ export class VillainImageService {
   private static readonly VILLAIN_DIRECTORIES = {
     'sourdough-pete': '00-sourdough-pete-alaska',
     'dr-meridian': '01-dr-meridian-elena-fossat',
-    'dr-aurora': '02-dr-aurora-magnus-nordstrom',
-    'dr-mirage': '03-dr-mirage-amara-benali',
-    'professor-tectonic': '04-professor-tectonic-jin-wei-ming',
-    'dr-cordillera': '05-dr-cordillera-isabella-mendoza',
+    'professor-sahara': '02-professor-sahara-amira-hassan',
+    'dr-mirage': '03-professor-tectonic-seismic-specialist',
+    'professor-tectonic': '04-dr-altiplano-isabella-santos',
+    'dr-sahel': '05-dr-sahel-kwame-asante',
     'dr-monsoon': '06-dr-monsoon-kiran-patel',
-    'dr-sahel': '07-dr-sahel-kwame-asante',
-    'dr-qanat': '08-dr-qanat-reza-mehrabi',
+    'dr-coral': '07-dr-coral-maya-sari',
+    'dr-qanat': '08-dr-qanat-master-of-disguise',
     'professor-atlas': '09-professor-atlas-viktor-kowalski',
     'dr-pacific': '10-dr-pacific-james-tauranga',
     'dr-watershed': '11-dr-watershed-sarah-blackfoot',
@@ -141,12 +141,12 @@ export class VillainImageService {
     const nameMap: Record<string, string> = {
       'sourdough-pete': 'Sourdough Pete',
       'dr-meridian': 'Dr. Meridian',
-      'dr-aurora': 'Dr. Aurora',
+      'professor-sahara': 'Professor Sahara',
       'dr-mirage': 'Dr. Mirage',
       'professor-tectonic': 'Professor Tectonic',
-      'dr-cordillera': 'Dr. Cordillera',
-      'dr-monsoon': 'Dr. Monsoon',
       'dr-sahel': 'Dr. Sahel',
+      'dr-monsoon': 'Dr. Monsoon',
+      'dr-coral': 'Dr. Coral',
       'dr-qanat': 'Dr. Qanat',
       'professor-atlas': 'Professor Atlas',
       'dr-pacific': 'Dr. Pacific',

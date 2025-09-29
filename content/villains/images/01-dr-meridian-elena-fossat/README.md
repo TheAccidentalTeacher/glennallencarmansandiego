@@ -15,3 +15,5 @@ Upload the 5 generated images for Dr. Elena Fossat here:
 - Navy blue, forest green, and snow white color palette
 - Professional field attire and scientific equipment
 - Dignified portrayal focused on environmental expertise
+
+See also: [Image Manifest](./manifest.md) — inline embeds with structured observation fields for each image.

@@ -1,0 +1,159 @@
+{
+  "id": "dr-qanat-ancient-irrigation-sabotage",
+  "title": "Dr. Qanat's Ancient Irrigation Sabotage",
+  "difficulty": "intermediate",
+  "durationMinutes": 45,
+  "description": "Track Dr. Qanat, master of disguise and ancient engineering expert, across the world's greatest arid regions as he steals monitoring equipment from modern construction projects threatening historical water systems.",
+  "briefing": {
+    "headline": "Ancient water management systems are under threat!",
+    "narrativeHtml": "<p><strong>UNESCO ALERT:</strong> Dr. Qanat, master of disguise and expert in ancient hydraulic engineering, has been stealing monitoring equipment from construction sites across the world's arid regions. He claims modern development is destroying millennia-old water management systems that sustained ancient civilizations.</p><p><strong>Educational Mission:</strong> Track this shape-shifting suspect from broad climate regions to specific historical sites, learning about ancient engineering innovations, arid climate adaptations, and the geography of water scarcity along the way!</p><p><strong>Challenge Level:</strong> Intermediate - requires understanding of climate patterns, ancient civilizations, water resource management, and historical geography.</p>",
+    "assets": {}
+  },
+  "villains": [
+    {
+      "id": "dr-qanat",
+      "name": "Dr. Qanat (Dr. Reza Mehrabi)",
+      "title": "Master of Disguise & Ancient Engineering Specialist",
+      "tags": ["ancient-engineering-expert", "master-of-disguise", "water-systems-specialist"],
+      "description": "Shape-shifting archaeological engineer with PhD from University of Pennsylvania. Expert in ancient hydraulic systems and obsessed with preserving traditional engineering knowledge through equipment theft.",
+      "image": "/images/villains/08-dr-qanat-master-of-disguise/desert-water-systems-archaeologist.jpg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 10,
+      "focus": ["geography", "climate", "arid-regions"],
+      "image": "desert-water-systems-archaeologist.jpg",
+      "clueHtml": "<p><strong>Climate Intelligence Report:</strong> 'Dr. Qanat was spotted in the world's largest hot desert climate zone - a vast region receiving less than 10 inches of rainfall annually, where ancient civilizations developed sophisticated water management systems to survive. His stolen equipment monitors areas where traditional irrigation methods sustained agriculture for thousands of years.'</p><p><strong>Hydrological Evidence:</strong> 'Equipment theft concentrated in regions where underground water channels, called qanats, transported water from highland sources across hundreds of miles of desert terrain. The suspect appears to understand these complex ancient engineering systems perfectly.'</p><p><strong>Research Challenge:</strong> Use your atlas to identify this massive arid climate region and understand how ancient peoples adapted to water scarcity!</p>",
+      "researchPrompts": [
+        "Research 'largest hot desert climate zone world arid regions'",
+        "Investigate 'ancient irrigation systems qanat underground channels'", 
+        "Look up 'Sahara Arabian desert climate less than 10 inches rain'",
+        "Study 'ancient civilizations water management arid adaptations'"
+      ],
+      "expectedProcess": [
+        "Search 'largest desert climate' → Sahara-Arabian desert belt identified",
+        "Research 'qanat systems' → ancient underground irrigation",
+        "Connect 'arid agriculture' → desert farming techniques",
+        "Verify 'ancient adaptations' → traditional water conservation"
+      ],
+      "reveal": { "trait": "Ancient irrigation expert", "note": "Understands traditional water management systems across arid regions" },
+      "answer": { "name": "Sahara-Arabian Desert Belt", "lat": 25.0000, "lng": 20.0000 },
+      "explainHtml": "<p><strong>Climate Zone Confirmed:</strong> The Sahara-Arabian Desert Belt! This massive arid region stretches across North Africa and Southwest Asia, where ancient civilizations like Egypt, Mesopotamia, and Persia developed ingenious water management systems including qanats, aqueducts, and irrigation networks that Dr. Qanat specializes in studying.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 200 }
+    },
+    {
+      "id": "r2",
+      "minutes": 10,
+      "focus": ["ancient-civilizations", "mesopotamia", "atlas-skills"],
+      "image": "educational-expedition-leader.jpg", 
+      "clueHtml": "<p><strong>Archaeological Intelligence Update:</strong> 'Dr. Qanat's operations focus on the region known as the \\\"Cradle of Civilization\\\" - the area between two great rivers where humans first developed writing, cities, and complex irrigation systems. Surveillance shows him coordinating with contacts in the modern country built on this ancient heartland.'</p><p><strong>Historical Pattern Analysis:</strong> 'Stolen equipment traced to areas where ancient Sumerians and Babylonians created the world's first urban water management systems. Dr. Qanat appears to be documenting how modern construction threatens these archaeological sites containing 5,000-year-old hydraulic innovations.'</p><p><strong>Atlas Investigation:</strong> Identify the modern country containing ancient Mesopotamia and understand why this region is crucial for understanding early engineering!</p>",
+      "researchPrompts": [
+        "Research 'Mesopotamia between two rivers Tigris Euphrates'",
+        "Investigate 'Iraq modern country ancient Mesopotamia cradle civilization'",
+        "Look up 'Sumerian Babylonian irrigation systems first cities'",
+        "Study 'archaeological sites ancient hydraulic engineering Iraq'"
+      ],
+      "expectedProcess": [
+        "Search 'Mesopotamia location' → between Tigris and Euphrates rivers",
+        "Research 'modern country' → Iraq contains ancient Mesopotamia",
+        "Connect 'first cities' → Sumerian urban development",
+        "Verify 'irrigation archaeology' → preserved ancient water systems"
+      ],
+      "reveal": { "trait": "Archaeological disguise expert", "note": "Can blend in with different research teams across multiple countries" },
+      "answer": { "name": "Iraq (Ancient Mesopotamia)", "lat": 33.2232, "lng": 43.6793 },
+      "explainHtml": "<p><strong>Historical Region Identified:</strong> Iraq, location of ancient Mesopotamia! This region between the Tigris and Euphrates rivers saw humanity's first cities, writing systems, and sophisticated irrigation networks. Dr. Qanat's expertise in ancient Sumerian and Babylonian water management makes him extremely dangerous in this archaeologically rich area.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r3",
+      "minutes": 12,
+      "focus": ["persian-engineering", "iranian-systems", "unesco-sites"],
+      "image": "historical-site-technical-specialist.jpg",
+      "clueHtml": "<p><strong>Historical Engineering Intelligence:</strong> 'Dr. Qanat has targeted a specific UNESCO World Heritage site in Iran - an ancient hydraulic system still functioning after 1,500 years, demonstrating Persian engineering mastery. His stolen equipment monitors these incredible structures where ancient engineers diverted rivers to create waterfalls, irrigation canals, and urban water systems.'</p><p><strong>Technical Analysis:</strong> 'He's particularly focused on sites where ancient Persian engineers created complex dam systems, water mills, and hydraulic structures that represent the pinnacle of ancient water management technology. Security reports show him documenting techniques that modern engineers still study for sustainable water management.'</p><p><strong>Heritage Research:</strong> Identify this UNESCO World Heritage hydraulic system and understand why Persian engineering was so advanced!</p>",
+      "researchPrompts": [
+        "Research 'Iran UNESCO World Heritage hydraulic system Shushtar'",
+        "Investigate 'ancient Persian engineering water management technology'",
+        "Look up 'Shushtar Historical Hydraulic System 1500 years old'",
+        "Study 'dam systems water mills ancient Iran sustainable technology'"
+      ],
+      "expectedProcess": [
+        "Search 'Iran UNESCO hydraulic' → Shushtar Historical Hydraulic System",
+        "Research 'Persian engineering' → advanced ancient technology",
+        "Connect 'water mills dams' → integrated hydraulic systems",
+        "Verify 'sustainability' → techniques still relevant today"
+      ],
+      "reveal": { "trait": "Persian engineering specialist", "note": "Expert in advanced ancient Persian hydraulic technologies" },
+      "answer": { "name": "Shushtar Historical Hydraulic System", "lat": 32.0453, "lng": 48.8580 },
+      "explainHtml": "<p><strong>Engineering Marvel Confirmed:</strong> The Shushtar Historical Hydraulic System in Iran! This UNESCO World Heritage site represents the masterpiece of ancient Persian engineering - a complex system of dams, canals, bridges, and mills that has supplied water and power for 1,500 years. Dr. Qanat's expertise makes him extremely dangerous here.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 10,
+      "focus": ["coordinates", "specific-location", "qanat-systems"],
+      "image": "academic-engineering-instructor.jpg",
+      "clueHtml": "<p><strong>Final Location Intelligence:</strong> 'Dr. Qanat photographed at coordinates 35°41'N, 51°25'E at a major Middle Eastern capital where ancient qanat systems still supply water to 14 million people. He was installing unauthorized monitoring equipment while declaring: \\\"From this megacity built on ancient water wisdom, my network will document the truth about hydraulic heritage destruction!\\\"'</p><p><strong>Urban Hydrology Context:</strong> 'The location sits on a plateau 3,900 feet above sea level, where mountains provide the water source for extensive underground qanat networks. Dr. Qanat chose this capital where ancient engineering still sustains one of the world's largest cities, making his interference extremely dangerous.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this high-altitude capital sustained by ancient water systems!</p>",
+      "researchPrompts": [
+        "Use coordinates 35°41'N, 51°25'E to find exact location",
+        "Research 'Tehran Iran capital 14 million people plateau 3900 feet'",
+        "Investigate 'Tehran qanat systems ancient water supply megacity'",
+        "Look up 'mountain water source qanat networks urban supply'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Tehran, Iran",
+        "Search 'Middle East capital 14 million' → Tehran identification",
+        "Research 'Tehran elevation' → 3,900 feet plateau location",
+        "Verify 'qanat systems' → ancient water supply to modern city"
+      ],
+      "reveal": { "trait": "MASTER HYDRAULIC SURVEILLANCE COORDINATOR", "note": "FINAL PHASE: Creates unauthorized monitoring networks in cities dependent on ancient water systems!" },
+      "answer": { "name": "Tehran, Iran", "lat": 35.6892, "lng": 51.3890 },
+      "explainHtml": "<p><strong>Capital Location Confirmed:</strong> Tehran, Iran! This massive city of 14 million people sits on a high plateau, sustained by ancient qanat systems that bring mountain water underground across vast distances. Dr. Qanat's interference with the monitoring systems that protect these ancient water networks could endanger millions of people!</p>",
+      "scoring": { "base": 180, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r5",
+      "minutes": 3,
+      "focus": ["advanced-engineering", "global-water-crisis", "disguise-revealed"],
+      "image": "european-historical-cartographer-disguise.jpg",
+      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION & DISGUISE EXPOSED:</strong> 'Dr. Qanat's ultimate plan revealed: He's a master of disguise who infiltrates different academic communities worldwide, stealing monitoring equipment to create unauthorized documentation of ancient water systems he believes modern development is destroying. His shape-shifting abilities allow him to operate across multiple cultural contexts!'</p><p><strong>Master of Disguise Threat:</strong> 'His stolen equipment disrupts legitimate research that protects both ancient heritage sites and modern water security systems. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the delicate balance between preserving archaeological treasures and meeting contemporary water needs for billions of people.'</p><p><strong>Mission Complete:</strong> You've tracked Dr. Qanat from the broad arid climate belt to the specific coordinates of Tehran, learning about ancient civilizations, engineering innovations, water management, and cultural heritage preservation - while uncovering his master of disguise abilities!</p>",
+      "researchPrompts": [
+        "Research 'ancient water management modern applications sustainability'",
+        "Investigate 'heritage preservation vs development balance'",
+        "Look up 'traditional engineering knowledge modern water crisis'",
+        "Study 'cultural heritage protection archaeological ethics'"
+      ],
+      "expectedProcess": [
+        "Research 'ancient techniques' → traditional knowledge still valuable",
+        "Connect 'heritage protection' → balancing old and new",
+        "Understand 'water crisis' → global need for innovative solutions",
+        "Verify 'archaeological ethics' → proper research protects sites"
+      ],
+      "reveal": { "trait": "SYNDICATE MASTER OF DISGUISE", "note": "Shape-shifting ancient engineering extremist who infiltrates academic communities worldwide!" },
+      "answer": { "name": "Global Ancient Water Systems Network", "lat": 35.6892, "lng": 51.3890 },
+      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Dr. Qanat's theft of hydraulic monitoring equipment aimed to create unauthorized surveillance across ancient water systems worldwide! His master of disguise abilities allowed him to infiltrate different cultural and academic contexts. While preserving ancient engineering knowledge is crucial, his illegal methods threaten both heritage sites and modern water security systems that protect billions of people.</p>",
+      "scoring": { "base": 220, "distanceKmFull": 30 }
+    }
+  ],
+  "warrant": {
+    "villainId": "dr-qanat",
+    "victim": "UNESCO World Heritage Water Systems",
+    "item": "Ancient Hydraulic Monitoring Equipment"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Geography: World's largest arid climate zone and ancient irrigation adaptations</li><li>Ancient History: Mesopotamian civilization and early engineering innovations</li><li>Cultural Heritage: Persian engineering mastery and UNESCO World Heritage sites</li><li>Urban Geography: Modern megacities sustained by ancient water systems</li><li>Global Issues: Balancing heritage preservation with contemporary water security needs</li></ul>",
+    "learningExtensions": [
+      "Research qanat irrigation systems and their global distribution",
+      "Explore UNESCO World Heritage hydraulic engineering sites",
+      "Map ancient trade routes and their water management requirements",
+      "Investigate modern applications of traditional water conservation techniques"
+    ],
+    "crossCurricular": [
+      "Ancient History: Mesopotamian and Persian civilizations",
+      "Engineering: Hydraulic systems and water management",
+      "Environmental Science: Arid climate adaptations and sustainability",
+      "Cultural Studies: Heritage preservation and traditional knowledge systems"
+    ]
+  }
+}

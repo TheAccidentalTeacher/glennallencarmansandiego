@@ -1,6 +1,13 @@
 # Login Credentials for Carmen Sandiego App
 
-## Test Accounts
+**📋 STATUS: PLANNED FEATURE**
+*These credentials are for future implementation. The current teacher-led MVP does not require authentication.*
+
+**Current Access:** Direct navigation to http://localhost:5173/ (no login required)
+
+---
+
+## PLANNED Test Accounts (Future Implementation)
 
 ### Teacher Account
 - **Email:** `teacher@school.edu`

@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useGame } from '../../contexts/GameContext';
 import { useNotifications } from '../../contexts/NotificationContext';
 import { ContentService } from '../../api';
-import type { Location, WarrantSubmission } from '../../api';
+import { ClientClueLocationService } from '../../services/clientClueLocationService';
+import type { Location, WarrantSubmission, WarrantResult } from '../../api';
+import type { LocationClueAnalysis } from '../../services/clientClueLocationService';
 import GameTimer from './GameTimer';
+import StudentGameMap from './StudentGameMap';
+import EnhancedWarrantResult from './EnhancedWarrantResult';
 import { 
   Clock, 
   MapPin, 
@@ -11,9 +15,7 @@ import {
   Eye, 
   Users, 
   Trophy, 
-  AlertCircle,
-  CheckCircle,
-  XCircle
+  AlertCircle
 } from 'lucide-react';
 
 interface StudentInterfaceProps {
@@ -34,11 +36,12 @@ const StudentInterface: React.FC<StudentInterfaceProps> = ({ className = '' }) =
   const { addNotification } = useNotifications();
 
   const [locations, setLocations] = useState<Location[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState<string>('');
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
   const [reasoning, setReasoning] = useState<string>('');
   const [joinSessionId, setJoinSessionId] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [lastWarrantResult, setLastWarrantResult] = useState<any>(null);
+  const [lastWarrantResult, setLastWarrantResult] = useState<WarrantResult | null>(null);
+  const [clueAnalysis, setClueAnalysis] = useState<LocationClueAnalysis | null>(null);
 
   // Load available locations
   useEffect(() => {
@@ -71,15 +74,45 @@ const StudentInterface: React.FC<StudentInterfaceProps> = ({ className = '' }) =
     setIsSubmitting(true);
     try {
       const warrant: WarrantSubmission = {
-        locationId: selectedLocation,
+        locationId: selectedLocation.id,
         reasoning: reasoning.trim() || undefined
       };
 
+      // Get clue analysis for enhanced feedback using the new API endpoint
+      let analysis: LocationClueAnalysis | null = null;
+      if (sessionId && gameState?.currentRound && gameState?.clueState?.revealedClues?.length > 0) {
+        try {
+          // Use dummy target location data for the API call - the service will fetch the real data
+          const dummyLocation: Location = {
+            id: 'temp',
+            name: 'temp',
+            country: 'temp',
+            latitude: 0,
+            longitude: 0,
+            region: 'temp',
+            description: 'temp',
+            culturalInfo: 'temp',
+            historicalSignificance: 'temp',
+            isActive: true
+          };
+          
+          analysis = await ClientClueLocationService.analyzeCluesForLocation(
+            sessionId,
+            gameState.currentRound,
+            dummyLocation,
+            gameState.clueState.revealedClues
+          );
+        } catch (error) {
+          console.warn('Failed to get clue analysis:', error);
+        }
+      }
+
       const result = await submitWarrant(warrant);
       setLastWarrantResult(result);
+      setClueAnalysis(analysis);
       
       if (result?.correct) {
-        setSelectedLocation('');
+        setSelectedLocation(null);
         setReasoning('');
         
         addNotification({
@@ -332,18 +365,30 @@ const StudentInterface: React.FC<StudentInterfaceProps> = ({ className = '' }) =
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Where is the criminal hiding?
                   </label>
-                  <select
-                    value={selectedLocation}
-                    onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option value="">Select a location...</option>
-                    {locations.map(location => (
-                      <option key={location.id} value={location.id}>
-                        {location.name}, {location.country}
-                      </option>
-                    ))}
-                  </select>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Click on the world map to select the location where you think the criminal is hiding. 
+                    Use the clues you've gathered to make your best detective guess!
+                  </p>
+                  <StudentGameMap
+                    locations={locations}
+                    selectedLocation={selectedLocation}
+                    onLocationSelect={setSelectedLocation}
+                    sessionId={sessionId || undefined}
+                    roundNumber={gameState?.currentRound || 1}
+                    showAllLocations={true}
+                    disabled={isSubmitting}
+                    className="mb-4"
+                  />
+                  {selectedLocation && (
+                    <div className="mt-2 p-3 bg-green-50 border border-green-200 rounded-lg">
+                      <div className="flex items-center">
+                        <MapPin className="text-green-600 mr-2" size={16} />
+                        <span className="font-medium text-green-800">
+                          Selected: {selectedLocation.name}, {selectedLocation.country}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -379,42 +424,16 @@ const StudentInterface: React.FC<StudentInterfaceProps> = ({ className = '' }) =
 
           {/* Last Warrant Result */}
           {lastWarrantResult && (
-            <div className={`p-6 rounded-lg shadow border ${
-              lastWarrantResult.correct ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
-            }`}>
-              <div className="flex items-center mb-3">
-                {lastWarrantResult.correct ? (
-                  <CheckCircle className="text-green-600 mr-2" size={24} />
-                ) : (
-                  <XCircle className="text-red-600 mr-2" size={24} />
-                )}
-                <h3 className={`text-lg font-semibold ${
-                  lastWarrantResult.correct ? 'text-green-800' : 'text-red-800'
-                }`}>
-                  {lastWarrantResult.correct ? 'Arrest Successful!' : 'Wrong Location'}
-                </h3>
-              </div>
-              
-              <p className={`mb-2 ${
-                lastWarrantResult.correct ? 'text-green-700' : 'text-red-700'
-              }`}>
-                {lastWarrantResult.feedback}
-              </p>
-              
-              <div className={`text-sm ${
-                lastWarrantResult.correct ? 'text-green-600' : 'text-red-600'
-              }`}>
-                Points awarded: {lastWarrantResult.pointsAwarded}
-              </div>
-
-              {!lastWarrantResult.correct && lastWarrantResult.correctLocation && (
-                <div className="mt-3 text-sm text-gray-600">
-                  The correct location was: <strong>
-                    {lastWarrantResult.correctLocation.name}, {lastWarrantResult.correctLocation.country}
-                  </strong>
-                </div>
-              )}
-            </div>
+            <EnhancedWarrantResult
+              result={lastWarrantResult}
+              clueAnalysis={clueAnalysis || undefined}
+              showDetailedFeedback={true}
+              onClose={() => {
+                setLastWarrantResult(null);
+                setClueAnalysis(null);
+              }}
+              className="mb-6"
+            />
           )}
 
           {/* Team Scores */}

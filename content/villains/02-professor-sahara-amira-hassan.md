@@ -5,9 +5,9 @@
 - **Full Name**: Dr. Amira Hassan
 - **Specialty**: Desert Archaeology & Ancient Water Systems Engineering
 - **Region**: North African Desert Systems (Sahara, archaeological sites)
-- **Cultural Inspiration**: Academic excellence in archaeology and ancient engineering
+ - **Cultural Background**: Academic excellence in archaeology and ancient engineering; contributions from North African and Mediterranean archaeological scholarship are acknowledged without stereotyping or essentializing any culture.
 - **Respect Note**: Character represents scholarly expertise in desert archaeology, wearing professional field gear and defined by scientific achievements rather than cultural stereotypes
-- **Difficulty**: 4 (Challenging - requires understanding of desert geography, ancient civilizations, and water systems)
+ - **Difficulty**: 4
 
 ## Educational Framework
 - **Learning Objectives**: 

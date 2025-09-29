@@ -1,0 +1,175 @@
+{
+  "id": "professor-sahara-desert-heist",
+  "title": "The Great Desert Archaeological Heist", 
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "professor-sahara-amira-hassan",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true, 
+      "learningExtensions": true
+    },
+    "theme": "desert"
+  },
+  "briefing": {
+    "headline": "Ancient Desert Artifacts Vanish Across North Africa!",
+    "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Professor Sahara, archaeological specialist of the <em>Sourdough Syndicate's 'Deserts & Oases Division,'</em> has stolen priceless ancient water management artifacts from museums across North Africa!</p><p>Her calling card: a bread-slice stamp and the message: <em>'These ancient engineering marvels belong in the DESERT, not in your climate-controlled cases! My ULTIMATE OASIS PROTOCOL will demonstrate the true power of desert archaeology!'</em></p><p><strong>Intelligence Report:</strong> Professor Sahara believes modern museums inadequately preserve ancient desert technologies. She's stealing artifacts to create an 'authentic desert museum' - but where in the vast Sahara?</p>",
+    "assets": {
+      "image": "/images/cases/professor-sahara/briefing-artifacts.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Professor Sahara (Dr. Amira Hassan)",
+      "tags": ["desert-archaeology", "ancient-water-systems", "heritage-preservationist"],
+      "description": "Brilliant archaeologist with PhD from Cambridge and expertise in ancient North African water management systems. Known for radical preservation methods.",
+      "image": "/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (5).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "physical-features", "climate"],
+      "clueHtml": "<p><strong>Geographic Intelligence:</strong> 'Professor Sahara has fled to the world's largest hot desert - a vast arid region stretching 9 million square kilometers across North Africa. Ancient fossils prove this was once covered by seas, but now experiences extreme temperature swings and minimal rainfall.'</p>",
+      "researchPrompts": [
+        "Use atlas to find world's largest hot desert",
+        "Research 'North Africa 9 million square kilometers desert'",
+        "Investigate 'ancient seas fossils desert formation'", 
+        "Study 'extreme temperature desert climate patterns'"
+      ],
+      "expectedProcess": [
+        "Search 'largest hot desert' → Sahara Desert",
+        "Verify size ~9 million km² across North Africa",
+        "Research desert formation from ancient ocean",
+        "Connect extreme diurnal temperature variation"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Sahara Desert, North Africa", "lat": 23.8069, "lng": 15.0589 },
+      "explainHtml": "<p><strong>Confirmed Location:</strong> The Sahara Desert! At 9 million square kilometers, it's the world's largest hot desert, stretching across North Africa. Your research shows it formed when ancient seas dried up, leaving fossil evidence and creating today's extreme desert climate.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2", 
+      "minutes": 8,
+      "focus": ["culture", "history", "ancient-civilizations"],
+      "clueHtml": "<p><strong>Archaeological Intelligence:</strong> 'Professor Sahara was spotted examining ancient hieroglyphs and consulting maps of historical trade routes. She's particularly interested in a country where the Nile River creates a narrow fertile valley through the desert, and where ancient pharaohs built monuments that still stand today.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Expert in ancient water management systems and hieroglyphic translation'</p>",
+      "researchPrompts": [
+        "Research 'Nile River fertile valley desert country'",
+        "Investigate 'ancient pharaohs monuments still standing'",
+        "Look up 'hieroglyphs ancient Egypt writing system'",
+        "Study 'trans-Saharan trade routes history'"
+      ],
+      "expectedProcess": [
+        "Search 'Nile River valley' → Egypt identification",
+        "Research ancient monuments → pyramids, temples", 
+        "Connect hieroglyphs → ancient Egyptian writing",
+        "Verify trade route connections across Sahara"
+      ],
+      "reveal": { "trait": "Master of ancient water management and hieroglyphic translation", "note": "Specializes in ancient Egyptian irrigation and desert survival techniques" },
+      "answer": { "name": "Egypt", "lat": 26.8206, "lng": 30.8025 },
+      "explainHtml": "<p><strong>Archaeological Analysis Complete:</strong> Egypt! The Nile River creates a narrow green valley through the Sahara Desert, where ancient pharaohs built enduring monuments. Professor Sahara's expertise in hieroglyphs and ancient water systems makes Egypt the perfect target for her archaeological crimes.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["ancient-technology", "water-systems", "oases"],
+      "clueHtml": "<p><strong>Technical Intelligence:</strong> 'Professor Sahara was photographed using ground-penetrating radar near ancient underground water channels called qanats. She's targeting a famous oasis where an ancient oracle once gave prophecies, and where unique salt lakes create distinctive desert ecosystems.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of ground-penetrating radar and ancient irrigation archaeology'</p>",
+      "researchPrompts": [
+        "Research 'Siwa Oasis ancient oracle Egypt'", 
+        "Investigate 'qanat underground water channels desert'",
+        "Look up 'salt lakes oasis ecosystems Egypt'",
+        "Study 'ground-penetrating radar archaeology methods'"
+      ],
+      "expectedProcess": [
+        "Search 'ancient oracle oasis Egypt' → Siwa Oasis",
+        "Research qanat irrigation → ancient Persian water tech",
+        "Connect salt lakes → unique Siwa ecosystem",
+        "Verify archaeological survey methods"
+      ],
+      "reveal": { "trait": "Master of ancient irrigation technology and archaeological survey", "note": "Uses modern radar to locate ancient underground water systems" },
+      "answer": { "name": "Siwa Oasis, Egypt", "lat": 29.2030, "lng": 25.5197 },
+      "explainHtml": "<p><strong>Technical Analysis Confirmed:</strong> Siwa Oasis! This remote Egyptian oasis was home to the famous Oracle of Ammon and features unique salt lakes. Professor Sahara's ground-penetrating radar can detect ancient qanat water channels - perfect for her desert archaeology crimes.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["landmarks", "ancient-monuments", "final-identification"],
+      "clueHtml": "<p><strong>Final Intelligence:</strong> 'Professor Sahara has been tracked to coordinates 22°20'N, 31°38'E near two massive ancient temples that were completely relocated in the 1960s to save them from flooding. She's using her archaeological equipment to examine the precision of ancient engineering versus modern reconstruction techniques.'</p><p><strong>Final Suspect Trait Revealed:</strong> 'ULTIMATE PRESERVATIONIST - Plans to create authentic desert museum using stolen artifacts!'</p>",
+      "researchPrompts": [
+        "Use coordinates 22°20'N, 31°38'E to find exact location",
+        "Research 'ancient temples relocated 1960s flooding Egypt'",
+        "Investigate 'Abu Simbel temple relocation project'", 
+        "Study 'ancient Egyptian precision engineering techniques'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Abu Simbel region",
+        "Search 'temples relocated flooding' → Abu Simbel rescue",
+        "Research 1960s UNESCO project → Aswan Dam flooding",
+        "Connect ancient precision → modern preservation"
+      ],
+      "reveal": { "trait": "MASTER ARCHAEOLOGICAL PRESERVATIONIST", "note": "FINAL PHASE: Creating 'authentic' desert museum with stolen ancient artifacts!" },
+      "answer": { "name": "Abu Simbel, Egypt", "lat": 22.3372, "lng": 31.6258 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> Abu Simbel! These massive temples of Ramesses II were completely dismantled and relocated 65 meters higher in the 1960s to save them from Aswan Dam flooding. Professor Sahara chose this location to demonstrate the 'superiority' of ancient engineering over modern preservation!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5", 
+      "minutes": 8,
+      "focus": ["advanced-research", "international-cooperation", "heritage-protection"],
+      "optional": true,
+      "clueHtml": "<p><strong>Advanced Intelligence (Optional Round):</strong> 'Professor Sahara's ultimate plan involves creating a 'living desert museum' that demonstrates ancient water management techniques across the entire Sahara. She's targeting UNESCO World Heritage sites to prove that artifacts belong in their original desert environments, not in climate-controlled museums.'</p><p><strong>Master Plan Revealed:</strong> 'Modern preservation destroys the desert context! My authentic museum will show how ancients truly mastered the Sahara!'</p>",
+      "researchPrompts": [
+        "Research 'UNESCO World Heritage sites Sahara Desert'",
+        "Investigate 'ancient water management Sahara techniques'",
+        "Study 'archaeological site preservation vs museum storage'",
+        "Look up 'living museum concept heritage interpretation'"
+      ],
+      "expectedProcess": [
+        "Research UNESCO sites → multiple Sahara heritage locations",
+        "Connect water management → qanat, wells, oasis systems",
+        "Understand preservation debate → context vs protection",
+        "Link living museums → interactive heritage interpretation"
+      ],
+      "reveal": { "trait": "DESERT HERITAGE REVOLUTIONARY", "note": "Ultimate goal: Transform entire Sahara into living archaeological museum!" },
+      "answer": { "name": "Sahara Desert UNESCO Sites Network", "lat": 23.8069, "lng": 15.0589 },
+      "explainHtml": "<p><strong>Master Plan Exposed:</strong> Professor Sahara wants to create a vast 'living desert museum' across multiple UNESCO World Heritage sites in the Sahara, demonstrating that ancient artifacts and knowledge belong in their original desert context rather than distant museums!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "warrant": {
+    "villainId": "professor-sahara-amira-hassan", 
+    "expectedCountry": "Egypt",
+    "victim": "North African Archaeological Museums Network",
+    "item": "Ancient water management artifacts and desert survival technologies",
+    "suspect": {
+      "name": "Professor Sahara (Dr. Amira Hassan)",
+      "notes": "Archaeological preservationist, hieroglyphic expert, ancient irrigation specialist, desert heritage revolutionary"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Geography:</strong> Sahara Desert (9 million km², world's largest hot desert, North Africa)</li><li><strong>Physical Features:</strong> Ancient sea fossils, extreme temperature variation, arid climate patterns</li><li><strong>Ancient Civilizations:</strong> Egyptian hieroglyphs, pharaonic monuments, Nile River valley civilization</li><li><strong>Water Systems:</strong> Qanat irrigation, oasis ecosystems, ancient underground channels</li><li><strong>Archaeological Sites:</strong> Siwa Oasis (ancient oracle), Abu Simbel (relocated temples)</li><li><strong>Coordinates:</strong> 22°20'N, 31°38'E precise location skills</li><li><strong>Heritage:</strong> UNESCO preservation, ancient vs modern engineering</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Desert geography, ancient civilizations, basic coordinate skills</p><p><strong>Advanced Challenges:</strong> Archaeological methods, heritage preservation debates, ancient technology analysis, international cooperation complexities</p><p><strong>Sourdough Syndicate Connection:</strong> Professor Sahara's 'Deserts & Oases Division' expertise in archaeological preservation revealed!</p>",
+    "learningExtensions": [
+      "Compare world's major deserts using your atlas (Sahara, Arabian, Gobi, Australian)",
+      "Research the UNESCO Abu Simbel rescue project - how were massive temples moved?",
+      "Study ancient irrigation systems: qanats, shadoofs, and oasis agriculture", 
+      "Map the trans-Saharan trade routes and their impact on civilizations",
+      "Investigate modern archaeological survey techniques (GPR, satellite imagery)",
+      "Explore the debate: Should artifacts stay in origin countries or world museums?",
+      "Use coordinate skills to locate other Egyptian archaeological sites",
+      "Research how ancient Egyptians adapted to desert environments"
+    ],
+    "crossCurricular": [
+      "History: Ancient Egyptian civilization, trans-Saharan trade, UNESCO heritage protection",
+      "Earth Science: Desert formation, climate patterns, ancient sea fossil evidence", 
+      "Engineering: Ancient irrigation systems, modern archaeological survey techniques",
+      "Environmental Science: Oasis ecosystems, desert adaptation, water conservation",
+      "Mathematics: Coordinate systems, archaeological dating methods, measurement precision",
+      "Ethics: Cultural heritage ownership, preservation vs accessibility debates",
+      "Technology: Ground-penetrating radar, satellite archaeology, digital preservation"
+    ]
+  }
+}

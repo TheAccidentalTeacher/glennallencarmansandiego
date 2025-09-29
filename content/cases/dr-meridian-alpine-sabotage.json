@@ -1,0 +1,175 @@
+{
+  "id": "dr-meridian-alpine-sabotage",
+  "title": "The Alpine Weather Station Sabotage",
+  "difficulty": "intermediate",
+  "durationMinutes": 35,
+  "villainId": "dr-meridian-elena-fossat",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "alpine"
+  },
+  "briefing": {
+    "headline": "The Alpine Weather Station Sabotage",
+    "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Critical mountain weather monitoring stations across Europe have been sabotaged by a member of the notorious <em>Sourdough Syndicate!</em> Security footage shows a suspect in professional alpine gear carrying advanced weather manipulation devices.</p><p>The saboteur left behind a taunting message: <em>'My ULTIMATE AVALANCHE PROTOCOL will reshape the mountain geography forever! The Highlands & Faultlines Division sends its regards!'</em> - along with a bread-slice stamp and mysterious coordinates.</p><p><strong>Intelligence Report:</strong> Dr. Meridian, master of the Syndicate's mountain operations, has fled to the collision zone where ancient tectonic forces built Europe's most dramatic peaks. Can you track her down before she triggers catastrophic avalanches?</p>",
+    "assets": {
+      "image": "/images/cases/dr-meridian/briefing-weather-stations.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Meridian (Elena Fossat)",
+      "tags": ["alpine-obsessed", "weather-manipulation", "environmental-extremist"],
+      "description": "Rogue environmental scientist with PhD from ETH Zurich. Known for advanced mountaineering skills and obsession with 'protecting' alpine ecosystems through fear tactics.",
+      "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "physical-features", "map-reading"],
+      "clueHtml": "<p><strong>Geographic Intelligence:</strong> 'The suspect fled to Europe's most dramatic collision zone - a mountain range stretching 1,200 kilometers where the African plate crashed into the Eurasian plate millions of years ago. These fold mountains have limestone peaks over 4,000 meters high and U-shaped valleys carved by ancient glaciers.'</p>",
+      "researchPrompts": [
+        "Use Google Earth to explore European mountain ranges",
+        "Research 'European collision zone mountains 1,200 km'", 
+        "Look up 'fold mountains limestone peaks Europe'",
+        "Investigate 'U-shaped glacial valleys European mountains'"
+      ],
+      "expectedProcess": [
+        "Search 'European mountain ranges' → Alps, Pyrenees, Carpathians",
+        "Research 'tectonic collision Europe' → African-Eurasian plates",
+        "Use map to measure ~1,200km mountain range → Alps",
+        "Verify limestone geology and glacial U-valleys"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "The Alps, Europe", "lat": 46.5197, "lng": 8.0806 },
+      "explainHtml": "<p><strong>Confirmed Location:</strong> The European Alps! This 1,200-kilometer mountain system formed when Africa collided with Europe 30 million years ago. The limestone peaks, glacial valleys, and extreme elevations match perfectly with Dr. Meridian's mountain expertise.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["culture", "language", "settlement", "atlas-skills"],
+      "clueHtml": "<p><strong>Cultural Intelligence:</strong> 'Airport security spotted Dr. Meridian switching between four different languages while coordinating with local contacts. She was reading financial news about 'precision manufacturing' and 'hydroelectric power' in a country where 26 regions called 'cantons' each have strong local autonomy.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master linguist who speaks German, French, Italian, and Romansh fluently'</p>",
+      "researchPrompts": [
+        "Investigate 'European country 4 official languages'",
+        "Research 'cantons political system Europe'",
+        "Look up 'precision manufacturing European Alps'", 
+        "Study 'Romansh language where spoken'"
+      ],
+      "expectedProcess": [
+        "Search '4 official languages Europe' → Switzerland",
+        "Research 'canton system' → Swiss federal structure", 
+        "Connect precision manufacturing → Swiss Alpine economy",
+        "Verify Romansh as unique Swiss language"
+      ],
+      "reveal": { "trait": "Master linguist and cultural infiltrator", "note": "Uses Switzerland's linguistic diversity to coordinate with local mountain communities" },
+      "answer": { "name": "Switzerland", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>Cultural Analysis Complete:</strong> Switzerland! The only European country with German, French, Italian, AND Romansh as official languages. The 26 cantons (like states) give local mountain communities strong autonomy - perfect for Dr. Meridian's infiltration tactics.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["economics", "environment", "technology", "research-skills"],
+      "clueHtml": "<p><strong>Economic Intelligence:</strong> 'Dr. Meridian exchanged money for Swiss francs and complained about the extremely high cost of everything. She was particularly interested in the cogwheel trains and cable cars that access impossibly steep mountain terrain, mentioning how perfect they are for reaching high-altitude weather stations.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Expert in mountain transportation systems and Alpine engineering'</p>",
+      "researchPrompts": [
+        "Research 'Swiss franc currency expensive country'",
+        "Investigate 'cogwheel trains Switzerland mountains'", 
+        "Look up 'cable cars Alpine access systems'",
+        "Study 'high altitude weather monitoring Alps'"
+      ],
+      "expectedProcess": [
+        "Search 'expensive European countries' → Switzerland consistently ranked highest",
+        "Research 'cogwheel railway systems' → Swiss mountain railways",
+        "Connect cable cars → access to extreme elevations", 
+        "Verify weather station locations in Swiss Alps"
+      ],
+      "reveal": { "trait": "Master of mountain infrastructure systems", "note": "Weaponizes knowledge of railways, cable cars, and hydroelectric systems for high-altitude access" },
+      "answer": { "name": "Swiss Alps Region", "lat": 46.5734, "lng": 7.9896 },
+      "explainHtml": "<p><strong>Economic Pattern Confirmed:</strong> Swiss Alpine economy! The combination of expensive Swiss francs, precision manufacturing, and unique mountain transportation (cogwheel trains to access steep terrain) gives Dr. Meridian perfect cover and access to her targets.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["landmarks", "coordinates", "final-identification"],
+      "clueHtml": "<p><strong>Final Intelligence:</strong> 'Dr. Meridian was photographed at coordinates 45°58'N, 7°39'E in front of the world's most famous pyramid-shaped mountain peak. She was holding weather manipulation devices and boasting: \"From 4,478 meters elevation, my Avalanche Protocol will reshape geography across TWO countries!\" The car-free village below has been evacuated.'</p><p><strong>Final Suspect Trait Revealed:</strong> 'ULTIMATE WEATHER MANIPULATOR - Plans to permanently alter topographic maps!'</p>",
+      "researchPrompts": [
+        "Use coordinates 45°58'N, 7°39'E to find exact location",
+        "Research 'pyramid-shaped mountain peak 4,478 meters'", 
+        "Investigate 'car-free Alpine village Switzerland'",
+        "Look up 'mountain border two countries Alps'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Matterhorn region",
+        "Search 'pyramid mountain 4,478m' → Matterhorn identification",
+        "Research 'Zermatt car-free village' → location below Matterhorn", 
+        "Verify Swiss-Italian border location"
+      ],
+      "reveal": { "trait": "MASTER OF GEOGRAPHIC MANIPULATION", "note": "FINAL PHASE: Plans to permanently alter topographic maps through avalanche redistribution!" },
+      "answer": { "name": "Matterhorn, Switzerland/Italy Border", "lat": 45.9763, "lng": 7.6586 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> The Matterhorn! This 4,478-meter pyramid peak on the Swiss-Italian border is perfect for Dr. Meridian's plan. The car-free village of Zermatt sits below (find it on your map where the railway ends). Her avalanches would affect BOTH countries - requiring international response!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["advanced-research", "international-cooperation", "environmental-impact"],
+      "optional": true,
+      "clueHtml": "<p><strong>Advanced Intelligence (Optional Round):</strong> 'Dr. Meridian's weather devices are designed to trigger avalanches that would permanently change the official topographic maps of 8 Alpine countries. She's targeting the heart of the Alpine Convention - the international agreement that protects mountain environments across borders.'</p><p><strong>Master Plan Revealed:</strong> 'Reshape the geography itself! Future students will need NEW atlases showing MY avalanche-created valleys!'</p>",
+      "researchPrompts": [
+        "Research 'Alpine Convention 8 countries environmental protection'",
+        "Investigate 'international mountain cooperation Europe'",
+        "Study 'avalanche impact on topographic mapping'",
+        "Look up 'climate change Alpine glacier retreat'"
+      ],
+      "expectedProcess": [
+        "Research Alpine Convention → France, Switzerland, Italy, Austria, Germany, Slovenia, Liechtenstein, Monaco",
+        "Connect environmental protection → international cooperation",
+        "Understand avalanche geography → permanent landscape changes",
+        "Link climate concerns → Dr. Meridian's twisted environmental goals"
+      ],
+      "reveal": { "trait": "GEOGRAPHIC TERRORIST", "note": "Ultimate goal: Force creation of new topographic maps across Europe!" },
+      "answer": { "name": "Alpine Convention Region (8 Countries)", "lat": 46.5197, "lng": 8.0806 },
+      "explainHtml": "<p><strong>Master Plan Exposed:</strong> Dr. Meridian targeted the Alpine Convention region where 8 countries cooperate to protect mountain environments. Her 'geographic terrorism' would force cartographers to redraw official topographic maps across Europe - the ultimate geographic crime!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "warrant": {
+    "villainId": "dr-meridian-elena-fossat",
+    "expectedCountry": "Switzerland/Italy Border",
+    "victim": "European Alpine Weather Monitoring Network", 
+    "item": "High-altitude meteorological equipment and avalanche safety systems",
+    "suspect": {
+      "name": "Dr. Meridian (Elena Fossat)",
+      "notes": "Master linguist (4 languages), mountain infrastructure expert, weather manipulator, geographic terrorist planning to reshape topographic maps"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Geography:</strong> European Alps (1,200km fold mountains, tectonic collision zone, U-shaped glacial valleys)</li><li><strong>Languages:</strong> Switzerland's 4 official languages (German, French, Italian, Romansh)</li><li><strong>Political System:</strong> Swiss federal system with 26 cantons</li><li><strong>Economy:</strong> Expensive Swiss francs, precision manufacturing, mountain transportation</li><li><strong>Transportation:</strong> Cogwheel trains and cable cars accessing extreme elevations</li><li><strong>Final Location:</strong> Matterhorn (4,478m pyramid peak, Swiss-Italian border, Zermatt village below)</li><li><strong>Coordinates:</strong> 45°58'N, 7°39'E precise location skills</li></ul><h3>Why This Case Works for Intermediate Level:</h3><p><strong>Beginner-Friendly Elements:</strong> Clear geographic progression (continental → national → regional → specific), recognizable landmarks (Alps, Matterhorn), practical research steps</p><p><strong>Intermediate Challenges:</strong> 4-language cultural analysis, economic geography connections, coordinate plotting skills, international border complexities</p><p><strong>Sourdough Syndicate Connection:</strong> Dr. Meridian's 'Highlands & Faultlines Division' expertise and coordination with Quartermaster Pete's network revealed!</p>",
+    "learningExtensions": [
+      "Compare European mountain ranges (Alps vs Pyrenees vs Carpathians) using your atlas",
+      "Research the Alpine Convention - how 8 countries cooperate on mountain protection", 
+      "Practice coordinate skills: Use latitude/longitude to locate other famous Alpine peaks",
+      "Study Swiss linguistic regions using cultural atlas maps",
+      "Investigate cogwheel railway systems worldwide (Switzerland, Japan, USA)",
+      "Map Switzerland's cantonal system and compare to other federal countries",
+      "Use Google Earth to explore U-shaped vs V-shaped valleys in the Alps",
+      "Research real avalanche monitoring and early warning systems"
+    ],
+    "crossCurricular": [
+      "Earth Science: Plate tectonics, mountain formation, glacial processes",
+      "World Languages: European linguistic diversity and geographic distribution", 
+      "Economics: Location factors for precision manufacturing, expensive country analysis",
+      "Environmental Science: Alpine ecosystems, climate change impacts, international conservation",
+      "Mathematics: Coordinate systems, elevation profiles, distance calculations using map scales",
+      "History: Alpine trade routes, formation of federal political systems",
+      "Engineering: Mountain transportation challenges, avalanche protection systems"
+    ]
+  }
+}

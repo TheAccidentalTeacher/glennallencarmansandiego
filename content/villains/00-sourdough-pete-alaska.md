@@ -5,10 +5,11 @@
 - **Full Name**: Peter "Pete" Goldpanner McKinley
 - **Age**: Claims to be "older than the Klondike Gold Rush" (actually around 65)
 - **Specialty**: Master Thief with Encyclopedic Knowledge of World Geography & History
+- **Region**: Alaska and Circumpolar Arctic Systems (Arctic Circle, mountain ranges, coastal systems)
 - **Home Base**: Remote cabin in the Alaskan wilderness, coordinates known only to ACME Detective Agency
 - **Cultural Background**: Classic Alaskan sourdough (old-timer who's survived many harsh winters)
 - **Signature Style**: Folksy wisdom mixed with brilliant criminal planning and geographical expertise
-- **Difficulty**: 5+ (Master Level - The ultimate challenge requiring comprehensive world geography knowledge)
+- **Difficulty**: 5
 
 ## The Legend of Sourdough Pete
 Pete is the stuff of Alaskan legend - a grizzled prospector who struck it rich not in gold, but in stolen treasures from around the world. He's been "sourdoughing" in Alaska since the 1980s, developing an obsession with world geography that makes him the most formidable criminal mastermind on the planet. His cabin is filled with maps, globes, atlases, and stolen artifacts from every corner of the Earth.

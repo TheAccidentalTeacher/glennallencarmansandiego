@@ -1,0 +1,56 @@
+{
+  "id": "sourdough-pete-alaska-demo",
+  "title": "Sourdough Pete’s Alaska Escape",
+  "difficulty": "beginner",
+  "durationMinutes": 25,
+  "villainId": "sourdough-pete",
+  "briefing": {
+    "headline": "A priceless sourdough starter has vanished to the far north!",
+    "narrativeHtml": "<p>Our bread history exhibit was robbed! Rumor says the thief chased glaciers and gold rush tales. Track him across Alaska.</p>",
+    "assets": {}
+  },
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography"],
+      "image": "generated-image-2025-09-26.png",
+      "clueHtml": "<p>He slipped north where glaciers meet the sea, a capital nestled along icy fjords, reachable mostly by boat or plane.</p>",
+      "researchPrompts": ["US capital only by boat or plane", "Alaska fjords capital"],
+      "expectedProcess": ["Identify Juneau as Alaska’s capital with fjords"],
+      "reveal": { "trait": null },
+      "answer": { "name": "Juneau, Alaska, USA", "lat": 58.3019, "lng": -134.4197 },
+      "explainHtml": "<p>Juneau sits along the Gastineau Channel with nearby glaciers; no road access from the rest of Alaska.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["history", "economics"],
+      "image": "generated-image-2025-09-26 (1).png",
+      "clueHtml": "<p>Gold rush echoes follow a narrow-gauge railway over a snowy pass into Yukon territory.</p>",
+      "researchPrompts": ["Gold rush railway pass Alaska", "White Pass narrow gauge"],
+      "expectedProcess": ["Connect to Skagway and White Pass & Yukon Route"],
+      "reveal": { "trait": "Collects vintage mining maps" },
+      "answer": { "name": "Skagway, Alaska, USA", "lat": 59.4583, "lng": -135.3139 },
+      "explainHtml": "<p>Skagway boomed during the Klondike Gold Rush; the WP&YR climbs White Pass toward the Yukon.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 50 }
+    }
+  ],
+  "warrant": {
+    "villainId": "sourdough-pete",
+    "victim": "National Museum of Bread History",
+    "item": "The Ancient Sourdough Starter"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Geography: fjords capital with glacier access (Juneau)</li><li>History/Economics: Klondike era, White Pass railway (Skagway)</li></ul>",
+    "learningExtensions": [
+      "Explore Alaska’s capitals and access routes",
+      "Map the Klondike Gold Rush trail"
+    ],
+    "crossCurricular": [
+      "History: Gold Rush",
+      "Science: Glaciers"
+    ]
+  }
+}

@@ -5,7 +5,7 @@
 - **Full Name**: Dr. Elena Fossat
 - **Specialty**: Alpine Ecosystem Research & Environmental Engineering
 - **Region**: Western European Mountain Systems (Alps, Pyrenees, Carpathians)
-- **Cultural Inspiration**: European academic tradition in environmental science
+- **Cultural Background**: European academic tradition in environmental science
 - **Respect Note**: Character represents professional excellence in environmental research, wearing modern field gear and defined by scientific expertise rather than cultural markers
 - **Difficulty**: 3 (Moderate - requires understanding of mountain ecosystems and European geography)
 

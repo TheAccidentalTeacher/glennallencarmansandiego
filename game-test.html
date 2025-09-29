@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Carmen Sandiego Game - API Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .section {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .section h2 {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 10px;
+        }
+        
+        .villain, .location, .case {
+            background: rgba(0,0,0,0.3);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .location {
+            border-left-color: #4ecdc4;
+        }
+        
+        .case {
+            border-left-color: #ffd700;
+        }
+        
+        .loading {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+        
+        .error {
+            background: rgba(255,0,0,0.2);
+            color: #ffcccc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff0000;
+        }
+        
+        .status {
+            background: rgba(0,255,0,0.2);
+            color: #ccffcc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00ff00;
+            margin-bottom: 30px;
+        }
+        
+        .coordinates {
+            font-family: 'Courier New', monospace;
+            color: #87ceeb;
+        }
+        
+        .button {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        
+        .button:hover {
+            background: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Carmen Sandiego Game</h1>
+            <p>MongoDB Atlas Database Test</p>
+        </div>
+        
+        <div id="status" class="status">
+            <strong>🔄 Loading game data...</strong>
+        </div>
+        
+        <div class="section">
+            <h2>🕵️ Villains</h2>
+            <div id="villains" class="loading">Loading villains...</div>
+        </div>
+        
+        <div class="section">
+            <h2>🌍 Locations</h2>
+            <div id="locations" class="loading">Loading locations...</div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Active Cases</h2>
+            <div id="cases" class="loading">Loading cases...</div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Quick Actions</h2>
+            <button class="button" onclick="refreshData()">🔄 Refresh Data</button>
+            <button class="button" onclick="testRandomLocation()">📍 Test Random Location</button>
+            <button class="button" onclick="window.open('/api/villains', '_blank')">📊 View Raw API</button>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001';
+        
+        async function loadGameData() {
+            try {
+                // Update status
+                document.getElementById('status').innerHTML = '<strong>✅ Connected to Carmen Sandiego API</strong>';
+                
+                // Load villains
+                const villains = await fetch(`${API_BASE}/api/villains`).then(r => r.json());
+                displayVillains(villains);
+                
+                // Load locations
+                const locations = await fetch(`${API_BASE}/api/locations`).then(r => r.json());
+                displayLocations(locations);
+                
+                // Load cases
+                const cases = await fetch(`${API_BASE}/api/cases`).then(r => r.json());
+                displayCases(cases);
+                
+                document.getElementById('status').innerHTML = `
+                    <strong>✅ Game Data Loaded Successfully!</strong><br>
+                    📊 ${villains.length} villains, ${locations.length} locations, ${cases.length} cases loaded from MongoDB Atlas
+                `;
+                
+            } catch (error) {
+                console.error('Error loading game data:', error);
+                document.getElementById('status').innerHTML = `
+                    <div class="error">
+                        <strong>❌ Connection Error</strong><br>
+                        Make sure the API server is running on port 3001<br>
+                        Error: ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        function displayVillains(villains) {
+            const container = document.getElementById('villains');
+            if (!villains || villains.length === 0) {
+                container.innerHTML = '<div class="error">No villains found</div>';
+                return;
+            }
+            
+            container.innerHTML = villains.map(villain => `
+                <div class="villain">
+                    <h3>🦹 ${villain.name}</h3>
+                    <p><strong>Description:</strong> ${villain.description}</p>
+                    <p><strong>Difficulty:</strong> ${villain.difficulty}</p>
+                    <p><strong>Specialties:</strong> ${villain.specialties ? villain.specialties.join(', ') : 'None listed'}</p>
+                </div>
+            `).join('');
+        }
+        
+        function displayLocations(locations) {
+            const container = document.getElementById('locations');
+            if (!locations || locations.length === 0) {
+                container.innerHTML = '<div class="error">No locations found</div>';
+                return;
+            }
+            
+            container.innerHTML = locations.map(location => `
+                <div class="location">
+                    <h3>📍 ${location.name}</h3>
+                    <p><strong>Country:</strong> ${location.country} (${location.continent})</p>
+                    <p><strong>Coordinates:</strong> <span class="coordinates">${location.coordinates ? `${location.coordinates.lat}, ${location.coordinates.lng}` : 'Not available'}</span></p>
+                    <p><strong>Landmarks:</strong> ${location.landmarks ? location.landmarks.join(', ') : 'None listed'}</p>
+                    <p><strong>Sample Clue:</strong> "${location.clues ? location.clues[0] : 'No clues available'}"</p>
+                </div>
+            `).join('');
+        }
+        
+        function displayCases(cases) {
+            const container = document.getElementById('cases');
+            if (!cases || cases.length === 0) {
+                container.innerHTML = '<div class="error">No cases found</div>';
+                return;
+            }
+            
+            container.innerHTML = cases.map(caseItem => `
+                <div class="case">
+                    <h3>🔍 ${caseItem.title}</h3>
+                    <p><strong>Description:</strong> ${caseItem.description}</p>
+                    <p><strong>Suspect:</strong> ${caseItem.villain_id}</p>
+                    <p><strong>Difficulty:</strong> ${caseItem.difficulty}</p>
+                    <p><strong>Status:</strong> ${caseItem.status}</p>
+                    <p><strong>Target Location:</strong> ${caseItem.correct_location}</p>
+                </div>
+            `).join('');
+        }
+        
+        function refreshData() {
+            document.getElementById('villains').innerHTML = '<div class="loading">Loading villains...</div>';
+            document.getElementById('locations').innerHTML = '<div class="loading">Loading locations...</div>';
+            document.getElementById('cases').innerHTML = '<div class="loading">Loading cases...</div>';
+            loadGameData();
+        }
+        
+        async function testRandomLocation() {
+            try {
+                const locations = await fetch(`${API_BASE}/api/locations`).then(r => r.json());
+                if (locations && locations.length > 0) {
+                    const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+                    alert(`🎯 Random Location Selected!\\n\\nLocation: ${randomLocation.name}\\nCountry: ${randomLocation.country}\\nClue: "${randomLocation.clues[0]}"`);
+                }
+            } catch (error) {
+                alert('Error loading locations for test');
+            }
+        }
+        
+        // Load data when page loads
+        loadGameData();
+        
+        // Auto-refresh every 30 seconds
+        setInterval(loadGameData, 30000);
+    </script>
+</body>
+</html>

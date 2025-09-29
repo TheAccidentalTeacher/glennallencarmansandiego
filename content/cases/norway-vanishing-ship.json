@@ -1,0 +1,86 @@
+{
+  "id": "norway-vanishing-ship",
+  "title": "The Vanishing Viking Ship",
+  "difficulty": "beginner",
+  "durationMinutes": 32,
+  "display": {
+    "enable": {
+      "suspectLineup": false,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "default"
+  },
+  "briefing": {
+    "headline": "A priceless Viking longship replica is missing!",
+    "narrativeHtml": "<p>Alert all detectives: a carefully crafted Viking longship replica has gone missing from a maritime museum. Eyewitnesses report a suspect with a fascination for fjords and maritime history. Your team must follow the clues and identify the country where the trail leads.</p>",
+    "assets": { "image": null }
+  },
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography"],
+      "clueHtml": "<p>A long, narrow country on a peninsula with deep coastal inlets carved by glaciers. It borders Sweden and Finland and stretches into the Arctic Circle.</p>",
+      "researchPrompts": ["country with fjords", "borders Sweden and Finland", "Scandinavian peninsula"],
+      "expectedProcess": ["Identify fjords → Norway", "Confirm borders", "Verify peninsula shape"],
+      "reveal": { "trait": null, "note": null },
+      "answer": { "name": "Norway", "lat": 60.4720, "lng": 8.4689 },
+      "explainHtml": "<p>Norway’s coastline features deep fjords formed by glaciers; it borders Sweden and Finland and extends above the Arctic Circle.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["culture", "language"],
+      "clueHtml": "<p>References to Aftenposten, lefse, and a national day celebrated on May 17 appear in the suspect’s notes.</p>",
+      "researchPrompts": ["Aftenposten", "lefse", "May 17 national day"],
+      "expectedProcess": ["Newspaper Aftenposten", "Traditional food lefse", "Constitution Day May 17"],
+      "reveal": { "trait": "traditional knitted sweater", "note": "geometric patterns" },
+      "answer": { "name": "Norway", "lat": 60.4720, "lng": 8.4689 },
+      "explainHtml": "<p>These are Norwegian cultural references: Aftenposten is a major newspaper; lefse is a traditional food; Syttende Mai is Constitution Day.</p>",
+      "scoring": { "base": 80, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r3",
+      "minutes": 8,
+      "focus": ["economics", "environment"],
+      "clueHtml": "<p>Notes mention North Sea offshore platforms, high cost of living, and summer days when the sun barely sets.</p>",
+      "researchPrompts": ["North Sea oil", "high cost of living Norway", "midnight sun"],
+      "expectedProcess": ["Oil platforms in North Sea", "Economic context", "Arctic daylight patterns"],
+      "reveal": { "trait": "Norse mythology fan", "note": null },
+      "answer": { "name": "Norway", "lat": 60.4720, "lng": 8.4689 },
+      "explainHtml": "<p>North Sea petroleum, the cost of living, and the midnight sun are associated with Norway and its northern latitude.</p>",
+      "scoring": { "base": 80, "distanceKmFull": 50 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["history", "flag", "geography"],
+      "clueHtml": "<p>Images include a stave church, a red flag with a blue cross outlined in white, and a capital located on a fjord.</p>",
+      "researchPrompts": ["stave church Norway", "Norwegian flag", "Oslo fjord capital"],
+      "expectedProcess": ["Identify stave churches", "Recognize the Nordic cross flag", "Oslo on a fjord"],
+      "reveal": { "trait": "Collects miniature ships", "note": null },
+      "answer": { "name": "Norway", "lat": 60.4720, "lng": 8.4689 },
+      "explainHtml": "<p>Stave churches, the Nordic cross flag, and Oslofjord confirm Norway.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 50 }
+    }
+  ],
+  "warrant": {
+    "expectedCountry": "Norway",
+    "suspect": { "name": "TBD", "notes": "history enthusiast, sweater, ships" }
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Geography: fjords, borders SE & FI</li><li>Language & culture: Aftenposten, lefse, Syttende Mai</li><li>Economy & environment: North Sea oil, midnight sun</li><li>Flag & landmarks: Nordic cross, stave churches, Oslofjord</li></ul>",
+    "learningExtensions": [
+      "Compare Norway, Sweden, Denmark",
+      "Map Viking exploration routes",
+      "Study Nordic cross flags"
+    ],
+    "crossCurricular": [
+      "History: Viking Age, maritime culture",
+      "Science: fjords, Arctic climate",
+      "Economics: petroleum industry impact"
+    ]
+  }
+}

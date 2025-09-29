@@ -28,10 +28,29 @@ export interface GameState {
   session: GameSession;
   currentRound: number;
   roundState: 'waiting' | 'revealing' | 'guessing' | 'scoring' | 'complete';
+  clueState: ClueRevealState;
   timeRemaining: number;
   canAdvanceRound: boolean;
   gameComplete: boolean;
   teamScores: TeamScore[];
+}
+
+export interface ClueRevealState {
+  sessionId: string;
+  roundNumber: number;
+  totalClues: number;
+  revealedClues: RevealedClue[];
+  nextClueIndex: number;
+  isComplete: boolean;
+  remainingPoints: number;
+}
+
+export interface RevealedClue {
+  id: string;
+  text: string;
+  type: 'geography' | 'culture' | 'historical' | 'economic' | 'visual';
+  round: number;
+  timestamp: Date;
 }
 
 export interface TeamScore {

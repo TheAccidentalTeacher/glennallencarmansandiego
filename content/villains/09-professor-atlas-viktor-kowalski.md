@@ -5,9 +5,9 @@
 - **Full Name**: Prof. Viktor Kowalski
 - **Specialty**: Historical Cartography & Geographic Information Systems
 - **Region**: Eastern European Geographic Systems (river networks, historical boundaries, cultural landscapes)
-- **Cultural Inspiration**: Excellence in geographical research and historical mapping science
+ - **Cultural Background**: Excellence in geographical research and historical mapping science; reflects diverse European scholarly traditions without national or ethnic generalizations.
 - **Respect Note**: Character represents professional expertise in cartographic science and historical geography, wearing modern research attire and defined by scholarly contributions to understanding changing landscapes
-- **Difficulty**: 3 (Moderate - requires understanding of historical geography, map interpretation, and European political geography)
+ - **Difficulty**: 3
 
 ## Educational Framework
 - **Learning Objectives**: 

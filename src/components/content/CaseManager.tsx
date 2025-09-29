@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ContentService } from '../../api';
 import type { Case, CreateCaseRequest } from '../../api';
 import CaseForm from './CaseForm';
+import CasePreview from './CasePreview';
 import { 
   BookOpen, 
   Plus, 
@@ -29,6 +30,7 @@ const CaseManager: React.FC<CaseManagerProps> = ({ className = '', onViewClues }
   const [searchTerm, setSearchTerm] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<number | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [previewCaseId, setPreviewCaseId] = useState<string | null>(null);
 
   // Load cases
   useEffect(() => {
@@ -281,7 +283,7 @@ const CaseManager: React.FC<CaseManagerProps> = ({ className = '', onViewClues }
                 
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => {/* TODO: Preview case */}}
+                    onClick={() => setPreviewCaseId(caseItem.id)}
                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                     title="Preview case"
                   >
@@ -316,6 +318,19 @@ const CaseManager: React.FC<CaseManagerProps> = ({ className = '', onViewClues }
           ))
         )}
       </div>
+
+      {/* Case Preview Modal */}
+      {previewCaseId && (
+        <CasePreview
+          caseId={previewCaseId}
+          onClose={() => setPreviewCaseId(null)}
+          onStartGame={(caseId) => {
+            // TODO: Navigate to game interface with this case
+            console.log('Starting game with case:', caseId);
+            window.open(`/game?case=${caseId}`, '_blank');
+          }}
+        />
+      )}
 
       {/* TODO: Create Case Modal */}
       {showCreateModal && (

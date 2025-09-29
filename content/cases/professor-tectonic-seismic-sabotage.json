@@ -1,0 +1,175 @@
+{
+  "id": "professor-tectonic-seismic-sabotage",
+  "title": "The Ring of Fire Seismic Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "professor-tectonic-jin-wei-ming",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "volcanic"
+  },
+  "briefing": {
+    "headline": "Earthquake Monitoring Systems Sabotaged Across the Pacific!",
+    "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Professor Tectonic, seismic specialist of the <em>Sourdough Syndicate's 'Highlands & Faultlines Division,'</em> has sabotaged critical earthquake monitoring stations across the Pacific Ring of Fire!</p><p>Security footage shows someone in a 'GEOLOGICAL SURVEY' vest tampering with seismographs. The villain's message: <em>'My ULTIMATE SEISMIC PROTOCOL will demonstrate the TRUE power hidden beneath the Earth's crust! Dr. Meridian's mountain data was just the beginning!'</em></p><p><strong>Intelligence Report:</strong> Professor Tectonic believes people don't take earthquake preparedness seriously enough. By triggering artificial seismic events, they plan to 'educate' the world about tectonic forces!</p>",
+    "assets": {
+      "image": "/images/cases/professor-tectonic/briefing-seismographs.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Professor Tectonic (Jin Wei-Ming)",
+      "tags": ["seismology-expert", "earthquake-engineering", "geological-survey"],
+      "description": "Brilliant geological engineer specializing in earthquake prediction and seismic hazard assessment. Known for radical approaches to earthquake preparedness education.",
+      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (15).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "physical-features", "tectonic-activity"],
+      "clueHtml": "<p><strong>Seismic Intelligence:</strong> 'Professor Tectonic has fled to the world's most geologically active region - a horseshoe-shaped zone around the Pacific Ocean where 90% of earthquakes occur and 75% of active volcanoes are located. This area sits where multiple tectonic plates collide and slide past each other.'</p>",
+      "researchPrompts": [
+        "Use atlas to find Pacific Ocean earthquake zone",
+        "Research 'horseshoe-shaped seismic activity Pacific'",
+        "Investigate 'Ring of Fire 90% earthquakes location'",
+        "Study 'tectonic plate boundaries Pacific Ocean'"
+      ],
+      "expectedProcess": [
+        "Search 'Pacific earthquake zone' → Ring of Fire",
+        "Verify horseshoe shape around Pacific Ocean",
+        "Research 90% earthquake statistic → Ring of Fire confirmation",
+        "Connect tectonic plate boundaries → Pacific Plate interactions"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Pacific Ring of Fire", "lat": 0.0000, "lng": -140.0000 },
+      "explainHtml": "<p><strong>Confirmed Location:</strong> The Pacific Ring of Fire! This 40,000-kilometer horseshoe-shaped zone contains 90% of the world's earthquakes and 75% of active volcanoes. Professor Tectonic chose the perfect geological target for seismic sabotage.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["culture", "technology", "urban-planning"],
+      "clueHtml": "<p><strong>Urban Intelligence:</strong> 'Professor Tectonic was spotted examining earthquake-resistant building designs in a densely populated island nation known for advanced seismic engineering. This country has experienced major earthquakes and has developed the world's most sophisticated early warning systems and building codes.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of earthquake-resistant architecture and urban planning'</p>",
+      "researchPrompts": [
+        "Research 'earthquake-resistant building technology world leader'",
+        "Investigate 'island nation advanced seismic engineering'",
+        "Look up 'earthquake early warning systems most advanced'",
+        "Study 'densely populated seismic hazard country'"
+      ],
+      "expectedProcess": [
+        "Search 'earthquake engineering leader' → Japan identification",
+        "Research island nation → Japanese archipelago",
+        "Connect advanced warning systems → Japan's technology",
+        "Verify dense population + seismic risk → Japan confirmed"
+      ],
+      "reveal": { "trait": "Master of earthquake-resistant architecture and seismic engineering", "note": "Specializes in advanced building codes and urban earthquake preparedness" },
+      "answer": { "name": "Japan", "lat": 36.2048, "lng": 138.2529 },
+      "explainHtml": "<p><strong>Urban Analysis Complete:</strong> Japan! This island nation leads the world in earthquake-resistant technology, with sophisticated early warning systems and building codes developed from centuries of seismic experience. Perfect cover for Professor Tectonic's geological crimes.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["geological-features", "volcanic-activity", "plate-tectonics"],
+      "clueHtml": "<p><strong>Geological Intelligence:</strong> 'Professor Tectonic was photographed using seismographs near a famous volcanic mountain that last erupted in 1707. This perfectly symmetrical stratovolcano is considered sacred and sits at the junction of three major tectonic plates, making it an ideal location for seismic monitoring.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Expert in volcanic seismology and tectonic plate junction analysis'</p>",
+      "researchPrompts": [
+        "Research 'volcanic mountain erupted 1707 Japan'",
+        "Investigate 'perfectly symmetrical stratovolcano sacred'",
+        "Look up 'three tectonic plates junction Japan'",
+        "Study 'famous volcanic mountain seismic monitoring'"
+      ],
+      "expectedProcess": [
+        "Search '1707 volcanic eruption Japan' → Mount Fuji",
+        "Research symmetrical stratovolcano → Mount Fuji confirmation",
+        "Connect three plate junction → Philippine, Eurasian, North American",
+        "Verify sacred mountain status → Mount Fuji cultural significance"
+      ],
+      "reveal": { "trait": "Master of volcanic seismology and tectonic analysis", "note": "Uses plate junction points for maximum seismic impact potential" },
+      "answer": { "name": "Mount Fuji, Japan", "lat": 35.3606, "lng": 138.7274 },
+      "explainHtml": "<p><strong>Geological Analysis Confirmed:</strong> Mount Fuji! This perfectly symmetrical stratovolcano last erupted in 1707 and sits where the Philippine, Eurasian, and North American tectonic plates meet. Professor Tectonic chose this triple junction for maximum seismic monitoring potential.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["landmarks", "coordinates", "final-identification"],
+      "clueHtml": "<p><strong>Final Intelligence:</strong> 'Professor Tectonic has been tracked to coordinates 35°21'N, 138°44'E at 3,776 meters elevation. They're installing unauthorized seismic devices at Japan's highest peak, boasting: \"From this sacred summit, my Seismic Protocol will demonstrate the awesome power of tectonic forces across the entire Pacific Rim!\"'</p><p><strong>Final Suspect Trait Revealed:</strong> 'ULTIMATE SEISMIC MANIPULATOR - Plans to trigger educational earthquakes from tectonic hot spots!'</p>",
+      "researchPrompts": [
+        "Use coordinates 35°21'N, 138°44'E to find exact location",
+        "Research 'Japan highest peak 3,776 meters elevation'",
+        "Investigate 'Mount Fuji sacred summit coordinates'",
+        "Study 'seismic monitoring Japan highest mountain'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Mount Fuji summit",
+        "Search 'Japan highest peak 3,776m' → Mount Fuji verification",
+        "Research sacred mountain → cultural significance",
+        "Connect seismic location → perfect monitoring position"
+      ],
+      "reveal": { "trait": "MASTER OF TECTONIC MANIPULATION", "note": "FINAL PHASE: Triggering educational earthquakes from sacred volcanic summit!" },
+      "answer": { "name": "Mount Fuji Summit, Japan", "lat": 35.3606, "lng": 138.7274 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> Mount Fuji Summit! At 3,776 meters, Japan's highest and most sacred mountain sits at a triple tectonic plate junction. Professor Tectonic's seismic devices here could trigger monitoring alerts across the entire Pacific Ring of Fire!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["advanced-research", "international-cooperation", "seismic-networks"],
+      "optional": true,
+      "clueHtml": "<p><strong>Advanced Intelligence (Optional Round):</strong> 'Professor Tectonic's master plan involves triggering coordinated seismic events across the entire Pacific Ring of Fire to demonstrate international earthquake preparedness gaps. They're targeting the Global Seismographic Network to show how unprepared most countries are for major tectonic events.'</p><p><strong>Master Plan Revealed:</strong> 'One coordinated demonstration will teach the world more about earthquake preparedness than decades of boring safety pamphlets!'</p>",
+      "researchPrompts": [
+        "Research 'Global Seismographic Network international monitoring'",
+        "Investigate 'Pacific Ring of Fire international cooperation'",
+        "Study 'earthquake preparedness Pacific Rim countries'",
+        "Look up 'seismic hazard early warning systems worldwide'"
+      ],
+      "expectedProcess": [
+        "Research GSN → international seismic monitoring network",
+        "Connect Ring of Fire → multiple country cooperation needed",
+        "Understand preparedness gaps → varying national capabilities",
+        "Link early warning → international data sharing systems"
+      ],
+      "reveal": { "trait": "GLOBAL SEISMIC EDUCATOR", "note": "Ultimate goal: Force worldwide earthquake preparedness through coordinated tectonic demonstrations!" },
+      "answer": { "name": "Global Seismographic Network, Pacific Rim", "lat": 0.0000, "lng": -140.0000 },
+      "explainHtml": "<p><strong>Master Plan Exposed:</strong> Professor Tectonic wants to trigger coordinated seismic events across multiple Ring of Fire countries to expose earthquake preparedness gaps and force better international cooperation in seismic monitoring!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "warrant": {
+    "villainId": "professor-tectonic-jin-wei-ming",
+    "expectedCountry": "Japan",
+    "victim": "Pacific Ring of Fire Seismic Monitoring Network",
+    "item": "Earthquake monitoring equipment and seismographic data systems",
+    "suspect": {
+      "name": "Professor Tectonic (Jin Wei-Ming)",
+      "notes": "Seismic engineering expert, earthquake architecture specialist, volcanic seismologist, global tectonic educator"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Tectonic Geography:</strong> Pacific Ring of Fire (40,000km horseshoe zone, 90% earthquakes, 75% volcanoes)</li><li><strong>Plate Tectonics:</strong> Tectonic plate boundaries, collision zones, seismic activity patterns</li><li><strong>Earthquake Engineering:</strong> Japan's advanced building codes, early warning systems</li><li><strong>Volcanic Features:</strong> Mount Fuji (3,776m, stratovolcano, triple plate junction)</li><li><strong>Coordinates:</strong> 35°21'N, 138°44'E precise location skills</li><li><strong>International Cooperation:</strong> Global Seismographic Network, Pacific Rim monitoring</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Ring of Fire geography, Japan identification, volcanic landmarks</p><p><strong>Advanced Challenges:</strong> Tectonic plate interactions, seismic engineering concepts, international monitoring systems, coordinate precision</p><p><strong>Sourdough Syndicate Connection:</strong> Professor Tectonic's 'Highlands & Faultlines Division' coordination with Dr. Meridian's alpine data revealed!</p>",
+    "learningExtensions": [
+      "Map the Pacific Ring of Fire and identify all countries affected by seismic activity",
+      "Research how Japan's earthquake building codes differ from other countries",
+      "Study the 2011 Tōhoku earthquake and tsunami to understand seismic hazards",
+      "Compare tectonic plate boundaries worldwide using your atlas",
+      "Investigate how early earthquake warning systems work and save lives",
+      "Use coordinates to locate other famous volcanoes in the Ring of Fire",
+      "Research the Global Seismographic Network and international cooperation",
+      "Explore how Mount Fuji's cultural significance relates to geological features"
+    ],
+    "crossCurricular": [
+      "Earth Science: Plate tectonics, volcanic processes, earthquake formation and measurement",
+      "Engineering: Seismic building design, earthquake-resistant architecture",
+      "Mathematics: Richter scale, coordinate systems, seismic wave calculations",
+      "History: Major earthquakes in history, impact on human settlements and culture",
+      "Technology: Seismographs, early warning systems, GPS monitoring networks",
+      "International Studies: Pacific Rim cooperation, disaster preparedness treaties",
+      "Cultural Studies: Sacred mountains, cultural responses to natural hazards"
+    ]
+  }
+}

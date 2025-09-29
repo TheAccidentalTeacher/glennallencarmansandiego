@@ -1,0 +1,147 @@
+{
+  "id": "dr-altiplano-andean-mining-sabotage",
+  "title": "The Andean Mining Operation Sabotage",
+  "difficulty": "intermediate",
+  "durationMinutes": 40,
+  "villainId": "dr-altiplano-isabella-santos",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "andean"
+  },
+  "briefing": {
+    "headline": "The Andean Mining Operation Sabotage",
+    "narrativeHtml": "<p><strong>Emergency Alert for Route Runners!</strong> High-altitude environmental monitoring stations across South America's spine have been systematically sabotaged by a Sourdough Syndicate operative! Surveillance shows a figure in advanced mountaineering gear stealing glacial monitoring equipment at extreme elevations.</p><p>The saboteur left behind this chilling message: <em>'My ALTITUDE PROTOCOL will document the truth they don't want revealed! The Continental Divide Division demands justice for the mountains!'</em> - accompanied by bread crumbs and coordinates at 4,000+ meters elevation.</p><p><strong>Intelligence Analysis:</strong> Dr. Altiplano, the Syndicate's high-altitude specialist, has escaped to the world's longest mountain range where ancient geological forces continue reshaping the landscape. Can you track her through the thin air before she triggers environmental chaos across two continents?</p>",
+    "assets": {
+      "image": "/images/cases/dr-altiplano/briefing-monitoring-stations.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Altiplano (Isabella Santos)",
+      "tags": ["high-altitude-expert", "environmental-extremist", "glacial-specialist"],
+      "description": "Rogue environmental geologist with PhD from Universidad Nacional de Colombia. Expert in high-altitude research and obsessed with documenting climate change evidence through illegal monitoring equipment theft.",
+      "image": "/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "physical-features", "mountain-formation"],
+      "image": "01-andes-mountains-gps-field-research.jpg",
+      "clueHtml": "<p><strong>Geographic Intelligence Report:</strong> 'Dr. Altiplano was spotted at high elevation in the world's longest continental mountain range - a massive chain stretching 7,000 kilometers where oceanic plates dive beneath continental margins. Seismic data shows she's targeting regions with active volcanism and recent geological uplift.'</p><p><strong>Field Evidence:</strong> 'Equipment theft occurred in areas with extreme altitude effects - thin atmosphere, intense UV radiation, and dramatic temperature swings between day and night. The suspect appears adapted to working above 3,500 meters elevation.'</p><p><strong>Research Task:</strong> Use your atlas to identify this massive mountain system and understand how plate tectonics created these towering peaks!</p>",
+      "researchPrompts": [
+        "Research 'longest mountain range world 7000 kilometers'",
+        "Investigate 'oceanic plate subduction South America'",
+        "Look up 'Ring of Fire volcanic activity mountains'",
+        "Study 'high altitude effects thin air UV radiation'"
+      ],
+      "expectedProcess": [
+        "Search 'longest mountain range' → Andes Mountains identified",
+        "Research 'plate tectonics' → subduction creates mountains",
+        "Connect 'altitude effects' → thin air at high elevation",
+        "Verify 'volcanic activity' → Ring of Fire connection"
+      ],
+      "reveal": { "trait": "High-altitude geological expert", "note": "Specializes in extreme elevation environments" },
+      "answer": { "name": "Andes Mountains", "lat": -13.1631, "lng": -72.5450 },
+      "explainHtml": "<p><strong>Geographic Target Confirmed:</strong> The Andes Mountains! The world's longest continental mountain range, stretching 7,000 km along South America's western coast. Dr. Altiplano exploits the extreme altitude and geological activity where the oceanic Nazca Plate subducts beneath the South American Plate, creating perfect conditions for her high-altitude environmental monitoring theft.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 10,
+      "focus": ["geography", "altiplano", "physical-features"],
+      "image": "02-mining-equipment-analysis.jpg",
+      "clueHtml": "<p><strong>Regional Intelligence Update:</strong> 'Dr. Altiplano has focused operations on the world's second-highest plateau - a massive high-altitude plain between two mountain ranges where ancient lakes dried into salt flats. Mining reports show her targeting areas with extensive mineral extraction at extreme elevations.'</p><p><strong>Mining Operation Analysis:</strong> 'She's stealing data from regions rich in lithium, copper, and silver deposits - materials crucial for modern technology. The plateau sits at average elevations above 3,500 meters, creating unique environmental conditions that traditional mining rarely encounters.'</p><p><strong>Geographic Challenge:</strong> Identify this high-altitude plateau that's become the center of modern mining operations!</p>",
+      "researchPrompts": [
+        "Research 'second highest plateau world South America'",
+        "Investigate 'Altiplano plateau Bolivia Peru mining'",
+        "Look up 'lithium mining high altitude salt flats'",
+        "Study 'Andes plateau between mountain ranges'"
+      ],
+      "expectedProcess": [
+        "Search 'highest plateau' → Altiplano identified",
+        "Research 'Bolivia Peru' → location confirmed",
+        "Connect 'mining operations' → lithium and copper",
+        "Verify 'salt flats' → dried ancient lakes"
+      ],
+      "reveal": { "trait": "Altiplano mining specialist", "note": "Expert in high-altitude resource extraction impacts" },
+      "answer": { "name": "Altiplano Plateau", "lat": -16.2902, "lng": -63.5887 },
+      "explainHtml": "<p><strong>Regional Focus Identified:</strong> The Altiplano Plateau! The world's second-highest plateau, stretching across Bolivia and Peru at average elevations above 3,500 meters. Dr. Altiplano targets this region because it's rich in lithium, copper, and silver deposits crucial for modern technology, while also being environmentally sensitive due to extreme altitude conditions.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3",
+      "minutes": 10,
+      "focus": ["economics", "mining", "resources", "environmental-impact"],
+      "image": "03-ancient-mining-heritage.jpg",
+      "clueHtml": "<p><strong>Economic Intelligence Analysis:</strong> 'Dr. Altiplano has been targeting regions with extensive mineral extraction operations - areas rich in copper, silver, tin, and lithium deposits. Her stolen monitoring equipment focuses on measuring environmental impacts of high-altitude mining activities.'</p><p><strong>Environmental Data Theft:</strong> 'She's particularly interested in the world's largest high-altitude plateau region, where mining operations extract materials crucial for modern technology. Security reports show she's documenting water table changes and glacial retreat affecting mining communities.'</p><p><strong>Research Mission:</strong> Identify this high-altitude plateau and understand the environmental challenges Dr. Altiplano is investigating!</p>",
+      "researchPrompts": [
+        "Research 'Bolivia mining copper tin silver lithium'",
+        "Investigate 'high altitude mining environmental impact'",
+        "Look up 'glacial retreat Andes mining water supply'",
+        "Study 'lithium extraction salt flats environmental cost'"
+      ],
+      "expectedProcess": [
+        "Search 'Bolivia mining' → major mineral producer",
+        "Research 'environmental impact' → water and glacial concerns",
+        "Connect 'lithium extraction' → modern technology demand",
+        "Verify 'altitude challenges' → unique mining conditions"
+      ],
+      "reveal": { "trait": "Environmental mining advocate", "note": "Campaigns against unsustainable high-altitude extraction" },
+      "answer": { "name": "Bolivian Mining Region", "lat": -17.7834, "lng": -67.0000 },
+      "explainHtml": "<p><strong>Economic Focus Confirmed:</strong> Bolivia's High-Altitude Mining Region! Bolivia is one of the world's largest producers of lithium, silver, tin, and copper, with most extraction occurring at extreme elevations. Dr. Altiplano steals monitoring equipment to document environmental impacts including glacial retreat, water contamination, and ecosystem disruption affecting indigenous communities.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["history", "culture", "ancient-civilizations"],
+      "image": "04-historical-mining-documentation.jpg",
+      "clueHtml": "<p><strong>Historical Intelligence Report:</strong> 'Dr. Altiplano's operations center on a specific archaeological site - ancient ruins representing the height of pre-Columbian civilization in the Andes. Intelligence indicates she's using the site's remote location and symbolic significance for her final environmental monitoring base.'</p><p><strong>Cultural Analysis:</strong> 'The location sits at 2,430 meters elevation, built by master engineers who created sophisticated agricultural terraces and astronomical observatories. Dr. Altiplano appears drawn to the site's representation of sustainable mountain civilization - contrasting with modern destructive mining practices.'</p><p><strong>Archaeological Mission:</strong> Identify this famous ancient site and understand why Dr. Altiplano chose it for her operations!</p>",
+      "researchPrompts": [
+        "Research 'ancient Inca ruins Peru mountains famous'",
+        "Investigate 'Machu Picchu archaeological site elevation'",
+        "Look up 'Inca agricultural terraces sustainable farming'",
+        "Study 'pre-Columbian mountain civilization engineering'"
+      ],
+      "expectedProcess": [
+        "Search 'ancient ruins Peru' → Machu Picchu identified",
+        "Research 'Inca civilization' → mountain engineering",
+        "Connect 'sustainable practices' → terraced agriculture",
+        "Verify 'elevation location' → 2,430 meters"
+      ],
+      "reveal": { "trait": "Ancient civilization admirer", "note": "Contrasts Inca sustainability with modern mining destruction" },
+      "answer": { "name": "Machu Picchu", "lat": -13.1631, "lng": -72.5450 },
+      "explainHtml": "<p><strong>Historical Connection Revealed:</strong> Machu Picchu! Dr. Altiplano chose this iconic 15th-century Inca citadel as her base because it represents sustainable mountain civilization - sophisticated agricultural terraces, water management, and astronomical knowledge that worked in harmony with the environment, contrasting sharply with destructive modern mining practices she's documenting.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r5",
+      "minutes": 4,
+      "focus": ["advanced-environmental-science", "global-impact", "ethics"],
+      "image": "05-environmental-education-synthesis.jpg",
+      "clueHtml": "<p><strong>FINAL SYNDICATE INTELLIGENCE:</strong> 'Dr. Altiplano's ultimate plan revealed: She's creating an unauthorized comprehensive climate database by stealing monitoring equipment from research stations across the entire Andes range. Her goal is to document glacial retreat and mining impacts that she believes governments are suppressing.'</p><p><strong>Environmental Threat Assessment:</strong> 'Her stolen data could destabilize international environmental agreements and mining contracts across seven countries. The Sourdough Syndicate's \"truth through chaos\" approach threatens legitimate scientific research and international cooperation.'</p><p><strong>Mission Complete:</strong> You've tracked Dr. Altiplano from the broad Andes range to the specific coordinates of Machu Picchu, learning about mountain formation, political geography, mining impacts, and ancient civilizations along the way!</p>",
+      "researchPrompts": [
+        "Research 'Andes glacial retreat climate change evidence'",
+        "Investigate 'South America environmental monitoring international'",
+        "Look up 'mining industry environmental impact regulation'",
+        "Study 'sustainable development mountains indigenous rights'"
+      ],
+      "expectedProcess": [
+        "Search 'glacial retreat' → climate change documentation",
+        "Research 'environmental agreements' → international cooperation",
+        "Connect 'mining regulation' → government oversight",
+        "Verify 'sustainable development' → balancing progress and protection"
+      ],
+      "reveal": { "trait": "Environmental data extremist", "note": "Believes unauthorized research justifies equipment theft" },
+      "answer": { "name": "Machu Picchu Research Station", "lat": -13.1631, "lng": -72.5450 },
+      "explainHtml": "<p><strong>Mission Accomplished!</strong> Dr. Altiplano captured at Machu Picchu! Her environmental extremism led her to establish an unauthorized climate monitoring station at this sacred site, stealing equipment to document glacial retreat and mining impacts across the Andes. While her environmental concerns are valid, her methods threaten legitimate scientific cooperation and international environmental agreements.</p>",
+      "scoring": { "base": 150, "distanceKmFull": 50 }
+    }
+  ]
+}

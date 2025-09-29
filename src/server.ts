@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -11,7 +12,9 @@ import { testConnection } from './services/database';
 import authRoutes from './api/routes/auth';
 import gameRoutes from './api/routes/game';
 import contentRoutes from './api/routes/content';
+import contentFsRoutes from './api/routes/contentFs';
 import imageRoutes from './api/routes/images';
+import locationRoutes from './api/routes/locations';
 import { errorHandler, notFound } from './api/middleware/errorHandler';
 import { setupWebSocket } from './api/websocket/gameSocket';
 
@@ -54,7 +57,7 @@ app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
     ? process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : true
-    : ['http://localhost:5173', 'http://localhost:3000'],
+    : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200,
 };
@@ -102,7 +105,7 @@ app.get('/health', async (_req, res) => {
       database: dbConnected ? 'connected' : 'disconnected',
       environment: process.env.NODE_ENV || 'development',
     });
-  } catch (error) {
+  } catch {
     res.status(200).json({
       status: 'ok',
       timestamp: new Date().toISOString(),
@@ -115,8 +118,22 @@ app.get('/health', async (_req, res) => {
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
-app.use('/api/content', contentRoutes);
+// Allow switching to filesystem-backed content endpoints for Teacher-led MVP
+const useFsContent = String(process.env.USE_FS_CONTENT || '').toLowerCase() === 'true';
+if (useFsContent) {
+  console.log('📚 Using filesystem-backed content routes (USE_FS_CONTENT=true)');
+  app.use('/api/content', contentFsRoutes);
+} else {
+  app.use('/api/content', contentRoutes);
+}
+// Forward /api/cases to /api/content/cases for frontend compatibility
+app.use('/api/cases', (req, res, next) => {
+  req.url = req.url.replace('/api/cases', '/api/content/cases');
+  next();
+}, useFsContent ? contentFsRoutes : contentRoutes);
+
 app.use('/api/images', imageRoutes);
+app.use('/api/locations', locationRoutes);
 
 // Serve React app for all non-API routes (catch-all)
 app.get(/^(?!\/api|\/images).*$/, (_req, res) => {

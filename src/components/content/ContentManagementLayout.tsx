@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
+import type { LucideIcon } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import CaseManager from './CaseManager';
 import ClueManager from './ClueManager';
 import ContentDashboard from './ContentDashboard';
+import VillainManagement from './VillainManagement';
+import LocationManagement from './LocationManagement';
 import { 
   BookOpen, 
   FileText, 
   Users, 
   Globe,
   ArrowLeft,
-  Home,
-  Sparkles
+  Home
 } from 'lucide-react';
 
 interface ContentManagementLayoutProps {
@@ -87,37 +89,26 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
         );
       
       case 'locations':
-        return (
-          <div className="text-center py-16 bg-white rounded-2xl shadow-xl">
-            <Globe className="mx-auto text-gray-400 mb-6" size={64} />
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Location Management</h3>
-            <p className="text-gray-600 mb-6">Create and manage global destinations for your mysteries.</p>
-            <div className="inline-flex items-center space-x-2 text-amber-600">
-              <Sparkles size={16} />
-              <span className="text-sm font-medium">Coming Soon</span>
-            </div>
-          </div>
-        );
+        return <LocationManagement />;
       
       case 'villains':
-        return (
-          <div className="text-center py-16 bg-white rounded-2xl shadow-xl">
-            <Users className="mx-auto text-gray-400 mb-6" size={64} />
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Villain Management</h3>
-            <p className="text-gray-600 mb-6">Design memorable characters for your educational adventures.</p>
-            <div className="inline-flex items-center space-x-2 text-amber-600">
-              <Sparkles size={16} />
-              <span className="text-sm font-medium">Coming Soon</span>
-            </div>
-          </div>
-        );
+        return <VillainManagement />;
       
       default:
         return <ContentDashboard />;
     }
   };
 
-  const TabButton = ({ icon: Icon, label, badge, isActive, onClick, isDisabled }: any) => (
+  interface TabButtonProps {
+    icon: LucideIcon;
+    label: string;
+    badge?: number | string | null;
+    isActive: boolean;
+    onClick: () => void;
+    isDisabled?: boolean;
+  }
+
+  const TabButton = ({ icon: Icon, label, badge, isActive, onClick, isDisabled }: TabButtonProps) => (
     <button
       onClick={onClick}
       disabled={isDisabled}
@@ -177,7 +168,6 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
         <div className="p-6">
           <div className="flex flex-wrap gap-3">
             <TabButton
-              id="dashboard"
               icon={Home}
               label="Dashboard"
               isActive={currentView === 'dashboard'}
@@ -185,7 +175,6 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
             />
             
             <TabButton
-              id="cases"
               icon={BookOpen}
               label="Cases"
               isActive={currentView === 'cases'}
@@ -193,7 +182,6 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
             />
             
             <TabButton
-              id="clues"
               icon={FileText}
               label="Clues"
               badge={clueViewState ? clueViewState.caseName : null}
@@ -203,7 +191,6 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
             />
             
             <TabButton
-              id="locations"
               icon={Globe}
               label="Locations"
               isActive={currentView === 'locations'}
@@ -211,7 +198,6 @@ const ContentManagementLayout: React.FC<ContentManagementLayoutProps> = ({ class
             />
             
             <TabButton
-              id="villains"
               icon={Users}
               label="Villains"
               isActive={currentView === 'villains'}

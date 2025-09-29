@@ -5,9 +5,9 @@
 - **Full Name**: Dr. Reza Mehrabi
 - **Specialty**: Ancient Engineering Systems & Water Management Archaeology
 - **Region**: Middle Eastern Arid Engineering Systems (ancient irrigation, historical architecture)
-- **Cultural Inspiration**: Excellence in engineering archaeology and ancient technology research
+ - **Cultural Background**: Excellence in engineering archaeology and ancient technology research; acknowledges the long history of hydraulic innovation across West and Central Asia without implying monolithic cultures.
 - **Respect Note**: Character represents professional expertise in ancient engineering systems, wearing modern archaeological gear and defined by scholarly achievements in historical technology
-- **Difficulty**: 4 (Challenging - requires understanding of ancient engineering, arid climate adaptation, and complex historical geography)
+ - **Difficulty**: 4
 
 ## Educational Framework
 - **Learning Objectives**: 

@@ -1,6 +1,7 @@
 // Simple database connection test
 // Run this after setting up DATABASE_URL in Railway
 
+require('dotenv').config();
 const { Pool } = require('pg');
 
 const pool = new Pool({

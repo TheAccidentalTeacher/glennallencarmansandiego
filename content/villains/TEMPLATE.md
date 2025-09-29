@@ -5,7 +5,7 @@
 - **Full Name**: [Culturally appropriate name without stereotyping]
 - **Specialty**: [Professional field of expertise]
 - **Region**: [Geographic area of professional focus]
-- **Cultural Inspiration**: [Professional tradition, academic background]
+- **Cultural Background**: [Professional tradition, academic background]
 - **Respect Note**: [How character avoids stereotypes and shows dignity]
 - **Difficulty**: [1-5 scale based on geographic complexity]
 

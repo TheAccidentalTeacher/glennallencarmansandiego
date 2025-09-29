@@ -8,10 +8,20 @@ This directory contains comprehensive documentation for the "Where in the World 
 
 ### Primary Documents
 1. **[Master Specification](../revised_master_prompt.md)** - Complete project requirements
-2. **[Implementation Plan](./implementation-plan.md)** - Phase-by-phase development roadmap  
+2. **[Implementation Plan](./implementation-plan.md)** - Teacher‑led MVP plus roadmap  
+	- Direct links: [Teacher‑Led MVP Plan](./implementation-plan.md#teacher-led-mvp-plan-sept-26-2025) • [Case Design Specification](./implementation-plan.md#case-design-specification-teacher-led-mode)
 3. **[Technical Architecture](./technical-architecture.md)** - System design and technical specifications
 4. **[Educational Design](./educational-design.md)** - Pedagogical framework and classroom integration
 5. **[Content Creation Guide](./content-creation-guide.md)** - Guidelines for creating culturally sensitive content
+6. **[Development Progress](./development-progress.md)** - Current implementation status and session progress
+7. **[Teacher Runbook](./teacher-runbook.md)** - Day‑of operations for classroom use
+8. **[Case Catalog](./case-catalog.md)** - Index of the 12 weekly cases plus finale
+9. **[Lore Bible](./lore-bible.md)** - Series backstory and character dossiers (scaffold)
+	- Dossiers: [Tracker](./dossiers/README.md) • [Sourdough Pete (Draft v1)](./dossiers/sourdough-pete.md) • [Dr. Meridian (Draft v1)](./dossiers/dr-meridian-elena-fossat.md) • [Professor Sahara (Draft v1)](./dossiers/professor-sahara-amira-hassan.md)
+10. **[Cultural Review Checklist](./cultural-review-checklist.md)** - Review and sign‑off guide
+11. **Organizations** — [Index](./organizations/README.md) • [Sourdough Syndicate (Draft v1)](./organizations/sourdough-syndicate.md)
+12. **Brand** — [Differentiation](./brand/Differentiation.md) • [Icon Brief](./brand/icon-brief.md) • [Audio Brief](./brand/audio-brief.md)
+13. **UX/Press** — [Master Route Board](./ux/master-route-board.md) • [Press Kit (stub)](../docs/press/press-kit.md)
 
 ## 🎯 Documentation by Audience
 
@@ -21,6 +31,7 @@ This directory contains comprehensive documentation for the "Where in the World 
 | **[Master Specification](../revised_master_prompt.md)** | Data Models, API Design, Technical Requirements | Complete product specification |
 | **[Implementation Plan](./implementation-plan.md)** | All 12 phases with deliverables and acceptance criteria | Development roadmap |
 | **[Technical Architecture](./technical-architecture.md)** | System design, database schema, API specifications | Technical implementation guide |
+| **[Development Progress](./development-progress.md)** | Current status, completed features, technical insights | Live project tracking |
 
 #### Key Technical Sections
 - **Data Models**: [Master Spec - Section 6](../revised_master_prompt.md#6-data-model-core-entities)
@@ -34,6 +45,8 @@ This directory contains comprehensive documentation for the "Where in the World 
 | **[Educational Design](./educational-design.md)** | Learning objectives, classroom integration, assessment | Complete educational framework |
 | **[Content Creation Guide](./content-creation-guide.md)** | Cultural sensitivity, content templates | Content creation guidelines |
 | **[Master Specification](../revised_master_prompt.md)** | Game flow, pedagogical foundations | Product understanding |
+| **[Teacher Runbook](./teacher-runbook.md)** | Health checks, classroom flow, controls | Operational guide |
+| **[Case Catalog](./case-catalog.md)** | Case lineup and status | Planning overview |
 
 #### Key Educational Sections
 - **Learning Objectives**: [Educational Design - Learning Objectives](./educational-design.md#learning-objectives)
@@ -46,6 +59,8 @@ This directory contains comprehensive documentation for the "Where in the World 
 |----------|----------|---------|
 | **[Content Creation Guide](./content-creation-guide.md)** | Character creation, cultural guidelines, review process | Complete content creation framework |
 | **[Educational Design](./educational-design.md)** | Cultural sensitivity framework | Educational context |
+| **[Cultural Review Checklist](./cultural-review-checklist.md)** | Approval criteria, sensitive content review | Review and sign‑off |
+| **[Lore Bible](./lore-bible.md)** | Series continuity, character dossiers | Narrative consistency |
 
 #### Key Content Creation Sections
 - **Cultural Guidelines**: [Content Guide - Cultural Sensitivity](./content-creation-guide.md#cultural-sensitivity-guidelines)
@@ -91,6 +106,7 @@ This directory contains comprehensive documentation for the "Where in the World 
 - **Representation Guidelines**: [Master Spec - Section 5](../revised_master_prompt.md#5-cultural-representation--respect-guidelines)
 - **Content Review Process**: [Content Guide - Review Process](./content-creation-guide.md#content-review-process)
 - **Cultural Framework**: [Educational Design - Cultural Framework](./educational-design.md#cultural-sensitivity-framework)
+- **Review Checklist**: [Cultural Review Checklist](./cultural-review-checklist.md)
 
 ### Security & Safety
 - **Security Requirements**: [Master Spec - Section 13](../revised_master_prompt.md#13-security-error-handling-and-content-safety)

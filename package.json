@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "vite",
     "dev:api": "tsx watch src/server.ts",
+    "dev:api:test": "node test-server.mjs",
+    "dev:both": "powershell -ExecutionPolicy Bypass -File start-dev.ps1",
+    "dev:simple": "powershell -ExecutionPolicy Bypass -File start-simple.ps1",
     "build": "npm run build:frontend && npm run build:server",
     "build:frontend": "vite build --config vite.config.production.mjs",
     "build:server": "tsc --project tsconfig.server.json",
@@ -13,6 +16,7 @@
     "start:original": "node dist/server.js",
     "start:test": "node server-test.js",
     "db:test": "node test-db-connection.js",
+    "lint:banned": "node scripts/check-banned-terms.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -44,6 +48,7 @@
     "jsonwebtoken": "^9.0.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.544.0",
+    "mongodb": "^6.20.0",
     "morgan": "^1.10.1",
     "pg": "^8.16.3",
     "react": "^19.1.1",

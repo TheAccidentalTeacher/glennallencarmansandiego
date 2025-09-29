@@ -1,0 +1,147 @@
+{
+  "id": "dr-monsoon-weather-station-sabotage",
+  "title": "The Monsoon Prediction System Sabotage",
+  "difficulty": "advanced",
+  "durationMinutes": 42,
+  "villainId": "dr-monsoon-kiran-patel",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "monsoon"
+  },
+  "briefing": {
+    "headline": "The Monsoon Prediction System Sabotage",
+    "narrativeHtml": "<p><strong>Critical Weather Alert for Route Runners!</strong> Monsoon prediction stations across South Asia have been systematically sabotaged, threatening the lives of millions who depend on seasonal rainfall forecasts! Advanced meteorological equipment worth billions has been stolen by a Sourdough Syndicate operative.</p><p>The saboteur left this ominous warning: <em>'My ATMOSPHERIC PROTOCOL will expose the climate truth they hide from billions! The Seasonal Winds Division controls what governments fear to reveal!'</em> - along with bread crumbs and coordinates from multiple weather balloon launch sites.</p><p><strong>Climate Crisis Alert:</strong> Dr. Monsoon, master of the Syndicate's atmospheric operations, has vanished into the world's most complex seasonal weather system. Can you track her through the monsoon patterns before she disrupts critical weather forecasting that protects over a billion people?</p>",
+    "assets": {
+      "image": "/images/cases/dr-monsoon/briefing-weather-stations.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Monsoon (Kiran Patel)",
+      "tags": ["atmospheric-scientist", "monsoon-expert", "weather-extremist"],
+      "description": "Rogue meteorologist specializing in South Asian monsoon systems. Expert in weather prediction technology, now stealing atmospheric monitoring equipment to create unauthorized climate surveillance networks.",
+      "image": "/images/villains/06-dr-monsoon-kiran-patel/generated-image-2025-09-25 (25).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 10,
+      "focus": ["geography", "climate-systems", "monsoon-patterns"],
+      "image": "meteorological-field-station.jpg",
+      "clueHtml": "<p><strong>Atmospheric Intelligence:</strong> 'Dr. Monsoon was detected in the world's most massive seasonal wind system - a climate pattern affecting over 3 billion people where winds completely reverse direction twice yearly, bringing life-giving rains followed by dry periods. Her stolen equipment monitors these dramatic seasonal shifts.'</p><p><strong>Climate Evidence:</strong> 'Equipment theft concentrated in regions experiencing the most dramatic seasonal rainfall variations on Earth - areas receiving 80% of annual precipitation in just 4 months, followed by extended dry seasons. The suspect appears to understand these complex atmospheric pressure systems perfectly.'</p><p><strong>Weather Research:</strong> Use your atlas to identify this massive seasonal wind system and understand how it affects billions of people!</p>",
+      "researchPrompts": [
+        "Research 'monsoon wind system seasonal reversal South Asia'",
+        "Investigate 'largest seasonal climate pattern world 3 billion people'",
+        "Look up 'summer monsoon winter monsoon wind direction change'",
+        "Study 'monsoon rainfall patterns wet dry seasons'"
+      ],
+      "expectedProcess": [
+        "Search 'largest seasonal climate system' → South Asian monsoon identified",
+        "Research 'seasonal wind reversal' → summer/winter monsoon patterns",
+        "Connect '3 billion affected' → massive population dependence",
+        "Verify 'rainfall concentration' → 80% of rain in monsoon months"
+      ],
+      "reveal": { "trait": "Seasonal weather pattern specialist", "note": "Expert in massive atmospheric systems affecting billions" },
+      "answer": { "name": "South Asian Monsoon System", "lat": 20.5937, "lng": 78.9629 },
+      "explainHtml": "<p><strong>Climate System Confirmed:</strong> The South Asian Monsoon! This massive seasonal wind system affects over 3 billion people, completely reversing wind directions twice yearly. Summer monsoons bring vital rains from the southwest, while winter monsoons bring dry air from the northeast. Dr. Monsoon is an expert in these life-critical weather patterns.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 10,
+      "focus": ["geography", "countries", "subcontinent", "atlas-skills"],
+      "image": "storm-chasing-monsoon-research.jpg",
+      "clueHtml": "<p><strong>Regional Intelligence Update:</strong> 'Dr. Monsoon's operations span the entire Indian subcontinent - a massive triangular landmass surrounded by water on three sides, where the monsoon system is most intense. Surveillance shows her coordinating across the region's largest countries sharing this critical climate system.'</p><p><strong>Monsoon Pattern Analysis:</strong> 'Stolen equipment positioned in countries where seasonal rains determine agricultural success for over a billion farmers. These nations share the subcontinent's unique geography - the massive Himalayan mountain barrier that helps create and intensify monsoon patterns.'</p><p><strong>Atlas Investigation:</strong> Identify the major countries of the Indian subcontinent where Dr. Monsoon is operating!</p>",
+      "researchPrompts": [
+        "Research 'Indian subcontinent countries India Pakistan Bangladesh'",
+        "Investigate 'Himalayas monsoon barrier mountain effect'",
+        "Look up 'subcontinent surrounded by water three sides'",
+        "Study 'monsoon agriculture billion farmers South Asia'"
+      ],
+      "expectedProcess": [
+        "Search 'Indian subcontinent' → India, Pakistan, Bangladesh, others",
+        "Research 'Himalayan barrier' → mountain effect on monsoons",
+        "Connect 'water surroundings' → Arabian Sea, Bay of Bengal, Indian Ocean",
+        "Verify 'agricultural dependence' → monsoon-dependent farming"
+      ],
+      "reveal": { "trait": "Regional climate coordination expert", "note": "Operates across multiple countries sharing monsoon dependence" },
+      "answer": { "name": "Indian Subcontinent", "lat": 20.5937, "lng": 78.9629 },
+      "explainHtml": "<p><strong>Regional Pattern Identified:</strong> The Indian Subcontinent! This massive triangular landmass includes India, Pakistan, Bangladesh, and neighboring countries. The Himalayan mountains to the north create a barrier that intensifies monsoon patterns, while being surrounded by water on three sides helps drive the seasonal wind reversals.</p>",
+      "scoring": { "base": 130, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3",
+      "minutes": 10,
+      "focus": ["rivers", "deltas", "agriculture", "water-systems"],
+      "image": "community-weather-education.jpg",
+      "clueHtml": "<p><strong>Hydrological Intelligence:</strong> 'Dr. Monsoon has targeted river delta regions where monsoon rains feed massive river systems crucial for agriculture. Her stolen equipment monitors areas where seasonal flooding creates some of the world's most fertile agricultural land, supporting hundreds of millions of people.'</p><p><strong>Delta System Analysis:</strong> 'She's particularly focused on the world's largest river delta - a vast fan-shaped region where major rivers meet the sea, creating incredibly productive rice-growing areas. Her equipment theft coincides with critical monsoon flood monitoring that protects millions in low-lying delta communities.'</p><p><strong>River Research:</strong> Identify this massive delta system and understand why monsoon monitoring is so critical here!</p>",
+      "researchPrompts": [
+        "Research 'Ganges Brahmaputra delta largest world Bangladesh'",
+        "Investigate 'Sundarbans mangrove delta rice agriculture'",
+        "Look up 'monsoon flooding delta fertile soil agriculture'",
+        "Study 'river delta formation sediment monsoon rivers'"
+      ],
+      "expectedProcess": [
+        "Search 'largest river delta' → Ganges-Brahmaputra Delta in Bangladesh",
+        "Research 'Sundarbans' → mangrove ecosystem in delta",
+        "Connect 'monsoon flooding' → seasonal fertility renewal",
+        "Verify 'delta agriculture' → rice production in fertile delta soils"
+      ],
+      "reveal": { "trait": "Delta flooding specialist", "note": "Expert in monsoon-driven river systems and agricultural impacts" },
+      "answer": { "name": "Ganges-Brahmaputra Delta", "lat": 23.6345, "lng": 90.2934 },
+      "explainHtml": "<p><strong>Delta System Confirmed:</strong> The Ganges-Brahmaputra Delta! This enormous delta in Bangladesh is the world's largest, where monsoon rains feed massive rivers that create incredibly fertile agricultural land. Dr. Monsoon's equipment monitors the critical flooding patterns that both threaten and sustain millions of people.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 10,
+      "focus": ["coordinates", "specific-location", "weather-stations"],
+      "image": "western-ghats-research-station.jpg",
+      "clueHtml": "<p><strong>Final Weather Intelligence:</strong> 'Dr. Monsoon photographed at coordinates 23°42'N, 90°22'E at a critical monsoon monitoring station in the world's largest delta. She was calibrating stolen atmospheric equipment while declaring: \\\"From this flood-prone capital of 9 million people, my weather network will expose the climate data they suppress!\\\"'</p><p><strong>Urban Monsoon Impact:</strong> 'The location is a major city built on delta land, extremely vulnerable to monsoon flooding and cyclones from the Bay of Bengal. Dr. Monsoon chose this high-risk urban center where accurate weather prediction literally saves millions of lives during monsoon season.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this vulnerable delta capital!</p>",
+      "researchPrompts": [
+        "Use coordinates 23°42'N, 90°22'E to find exact location",
+        "Research 'Bangladesh capital Dhaka delta city 9 million'",
+        "Investigate 'Dhaka monsoon flooding Bay of Bengal cyclones'",
+        "Look up 'delta capital vulnerable monsoon urban flooding'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Dhaka, Bangladesh",
+        "Search 'Bangladesh capital' → Dhaka identification",
+        "Research 'Dhaka vulnerability' → delta flooding risks",
+        "Verify 'population 9 million' → major urban center"
+      ],
+      "reveal": { "trait": "MASTER ATMOSPHERIC SURVEILLANCE COORDINATOR", "note": "FINAL PHASE: Creates unauthorized weather monitoring networks in vulnerable urban centers!" },
+      "answer": { "name": "Dhaka, Bangladesh", "lat": 23.6345, "lng": 90.2934 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> Dhaka, Bangladesh! This capital city of 9 million people sits in the world's largest river delta, making it extremely vulnerable to monsoon flooding and Bay of Bengal cyclones. Dr. Monsoon's unauthorized equipment threatens legitimate weather forecasting that protects millions of lives.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r5",
+      "minutes": 2,
+      "focus": ["advanced-meteorology", "global-climate", "prediction-ethics"],
+      "image": "storm-research-laboratory.jpg",
+      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Dr. Monsoon's ultimate scheme exposed: She's creating an unauthorized atmospheric surveillance network by stealing monsoon prediction equipment throughout South Asia. Her goal is to document climate data she believes governments are hiding about monsoon pattern changes and extreme weather increases.'</p><p><strong>Climate Prediction Threat:</strong> 'Her stolen equipment disrupts legitimate weather forecasting that protects over a billion people from floods, droughts, and cyclones. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the precise international cooperation essential for accurate monsoon prediction across multiple countries.'</p><p><strong>Mission Accomplished:</strong> You've tracked Dr. Monsoon from the broad South Asian monsoon system to the specific coordinates of Dhaka, learning about seasonal climate patterns, river deltas, agricultural systems, and urban vulnerability along the way!</p>",
+      "researchPrompts": [
+        "Research 'monsoon prediction accuracy international cooperation'",
+        "Investigate 'climate change monsoon pattern disruption'",
+        "Look up 'weather forecasting ethics unauthorized monitoring'",
+        "Study 'monsoon early warning systems save lives'"
+      ],
+      "expectedProcess": [
+        "Research 'prediction accuracy' → international data sharing importance",
+        "Connect 'climate change' → changing monsoon patterns concern",
+        "Understand 'forecasting ethics' → proper scientific protocols",
+        "Verify 'early warning' → weather prediction saves millions of lives"
+      ],
+      "reveal": { "trait": "SYNDICATE ATMOSPHERIC EXTREMIST", "note": "Uses stolen weather equipment to destabilize critical monsoon forecasting systems!" },
+      "answer": { "name": "South Asian Monsoon Network", "lat": 23.6345, "lng": 90.2934 },
+      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Dr. Monsoon's theft of atmospheric monitoring equipment aimed to create unauthorized weather surveillance across the entire monsoon system! While climate research is important, her illegal methods threaten the legitimate forecasting that protects over a billion people from monsoon-related disasters.</p>",
+      "scoring": { "base": 200, "distanceKmFull": 40 }
+    }
+  ]
+}

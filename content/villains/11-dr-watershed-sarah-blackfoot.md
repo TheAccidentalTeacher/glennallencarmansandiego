@@ -5,9 +5,9 @@
 - **Full Name**: Dr. Sarah Blackfoot
 - **Specialty**: Environmental Geography & Traditional Ecological Knowledge Systems
 - **Region**: North American Watershed Systems (rivers, forests, grasslands, traditional territories)
-- **Cultural Inspiration**: Excellence in integrating traditional ecological knowledge with modern environmental science
+ - **Cultural Background**: Integrates traditional ecological knowledge with modern environmental science; emphasizes respectful collaboration with Indigenous communities and avoids appropriation.
 - **Respect Note**: Character represents professional expertise in environmental geography and sustainable resource management, wearing modern field research gear and defined by scholarly contributions to environmental stewardship
-- **Difficulty**: 3 (Moderate - requires understanding of North American physical geography, watershed systems, and environmental management)
+ - **Difficulty**: 3
 
 ## Educational Framework
 - **Learning Objectives**: 

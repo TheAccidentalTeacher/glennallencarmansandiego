@@ -5,9 +5,9 @@
 - **Full Name**: Dr. James Tauranga
 - **Specialty**: Volcanology & Pacific Rim Geological Systems
 - **Region**: Oceanian Volcanic Systems (Pacific Ring of Fire, island formation, geothermal activity)
-- **Cultural Inspiration**: Excellence in volcanic research and geological hazard assessment
+ - **Cultural Background**: Excellence in volcanic research and geological hazard assessment; incorporates Pacific academic and community knowledge respectfully without cultural stereotyping.
 - **Respect Note**: Character represents professional expertise in volcanology and geological sciences, wearing modern field safety equipment and defined by scientific contributions to understanding volcanic processes
-- **Difficulty**: 4 (Challenging - requires understanding of volcanic processes, plate tectonics, and Pacific Ocean geography)
+ - **Difficulty**: 4
 
 ## Educational Framework
 - **Learning Objectives**: 

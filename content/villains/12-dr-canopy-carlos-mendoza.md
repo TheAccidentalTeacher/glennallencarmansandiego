@@ -5,9 +5,9 @@
 - **Full Name**: Dr. Carlos Mendoza
 - **Specialty**: Tropical Ecology & Rainforest Biodiversity Research
 - **Region**: Central American Rainforest Systems (cloud forests, tropical rainforests, biodiversity corridors)
-- **Cultural Inspiration**: Excellence in tropical ecological research and biodiversity conservation
+ - **Cultural Background**: Excellence in tropical ecological research and biodiversity conservation; acknowledges diverse Central American conservation and research traditions.
 - **Respect Note**: Character represents professional expertise in tropical ecology, wearing modern field research equipment and defined by scientific contributions to rainforest conservation
-- **Difficulty**: 4 (Challenging - requires understanding of complex tropical ecosystems, biodiversity concepts, and Central American geography)
+ - **Difficulty**: 4
 
 ## Educational Framework
 - **Learning Objectives**: 

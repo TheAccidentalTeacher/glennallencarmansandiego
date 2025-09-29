@@ -1,6 +1,7 @@
 import { query } from './database';
 import { ClueRevealService, type ClueRevealState } from './clueRevealService';
 import { ScoringService, type TeamScore } from './scoringService';
+import { EnhancedWarrantService, type EnhancedWarrantResult } from './enhancedWarrantService';
 import type { GameSession } from '../types';
 
 export interface GameFlowConfig {
@@ -267,7 +268,24 @@ export class GameSessionController {
   }
 
   /**
-   * Submit a team's warrant (final guess)
+   * Submit a team's warrant with enhanced map-based scoring
+   */
+  static async submitEnhancedWarrant(
+    sessionId: string,
+    teamId: string,
+    guessedLocationId: string,
+    reasoning?: string
+  ): Promise<EnhancedWarrantResult> {
+    return await EnhancedWarrantService.processMapWarrant(
+      sessionId,
+      teamId,
+      guessedLocationId,
+      reasoning
+    );
+  }
+
+  /**
+   * Submit a team's warrant (final guess) - Legacy method
    */
   static async submitWarrant(
     sessionId: string,
