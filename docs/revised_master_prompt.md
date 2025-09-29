@@ -521,7 +521,7 @@ Use this JSON object as a direct, machine-readable template for creating seed da
 
 ## IMPLEMENTATION GUIDANCE
 
-This prompt provides a complete specification for building the "Where in the World is Sourdough Pete?" application. The structure is designed to be clear and actionable for AI-driven development.
+This prompt provides a complete specification for building the "Sourdough Pete's Geography Challenge" application. The structure is designed to be clear and actionable for AI-driven development.
 
 **Development Approach:**
 1. Begin with the data models and API endpoints defined in Part 1.
