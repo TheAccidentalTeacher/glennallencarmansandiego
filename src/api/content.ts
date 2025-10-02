@@ -88,6 +88,9 @@ export class ContentService {
     const query = queryParams.toString();
     const url = query ? `/content/cases?${query}` : '/content/cases';
     
+    console.log('🔍 API: Calling getCases with URL:', url);
+    console.log('🔍 API: Base URL should be relative /api');
+    
     return api.get<{ cases: Case[] }>(url);
   }
 

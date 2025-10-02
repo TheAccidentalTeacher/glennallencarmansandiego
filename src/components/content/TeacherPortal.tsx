@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import ContentManagementLayout from './ContentManagementLayout';
-import { GraduationCap, ChevronRight, MapPin, Users, BookOpen, Star } from 'lucide-react';
+import { GraduationCap, ChevronRight, MapPin, Users, BookOpen, Star, Gamepad2, Monitor } from 'lucide-react';
 
 interface TeacherPortalProps {
   className?: string;
@@ -116,6 +116,49 @@ const TeacherPortal: React.FC<TeacherPortalProps> = ({ className = '' }) => {
           </svg>
         </div>
       </header>
+
+      {/* Game Interfaces Quick Access - NEW SECTION */}
+      <section className="container mx-auto px-6 py-8">
+        <div className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 shadow-xl border border-green-500/20">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2 flex items-center">
+                <Gamepad2 className="mr-3" size={32} />
+                Launch Game Interfaces
+              </h2>
+              <p className="text-green-100 text-lg">
+                Ready to teach? Launch your classroom game controls and projector display.
+              </p>
+            </div>
+            <div className="flex space-x-4">
+              <a 
+                href="/control" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center space-x-2"
+              >
+                <Monitor size={20} />
+                <span>Teacher Control</span>
+              </a>
+              <a 
+                href="/projector" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center space-x-2"
+              >
+                <Users size={20} />
+                <span>Projector Display</span>
+              </a>
+            </div>
+          </div>
+          <div className="mt-4 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <p className="text-white/90 text-sm">
+              💡 <strong>Pro Tip:</strong> Open Teacher Control in one tab and Projector Display in another. 
+              Control the game from your laptop while students watch the big screen!
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Main Content with better spacing */}
       <main className="container mx-auto px-6 py-12">

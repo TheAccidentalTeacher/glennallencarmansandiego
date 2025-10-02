@@ -10,8 +10,8 @@ We will ship with 12 fully‑fleshed weekly cases plus a 2‑week finale to find
 **Sourdough Syndicate Specialists:**
 - **01: Dr. Meridian (Elena Fossat)** - Western Europe/Alpine Research
 - **02: Professor Sahara (Amira Hassan)** - North Africa/Desert Systems  
-- **03: Dr. Mirage (Amara Benali)** - North Africa/Desert Hydrology
-- **04: Professor Tectonic (Jin Wei-Ming)** - East Asia/Seismic Engineering
+- **03: Professor Tectonic (Jin Wei-Ming)** - East Asia/Seismic Engineering
+- **04: Dr. Altiplano (Isabella Santos)** - South America/Andean Systems
 - **05: Dr. Sahel (Kwame Asante)** - West Africa/Sahelian Climatology
 - **06: Dr. Monsoon (Kiran Patel)** - South Asia/Monsoon Systems
 - **07: Dr. Coral (Maya Sari)** - Southeast Asia/Marine Conservation

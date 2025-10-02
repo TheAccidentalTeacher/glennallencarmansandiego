@@ -1,12 +1,12 @@
 {
   "id": "professor-atlas-boundary-mapping-sabotage", 
   "title": "Professor Atlas's European Boundary Sabotage",
-  "difficulty": "intermediate",
-  "durationMinutes": 50,
-  "description": "Track Professor Atlas, historical cartography expert, across Europe's great river systems as he steals GPS equipment to document what he believes are deliberate misrepresentations of changing political boundaries.",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 40,
+  "description": "Follow Professor Atlas through his academic cartographic career from traditional surveying to modern GPS technology as he steals mapping equipment across European landscapes to expose boundary inaccuracies.",
   "briefing": {
     "headline": "European geographical boundaries are under surveillance!",
-    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Professor Atlas, distinguished expert in historical cartography and Eastern European geography, has been stealing high-precision GPS and surveying equipment across Europe's major river systems. He claims modern mapping is deliberately obscuring historical boundary changes and cultural landscape evolution.</p><p><strong>Educational Mission:</strong> Track this meticulous scholar from broad European river systems to specific historical locations, learning about river geography, political boundary changes, cultural landscapes, and the evolution of European political geography!</p><p><strong>Challenge Level:</strong> Intermediate - requires understanding of European geography, river systems, historical boundary changes, and cultural landscapes.</p>",
+    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Professor Atlas (Viktor Kowalski), distinguished Eastern European cartography expert, has been stealing traditional and modern surveying equipment across European landscapes. He claims to be documenting 'cartographic fraud' in official boundary representations but his methods threaten international mapping agreements.</p><p><strong>Educational Mission:</strong> Follow this meticulous scholar from his traditional cartography laboratory through field surveying expeditions to university teaching, learning about the evolution of mapping technology, European geography, and the importance of accurate boundary documentation!</p><p><strong>Challenge Level:</strong> Intermediate-Advanced - requires understanding of surveying techniques, European geography, and cartographic technology evolution.</p>",
     "assets": {}
   },
   "villains": [
@@ -22,118 +22,118 @@
   "rounds": [
     {
       "id": "r1",
-      "minutes": 12,
-      "focus": ["geography", "rivers", "european-systems"],
+      "minutes": 8,
+      "focus": ["geography", "cartography", "technology-evolution"],
       "image": "generated-image-2025-09-25 (40).png",
-      "clueHtml": "<p><strong>Hydrographic Intelligence Report:</strong> 'Professor Atlas was detected along Europe's second-longest river system - a massive waterway flowing 2,850 kilometers from the Black Forest to the Black Sea, passing through 10 countries and 4 capital cities. His stolen equipment monitors areas where this river has shaped European political boundaries for over 2,000 years.'</p><p><strong>Cartographic Evidence:</strong> 'Equipment theft concentrated along river sections that have served as natural boundaries between empires, kingdoms, and modern nations. The suspect appears to understand how this waterway's geography influenced European political development, trade routes, and cultural exchanges throughout history.'</p><p><strong>River Research:</strong> Use your atlas to identify this major European river system and understand how it shaped continental geography!</p>",
+      "clueHtml": "<p><strong>Cartographic Equipment Theft Report:</strong> 'Professor Atlas photographed in his European countryside laboratory where traditional surveying instruments meet cutting-edge technology. He holds both a GPS device and modern mapping tablet while surrounded by antique theodolites, compasses, and rolled maps - the perfect blend of historical and digital cartography tools.'</p><p><strong>Technology Bridge Evidence:</strong> 'Security footage shows him comparing traditional compass readings with GPS coordinates, demonstrating how modern technology validates centuries-old surveying principles. The theft occurred near medieval castles where ancient boundaries meet modern mapping needs.'</p><p><strong>Geographic Context:</strong> Identify the type of European landscape where traditional cartography meets modern technology!</p>",
       "researchPrompts": [
-        "Research 'second longest European river 2850 kilometers 10 countries'",
-        "Investigate 'Danube River Black Forest to Black Sea capitals'",
-        "Look up 'European river boundaries political geography trade routes'",
-        "Study 'Danube capitals Vienna Budapest Belgrade Bratislava'"
+        "Research 'traditional surveying instruments theodolite compass GPS comparison'",
+        "Investigate 'historical cartography evolution digital mapping technology'",
+        "Look up 'European countryside medieval castles mapping landscape'",
+        "Study 'cartographic equipment traditional versus modern surveying'"
       ],
       "expectedProcess": [
-        "Search 'second longest European river' → Danube River identified",
-        "Research 'Black Forest Black Sea' → Danube source and mouth",
-        "Connect '4 capitals' → Vienna, Budapest, Belgrade, Bratislava",
-        "Verify 'political boundaries' → river as natural border"
+        "Search 'traditional surveying' → theodolite, compass, mapping tools identified",
+        "Research 'GPS technology' → Global Positioning System for precise coordinates",
+        "Connect 'medieval landscape' → European countryside with historical boundaries",
+        "Verify 'technology evolution' → traditional methods validated by modern tools"
       ],
-      "reveal": { "trait": "River boundary expert", "note": "Specializes in how waterways shape political geography" },
-      "answer": { "name": "Danube River System", "lat": 48.1486, "lng": 17.1077 },
-      "explainHtml": "<p><strong>River System Confirmed:</strong> The Danube River! Europe's second-longest river flows through 10 countries and 4 capital cities, serving as a natural boundary and transportation corridor that shaped European civilization. Professor Atlas's expertise in river-boundary relationships makes him extremely dangerous along this critical waterway.</p>",
-      "scoring": { "base": 130, "distanceKmFull": 180 }
+      "reveal": { "trait": "Technology bridge specialist", "note": "Combines traditional surveying with modern GPS for maximum accuracy" },
+      "answer": { "name": "European Countryside Cartography Lab", "lat": 49.7500, "lng": 6.1667 },
+      "explainHtml": "<p><strong>Laboratory Setting Confirmed:</strong> European countryside where traditional cartography meets modern technology! Professor Atlas uses both antique surveying instruments and cutting-edge GPS devices to achieve unprecedented mapping precision. His expertise bridges centuries of surveying evolution in landscapes shaped by medieval boundaries.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 150 }
     },
     {
       "id": "r2",
-      "minutes": 12,
-      "focus": ["political-geography", "eastern-europe", "boundaries"],
+      "minutes": 8,
+      "focus": ["topography", "field-surveying", "canyon-geography"],
       "image": "generated-image-2025-09-25 (41).png",
-      "clueHtml": "<p><strong>Regional Intelligence Update:</strong> 'Professor Atlas's operations focus on Eastern European countries that experienced dramatic political boundary changes in the 20th century - nations where river systems like the Danube served as borders between competing empires and later became internal waterways of new states. Surveillance shows him particularly active in countries that emerged from the dissolution of multi-ethnic empires.'</p><p><strong>Boundary Analysis:</strong> 'Stolen equipment positioned in countries that gained independence after 1918 and again after 1989, where Professor Atlas appears to be documenting how political changes affected river management, transportation networks, and cultural landscapes along the Danube corridor.'</p><p><strong>Atlas Investigation:</strong> Identify the Eastern European countries where Professor Atlas is tracking historical boundary changes along the Danube!</p>",
+      "clueHtml": "<p><strong>Field Operations Intelligence:</strong> 'Professor Atlas spotted conducting unauthorized surveying at the edge of a dramatic river canyon, using professional theodolite equipment to map challenging terrain. He claims these deep gorges and winding waterways represent fundamental geographical features often misrepresented in official maps.'</p><p><strong>Topographic Evidence:</strong> 'Security reports show him documenting how water erosion creates complex topographic features - canyon walls, meandering rivers, and varied terrain that traditional surveying struggles to map accurately. His stolen GPS equipment provides precise coordinates for areas where topographic complexity challenges conventional boundary mapping.'</p><p><strong>Terrain Analysis:</strong> Identify the geographic processes that create these challenging canyon landscapes Professor Atlas is surveying!</p>",
       "researchPrompts": [
-        "Research 'Eastern Europe Danube countries independence after 1918 1989'",
-        "Investigate 'Austria Hungary Czechoslovakia Yugoslavia dissolution'",
-        "Look up 'Danube countries Slovakia Hungary Serbia Romania Bulgaria'",
-        "Study '20th century boundary changes Eastern European empires'"
+        "Research 'river canyon formation water erosion topographic features'",
+        "Investigate 'theodolite surveying equipment canyon terrain mapping'",
+        "Look up 'meandering rivers gorge formation geological processes'",
+        "Study 'topographic mapping challenging terrain GPS coordinates'"
       ],
       "expectedProcess": [
-        "Search 'Eastern Europe boundary changes' → 20th century political transformations",
-        "Research 'empire dissolution' → Austria-Hungary, Yugoslavia, Czechoslovakia",
-        "Connect 'Danube countries' → Slovakia, Hungary, Serbia, Romania, others",
-        "Verify 'independence dates' → 1918 (post-WWI) and 1989-1991 (post-Communist)"
+        "Search 'canyon formation' → water erosion carves deep gorges over time",
+        "Research 'theodolite surveying' → precision instrument for measuring angles and distances",
+        "Connect 'meandering rivers' → flowing water creates winding patterns through landscapes",
+        "Verify 'topographic complexity' → varied terrain requires advanced mapping techniques"
       ],
-      "reveal": { "trait": "Historical boundary specialist", "note": "Expert in 20th-century political geography changes" },
-      "answer": { "name": "Eastern European Danube Countries", "lat": 47.4979, "lng": 19.0402 },
-      "explainHtml": "<p><strong>Regional Pattern Identified:</strong> Eastern European Danube countries! Slovakia, Hungary, Serbia, Romania, and Bulgaria all experienced major political boundary changes in the 20th century, transforming from parts of multi-ethnic empires to independent nation-states. Professor Atlas specializes in documenting these complex geopolitical transformations along the Danube.</p>",
-      "scoring": { "base": 150, "distanceKmFull": 140 }
+      "reveal": { "trait": "Terrain specialist", "note": "Expert in mapping complex topographic features and challenging landscapes" },
+      "answer": { "name": "River Canyon Surveying Site", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>Terrain Analysis Complete:</strong> River canyon topography! Professor Atlas specializes in surveying challenging landscapes where water erosion creates complex topographic features. His precision theodolite equipment and GPS technology allow him to map canyon walls and meandering waterways that conventional surveying methods struggle to document accurately.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 120 }
     },
     {
       "id": "r3", 
-      "minutes": 12,
-      "focus": ["cultural-geography", "historic-cities", "landscapes"],
+      "minutes": 8,
+      "focus": ["european-architecture", "team-leadership", "historic-cities"],
       "image": "generated-image-2025-09-25 (42).png",
-      "clueHtml": "<p><strong>Cultural Landscape Intelligence:</strong> 'Professor Atlas has targeted one of Europe's most historically significant capital cities - a former center of a vast multi-ethnic empire that controlled much of Central and Eastern Europe for over 600 years. His stolen equipment monitors areas where imperial architecture, diverse cultural districts, and Habsburg legacy create complex urban geography.'</p><p><strong>Imperial Geography Analysis:</strong> 'He's particularly focused on a Danube capital where the river divides the city into two distinct historic sections, creating unique urban geography that reflects centuries of political and cultural change. Security reports show him documenting how imperial boundaries became modern city districts.'</p><p><strong>Historic Research:</strong> Identify this divided Danube capital and understand how empires shaped European urban landscapes!</p>",
+      "clueHtml": "<p><strong>Urban Mapping Intelligence:</strong> 'Professor Atlas photographed leading a diverse cartography team in a European historic city center, surrounded by Gothic architecture, stone bridges, and cathedral spires. His stolen equipment enables collaborative mapping projects documenting how medieval urban planning affects modern boundary definitions.'</p><p><strong>Architectural Evidence:</strong> 'Team surveillance shows him directing students and assistants with various mapping instruments around medieval buildings, cathedral towers, and historic stone structures. The suspect appears to understand how European historic districts preserve ancient boundary markers within their architectural layouts.'</p><p><strong>Cultural Geography:</strong> Identify the significance of Gothic architecture and medieval urban planning in European historic city preservation!</p>",
       "researchPrompts": [
-        "Research 'Habsburg empire capital Central Eastern Europe 600 years'",
-        "Investigate 'Vienna Austria Danube capital imperial architecture'",
-        "Look up 'Vienna historic districts cultural diversity Habsburg legacy'",
-        "Study 'imperial cities urban geography cultural landscapes'"
+        "Research 'Gothic architecture medieval European cities cathedral spires'",
+        "Investigate 'historic city centers stone bridges urban planning'",
+        "Look up 'medieval towns cultural heritage preservation architecture'",
+        "Study 'European historic districts boundary markers urban geography'"
       ],
       "expectedProcess": [
-        "Search 'Habsburg empire capital' → Vienna, Austria identified",
-        "Research 'Vienna Danube' → river's role in city geography",
-        "Connect 'imperial legacy' → multicultural Habsburg influence",
-        "Verify 'urban districts' → historic neighborhoods reflect imperial past"
+        "Search 'Gothic architecture' → medieval building style with cathedral spires and stone structures",
+        "Research 'historic cities' → preserved medieval urban planning in European centers",
+        "Connect 'stone bridges' → medieval infrastructure connecting historic districts",
+        "Verify 'boundary markers' → ancient urban divisions preserved in architecture"
       ],
-      "reveal": { "trait": "Imperial geography expert", "note": "Specializes in how empires shaped urban cultural landscapes" },
-      "answer": { "name": "Vienna, Austria", "lat": 48.2082, "lng": 16.3738 },
-      "explainHtml": "<p><strong>Imperial Capital Confirmed:</strong> Vienna, Austria! Former capital of the Habsburg Empire, Vienna controlled Central and Eastern Europe for over 600 years. The Danube divides this magnificent city, where imperial palaces, diverse cultural districts, and Habsburg architectural legacy create complex urban geography that Professor Atlas studies intensively.</p>",
-      "scoring": { "base": 170, "distanceKmFull": 100 }
+      "reveal": { "trait": "Team leadership specialist", "note": "Directs collaborative mapping projects in complex historical environments" },
+      "answer": { "name": "European Historic City Center", "lat": 50.0755, "lng": 14.4378 },
+      "explainHtml": "<p><strong>Historic Urban Context Confirmed:</strong> European medieval city center! Professor Atlas's team leadership skills enable collaborative mapping projects in complex historic environments where Gothic cathedrals, stone bridges, and medieval architecture preserve ancient boundary systems within modern urban geography.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 100 }
     },
     {
       "id": "r4",
-      "minutes": 10,
-      "focus": ["coordinates", "specific-location", "boundary-precision"],
+      "minutes": 8,
+      "focus": ["academic-teaching", "european-geography", "education"],
       "image": "generated-image-2025-09-25 (43).png",
-      "clueHtml": "<p><strong>Final Cartographic Intelligence:</strong> 'Professor Atlas photographed at coordinates 48°12'N, 16°22'E at a renowned European university where he was installing unauthorized GPS equipment while declaring: \\\"From this center of geographic learning, my precision mapping network will expose the boundary falsifications they perpetrate!\\\"'</p><p><strong>Academic Context:</strong> 'The location is a prestigious university in the former imperial capital, where geography departments study Central European boundary changes and cultural landscape evolution. Professor Atlas chose this academic center where his expertise allows him to blend in while conducting unauthorized surveying operations.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this prestigious university location in the former imperial capital!</p>",
+      "clueHtml": "<p><strong>Academic Infiltration Alert:</strong> 'Professor Atlas photographed in a university lecture hall teaching European geography to engaged students, using professional presentation equipment including wall-mounted displays of comprehensive European political and physical geography maps. His academic credentials allow him to blend in while conducting unauthorized research.'</p><p><strong>Educational Context:</strong> 'Security footage shows him in a distinguished green academic blazer, using pointers and topographic materials to instruct students about European boundary systems. The classroom setting provides perfect cover for his cartographic espionage operations while maintaining his scholarly reputation.'</p><p><strong>University Research:</strong> Identify the role of academic institutions in European geographic education and boundary studies!</p>",
       "researchPrompts": [
-        "Use coordinates 48°12'N, 16°22'E to find exact location",
-        "Research 'University of Vienna geography department Austria'",
-        "Investigate 'Vienna universities Central European studies geography'",
-        "Look up 'prestigious European universities boundary studies cartography'"
+        "Research 'university geography departments European boundary studies'",
+        "Investigate 'academic cartography education topographic maps teaching'",
+        "Look up 'European geography instruction political physical geography'",
+        "Study 'scholarly geographic research university classroom settings'"
       ],
       "expectedProcess": [
-        "Plot coordinates on detailed map → University district in Vienna",
-        "Search 'Vienna universities' → University of Vienna identified",
-        "Research 'geography programs' → Central European studies specialization",
-        "Verify 'academic reputation' → prestigious European university"
+        "Search 'university geography' → academic institutions teach geographic sciences",
+        "Research 'European boundary studies' → scholarly analysis of political geography",
+        "Connect 'classroom instruction' → professors educate students about continental geography",
+        "Verify 'academic cover' → scholarly credentials provide access to research resources"
       ],
-      "reveal": { "trait": "MASTER ACADEMIC INFILTRATOR", "note": "FINAL PHASE: Uses university positions to conduct unauthorized boundary mapping!" },
-      "answer": { "name": "University of Vienna, Austria", "lat": 48.2082, "lng": 16.3738 },
-      "explainHtml": "<p><strong>Academic Location Confirmed:</strong> University of Vienna, Austria! This prestigious institution's geography department is a leading center for Central European boundary studies and cultural landscape research. Professor Atlas's academic credentials allow him to infiltrate university research while conducting his unauthorized precision mapping operations!</p>",
-      "scoring": { "base": 190, "distanceKmFull": 40 }
+      "reveal": { "trait": "Academic authority", "note": "Uses teaching position to access university geographic resources and research" },
+      "answer": { "name": "European University Geography Department", "lat": 48.2082, "lng": 16.3738 },
+      "explainHtml": "<p><strong>Academic Setting Confirmed:</strong> University geography department! Professor Atlas's teaching credentials provide legitimate access to European geographic research while enabling his unauthorized mapping activities. His classroom authority and scholarly reputation create perfect cover for cartographic espionage operations.</p>",
+      "scoring": { "base": 180, "distanceKmFull": 80 }
     },
     {
       "id": "r5",
-      "minutes": 4,
-      "focus": ["advanced-cartography", "academic-ethics", "boundary-politics"],
-      "image": "generated-image-2025-09-25 (43).png",
-      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Professor Atlas's ultimate plan exposed: He's creating an unauthorized high-precision mapping network by stealing GPS and surveying equipment across European universities and research institutions. His goal is to document what he believes are deliberate cartographic inaccuracies in official boundary representations and historical geographic records.'</p><p><strong>Academic Geography Threat:</strong> 'His stolen equipment disrupts legitimate research that supports international boundary agreements, cultural heritage preservation, and geographic education. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the careful scholarly consensus that maintains peaceful relationships between European nations with complex historical boundaries.'</p><p><strong>Mission Accomplished:</strong> You've tracked Professor Atlas from the broad Danube River system to the specific coordinates of the University of Vienna, learning about European river geography, political boundary evolution, imperial history, and the role of academic institutions in geographic research!</p>",
+      "minutes": 8,
+      "focus": ["eastern-europe", "historic-preservation", "identity-reveal"],
+      "image": "generated-image-2025-09-25 (44).png",
+      "clueHtml": "<p><strong>FINAL IDENTITY CONFIRMATION:</strong> 'Professor Atlas photographed in a historic Eastern European city with distinctive medieval architecture - cathedral, clock tower, and defensive walls along a flowing river. He uses modern theodolite surveying equipment to document these preserved urban areas while wearing professional attire with leather surveying satchel.'</p><p><strong>Cultural Specialization Revealed:</strong> 'The location features authentic Polish/Eastern European architectural styles with Gothic cathedral, medieval clock tower, and historic defensive walls - exactly matching Professor Atlas's regional expertise. His modern surveying techniques applied to historic city preservation reveal his true identity: <strong>PROFESSOR VIKTOR KOWALSKI</strong>, Eastern European cartography specialist!'</p><p><strong>Final Challenge:</strong> Identify how Professor Atlas's Eastern European expertise combines historic preservation with modern surveying!</p>",
       "researchPrompts": [
-        "Research 'cartographic accuracy international boundary agreements'",
-        "Investigate 'geographic education peaceful international relations'",
-        "Look up 'scholarly consensus European boundary recognition'",
-        "Study 'academic ethics unauthorized geographic research'"
+        "Research 'Eastern European medieval architecture Polish Gothic cathedral'",
+        "Investigate 'historic city preservation modern surveying techniques'",
+        "Look up 'Professor Viktor Kowalski Eastern European cartography'",
+        "Study 'medieval defensive walls clock towers urban documentation'"
       ],
       "expectedProcess": [
-        "Research 'boundary agreements' → international treaties depend on accurate mapping",
-        "Connect 'education role' → universities teach accepted geographic knowledge",
-        "Understand 'scholarly consensus' → academic integrity maintains stability",
-        "Verify 'research ethics' → proper authorization protects international relations"
+        "Search 'Eastern European architecture' → Polish/Czech medieval city features identified",
+        "Research 'historic preservation' → modern surveying protects cultural heritage",
+        "Connect 'Viktor Kowalski' → Professor Atlas's true identity revealed",
+        "Verify 'regional expertise' → Eastern European specialization confirmed"
       ],
-      "reveal": { "trait": "SYNDICATE CARTOGRAPHIC EXTREMIST", "note": "Uses academic credentials to destabilize accepted geographic knowledge and boundary agreements!" },
-      "answer": { "name": "European University Geographic Network", "lat": 48.2082, "lng": 16.3738 },
-      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Professor Atlas's theft of precision mapping equipment aimed to create unauthorized surveillance across European academic institutions! His academic credentials allowed him to infiltrate university geography departments. While accurate cartography is essential, his illegal methods threaten the scholarly consensus and international agreements that maintain peaceful boundaries across Europe's complex political landscape.</p>",
-      "scoring": { "base": 240, "distanceKmFull": 20 }
+      "reveal": { "trait": "PROFESSOR VIKTOR KOWALSKI CONFIRMED", "note": "Eastern European cartography specialist using academic cover for mapping espionage!" },
+      "answer": { "name": "Historic Eastern European City", "lat": 50.0647, "lng": 19.9450 },
+      "explainHtml": "<p><strong>SYNDICATE VILLAIN IDENTIFIED:</strong> Professor Viktor Kowalski! His authentic Eastern European expertise and modern surveying equipment reveal his true specialization in Polish/Czech historic city documentation. This academic cartographer combines legitimate historic preservation knowledge with illegal mapping espionage across European boundary systems!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 60 }
     }
   ],
   "solution": {
@@ -142,12 +142,12 @@
     "item": "High-Precision GPS and Surveying Equipment"
   },
   "resolution": {
-    "summaryHtml": "<ul><li>Physical Geography: Europe's major river systems and their role in shaping political boundaries</li><li>Political Geography: 20th-century boundary changes in Eastern Europe and empire dissolution</li><li>Cultural Geography: Imperial legacies in European urban landscapes and city planning</li><li>Academic Geography: Role of universities in geographic research and boundary studies</li><li>Cartographic Ethics: Importance of authorized research and international agreements in mapping</li></ul>",
+    "summaryHtml": "<ul><li>Cartographic Technology: Evolution from traditional surveying instruments to modern GPS/GIS systems</li><li>Topographic Geography: Understanding how water erosion creates complex canyon landscapes requiring advanced mapping</li><li>European Architecture: Medieval Gothic cities preserving ancient boundary markers in urban planning</li><li>Academic Geography: Role of university education in European geographic research and boundary studies</li><li>Eastern European Expertise: Historic preservation combining cultural heritage with modern surveying techniques</li></ul>",
     "learningExtensions": [
-      "Explore the role of rivers as natural boundaries in European political development",
-      "Research the dissolution of multi-ethnic empires and creation of modern European nation-states",
-      "Map Habsburg Empire territories and trace their influence on modern Central Europe",
-      "Investigate how academic institutions contribute to international geographic knowledge"
+      "Compare traditional surveying instruments (theodolite, compass) with modern GPS technology",
+      "Research how water erosion creates challenging topographic features like river canyons", 
+      "Explore how medieval European architecture preserves ancient urban boundary systems",
+      "Investigate the role of universities in maintaining scholarly consensus about geographic boundaries"
     ],
     "crossCurricular": [
       "European History: Imperial histories and 20th-century political transformations",

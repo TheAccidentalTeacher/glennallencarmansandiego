@@ -3,11 +3,14 @@ import { AuthProvider } from './contexts/AuthContext';
 import { LoginForm, RegisterForm, ProtectedRoute } from './components/auth';
 import { GameLayout } from './components/game';
 import { TeacherPortal } from './components/content';
+import TeacherControl from './components/game/TeacherControl';
+import ProjectorDisplay from './components/game/ProjectorDisplay';
 import Navigation from './components/common/Navigation';
 import DevelopmentBanner from './components/common/DevelopmentBanner';
 import Dashboard from './pages/Dashboard';
 import LiveCase from './pages/LiveCase';
 import Editor from './pages/Editor';
+import GamePresentation from './pages/GamePresentation';
 
 function App() {
   return (
@@ -48,16 +51,35 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-            <Route 
+                        <Route 
               path="/editor" 
               element={
-                <ProtectedRoute requireRole="teacher">
+                <ProtectedRoute>
                   <Navigation />
                   <Editor />
                 </ProtectedRoute>
               } 
             />
             
+            {/* Game routes - MUST be before catch-all redirect */}
+            <Route 
+              path="/present" 
+              element={
+                <ProtectedRoute requireRole="teacher">
+                  <GamePresentation />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/control" 
+              element={<TeacherControl />} 
+            />
+            <Route 
+              path="/projector" 
+              element={<ProjectorDisplay />} 
+            />
+            
+            {/* Content management */}
             <Route 
               path="/content" 
               element={
@@ -67,11 +89,11 @@ function App() {
               } 
             />
             
-            {/* Redirect root to content management for auto-logged teacher */}
-            <Route path="/" element={<Navigate to="/content" replace />} />
+            {/* Default redirect */}
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
             
             {/* Catch-all redirect */}
-            <Route path="*" element={<Navigate to="/content" replace />} />
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </div>
       </Router>

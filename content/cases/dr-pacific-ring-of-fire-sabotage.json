@@ -1,139 +1,135 @@
 {
   "id": "dr-pacific-ring-of-fire-sabotage",
   "title": "Dr. Pacific's Ring of Fire Sabotage", 
-  "difficulty": "advanced",
-  "durationMinutes": 55,
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
   "description": "Track Dr. Pacific, volcanology expert, across the Pacific Ring of Fire as he steals seismic monitoring equipment to create what he believes is a more accurate volcanic eruption prediction system.",
   "briefing": {
-    "headline": "Pacific Ring of Fire monitoring systems compromised!",
-    "narrativeHtml": "<p><strong>INTERNATIONAL GEOLOGICAL ALERT:</strong> Dr. Pacific, distinguished volcanologist and expert in Pacific Ring of Fire systems, has been stealing seismic monitoring and volcanic research equipment across the world's most active volcanic region. He claims existing warning systems are inadequate and that his unauthorized network will prevent catastrophic eruptions.</p><p><strong>Educational Mission:</strong> Track this dangerous scientist from broad tectonic regions to specific active volcanic sites, learning about plate boundaries, island formation, volcanic hazards, and the geography of the Pacific's geological activity!</p><p><strong>Challenge Level:</strong> Advanced - requires understanding of plate tectonics, volcanic processes, Pacific geography, and geological hazard assessment.</p>",
-    "assets": {}
+    "headline": "Pacific Volcanic Research Stations Under Attack!",
+    "narrativeHtml": "<p><strong>GEOLOGICAL EMERGENCY for Route Runners!</strong> Dr. Pacific, volcanic specialist of the <em>Sourdough Syndicate's 'Islands Division,'</em> has stolen advanced seismic monitoring equipment from volcanic research stations across the Pacific Ring of Fire!</p><p>His calling card: a bread-slice stamp and the message: <em>'These volcanic warnings are INADEQUATE! My ERUPTION PROTOCOL will expose the seismic truth they hide from millions!'</em></p><p><strong>Intelligence Report:</strong> Dr. Pacific believes governments suppress accurate volcanic hazard data to avoid tourism panic. He's stealing equipment to create an 'authentic eruption prediction network' - but where in the vast Ring of Fire?</p>",
+    "assets": {
+      "image": "/images/cases/dr-pacific/briefing-volcanic-equipment.jpg"
+    }
   },
-  "villains": [
+  "suspects": [
     {
-      "id": "dr-pacific",
-      "name": "Dr. Pacific (Dr. James Tauranga)",
-      "title": "Volcanology & Pacific Ring of Fire Expert",
-      "tags": ["volcanology-expert", "ring-of-fire-specialist", "seismic-monitoring-expert"],
-      "description": "Distinguished volcanologist with PhD from University of Auckland. Expert in Pacific volcanic systems and obsessed with creating comprehensive eruption prediction networks through equipment theft.",
+      "name": "Dr. Pacific (James Tauranga)",
+      "tags": ["volcanologist", "ring-of-fire-expert", "seismic-specialist"],
+      "description": "Volcanic research specialist with PhD from University of Auckland. Expert in Pacific Ring of Fire volcanism and seismic monitoring systems.",
       "image": "/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (45).png"
     }
   ],
   "rounds": [
     {
       "id": "r1",
-      "minutes": 12,
-      "focus": ["geology", "plate-tectonics", "ring-of-fire"],
-      "image": "generated-image-2025-09-25 (45).png",
-      "clueHtml": "<p><strong>Seismic Intelligence Report:</strong> 'Dr. Pacific was detected along the world's most active seismic and volcanic zone - a 40,000-kilometer horseshoe-shaped region around the Pacific Ocean containing 75% of Earth's active volcanoes and 80% of major earthquakes. His stolen equipment monitors areas where oceanic plates subduct beneath continental and island arc systems.'</p><p><strong>Tectonic Evidence:</strong> 'Equipment theft concentrated along convergent plate boundaries where the Pacific Plate meets other major plates, creating the conditions for explosive volcanism, deep earthquakes, and mountain building. The suspect appears to understand these complex tectonic processes perfectly.'</p><p><strong>Geological Research:</strong> Use your atlas to identify this massive seismic zone and understand how plate tectonics creates volcanic activity!</p>",
+      "minutes": 8,
+      "focus": ["volcanic-research", "multi-volcano-monitoring", "field-stations"],
+      "clueHtml": "<p><strong>Volcanic Intelligence:</strong> 'Dr. Pacific was spotted at a comprehensive volcanic field research station monitoring multiple active volcanoes simultaneously. He's using thermal monitoring equipment, GPS systems, and protective field suits marked 'VOLCANO WATCH' while documenting active lava flows and volcanic activity across several volcanic sites.'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (45).png' alt='Dr. Pacific at multi-volcano research station with monitoring equipment' style='width:100%; max-width:400px; margin:10px 0;'>",
       "researchPrompts": [
-        "Research 'Pacific Ring of Fire 40000 kilometers 75% volcanoes'",
-        "Investigate 'Pacific Plate subduction convergent boundaries'",
-        "Look up 'horseshoe shaped seismic zone Pacific Ocean'",
-        "Study 'oceanic plate continental plate volcanic activity'"
+        "Research 'volcanic field research stations monitoring equipment'",
+        "Investigate 'thermal cameras volcanic lava flow monitoring'",
+        "Look up 'volcanic safety protocols field research'",
+        "Study 'multi-volcano monitoring systems seismic networks'"
       ],
       "expectedProcess": [
-        "Search 'Ring of Fire' → Pacific Ring of Fire identified",
-        "Research 'Pacific Plate boundaries' → convergent plate margins",
-        "Connect 'subduction volcanism' → oceanic plate diving creates magma",
-        "Verify 'seismic activity' → earthquakes and volcanoes linked to plate motion"
+        "Search 'volcanic monitoring' → field research station methods",
+        "Research thermal monitoring → lava flow temperature tracking",
+        "Connect safety protocols → protective equipment for volcanic work",
+        "Understand multi-volcano systems → comprehensive monitoring networks"
       ],
-      "reveal": { "trait": "Plate boundary expert", "note": "Understands tectonic processes creating Pacific volcanic activity" },
-      "answer": { "name": "Pacific Ring of Fire", "lat": -15.0000, "lng": -150.0000 },
-      "explainHtml": "<p><strong>Tectonic Zone Confirmed:</strong> The Pacific Ring of Fire! This massive 40,000-kilometer arc of seismic and volcanic activity surrounds the Pacific Ocean, created by oceanic plates subducting beneath continental margins and island arcs. Dr. Pacific's expertise in these tectonic processes makes him extremely dangerous across this vast region.</p>",
-      "scoring": { "base": 140, "distanceKmFull": 220 }
+      "reveal": { "trait": null },
+      "answer": { "name": "Pacific Volcanic Research Stations", "lat": -15.0000, "lng": 168.0000 },
+      "explainHtml": "<p><strong>Volcanic Station Confirmed:</strong> Pacific volcanic research stations! These comprehensive facilities monitor multiple active volcanoes using thermal cameras, GPS, and seismic equipment. Dr. Pacific's expertise in volcanic monitoring makes him dangerous around these critical safety systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
     },
     {
       "id": "r2",
-      "minutes": 12,
-      "focus": ["oceania", "island-formation", "hotspots"],
-      "image": "generated-image-2025-09-25 (46).png",
-      "clueHtml": "<p><strong>Volcanic Island Intelligence:</strong> 'Dr. Pacific's operations focus on the Pacific island region where volcanic island chains demonstrate two different formation processes - explosive subduction zone volcanism along plate boundaries, and quiet shield volcano formation over stationary mantle hotspots. Surveillance shows him particularly interested in island chains that show clear age progressions.'</p><p><strong>Hotspot Analysis:</strong> 'Stolen equipment positioned along island chains where active volcanism occurs at one end while older, eroded volcanic remnants extend thousands of kilometers in straight lines. Dr. Pacific appears to be studying these natural laboratories of volcanic evolution and Pacific Plate motion.'</p><p><strong>Island Formation Research:</strong> Identify this Pacific island region and understand how different volcanic processes create island chains!</p>",
+      "minutes": 8,
+      "focus": ["lava-sampling", "fieldwork-techniques", "geological-collection"],
+      "clueHtml": "<p><strong>Fieldwork Intelligence:</strong> 'Dr. Pacific was photographed conducting dangerous close-range volcanic fieldwork, collecting lava flow samples using specialized protective equipment and research instrumentation. He's demonstrating expertise in geological sampling techniques near active volcanic features, using proper safety protocols for extreme environment research.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of volcanic fieldwork and geological sampling'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (46).png' alt='Dr. Pacific collecting lava flow samples in extreme volcanic conditions' style='width:100%; max-width:400px; margin:10px 0;'>",
       "researchPrompts": [
-        "Research 'Oceania Pacific islands volcanic formation hotspots'",
-        "Investigate 'Hawaiian island chain hotspot age progression'",
-        "Look up 'shield volcanoes vs subduction zone volcanism'",
-        "Study 'Pacific Plate motion hotspot tracks island chains'"
+        "Research 'volcanic lava flow sampling techniques'",
+        "Investigate 'geological field safety extreme environments'",
+        "Look up 'volcanic rock sample collection methods'",
+        "Study 'lava flow behavior volcanic fieldwork'"
       ],
       "expectedProcess": [
-        "Search 'Pacific island volcanic chains' → Oceania region identified",
-        "Research 'Hawaiian hotspot' → stationary mantle plume creates island chain",
-        "Connect 'age progression' → oldest islands furthest from hotspot",
-        "Verify 'plate motion' → Pacific Plate moves over stationary hotspots"
+        "Search 'lava sampling' → geological sample collection methods",
+        "Research field safety → protective equipment for volcanic work",
+        "Connect sampling techniques → scientific data collection",
+        "Understand lava behavior → volcanic flow characteristics"
       ],
-      "reveal": { "trait": "Hotspot volcanism specialist", "note": "Expert in both subduction zone and hotspot volcanic processes" },
-      "answer": { "name": "Oceania - Pacific Island Chains", "lat": -20.0000, "lng": 160.0000 },
-      "explainHtml": "<p><strong>Island Region Confirmed:</strong> Oceania's Pacific island chains! This region demonstrates both types of Pacific volcanism - explosive subduction zone volcanoes along plate boundaries and shield volcanoes formed by hotspots. The Hawaiian chain shows perfect age progression as the Pacific Plate moves over stationary mantle plumes, creating Dr. Pacific's natural laboratory.</p>",
-      "scoring": { "base": 160, "distanceKmFull": 180 }
+      "reveal": { "trait": "Master of volcanic fieldwork and geological sampling", "note": "Expert in dangerous close-range volcanic research and safety protocols" },
+      "answer": { "name": "Active Volcanic Fields", "lat": -19.0000, "lng": 169.0000 },
+      "explainHtml": "<p><strong>Fieldwork Confirmed:</strong> Active volcanic fields! Dr. Pacific's expertise in geological sampling and extreme environment safety allows him to work directly with active lava flows. His close-range volcanic research skills make him incredibly dangerous around active eruption sites!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
     },
     {
       "id": "r3",
-      "minutes": 15,
-      "focus": ["geothermal-systems", "new-zealand", "taupo-zone"],
-      "image": "generated-image-2025-09-25 (47).png",
-      "clueHtml": "<p><strong>Geothermal Intelligence Analysis:</strong> 'Dr. Pacific has targeted one of the world's most active geothermal regions - a volcanic zone in New Zealand where the Pacific Plate subducts beneath the Australian Plate, creating intense geothermal activity, volcanic lakes, and one of Earth's most dangerous supervolcano systems. His stolen equipment monitors areas where geothermal energy development intersects with extreme volcanic hazards.'</p><p><strong>Supervolcano Threat Assessment:</strong> 'He's particularly focused on a specific geothermal region containing a massive volcanic caldera that last erupted 26,500 years ago, creating one of the largest known eruptions in human history. Security reports show him documenting the relationship between geothermal energy extraction and volcanic activity monitoring.'</p><p><strong>Geothermal Research:</strong> Identify this active New Zealand geothermal zone and understand the connection between plate tectonics and geothermal energy!</p>",
+      "minutes": 9,
+      "focus": ["geothermal-research", "rotorua-systems", "renewable-energy"],
+      "clueHtml": "<p><strong>Geothermal Intelligence:</strong> 'Dr. Pacific was observed at the Rotorua Geothermal Field Research Area in New Zealand, monitoring geothermal features with thermal measurement devices and seismic monitoring stations. He's studying the connection between volcanic activity and renewable energy applications, using research-grade instrumentation for geothermal energy development.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of geothermal energy research and thermal monitoring'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (47).png' alt='Dr. Pacific conducting geothermal research at Rotorua field station' style='width:100%; max-width:400px; margin:10px 0;'>",
       "researchPrompts": [
-        "Research 'New Zealand geothermal Taupo Volcanic Zone supervolcano'",
-        "Investigate 'Pacific Australian plate subduction geothermal energy'",
-        "Look up 'Taupo supervolcano caldera 26500 years ago eruption'",
-        "Study 'Rotorua geothermal geysers volcanic lakes New Zealand'"
+        "Research 'Rotorua geothermal field New Zealand energy'",
+        "Investigate 'geothermal energy volcanic heat renewable'",
+        "Look up 'thermal monitoring geothermal systems'",
+        "Study 'volcanic activity geothermal power generation'"
       ],
       "expectedProcess": [
-        "Search 'New Zealand geothermal' → Taupo Volcanic Zone identified",
-        "Research 'Taupo supervolcano' → massive caldera system",
-        "Connect 'plate subduction' → Australian-Pacific plate boundary creates heat",
-        "Verify 'geothermal energy' → volcanic heat powers electricity generation"
+        "Search 'Rotorua geothermal' → New Zealand geothermal region",
+        "Research geothermal energy → volcanic heat for electricity",
+        "Connect thermal monitoring → measuring geothermal temperatures",
+        "Understand volcanic connection → volcanic heat drives geothermal systems"
       ],
-      "reveal": { "trait": "Supervolcano monitoring expert", "note": "Specializes in extreme volcanic hazard assessment and geothermal systems" },
-      "answer": { "name": "Taupo Volcanic Zone, New Zealand", "lat": -38.7197, "lng": 176.0761 },
-      "explainHtml": "<p><strong>Geothermal Zone Confirmed:</strong> The Taupo Volcanic Zone in New Zealand! This incredibly active volcanic region contains the Taupo supervolcano, whose last major eruption 26,500 years ago was one of the largest in human history. Dr. Pacific's expertise in both geothermal energy systems and supervolcano monitoring makes him extremely dangerous here.</p>",
-      "scoring": { "base": 180, "distanceKmFull": 120 }
+      "reveal": { "trait": "Master of geothermal energy research and volcanic thermal systems", "note": "Expert in connecting volcanic activity to renewable energy applications" },
+      "answer": { "name": "Rotorua, New Zealand", "lat": -38.1368, "lng": 176.2497 },
+      "explainHtml": "<p><strong>Geothermal Research Confirmed:</strong> Rotorua geothermal field! This active geothermal region in New Zealand harnesses volcanic heat for renewable energy generation. Dr. Pacific's expertise in both volcanic monitoring and geothermal energy makes him dangerous around these sustainable energy systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
     },
     {
       "id": "r4",
-      "minutes": 12,
-      "focus": ["coordinates", "active-volcanism", "hazard-zones"],
-      "image": "generated-image-2025-09-25 (48).png", 
-      "clueHtml": "<p><strong>Final Volcanic Intelligence:</strong> 'Dr. Pacific photographed at coordinates 38°15'S, 175°54'E at New Zealand's largest lake, formed by a massive volcanic explosion. He was installing unauthorized seismic equipment while declaring: \\\"From this supervolcano crater now filled with water, my monitoring network will predict the next catastrophic eruption that officials ignore!\\\"'</p><p><strong>Supervolcano Context:</strong> 'The location sits within a 35-kilometer-wide caldera created by the Oruanui eruption 26,500 years ago, which ejected 530 cubic kilometers of material. Dr. Pacific chose this site where ongoing volcanic unrest beneath New Zealand's largest freshwater lake could signal future supervolcanic activity.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this massive volcanic lake formed by ancient supervolcanic eruption!</p>",
+      "minutes": 8,
+      "focus": ["community-education", "volcanic-hazards", "pacific-islands"],
+      "clueHtml": "<p><strong>Community Intelligence:</strong> 'Dr. Pacific was tracked conducting volcanic hazard education with Pacific island community members, using volcano hazard zone mapping and evacuation route planning. He's engaging diverse community members in volcanic safety education, teaching about geological hazards and disaster preparedness while building community understanding of volcanic risks.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of community volcanic hazard education and safety planning'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (48).png' alt='Dr. Pacific conducting volcanic hazard education with Pacific island community' style='width:100%; max-width:400px; margin:10px 0;'>",
       "researchPrompts": [
-        "Use coordinates 38°15'S, 175°54'E to find exact location",
-        "Research 'Lake Taupo New Zealand largest lake volcanic caldera'",
-        "Investigate 'Oruanui eruption 26500 years 530 cubic kilometers'",
-        "Look up 'Taupo caldera 35 kilometers wide supervolcano'"
+        "Research 'volcanic hazard community education Pacific islands'",
+        "Investigate 'evacuation planning volcanic emergency preparedness'",
+        "Look up 'volcanic hazard zone mapping safety planning'",
+        "Study 'community disaster preparedness volcanic risks'"
       ],
       "expectedProcess": [
-        "Plot coordinates on detailed map → Lake Taupo, New Zealand",
-        "Search 'New Zealand largest lake' → Lake Taupo identification",
-        "Research 'Taupo caldera' → massive volcanic crater now filled with water",
-        "Verify 'Oruanui eruption' → one of history's largest explosive eruptions"
+        "Search 'volcanic hazard education' → community safety programs",
+        "Research evacuation planning → emergency preparedness for volcanic areas",
+        "Connect hazard mapping → identifying dangerous volcanic zones",
+        "Understand community preparedness → local disaster response planning"
       ],
-      "reveal": { "trait": "MASTER SUPERVOLCANIC SURVEILLANCE COORDINATOR", "note": "FINAL PHASE: Creates unauthorized monitoring networks at world's most dangerous volcanic sites!" },
-      "answer": { "name": "Lake Taupo, New Zealand", "lat": -38.7197, "lng": 175.9073 },
-      "explainHtml": "<p><strong>Supervolcano Location Confirmed:</strong> Lake Taupo, New Zealand! This massive freshwater lake fills a 35-kilometer-wide caldera created by one of history's largest volcanic eruptions 26,500 years ago. Dr. Pacific's unauthorized seismic monitoring at this active supervolcano site could interfere with legitimate hazard assessment systems protecting millions of people!</p>",
-      "scoring": { "base": 200, "distanceKmFull": 60 }
+      "reveal": { "trait": "Master of community volcanic hazard education and emergency planning", "note": "Expert in volcanic safety communication and community disaster preparedness" },
+      "answer": { "name": "Pacific Island Communities", "lat": -17.0000, "lng": 179.0000 },
+      "explainHtml": "<p><strong>Community Education Confirmed:</strong> Pacific island communities! Dr. Pacific's expertise in volcanic hazard communication helps island communities understand evacuation routes and disaster preparedness. His community education skills make him valuable but dangerous around volcanic safety systems!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
     },
     {
       "id": "r5",
-      "minutes": 4,
-      "focus": ["advanced-volcanology", "global-hazard-assessment", "prediction-ethics"],
-      "image": "generated-image-2025-09-25 (49).png",
-      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Dr. Pacific's ultimate plan exposed: He's creating an unauthorized global volcanic monitoring network by stealing seismic equipment from research stations across the Pacific Ring of Fire. His goal is to develop eruption prediction capabilities he believes are superior to official hazard assessment systems, potentially causing panic or false security.'</p><p><strong>Volcanic Prediction Threat:</strong> 'His stolen equipment disrupts legitimate research that protects millions of people living near active volcanoes. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the careful scientific protocols essential for accurate volcanic hazard communication and emergency response coordination across the Pacific region.'</p><p><strong>Mission Accomplished:</strong> You've tracked Dr. Pacific from the broad Pacific Ring of Fire to the specific coordinates of Lake Taupo, learning about plate tectonics, volcanic processes, island formation, geothermal systems, and the critical importance of authorized volcanic hazard assessment!</p>",
+      "minutes": 8,
+      "focus": ["academic-research", "global-patterns", "volcanic-presentations"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Pacific has been cornered in an academic setting, presenting global volcanic activity patterns using scientific charts and educational materials. He's demonstrating professional research communication skills while showing comprehensive volcanic research data, claiming to revolutionize volcanic hazard prediction through academic research.'</p><p><strong>Master Plan Revealed:</strong> 'Academic institutions hide the TRUE patterns of global volcanic activity! My research presentations will expose the eruption predictions they're afraid to share!'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (49).png' alt='Dr. Pacific presenting global volcanic research in academic setting' style='width:100%; max-width:400px; margin:10px 0;'>",
       "researchPrompts": [
-        "Research 'volcanic eruption prediction challenges scientific uncertainty'",
-        "Investigate 'volcanic hazard communication emergency response protocols'",
-        "Look up 'unauthorized predictions public safety false alarms'",
-        "Study 'international volcanic monitoring cooperation Pacific region'"
+        "Research 'global volcanic activity patterns academic research'",
+        "Investigate 'volcanic research communication scientific presentations'",
+        "Study 'volcanic hazard prediction academic institutions'",
+        "Look up 'volcanic research data analysis global patterns'"
       ],
       "expectedProcess": [
-        "Research 'eruption prediction' → extremely difficult due to complex processes",
-        "Connect 'hazard communication' → requires careful scientific protocols",
-        "Understand 'false predictions' → can cause panic or dangerous complacency",
-        "Verify 'international cooperation' → Pacific monitoring requires coordination"
+        "Search 'global volcanic patterns' → worldwide volcanic activity research",
+        "Research academic communication → scientific presentation methods",
+        "Connect hazard prediction → volcanic forecasting challenges",
+        "Understand research analysis → volcanic data interpretation"
       ],
-      "reveal": { "trait": "SYNDICATE VOLCANIC EXTREMIST", "note": "Uses stolen monitoring equipment to destabilize international volcanic hazard assessment systems!" },
-      "answer": { "name": "Pacific Ring of Fire Monitoring Network", "lat": -38.7197, "lng": 175.9073 },
-      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Dr. Pacific's theft of seismic monitoring equipment aimed to create unauthorized volcanic prediction systems across the entire Pacific Ring of Fire! While volcanic hazard research is crucial, his illegal methods threaten the careful scientific protocols and international cooperation essential for protecting the millions of people living near active volcanoes around the Pacific.</p>",
-      "scoring": { "base": 250, "distanceKmFull": 30 }
+      "reveal": { "trait": "MASTER OF GLOBAL VOLCANIC RESEARCH AND COMMUNICATION", "note": "Ultimate goal: Revolutionize volcanic hazard prediction through unauthorized academic research!" },
+      "answer": { "name": "Global Volcanic Research Network", "lat": -36.8485, "lng": 174.7633 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Academic volcanic research facility! Dr. Pacific's ultimate plan involves revolutionizing global volcanic hazard prediction through comprehensive academic research. His scientific communication expertise makes this his most sophisticated volcanic scheme!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
     }
   ],
   "solution": {

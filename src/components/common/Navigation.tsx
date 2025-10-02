@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Monitor, Edit3, User, LogOut, ChevronDown, Gamepad2 } from 'lucide-react';
+import { Home, Monitor, Edit3, User, LogOut, ChevronDown, Gamepad2, Users, Settings } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 const Navigation: React.FC = () => {
@@ -10,6 +10,9 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { path: '/dashboard', label: 'Dashboard', icon: Home },
+    { path: '/present', label: 'Present Game', icon: Gamepad2, requireTeacher: true },
+    { path: '/control', label: 'Teacher Control', icon: Settings, requireTeacher: true },
+    { path: '/projector', label: 'Projector', icon: Users, requireTeacher: true },
     { path: '/game', label: 'Game', icon: Gamepad2 },
     { path: '/live-case', label: 'Live Case', icon: Monitor },
     { path: '/editor', label: 'Editor', icon: Edit3, requireTeacher: true },

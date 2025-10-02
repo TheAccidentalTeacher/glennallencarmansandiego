@@ -2,9 +2,7 @@ import axios from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 // API Configuration
-// Prefer VITE_API_URL if provided at build time; else fall back to current origin at runtime.
-const RUNTIME_ORIGIN = typeof window !== 'undefined' && window.location ? window.location.origin : 'http://localhost:3001';
-const API_BASE_URL: string = (import.meta.env.VITE_API_URL as string | undefined) || RUNTIME_ORIGIN;
+// Force use of relative URLs for Vite proxy in development
 
 // Token management
 export class TokenManager {
@@ -36,8 +34,10 @@ export class TokenManager {
 
 // Create axios instance
 const createApiClient = (): AxiosInstance => {
+  console.log('🔧 Creating API client with baseURL: /api');
+  
   const client = axios.create({
-    baseURL: `${API_BASE_URL}/api`,
+    baseURL: '/api',  // Use relative URL to work with Vite proxy
     timeout: 20000,
     headers: {
       'Content-Type': 'application/json',
@@ -47,6 +47,7 @@ const createApiClient = (): AxiosInstance => {
   // Request interceptor to add auth token
   client.interceptors.request.use(
     (config) => {
+      console.log('🌐 Making API request to:', (config.baseURL || '') + (config.url || ''));
       const token = TokenManager.getAccessToken();
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
@@ -77,7 +78,7 @@ const createApiClient = (): AxiosInstance => {
           }
 
           // Attempt to refresh the token
-          const response = await axios.post(`${API_BASE_URL}/api/auth/refresh`, {
+          const response = await axios.post('/api/auth/refresh', {
             refreshToken,
           });
 
@@ -95,6 +96,24 @@ const createApiClient = (): AxiosInstance => {
         }
       }
 
+      return Promise.reject(error);
+    }
+  );
+
+  // Response interceptor for debugging
+  client.interceptors.response.use(
+    (response) => {
+      console.log('✅ API Response received:', response.status, response.config.url);
+      console.log('📦 Response data sample:', JSON.stringify(response.data).substring(0, 100) + '...');
+      return response;
+    },
+    (error) => {
+      console.error('❌ API Error:', error.message);
+      console.error('🔗 Failed URL:', error.config?.url);
+      if (error.response) {
+        console.error('📊 Error status:', error.response.status);
+        console.error('📋 Error data:', error.response.data);
+      }
       return Promise.reject(error);
     }
   );

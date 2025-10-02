@@ -42,13 +42,26 @@ const CaseManager: React.FC<CaseManagerProps> = ({ className = '', onViewClues }
       setIsLoading(true);
       setError(null);
       
+      console.log('🔄 Starting to load cases...');
       const response = await ContentService.getCases();
+      console.log('📥 Received response:', response);
+      console.log('🔍 Response.success:', response.success);
+      console.log('🔍 Response.data:', response.data);
+      console.log('🔍 Response keys:', Object.keys(response));
+      
       if (response.success && response.data) {
+        console.log('✅ Cases loaded successfully:', response.data.cases.length, 'cases');
+        console.log('📊 First case data sample:', response.data.cases[0]);
+        console.log('🔍 Difficulty levels:', response.data.cases.map(c => ({ id: c.id, difficultyLevel: c.difficultyLevel, type: typeof c.difficultyLevel })));
         setCases(response.data.cases);
       } else {
+        console.log('❌ Response indicates failure:', response);
+        console.log('❌ response.success:', response.success);
+        console.log('❌ response.data:', response.data);
         setError('Failed to load cases');
       }
     } catch (err) {
+      console.error('💥 Exception while loading cases:', err);
       setError('Failed to load cases');
       console.error('Error loading cases:', err);
     } finally {

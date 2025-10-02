@@ -1,15 +1,15 @@
-# Dr. Mirage: Amara Benali
+![alt text](image.png)# Professor Tectonic: Jin Wei Ming
 
 # VILLAIN CONTENT TEMPLATE
 
 ## Character Profile
-- **Codename**: Dr. Mirage
-- **Full Name**: Amara Benali
-- **Specialty**: Desert Geomorphology & Oasis Hydrology
-- **Region**: North African Desert Systems (Sahara, oases, dune fields)
-- **Cultural Background**: Professional tradition in arid lands research and water resource engineering
+- **Codename**: Professor Tectonic
+- **Full Name**: Jin Wei Ming
+- **Specialty**: Seismology & Geological Survey Engineering
+- **Region**: East Asian Tectonic Systems (Ring of Fire, mountain ranges, river systems)
+- **Cultural Background**: Professional excellence in geological engineering and earthquake preparedness science
 - **Respect Note**: Focuses on professional expertise and geography.
-- **Difficulty**: 3
+- **Difficulty**: 4
 
 ## Educational Framework
 - **Learning Objectives**: [Specific geography concepts taught]

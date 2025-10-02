@@ -272,7 +272,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({ caseId, onClose, onStartGame 
                             
                             return (
                               <img 
-                                src={getVillainImageForRound(selectedCase.villainId, roundIndex)}
+                                src={getVillainImageForRound(caseData.villainId, index)}
                                 alt={`Investigation evidence for ${round.answer?.name || round.location}`}
                                 className="w-48 h-36 object-cover rounded-lg shadow-md mx-auto border"
                                 onError={(e) => {
