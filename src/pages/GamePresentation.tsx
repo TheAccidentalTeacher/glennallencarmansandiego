@@ -78,7 +78,12 @@ const GamePresentation: React.FC = () => {
   }, []);
 
   const startPresentation = async () => {
-    if (!selectedCase) return;
+    if (!selectedCase) {
+      console.error('No case selected');
+      return;
+    }
+
+    console.log('Starting presentation for case:', selectedCase.id);
 
     try {
       // Create a new game session
@@ -91,8 +96,20 @@ const GamePresentation: React.FC = () => {
         }),
       });
 
+      console.log('Session creation response status:', response.status);
+
       if (response.ok) {
-        const session = await response.json();
+        const sessionResponse = await response.json();
+        console.log('Session response:', sessionResponse);
+        
+        let session;
+        if (sessionResponse.success && sessionResponse.data) {
+          session = sessionResponse.data;
+        } else {
+          session = sessionResponse;
+        }
+        
+        console.log('Setting current session:', session);
         setCurrentSession(session);
         
         // Enter fullscreen mode
@@ -141,16 +158,36 @@ const GamePresentation: React.FC = () => {
   };
 
   const revealNextClue = async () => {
-    if (!currentSession) return;
+    if (!currentSession) {
+      console.error('No current session for clue reveal');
+      return;
+    }
+
+    console.log('Revealing clue for session:', currentSession.id);
+    console.log('Current session state:', currentSession);
 
     try {
       const response = await fetch(`/api/sessions/${currentSession.id}/reveal`, {
         method: 'POST',
       });
 
+      console.log('Reveal response status:', response.status);
+      
       if (response.ok) {
         const updatedSession = await response.json();
-        setCurrentSession(updatedSession);
+        console.log('Updated session received:', updatedSession);
+        
+        if (updatedSession.success && updatedSession.data) {
+          console.log('Setting session with:', updatedSession.data);
+          setCurrentSession(updatedSession.data);
+        } else {
+          console.log('Setting session directly:', updatedSession);
+          setCurrentSession(updatedSession);
+        }
+      } else {
+        console.error('Failed to reveal clue, status:', response.status);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
       }
     } catch (error) {
       console.error('Failed to reveal clue:', error);
@@ -383,10 +420,21 @@ const GamePresentation: React.FC = () => {
                       __html: currentSession.revealedClues[currentSession.revealedClues.length - 1]?.clue || ''
                     }} />
                   </div>
+                  {/* Debug info */}
+                  <div className="text-xs text-gray-400 mt-4 opacity-50">
+                    Debug: {currentSession.revealedClues.length} clues revealed
+                    {console.log('Current session for display:', currentSession)}
+                    {console.log('Revealed clues:', currentSession.revealedClues)}
+                  </div>
                 </div>
               ) : (
                 <div className="text-center text-2xl text-blue-200">
                   Ready to reveal the first clue!
+                  {/* Debug info */}
+                  <div className="text-xs text-gray-400 mt-4 opacity-50">
+                    Debug: Session={!!currentSession}, CluesArray={!!currentSession?.revealedClues}, CluesLength={currentSession?.revealedClues?.length || 0}
+                    {console.log('No clues to display. Session:', currentSession)}
+                  </div>
                 </div>
               )}
             </div>
