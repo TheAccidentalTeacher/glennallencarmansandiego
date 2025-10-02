@@ -43,6 +43,11 @@ if (!Number.isFinite(PORT)) {
 console.log(`🔍 PORT env var: "${process.env.PORT}"`);
 console.log(`🔍 Parsed PORT: ${PORT}`);
 console.log(`🔍 NODE_ENV: "${process.env.NODE_ENV}"`);
+console.log(`🔍 Railway specific env vars:`);
+console.log(`   - RAILWAY_ENVIRONMENT: "${process.env.RAILWAY_ENVIRONMENT}"`);
+console.log(`   - RAILWAY_SERVICE_NAME: "${process.env.RAILWAY_SERVICE_NAME}"`);
+console.log(`   - RAILWAY_PROJECT_NAME: "${process.env.RAILWAY_PROJECT_NAME}"`);
+console.log(`   - RAILWAY_REPLICA_ID: "${process.env.RAILWAY_REPLICA_ID}"`);
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -52,24 +57,44 @@ console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
 console.log(`🌐 Is Production: ${isProduction}`);
 
 // Instant liveness probe (no deps, no middleware)
-app.get('/healthz', (_req, res) => {
+app.get('/healthz', (req, res) => {
+  console.log(`🏥 /healthz called from ${req.ip} at ${new Date().toISOString()}`);
   res.status(200).json({ status: 'ok' });
 });
 
-// Security and performance middleware
-app.use(helmet());
+// Security and middleware
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https:"],
+      imgSrc: ["'self'", "data:"],
+      scriptSrc: ["'self'"],
+    },
+  },
+}));
 app.use(compression());
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
-
-// CORS configuration for development and production
-const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : true
-    : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+app.use(cors({
+  origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true,
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+}));
+
+// Request logging middleware for Railway debugging
+app.use((req, _res, next) => {
+  const timestamp = new Date().toISOString();
+  console.log(`📥 ${timestamp} ${req.method} ${req.url} from ${req.ip}`);
+  
+  // Log health check requests specifically
+  if (req.url === '/health' || req.url === '/healthz') {
+    console.log(`🏥 Health check request: ${req.method} ${req.url}`);
+    console.log(`🏥 User-Agent: ${req.get('User-Agent')}`);
+    console.log(`🏥 Headers: ${JSON.stringify(req.headers, null, 2)}`);
+  }
+  
+  next();
+});
+
+app.use(morgan('combined')); // Keep detailed access logs
 
 // Rate limiting
 const limiter = rateLimit({
@@ -100,15 +125,39 @@ console.log(`🖼️  Serving villain images from: ${villainImagesPath}`);
 app.use('/images/villains', express.static(villainImagesPath));
 
 // Health check endpoint - simplified for Railway deployment
-app.get('/health', async (_req, res) => {
-  // For Railway deployment: simple health check without database dependency
-  // The MVP uses file-based content, so database connection is not critical
-  res.json({
-    status: 'ok',
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development',
-    contentMode: 'filesystem',
-  });
+app.get('/health', async (req, res) => {
+  const timestamp = new Date().toISOString();
+  console.log(`🏥 /health called from ${req.ip} at ${timestamp}`);
+  console.log(`🏥 Health check headers:`, req.headers);
+  
+  try {
+    // For Railway deployment: simple health check without database dependency
+    // The MVP uses file-based content, so database connection is not critical
+    const healthData = {
+      status: 'ok',
+      timestamp,
+      environment: process.env.NODE_ENV || 'development',
+      contentMode: 'filesystem',
+      uptime: process.uptime(),
+      memory: process.memoryUsage(),
+      port: PORT,
+      railway: {
+        environment: process.env.RAILWAY_ENVIRONMENT,
+        service: process.env.RAILWAY_SERVICE_NAME,
+        replica: process.env.RAILWAY_REPLICA_ID
+      }
+    };
+    
+    console.log(`🏥 Health check response:`, healthData);
+    res.json(healthData);
+  } catch (error) {
+    console.error(`💥 Health check error:`, error);
+    res.status(500).json({
+      status: 'error',
+      timestamp,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
 });
 
 // API routes
@@ -190,6 +239,9 @@ app.use(errorHandler);
 
 // Start server
 console.log('⏱️  Starting server initialization...');
+console.log(`⏱️  Current working directory: ${process.cwd()}`);
+console.log(`⏱️  Node.js version: ${process.version}`);
+console.log(`⏱️  Platform: ${process.platform} ${process.arch}`);
 const startTime = Date.now();
 
 const server = app.listen(PORT, '0.0.0.0', () => {
@@ -198,6 +250,7 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
+  console.log(`🔗 Alternative health check: http://0.0.0.0:${PORT}/healthz`);
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
@@ -213,14 +266,28 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   }
   
   console.log('✅ Server startup complete');
+  console.log('🎯 Railway health check should succeed now');
 });
 
 // Handle server errors
 server.on('error', (error: any) => {
   console.error('💥 Server error:', error);
+  console.error('💥 Error code:', error.code);
+  console.error('💥 Error syscall:', error.syscall);
+  console.error('💥 Error address:', error.address);
+  console.error('💥 Error port:', error.port);
+  
   if (error.code === 'EADDRINUSE') {
     console.error(`❌ Port ${PORT} is already in use`);
+  } else if (error.code === 'EACCES') {
+    console.error(`❌ Permission denied to bind to port ${PORT}`);
   }
+});
+
+server.on('listening', () => {
+  const addr = server.address();
+  console.log(`🎧 Server listening on:`, addr);
+  console.log(`🌍 Server accessible at: http://0.0.0.0:${PORT}`);
 });
 
 // Global error handlers
