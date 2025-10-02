@@ -60,7 +60,27 @@ const stripHtml = (html: string | undefined): string => {
 
 // Resolve the cases directory relative to the project root
 // Using process.cwd() to get the current working directory (project root)
-const casesDir = path.resolve(process.cwd(), 'content', 'cases');
+// For Railway deployment, try multiple possible paths
+const getCasesDirectory = (): string => {
+  const possiblePaths = [
+    path.resolve(process.cwd(), 'content', 'cases'),           // Development
+    path.resolve(__dirname, '../../content', 'cases'),        // Built server relative
+    path.resolve(__dirname, '../../../content', 'cases'),     // Alternative build structure
+    path.resolve(process.cwd(), '../content', 'cases'),       // Railway alternative
+  ];
+  
+  for (const dir of possiblePaths) {
+    if (fs.existsSync(dir)) {
+      console.log(`📂 Found cases directory at: ${dir}`);
+      return dir;
+    }
+  }
+  
+  console.error('❌ Could not find content/cases directory. Tried:', possiblePaths);
+  return possiblePaths[0]; // fallback to first path
+};
+
+const casesDir = getCasesDirectory();
 
 // Load and parse a single case JSON by id (filename without .json)
 type FsRound = {
