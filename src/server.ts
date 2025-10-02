@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
+import fs from 'fs';
 import { testConnection } from './services/database';
 
 // Import route handlers
@@ -77,14 +78,18 @@ app.use('/api/', limiter);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Serve static files from the React app build directory
-const buildPath = path.join(__dirname, './');
-console.log(`📁 Serving static files from: ${buildPath}`);
-app.use(express.static(buildPath));
+// Serve static files only in production (development uses Vite dev server)
+if (isProduction) {
+  const buildPath = path.join(__dirname, './');
+  console.log(`📁 Serving static files from: ${buildPath}`);
+  app.use(express.static(buildPath));
+} else {
+  console.log(`🔧 Development mode: Static files served by Vite dev server`);
+}
 
-// Serve villain images from content directory
+// Serve villain images from content directory (both dev and prod)
 const villainImagesPath = path.join(__dirname, '../content/villains/images');
-console.log(`�️  Serving villain images from: ${villainImagesPath}`);
+console.log(`🖼️  Serving villain images from: ${villainImagesPath}`);
 app.use('/images/villains', express.static(villainImagesPath));
 
 // Health check endpoint (fast, DB check timeboxed)
@@ -119,15 +124,47 @@ app.get('/health', async (_req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
 // Allow switching to filesystem-backed content endpoints for Teacher-led MVP
-const useFsContent = String(process.env.USE_FS_CONTENT || '').toLowerCase() === 'true';
+// Auto-detect if we should use file-based content by checking for content directory
+const detectFileBasedContent = (): boolean => {
+  // Explicit env var takes precedence
+  if (String(process.env.USE_FS_CONTENT || '').toLowerCase() === 'true') {
+    return true;
+  }
+  
+  // For production deployment, default to file-based content
+  // This ensures Railway works without requiring specific env configuration
+  if (process.env.NODE_ENV === 'production') {
+    console.log('📂 Production environment detected, defaulting to file-based content');
+    return true;
+  }
+  
+  // Check if content directory exists
+  const contentDirs = [
+    path.join(__dirname, '../content/cases'),
+    path.join(__dirname, './content/cases'),
+    path.join(process.cwd(), 'content/cases')
+  ];
+  
+  for (const dir of contentDirs) {
+    if (fs.existsSync(dir)) {
+      console.log(`📂 Found content directory at ${dir}, using file-based serving`);
+      return true;
+    }
+  }
+  
+  return false;
+};
+
+const useFsContent = detectFileBasedContent();
 if (useFsContent) {
-  console.log('📚 Using filesystem-backed content routes (USE_FS_CONTENT=true)');
+  console.log('📚 Using filesystem-backed content routes');
   app.use('/api/content', contentFsRoutes);
 } else {
+  console.log('💾 Using database-backed content routes');
   app.use('/api/content', contentRoutes);
 }
 // Forward /api/cases to /api/content/cases for frontend compatibility
-app.use('/api/cases', (req, res, next) => {
+app.use('/api/cases', (req, _res, next) => {
   req.url = req.url.replace('/api/cases', '/api/content/cases');
   next();
 }, useFsContent ? contentFsRoutes : contentRoutes);
@@ -135,12 +172,25 @@ app.use('/api/cases', (req, res, next) => {
 app.use('/api/images', imageRoutes);
 app.use('/api/locations', locationRoutes);
 
-// Serve React app for all non-API routes (catch-all)
-app.get(/^(?!\/api|\/images).*$/, (_req, res) => {
-  const indexPath = path.join(__dirname, './index.html');
-  console.log(`📄 Serving index.html from: ${indexPath}`);
-  res.sendFile(indexPath);
-});
+// Serve React app for all non-API routes (catch-all) - only in production
+if (isProduction) {
+  app.get(/^(?!\/api|\/images).*$/, (_req, res) => {
+    const indexPath = path.join(__dirname, './index.html');
+    console.log(`📄 Serving index.html from: ${indexPath}`);
+    res.sendFile(indexPath);
+  });
+} else {
+  // In development, API-only server (frontend served by Vite)
+  app.get('/', (_req, res) => {
+    res.json({
+      message: '🎮 Sourdough Pete API Server (Development)',
+      status: 'running',
+      mode: 'development',
+      frontend: 'Run `npm run dev` to start Vite dev server on port 5173',
+      api: 'API endpoints available at /api/*'
+    });
+  });
+}
 
 // Error handling middleware (must be after routes)
 app.use(notFound);

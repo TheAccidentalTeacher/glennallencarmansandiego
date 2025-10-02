@@ -63,21 +63,26 @@ const stripHtml = (html: string | undefined): string => {
 // For Railway deployment, try multiple possible paths
 const getCasesDirectory = (): string => {
   const possiblePaths = [
-    path.resolve(process.cwd(), 'content', 'cases'),           // Development
-    path.resolve(__dirname, '../../content', 'cases'),        // Built server relative
+    path.resolve(process.cwd(), 'content', 'cases'),           // Development (project root)
+    path.resolve(__dirname, '../../content', 'cases'),        // Built server relative (dist/)
     path.resolve(__dirname, '../../../content', 'cases'),     // Alternative build structure
+    path.resolve(__dirname, './content', 'cases'),            // If content copied to dist/
     path.resolve(process.cwd(), '../content', 'cases'),       // Railway alternative
+    path.resolve(process.cwd(), 'dist', 'content', 'cases'),  // Another Railway possibility
   ];
   
   for (const dir of possiblePaths) {
     if (fs.existsSync(dir)) {
       console.log(`📂 Found cases directory at: ${dir}`);
       return dir;
+    } else {
+      console.log(`📂 Checked path (not found): ${dir}`);
     }
   }
   
   console.error('❌ Could not find content/cases directory. Tried:', possiblePaths);
-  return possiblePaths[0]; // fallback to first path
+  // Return the most likely path as fallback
+  return possiblePaths[0];
 };
 
 const casesDir = getCasesDirectory();
