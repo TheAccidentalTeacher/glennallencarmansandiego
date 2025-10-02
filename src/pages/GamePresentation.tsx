@@ -415,16 +415,50 @@ const GamePresentation: React.FC = () => {
                   <div className="text-2xl text-yellow-300 mb-4 font-semibold">
                     Clue #{currentSession.revealedClues.length}
                   </div>
-                  <div className="text-xl text-white leading-relaxed">
+                  
+                  {/* Clue Image */}
+                  {currentSession.revealedClues[currentSession.revealedClues.length - 1]?.image && (
+                    <div className="mb-6">
+                      <img 
+                        src={(() => {
+                          const clue = currentSession.revealedClues[currentSession.revealedClues.length - 1];
+                          const imagePath = clue.image;
+                          
+                          // If it's already a full path, use it
+                          if (imagePath.startsWith('/')) {
+                            return imagePath.replace('/images/villains/', '/content/villains/images/');
+                          }
+                          
+                          // If it's just a filename, construct the path using villain ID
+                          const villainId = currentSession.caseData?.villainId;
+                          if (villainId) {
+                            return `/content/villains/images/${villainId}/${imagePath}`;
+                          }
+                          
+                          // Fallback
+                          return `/images/placeholder-villain.png`;
+                        })()}
+                        alt={`Clue ${currentSession.revealedClues.length} Evidence`}
+                        className="max-w-md mx-auto rounded-lg shadow-lg border-2 border-yellow-300 block"
+                        onError={(e) => {
+                          console.error('Image failed to load:', e.currentTarget.src);
+                          // Fallback to placeholder
+                          e.currentTarget.src = '/images/placeholder-villain.png';
+                        }}
+                      />
+                    </div>
+                  )}
+                  
+                  {/* Clue Text */}
+                  <div className="text-xl text-white leading-relaxed max-w-4xl mx-auto">
                     <div dangerouslySetInnerHTML={{ 
                       __html: currentSession.revealedClues[currentSession.revealedClues.length - 1]?.clue || ''
                     }} />
                   </div>
+                  
                   {/* Debug info */}
                   <div className="text-xs text-gray-400 mt-4 opacity-50">
                     Debug: {currentSession.revealedClues.length} clues revealed
-                    {console.log('Current session for display:', currentSession)}
-                    {console.log('Revealed clues:', currentSession.revealedClues)}
                   </div>
                 </div>
               ) : (
@@ -433,7 +467,6 @@ const GamePresentation: React.FC = () => {
                   {/* Debug info */}
                   <div className="text-xs text-gray-400 mt-4 opacity-50">
                     Debug: Session={!!currentSession}, CluesArray={!!currentSession?.revealedClues}, CluesLength={currentSession?.revealedClues?.length || 0}
-                    {console.log('No clues to display. Session:', currentSession)}
                   </div>
                 </div>
               )}
@@ -459,7 +492,8 @@ const GamePresentation: React.FC = () => {
             <button 
               onClick={revealNextClue}
               disabled={!currentSession || (currentSession.revealedClues?.length >= 3)}
-              className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-500 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl font-bold text-xl transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl font-bold text-xl transition-colors shadow-lg border-2 border-blue-400"
+              style={{ color: 'white', backgroundColor: currentSession && currentSession.revealedClues?.length < 3 ? '#2563eb' : '#6b7280' }}
             >
               {currentSession?.revealedClues?.length === 0 ? 'Reveal First Clue' : 'Reveal Next Clue'}
             </button>
@@ -470,7 +504,8 @@ const GamePresentation: React.FC = () => {
                 alert('Click on the world map above to submit your guess!');
               }}
               disabled={!currentSession || currentSession.revealedClues?.length === 0}
-              className="bg-green-500 hover:bg-green-600 disabled:bg-gray-500 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl font-bold text-xl transition-colors"
+              className="bg-green-600 hover:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl font-bold text-xl transition-colors shadow-lg border-2 border-green-400"
+              style={{ color: 'white', backgroundColor: currentSession && currentSession.revealedClues?.length > 0 ? '#16a34a' : '#6b7280' }}
             >
               Make Guess on Map
             </button>
