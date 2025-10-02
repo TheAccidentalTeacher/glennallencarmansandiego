@@ -379,7 +379,9 @@ const GamePresentation: React.FC = () => {
                     Clue #{currentSession.revealedClues.length}
                   </div>
                   <div className="text-xl text-white leading-relaxed">
-                    {currentSession.revealedClues[currentSession.revealedClues.length - 1]?.text}
+                    <div dangerouslySetInnerHTML={{ 
+                      __html: currentSession.revealedClues[currentSession.revealedClues.length - 1]?.clue || ''
+                    }} />
                   </div>
                 </div>
               ) : (
