@@ -1,8 +1,16 @@
 import { Router, type Request, type Response } from 'express';
-import { v4 as uuidv4 } from 'uuid';
 import { asyncHandler, AppError } from '../middleware/errorHandler';
 
 const router = Router();
+
+// Generate UUID without ES Module import issues
+function generateUUID(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
 
 // In-memory session storage (in production, this would be in a database)
 const gameSessions = new Map<string, any>();
@@ -70,7 +78,7 @@ router.post('/',
     
     // Create new session
     const session: GameSession = {
-      id: uuidv4(),
+      id: generateUUID(),
       caseId,
       caseData,
       currentRound: 1,
@@ -125,7 +133,7 @@ router.post('/:id/guess',
     
     // Add guess to session
     const guess: any = {
-      id: uuidv4(),
+      id: generateUUID(),
       round: session.currentRound,
       latitude,
       longitude,
