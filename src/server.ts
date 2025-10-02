@@ -35,9 +35,15 @@ const cleanEnv = (v?: string): string | undefined => {
 const rawPort = cleanEnv(process.env.PORT);
 let PORT = Number.parseInt(rawPort || '', 10);
 if (!Number.isFinite(PORT)) {
-  // Default to common platform port if env is missing/malformed
+  // Railway typically provides PORT, but default to 8080 if missing
   PORT = 8080;
 }
+
+// Add explicit logs for Railway debugging
+console.log(`🔍 PORT env var: "${process.env.PORT}"`);
+console.log(`🔍 Parsed PORT: ${PORT}`);
+console.log(`🔍 NODE_ENV: "${process.env.NODE_ENV}"`);
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 // Ensure the app is serving on the correct port for Railway
@@ -183,7 +189,12 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Start server
-const server = app.listen(PORT, '0.0.0.0', async () => {
+console.log('⏱️  Starting server initialization...');
+const startTime = Date.now();
+
+const server = app.listen(PORT, '0.0.0.0', () => {
+  const initTime = Date.now() - startTime;
+  console.log(`⏱️  Server initialized in ${initTime}ms`);
   console.log(`🚀 Sourdough Pete API Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
@@ -192,10 +203,25 @@ const server = app.listen(PORT, '0.0.0.0', async () => {
   
   // MVP mode: Skip database connection test for faster startup
   console.log('📂 MVP mode: Using file-based content serving');
+  
+  // Set up WebSocket server for real-time communication
+  try {
+    setupWebSocket(server);
+  } catch (error) {
+    console.error('⚠️  WebSocket setup failed:', error);
+    console.log('📈 Server continuing without WebSocket support');
+  }
+  
+  console.log('✅ Server startup complete');
 });
 
-// Set up WebSocket server for real-time communication
-setupWebSocket(server);
+// Handle server errors
+server.on('error', (error: any) => {
+  console.error('💥 Server error:', error);
+  if (error.code === 'EADDRINUSE') {
+    console.error(`❌ Port ${PORT} is already in use`);
+  }
+});
 
 // Global error handlers
 process.on('uncaughtException', (error) => {
