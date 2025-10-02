@@ -7,7 +7,7 @@ import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
 import fs from 'fs';
-import { testConnection } from './services/database';
+// Note: testConnection removed for MVP file-based deployment
 
 // Import route handlers
 import authRoutes from './api/routes/auth';
@@ -93,32 +93,16 @@ const villainImagesPath = path.join(__dirname, '../content/villains/images');
 console.log(`🖼️  Serving villain images from: ${villainImagesPath}`);
 app.use('/images/villains', express.static(villainImagesPath));
 
-// Health check endpoint (fast, DB check timeboxed)
-const withTimeout = async <T>(p: Promise<T>, ms: number, fallback: T): Promise<T> => {
-  return Promise.race([
-    p.catch(() => fallback),
-    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms))
-  ]) as Promise<T>;
-};
-
+// Health check endpoint - simplified for Railway deployment
 app.get('/health', async (_req, res) => {
-  try {
-    // Limit DB check to 1200ms so healthcheck responds quickly
-    const dbConnected = await withTimeout<boolean>(testConnection(), 1200, false);
-    res.json({
-      status: 'ok',
-      timestamp: new Date().toISOString(),
-      database: dbConnected ? 'connected' : 'disconnected',
-      environment: process.env.NODE_ENV || 'development',
-    });
-  } catch {
-    res.status(200).json({
-      status: 'ok',
-      timestamp: new Date().toISOString(),
-      database: 'unknown',
-      environment: process.env.NODE_ENV || 'development',
-    });
-  }
+  // For Railway deployment: simple health check without database dependency
+  // The MVP uses file-based content, so database connection is not critical
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    contentMode: 'filesystem',
+  });
 });
 
 // API routes
@@ -206,17 +190,8 @@ const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🌐 CORS Origin: ${process.env.CORS_ORIGIN || 'not set'}`);
   console.log(`💾 Database URL: ${process.env.DATABASE_URL ? 'configured' : 'not configured'}`);
   
-  // Test database connection on startup
-  try {
-    const dbConnected = await testConnection();
-    if (dbConnected) {
-      console.log('✅ Database connection successful');
-    } else {
-      console.log('❌ Database connection failed');
-    }
-  } catch (error) {
-    console.error('💥 Database connection error:', error);
-  }
+  // MVP mode: Skip database connection test for faster startup
+  console.log('📂 MVP mode: Using file-based content serving');
 });
 
 // Set up WebSocket server for real-time communication
