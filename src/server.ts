@@ -16,6 +16,7 @@ import contentRoutes from './api/routes/content';
 import contentFsRoutes from './api/routes/contentFs';
 import imageRoutes from './api/routes/images';
 import locationRoutes from './api/routes/locations';
+import sessionRoutes from './api/routes/sessions';
 import { errorHandler, notFound } from './api/middleware/errorHandler';
 import { setupWebSocket } from './api/websocket/gameSocket';
 
@@ -171,6 +172,7 @@ app.use('/api/cases', (req, _res, next) => {
 
 app.use('/api/images', imageRoutes);
 app.use('/api/locations', locationRoutes);
+app.use('/api/sessions', sessionRoutes);
 
 // Serve React app for all non-API routes (catch-all) - only in production
 if (isProduction) {
