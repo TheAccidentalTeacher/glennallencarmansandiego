@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image Display Fix</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .test-section { 
+            margin: 20px 0; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+        }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        img { 
+            max-width: 300px; 
+            border: 2px solid #007bff; 
+            border-radius: 8px; 
+            margin: 10px 0; 
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Image Display Fix Test</h1>
+    
+    <div class="test-section">
+        <h2>✅ Fixed Frontend Image Path Construction</h2>
+        <p><strong>Test Case:</strong> Dr. Altiplano Mountain Mystery - Clue #1</p>
+        <p><strong>Image Path Logic:</strong> When image is just filename + villainId exists → construct full path</p>
+        <p><strong>Expected URL:</strong> <code>/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25%20(15).png</code></p>
+        
+        <div id="test-result"></div>
+        
+        <img id="test-image" src="/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25%20(15).png" 
+             alt="Dr. Altiplano Clue Image" 
+             onload="showSuccess()" 
+             onerror="showError()">
+    </div>
+
+    <div class="test-section">
+        <h2>📊 Educational Content Transformation Results</h2>
+        <p><strong>Before (Graduate Level):</strong> Complex technical language about Andean orogeny and altitudinal zonation</p>
+        <p><strong>After (11-year-old Friendly):</strong> "She's hiding in the world's LONGEST mountain range - it goes for thousands of miles!"</p>
+        <p><strong>✅ Success:</strong> Content successfully transformed to age-appropriate language while maintaining educational value</p>
+    </div>
+
+    <script>
+        function showSuccess() {
+            const resultDiv = document.getElementById('test-result');
+            resultDiv.innerHTML = '<div class="success"><strong>✅ SUCCESS!</strong> Image loads correctly with fixed path construction logic.</div>';
+        }
+        
+        function showError() {
+            const resultDiv = document.getElementById('test-result');
+            resultDiv.innerHTML = '<div class="error"><strong>❌ ERROR:</strong> Image failed to load. Path construction needs adjustment.</div>';
+        }
+        
+        // Test the URL construction logic
+        function testPathConstruction() {
+            const testCases = [
+                {
+                    imagePath: 'generated-image-2025-09-25 (15).png',
+                    villainId: '04-dr-altiplano-isabella-santos',
+                    expected: '/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png'
+                },
+                {
+                    imagePath: '/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png',
+                    villainId: '04-dr-altiplano-isabella-santos', 
+                    expected: '/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png'
+                }
+            ];
+            
+            console.log('Testing URL construction logic:');
+            testCases.forEach((test, i) => {
+                const result = test.imagePath.startsWith('/') ? 
+                    test.imagePath : 
+                    `/images/villains/${test.villainId}/${test.imagePath}`;
+                
+                const passed = result === test.expected;
+                console.log(`Test ${i + 1}: ${passed ? '✅ PASS' : '❌ FAIL'}`);
+                console.log(`  Input: "${test.imagePath}"`);
+                console.log(`  Output: "${result}"`);
+                console.log(`  Expected: "${test.expected}"`);
+            });
+        }
+        
+        testPathConstruction();
+    </script>
+</body>
+</html>

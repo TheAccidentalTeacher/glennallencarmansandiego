@@ -57,7 +57,7 @@ const ContentDashboard: React.FC<ContentDashboardProps> = ({ className = '' }) =
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-2">Content Management Dashboard</h2>
-            <p className="text-gray-600 text-lg">Create and manage your Carmen Sandiego educational adventures</p>
+            <p className="text-gray-600 text-lg">Create and manage your Sourdough Pete geography adventures</p>
             <div className="flex items-center space-x-2 mt-3 text-amber-700">
               <Sparkles size={18} />
               <span className="text-sm font-medium">Ready to inspire young detectives worldwide</span>

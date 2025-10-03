@@ -157,7 +157,7 @@ const CaseManager: React.FC<CaseManagerProps> = ({ className = '', onViewClues }
               <BookOpen className="mr-3" size={28} />
               Case Management
             </h1>
-            <p className="text-red-200 mt-1">Create and manage your Carmen Sandiego investigations</p>
+            <p className="text-red-200 mt-1">Create and manage your Sourdough Pete geography investigations</p>
           </div>
           <button
             onClick={() => setShowCreateModal(true)}

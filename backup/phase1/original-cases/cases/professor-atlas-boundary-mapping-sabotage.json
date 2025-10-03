@@ -1,0 +1,159 @@
+{
+  "id": "professor-atlas-boundary-mapping-sabotage", 
+  "title": "Professor Atlas's European Boundary Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 40,
+  "description": "Follow Professor Atlas through his academic cartographic career from traditional surveying to modern GPS technology as he steals mapping equipment across European landscapes to expose boundary inaccuracies.",
+  "briefing": {
+    "headline": "European geographical boundaries are under surveillance!",
+    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Professor Atlas (Viktor Kowalski), distinguished Eastern European cartography expert, has been stealing traditional and modern surveying equipment across European landscapes. He claims to be documenting 'cartographic fraud' in official boundary representations but his methods threaten international mapping agreements.</p><p><strong>Educational Mission:</strong> Follow this meticulous scholar from his traditional cartography laboratory through field surveying expeditions to university teaching, learning about the evolution of mapping technology, European geography, and the importance of accurate boundary documentation!</p><p><strong>Challenge Level:</strong> Intermediate-Advanced - requires understanding of surveying techniques, European geography, and cartographic technology evolution.</p>",
+    "assets": {}
+  },
+  "villains": [
+    {
+      "id": "professor-atlas",
+      "name": "Professor Atlas (Prof. Viktor Kowalski)",
+      "title": "Historical Cartography & Eastern European Geography Expert",
+      "tags": ["cartography-expert", "boundary-specialist", "river-systems-analyst"],
+      "description": "Distinguished geographer with PhD from University of Warsaw. Expert in historical boundary changes and obsessed with preserving accurate records of European political and cultural landscape evolution.",
+      "image": "/images/villains/09-professor-atlas-viktor-kowalski/historical-cartography-laboratory.jpg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "cartography", "technology-evolution"],
+      "image": "generated-image-2025-09-25 (40).png",
+      "clueHtml": "<p><strong>Cartographic Equipment Theft Report:</strong> 'Professor Atlas photographed in his European countryside laboratory where traditional surveying instruments meet cutting-edge technology. He holds both a GPS device and modern mapping tablet while surrounded by antique theodolites, compasses, and rolled maps - the perfect blend of historical and digital cartography tools.'</p><p><strong>Technology Bridge Evidence:</strong> 'Security footage shows him comparing traditional compass readings with GPS coordinates, demonstrating how modern technology validates centuries-old surveying principles. The theft occurred near medieval castles where ancient boundaries meet modern mapping needs.'</p><p><strong>Geographic Context:</strong> Identify the type of European landscape where traditional cartography meets modern technology!</p>",
+      "researchPrompts": [
+        "Research 'traditional surveying instruments theodolite compass GPS comparison'",
+        "Investigate 'historical cartography evolution digital mapping technology'",
+        "Look up 'European countryside medieval castles mapping landscape'",
+        "Study 'cartographic equipment traditional versus modern surveying'"
+      ],
+      "expectedProcess": [
+        "Search 'traditional surveying' → theodolite, compass, mapping tools identified",
+        "Research 'GPS technology' → Global Positioning System for precise coordinates",
+        "Connect 'medieval landscape' → European countryside with historical boundaries",
+        "Verify 'technology evolution' → traditional methods validated by modern tools"
+      ],
+      "reveal": { "trait": "Technology bridge specialist", "note": "Combines traditional surveying with modern GPS for maximum accuracy" },
+      "answer": { "name": "European Countryside Cartography Lab", "lat": 49.7500, "lng": 6.1667 },
+      "explainHtml": "<p><strong>Laboratory Setting Confirmed:</strong> European countryside where traditional cartography meets modern technology! Professor Atlas uses both antique surveying instruments and cutting-edge GPS devices to achieve unprecedented mapping precision. His expertise bridges centuries of surveying evolution in landscapes shaped by medieval boundaries.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["topography", "field-surveying", "canyon-geography"],
+      "image": "generated-image-2025-09-25 (41).png",
+      "clueHtml": "<p><strong>Field Operations Intelligence:</strong> 'Professor Atlas spotted conducting unauthorized surveying at the edge of a dramatic river canyon, using professional theodolite equipment to map challenging terrain. He claims these deep gorges and winding waterways represent fundamental geographical features often misrepresented in official maps.'</p><p><strong>Topographic Evidence:</strong> 'Security reports show him documenting how water erosion creates complex topographic features - canyon walls, meandering rivers, and varied terrain that traditional surveying struggles to map accurately. His stolen GPS equipment provides precise coordinates for areas where topographic complexity challenges conventional boundary mapping.'</p><p><strong>Terrain Analysis:</strong> Identify the geographic processes that create these challenging canyon landscapes Professor Atlas is surveying!</p>",
+      "researchPrompts": [
+        "Research 'river canyon formation water erosion topographic features'",
+        "Investigate 'theodolite surveying equipment canyon terrain mapping'",
+        "Look up 'meandering rivers gorge formation geological processes'",
+        "Study 'topographic mapping challenging terrain GPS coordinates'"
+      ],
+      "expectedProcess": [
+        "Search 'canyon formation' → water erosion carves deep gorges over time",
+        "Research 'theodolite surveying' → precision instrument for measuring angles and distances",
+        "Connect 'meandering rivers' → flowing water creates winding patterns through landscapes",
+        "Verify 'topographic complexity' → varied terrain requires advanced mapping techniques"
+      ],
+      "reveal": { "trait": "Terrain specialist", "note": "Expert in mapping complex topographic features and challenging landscapes" },
+      "answer": { "name": "River Canyon Surveying Site", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>Terrain Analysis Complete:</strong> River canyon topography! Professor Atlas specializes in surveying challenging landscapes where water erosion creates complex topographic features. His precision theodolite equipment and GPS technology allow him to map canyon walls and meandering waterways that conventional surveying methods struggle to document accurately.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3", 
+      "minutes": 8,
+      "focus": ["european-architecture", "team-leadership", "historic-cities"],
+      "image": "generated-image-2025-09-25 (42).png",
+      "clueHtml": "<p><strong>Urban Mapping Intelligence:</strong> 'Professor Atlas photographed leading a diverse cartography team in a European historic city center, surrounded by Gothic architecture, stone bridges, and cathedral spires. His stolen equipment enables collaborative mapping projects documenting how medieval urban planning affects modern boundary definitions.'</p><p><strong>Architectural Evidence:</strong> 'Team surveillance shows him directing students and assistants with various mapping instruments around medieval buildings, cathedral towers, and historic stone structures. The suspect appears to understand how European historic districts preserve ancient boundary markers within their architectural layouts.'</p><p><strong>Cultural Geography:</strong> Identify the significance of Gothic architecture and medieval urban planning in European historic city preservation!</p>",
+      "researchPrompts": [
+        "Research 'Gothic architecture medieval European cities cathedral spires'",
+        "Investigate 'historic city centers stone bridges urban planning'",
+        "Look up 'medieval towns cultural heritage preservation architecture'",
+        "Study 'European historic districts boundary markers urban geography'"
+      ],
+      "expectedProcess": [
+        "Search 'Gothic architecture' → medieval building style with cathedral spires and stone structures",
+        "Research 'historic cities' → preserved medieval urban planning in European centers",
+        "Connect 'stone bridges' → medieval infrastructure connecting historic districts",
+        "Verify 'boundary markers' → ancient urban divisions preserved in architecture"
+      ],
+      "reveal": { "trait": "Team leadership specialist", "note": "Directs collaborative mapping projects in complex historical environments" },
+      "answer": { "name": "European Historic City Center", "lat": 50.0755, "lng": 14.4378 },
+      "explainHtml": "<p><strong>Historic Urban Context Confirmed:</strong> European medieval city center! Professor Atlas's team leadership skills enable collaborative mapping projects in complex historic environments where Gothic cathedrals, stone bridges, and medieval architecture preserve ancient boundary systems within modern urban geography.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["academic-teaching", "european-geography", "education"],
+      "image": "generated-image-2025-09-25 (43).png",
+      "clueHtml": "<p><strong>Academic Infiltration Alert:</strong> 'Professor Atlas photographed in a university lecture hall teaching European geography to engaged students, using professional presentation equipment including wall-mounted displays of comprehensive European political and physical geography maps. His academic credentials allow him to blend in while conducting unauthorized research.'</p><p><strong>Educational Context:</strong> 'Security footage shows him in a distinguished green academic blazer, using pointers and topographic materials to instruct students about European boundary systems. The classroom setting provides perfect cover for his cartographic espionage operations while maintaining his scholarly reputation.'</p><p><strong>University Research:</strong> Identify the role of academic institutions in European geographic education and boundary studies!</p>",
+      "researchPrompts": [
+        "Research 'university geography departments European boundary studies'",
+        "Investigate 'academic cartography education topographic maps teaching'",
+        "Look up 'European geography instruction political physical geography'",
+        "Study 'scholarly geographic research university classroom settings'"
+      ],
+      "expectedProcess": [
+        "Search 'university geography' → academic institutions teach geographic sciences",
+        "Research 'European boundary studies' → scholarly analysis of political geography",
+        "Connect 'classroom instruction' → professors educate students about continental geography",
+        "Verify 'academic cover' → scholarly credentials provide access to research resources"
+      ],
+      "reveal": { "trait": "Academic authority", "note": "Uses teaching position to access university geographic resources and research" },
+      "answer": { "name": "European University Geography Department", "lat": 48.2082, "lng": 16.3738 },
+      "explainHtml": "<p><strong>Academic Setting Confirmed:</strong> University geography department! Professor Atlas's teaching credentials provide legitimate access to European geographic research while enabling his unauthorized mapping activities. His classroom authority and scholarly reputation create perfect cover for cartographic espionage operations.</p>",
+      "scoring": { "base": 180, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["eastern-europe", "historic-preservation", "identity-reveal"],
+      "image": "generated-image-2025-09-25 (44).png",
+      "clueHtml": "<p><strong>FINAL IDENTITY CONFIRMATION:</strong> 'Professor Atlas photographed in a historic Eastern European city with distinctive medieval architecture - cathedral, clock tower, and defensive walls along a flowing river. He uses modern theodolite surveying equipment to document these preserved urban areas while wearing professional attire with leather surveying satchel.'</p><p><strong>Cultural Specialization Revealed:</strong> 'The location features authentic Polish/Eastern European architectural styles with Gothic cathedral, medieval clock tower, and historic defensive walls - exactly matching Professor Atlas's regional expertise. His modern surveying techniques applied to historic city preservation reveal his true identity: <strong>PROFESSOR VIKTOR KOWALSKI</strong>, Eastern European cartography specialist!'</p><p><strong>Final Challenge:</strong> Identify how Professor Atlas's Eastern European expertise combines historic preservation with modern surveying!</p>",
+      "researchPrompts": [
+        "Research 'Eastern European medieval architecture Polish Gothic cathedral'",
+        "Investigate 'historic city preservation modern surveying techniques'",
+        "Look up 'Professor Viktor Kowalski Eastern European cartography'",
+        "Study 'medieval defensive walls clock towers urban documentation'"
+      ],
+      "expectedProcess": [
+        "Search 'Eastern European architecture' → Polish/Czech medieval city features identified",
+        "Research 'historic preservation' → modern surveying protects cultural heritage",
+        "Connect 'Viktor Kowalski' → Professor Atlas's true identity revealed",
+        "Verify 'regional expertise' → Eastern European specialization confirmed"
+      ],
+      "reveal": { "trait": "PROFESSOR VIKTOR KOWALSKI CONFIRMED", "note": "Eastern European cartography specialist using academic cover for mapping espionage!" },
+      "answer": { "name": "Historic Eastern European City", "lat": 50.0647, "lng": 19.9450 },
+      "explainHtml": "<p><strong>SYNDICATE VILLAIN IDENTIFIED:</strong> Professor Viktor Kowalski! His authentic Eastern European expertise and modern surveying equipment reveal his true specialization in Polish/Czech historic city documentation. This academic cartographer combines legitimate historic preservation knowledge with illegal mapping espionage across European boundary systems!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 60 }
+    }
+  ],
+  "solution": {
+    "villainId": "professor-atlas",
+    "victim": "European Geographic Research Consortium",
+    "item": "High-Precision GPS and Surveying Equipment"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Cartographic Technology: Evolution from traditional surveying instruments to modern GPS/GIS systems</li><li>Topographic Geography: Understanding how water erosion creates complex canyon landscapes requiring advanced mapping</li><li>European Architecture: Medieval Gothic cities preserving ancient boundary markers in urban planning</li><li>Academic Geography: Role of university education in European geographic research and boundary studies</li><li>Eastern European Expertise: Historic preservation combining cultural heritage with modern surveying techniques</li></ul>",
+    "learningExtensions": [
+      "Compare traditional surveying instruments (theodolite, compass) with modern GPS technology",
+      "Research how water erosion creates challenging topographic features like river canyons", 
+      "Explore how medieval European architecture preserves ancient urban boundary systems",
+      "Investigate the role of universities in maintaining scholarly consensus about geographic boundaries"
+    ],
+    "crossCurricular": [
+      "European History: Imperial histories and 20th-century political transformations",
+      "Political Science: Boundary formation and international relations",
+      "Mathematics: Coordinate systems and cartographic projection methods",
+      "Computer Science: Geographic Information Systems and digital mapping technologies"
+    ]
+  }
+}

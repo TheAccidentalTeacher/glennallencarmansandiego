@@ -1,0 +1,153 @@
+{
+  "id": "dr-qanat-ancient-irrigation-sabotage",
+  "title": "Dr. Qanat's Ancient Irrigation Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "description": "Track Dr. Qanat, master of disguise and ancient engineering expert, across the world's greatest arid regions as he steals monitoring equipment from modern construction projects threatening historical water systems.",
+  "briefing": {
+    "headline": "Ancient water management systems are under threat!",
+    "narrativeHtml": "<p><strong>UNESCO Heritage Alert for Route Runners!</strong> Dr. Qanat, master of disguise from the <em>Sourdough Syndicate's 'Ancient Systems Division,'</em> has stolen hydraulic monitoring equipment from archaeological sites protecting ancient water systems!</p><p>His calling card: a bread-slice stamp and the message: <em>'These ancient irrigation masterpieces are being DESTROYED by modern development! My HYDRAULIC PROTOCOL will expose the engineering truth they're erasing!'</em></p><p><strong>Intelligence Report:</strong> Dr. Qanat believes authorities suppress knowledge of ancient water engineering to justify destructive modern projects. He's stealing equipment to create an 'authentic heritage monitoring network' - but his shape-shifting abilities make him extremely difficult to track!</p>",
+    "assets": {}
+  },
+  "suspects": [
+    {
+      "name": "Dr. Qanat (Reza Mehrabi)",
+      "tags": ["master-of-disguise", "ancient-engineering-expert", "water-systems-specialist"],
+      "description": "Shape-shifting archaeological engineer specializing in ancient hydraulic systems. Expert in qanat irrigation and traditional water management across multiple cultures.",
+      "image": "/images/villains/08-dr-qanat-master-of-disguise/desert-water-systems-archaeologist.jpg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["ancient-archaeology", "qanat-systems", "desert-engineering"],
+      "clueHtml": "<p><strong>Archaeological Intelligence:</strong> 'Dr. Qanat was spotted at an ancient qanat archaeological site in arid landscape, conducting field research on traditional water management structures. He's using water flow measurement devices and surveying equipment to document ancient desert architecture and hydraulic engineering systems that sustained civilizations for millennia.'</p><img src='/images/villains/08-dr-qanat-master-of-disguise/desert-water-systems-archaeologist.jpg' alt='Dr. Qanat conducting archaeological research at ancient qanat site' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'qanat ancient irrigation underground channels'",
+        "Investigate 'archaeological field research water systems'",
+        "Look up 'ancient desert water management arid regions'",
+        "Study 'traditional hydraulic engineering desert architecture'"
+      ],
+      "expectedProcess": [
+        "Search 'qanat systems' → ancient Persian irrigation technology",
+        "Research archaeological methods → field research techniques",
+        "Connect desert water → ancient survival engineering",
+        "Understand hydraulic systems → traditional water transport"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Ancient Qanat Systems", "lat": 32.0000, "lng": 53.0000 },
+      "explainHtml": "<p><strong>Archaeological Site Confirmed:</strong> Ancient qanat irrigation systems! These underground channels transported water across vast desert distances, enabling agriculture and cities in arid regions. Dr. Qanat's expertise in these ancient engineering marvels makes him dangerous around archaeological sites!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["expedition-leadership", "middle-eastern-architecture", "educational-outreach"],
+      "clueHtml": "<p><strong>Educational Intelligence:</strong> 'Dr. Qanat was photographed leading a teaching expedition in a historic Middle Eastern city featuring distinctive windcatcher tower architecture. He's using educational display boards labeled 'Dr. QANAT' with water system diagrams, coordinating diverse international teams while demonstrating expertise in traditional urban water management.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of educational expedition leadership and cultural adaptation'</p><img src='/images/villains/08-dr-qanat-master-of-disguise/educational-expedition-leader.jpg' alt='Dr. Qanat leading educational expedition in Middle Eastern city' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'windcatcher towers Middle Eastern architecture'",
+        "Investigate 'traditional urban water management systems'",
+        "Look up 'educational expeditions cultural heritage sites'",
+        "Study 'Middle Eastern water architecture cooling systems'"
+      ],
+      "expectedProcess": [
+        "Search 'windcatcher towers' → traditional cooling architecture",
+        "Research urban water management → city water systems",
+        "Connect educational expeditions → heritage site teaching",
+        "Understand cultural architecture → traditional engineering solutions"
+      ],
+      "reveal": { "trait": "Master of educational expedition leadership and cultural adaptation", "note": "Expert in coordinating international teams and teaching traditional engineering" },
+      "answer": { "name": "Middle Eastern Historic Cities", "lat": 31.0000, "lng": 47.0000 },
+      "explainHtml": "<p><strong>Educational Operations Confirmed:</strong> Historic Middle Eastern cities! Dr. Qanat's expertise in traditional architecture and water systems makes him valuable as an expedition leader, but dangerous when stealing educational equipment from heritage sites!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["shushtar-hydraulics", "persian-engineering", "unesco-heritage"],
+      "clueHtml": "<p><strong>Heritage Intelligence:</strong> 'Dr. Qanat was observed at the Shushtar Historical Hydraulic System Research Site, a UNESCO World Heritage location showcasing 1,500-year-old Persian engineering. He's using advanced flow measurement equipment to analyze ancient hydraulic infrastructure with flowing water channels, demonstrating technical expertise in historical water systems preservation.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of Persian hydraulic engineering and UNESCO site analysis'</p><img src='/images/villains/08-dr-qanat-master-of-disguise/historical-site-technical-specialist.jpg' alt='Dr. Qanat conducting technical research at Shushtar UNESCO site' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'Shushtar Historical Hydraulic System UNESCO Iran'",
+        "Investigate 'Persian engineering ancient water management'",
+        "Look up 'UNESCO World Heritage hydraulic systems'",
+        "Study 'ancient Iranian water infrastructure technology'"
+      ],
+      "expectedProcess": [
+        "Search 'Shushtar hydraulic system' → UNESCO World Heritage site in Iran",
+        "Research Persian engineering → advanced ancient technology",
+        "Connect UNESCO heritage → protected historical sites",
+        "Understand Iranian water systems → sophisticated ancient infrastructure"
+      ],
+      "reveal": { "trait": "Master of Persian hydraulic engineering and UNESCO heritage analysis", "note": "Expert in analyzing and preserving ancient Iranian water management systems" },
+      "answer": { "name": "Shushtar, Iran", "lat": 32.0453, "lng": 48.8580 },
+      "explainHtml": "<p><strong>UNESCO Heritage Confirmed:</strong> Shushtar Historical Hydraulic System! This incredible 1,500-year-old Persian engineering masterpiece demonstrates advanced ancient water management. Dr. Qanat's expertise in Persian hydraulic systems makes him extremely dangerous around this UNESCO World Heritage site!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["academic-instruction", "hydraulic-education", "engineering-presentation"],
+      "clueHtml": "<p><strong>Academic Intelligence:</strong> 'Dr. Qanat was tracked conducting professional classroom presentations on hydraulic engineering systems, using engineering diagrams, water flow charts, and technical displays. He's demonstrating expert teaching credentials and engineering education expertise while communicating complex hydraulic systems to students in an academic environment with desert landscape views.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of academic hydraulic engineering instruction and technical education'</p><img src='/images/villains/08-dr-qanat-master-of-disguise/academic-engineering-instructor.jpg' alt='Dr. Qanat presenting hydraulic engineering in academic classroom' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'hydraulic engineering education academic instruction'",
+        "Investigate 'water flow systems engineering diagrams'",
+        "Look up 'technical education hydraulic systems teaching'",
+        "Study 'engineering instruction water management systems'"
+      ],
+      "expectedProcess": [
+        "Search 'hydraulic education' → engineering instruction methods",
+        "Research water flow systems → technical diagram interpretation",
+        "Connect technical education → engineering teaching expertise",
+        "Understand instruction methods → academic presentation skills"
+      ],
+      "reveal": { "trait": "Master of academic hydraulic engineering instruction and technical education", "note": "Expert in teaching complex water management systems in educational settings" },
+      "answer": { "name": "Engineering Education Institutions", "lat": 35.0000, "lng": 51.0000 },
+      "explainHtml": "<p><strong>Academic Operations Confirmed:</strong> Engineering education institutions! Dr. Qanat's expertise in hydraulic engineering education makes him valuable as an instructor, but dangerous when infiltrating academic institutions to steal educational equipment and resources!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["master-of-disguise", "european-cartography", "shape-shifting-revealed"],
+      "optional": true,
+      "clueHtml": "<p><strong>DISGUISE EXPOSED (Optional Round):</strong> 'Dr. Qanat has been cornered in his most shocking disguise yet - appearing as a completely different person! He's now a European academic with bow tie, glasses, and formal brown suit, conducting historical cartography with GPS devices and surveying instruments near medieval European castles, demonstrating his master of disguise abilities across different cultural contexts!'</p><p><strong>Shape-Shifting Revelation:</strong> 'His master of disguise abilities allow him to infiltrate different academic communities worldwide - from Middle Eastern water systems specialist to European historical cartographer - while maintaining expertise in water management across all cultural contexts!'</p><img src='/images/villains/08-dr-qanat-master-of-disguise/european-historical-cartographer-disguise.jpg' alt='Dr. Qanat in complete European academic disguise conducting cartography' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'historical cartography GPS surveying techniques'",
+        "Investigate 'master of disguise cultural adaptation'",
+        "Study 'European medieval water management systems'",
+        "Look up 'academic infiltration shape-shifting abilities'"
+      ],
+      "expectedProcess": [
+        "Search 'historical cartography' → mapping and surveying techniques",
+        "Research master of disguise → identity transformation abilities",
+        "Connect European systems → different water management traditions",
+        "Understand infiltration → academic community penetration"
+      ],
+      "reveal": { "trait": "MASTER OF DISGUISE AND CULTURAL SHAPE-SHIFTING", "note": "Ultimate ability: Complete identity transformation across different cultural and academic contexts!" },
+      "answer": { "name": "European Academic Institutions", "lat": 48.8566, "lng": 2.3522 },
+      "explainHtml": "<p><strong>Disguise Exposed:</strong> Dr. Qanat's master of disguise abilities revealed! He can completely transform his appearance and cultural presentation while maintaining expertise in water systems across different civilizations. His shape-shifting makes him the most dangerous Syndicate operative!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-qanat",
+    "victim": "UNESCO World Heritage Water Systems",
+    "item": "Ancient Hydraulic Monitoring Equipment"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Geography: World's largest arid climate zone and ancient irrigation adaptations</li><li>Ancient History: Mesopotamian civilization and early engineering innovations</li><li>Cultural Heritage: Persian engineering mastery and UNESCO World Heritage sites</li><li>Urban Geography: Modern megacities sustained by ancient water systems</li><li>Global Issues: Balancing heritage preservation with contemporary water security needs</li></ul>",
+    "learningExtensions": [
+      "Research qanat irrigation systems and their global distribution",
+      "Explore UNESCO World Heritage hydraulic engineering sites",
+      "Map ancient trade routes and their water management requirements",
+      "Investigate modern applications of traditional water conservation techniques"
+    ],
+    "crossCurricular": [
+      "Ancient History: Mesopotamian and Persian civilizations",
+      "Engineering: Hydraulic systems and water management",
+      "Environmental Science: Arid climate adaptations and sustainability",
+      "Cultural Studies: Heritage preservation and traditional knowledge systems"
+    ]
+  }
+}

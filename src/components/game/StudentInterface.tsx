@@ -192,7 +192,7 @@ const StudentInterface: React.FC<StudentInterfaceProps> = ({ className = '' }) =
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Detective Station</h1>
-            <p className="text-blue-200">Track down Carmen Sandiego and her gang!</p>
+            <p className="text-blue-200">Track down The Sourdough Syndicate!</p>
           </div>
           <div className="flex items-center space-x-2">
             <div className={`px-3 py-1 rounded-full text-sm font-medium ${

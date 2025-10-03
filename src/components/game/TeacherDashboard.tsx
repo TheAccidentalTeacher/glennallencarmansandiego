@@ -107,7 +107,7 @@ const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ className = '' }) =
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Teacher Command Center</h1>
-            <p className="text-red-200">Control your Carmen Sandiego investigation</p>
+            <p className="text-red-200">Control your Sourdough Pete geography investigation</p>
           </div>
           <div className="flex items-center space-x-2">
             <div className={`px-3 py-1 rounded-full text-sm font-medium ${

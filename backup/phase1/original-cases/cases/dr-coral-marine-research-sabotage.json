@@ -1,0 +1,175 @@
+{
+  "id": "dr-coral-marine-research-sabotage",
+  "title": "The Coral Triangle Research Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "dr-coral-maya-sari",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "marine"
+  },
+  "briefing": {
+    "headline": "Pacific Coral Research Stations Under Attack!",
+    "narrativeHtml": "<p><strong>Marine Emergency Alert for Route Runners!</strong> Dr. Coral, marine specialist of the <em>Sourdough Syndicate's 'Reefs & Currents Division,'</em> has stolen advanced coral monitoring equipment from research stations across the Pacific!</p><p>Her calling card: a bread-slice stamp and the message: <em>'These coral reefs are DYING while governments pretend! My REEF PROTOCOL will expose the oceanic truth they hide from the world!'</em></p><p><strong>Intelligence Report:</strong> Dr. Coral believes official marine research downplays coral bleaching to protect tourism industries. She's stealing equipment to create an 'authentic reef monitoring network' - but where in the vast Pacific?</p>",
+    "assets": {
+      "image": "/images/cases/dr-coral/briefing-coral-equipment.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Coral (Maya Sari)",
+      "tags": ["marine-biologist", "coral-expert", "conservation-extremist"],
+      "description": "Marine conservation specialist with PhD from University of Hawaii. Expert in Pacific coral reef systems and underwater research diving.",
+      "image": "/images/villains/07-dr-coral-maya-sari/generated-image-2025-09-25 (30).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["marine-ecosystems", "tropical-research", "dive-preparation"],
+      "clueHtml": "<p><strong>Marine Intelligence:</strong> 'Dr. Coral was spotted at a tropical coral reef research station, preparing for underwater survey missions. She's targeting pristine coral formations with diverse marine life, using professional diving equipment and underwater cameras to document reef systems around tropical islands with palm tree coastlines.'</p><img src='/images/villains/07-dr-coral-maya-sari/tropical-coral-reef-field-research.jpg' alt='Dr. Coral preparing diving equipment at tropical reef research station' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'tropical coral reef ecosystems Pacific islands'",
+        "Investigate 'coral reef research diving scientific methods'",
+        "Look up 'marine biodiversity tropical reef systems'",
+        "Study 'coral formation tropical island environments'"
+      ],
+      "expectedProcess": [
+        "Search 'tropical coral reefs' → Indo-Pacific reef systems",
+        "Research diving methods → scientific underwater research",
+        "Connect biodiversity → reef ecosystem complexity",
+        "Understand formation → tropical coral growth conditions"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Tropical Pacific Coral Reefs", "lat": -10.0000, "lng": 150.0000 },
+      "explainHtml": "<p><strong>Research Location Confirmed:</strong> Tropical Pacific coral reefs! These pristine reef systems around tropical islands provide ideal conditions for coral growth and support incredible marine biodiversity. Dr. Coral's diving expertise makes her dangerous around these delicate ecosystems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2", 
+      "minutes": 8,
+      "focus": ["underwater-research", "reef-documentation", "marine-life"],
+      "clueHtml": "<p><strong>Diving Intelligence:</strong> 'Dr. Coral was photographed conducting active underwater research, using advanced diving gear and underwater camera systems to document vibrant coral formations. She's studying diverse marine life including tropical fish and sea turtles in their natural reef habitat, gathering data on coral ecosystem health and biodiversity.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of underwater research and marine documentation'</p><img src='/images/villains/07-dr-coral-maya-sari/underwater-coral-reef-documentation.jpg' alt='Dr. Coral conducting underwater coral reef research' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'underwater coral reef research methods'",
+        "Investigate 'coral ecosystem health monitoring'",
+        "Look up 'marine biodiversity tropical fish sea turtles'",
+        "Study 'scientific diving coral documentation'"
+      ],
+      "expectedProcess": [
+        "Search 'underwater research' → scientific diving techniques",
+        "Research ecosystem monitoring → coral health assessment",
+        "Connect marine life → reef biodiversity indicators", 
+        "Verify documentation → underwater photography methods"
+      ],
+      "reveal": { "trait": "Master of underwater research and coral documentation", "note": "Expert in scientific diving and marine ecosystem assessment" },
+      "answer": { "name": "Great Barrier Reef, Australia", "lat": -18.2871, "lng": 147.6992 },
+      "explainHtml": "<p><strong>Underwater Research Confirmed:</strong> Great Barrier Reef! This massive coral system provides perfect conditions for underwater research, with diverse marine life and complex coral formations. Dr. Coral's expertise in scientific diving makes her a formidable underwater researcher!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["research-vessels", "marine-operations", "field-coordination"],
+      "clueHtml": "<p><strong>Vessel Intelligence:</strong> 'Dr. Coral was observed coordinating operations from a marine research vessel marked 'MARINE RESEARCH,' managing underwater research equipment and diving operations. She's using professional research infrastructure to conduct vessel-based coral studies, coordinating between surface support and underwater research teams.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of marine research vessel operations and field coordination'</p><img src='/images/villains/07-dr-coral-maya-sari/marine-research-vessel-operations.jpg' alt='Dr. Coral coordinating research vessel operations' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'marine research vessel operations'",
+        "Investigate 'research ship coral reef studies'", 
+        "Look up 'vessel-based underwater research coordination'",
+        "Study 'marine field research infrastructure'"
+      ],
+      "expectedProcess": [
+        "Search 'research vessels' → marine research ship operations",
+        "Research vessel studies → ship-based coral research",
+        "Connect coordination → surface and underwater teams",
+        "Understand infrastructure → research vessel capabilities"
+      ],
+      "reveal": { "trait": "Master of research vessel operations and marine coordination", "note": "Expert in vessel-based coral research and diving support systems" },
+      "answer": { "name": "Coral Triangle Research Stations", "lat": -2.0000, "lng": 120.0000 },
+      "explainHtml": "<p><strong>Research Operations Confirmed:</strong> Coral Triangle research stations! This marine biodiversity hotspot requires sophisticated research vessels to study the world's most diverse coral ecosystems. Dr. Coral's vessel coordination skills make her dangerous around these critical research operations!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["marine-laboratory", "conservation-education", "scientific-communication"],
+      "clueHtml": "<p><strong>Laboratory Intelligence:</strong> 'Dr. Coral was tracked to a marine conservation laboratory with large educational displays showing 'MARINE CONSERVATION' research. She's presenting coral reef conservation knowledge to students using coral samples, specimens, and comprehensive educational materials, demonstrating her expertise in scientific communication and marine education.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of marine conservation education and laboratory research'</p><img src='/images/villains/07-dr-coral-maya-sari/marine-conservation-laboratory-education.jpg' alt='Dr. Coral presenting marine conservation research in laboratory' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'marine conservation laboratory research'",
+        "Investigate 'coral reef conservation education'",
+        "Look up 'marine science communication methods'",
+        "Study 'coral specimen research display techniques'"
+      ],
+      "expectedProcess": [
+        "Search 'marine laboratories' → coral research facilities",
+        "Research conservation education → marine science teaching",
+        "Connect communication → sharing research with public",
+        "Verify specimens → coral research and display"
+      ],
+      "reveal": { "trait": "Master of marine conservation education and research communication", "note": "Expert in laboratory research and scientific education outreach" },
+      "answer": { "name": "Marine Research Institute", "lat": -27.4698, "lng": 153.0251 },
+      "explainHtml": "<p><strong>Laboratory Operations Confirmed:</strong> Marine research institute! These facilities combine cutting-edge coral research with public education, helping people understand marine conservation. Dr. Coral's expertise in both research and education makes her particularly dangerous around these valuable scientific resources!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5", 
+      "minutes": 8,
+      "focus": ["community-engagement", "pacific-islands", "collaborative-conservation"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Coral has been cornered engaging with Pacific island community members about marine conservation, using educational materials and research from the 'RESEARCH VESSEL CORAL EXPLORER.' She's conducting collaborative conservation education alongside traditional Pacific outrigger boats, claiming to bridge scientific research with indigenous marine knowledge.'</p><p><strong>Master Plan Revealed:</strong> 'Pacific communities deserve the TRUTH about coral destruction! My research network will expose the reef crisis they're hiding from island peoples!'</p><img src='/images/villains/07-dr-coral-maya-sari/pacific-island-community-marine-education.jpg' alt='Dr. Coral conducting community marine conservation education' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'Pacific island community marine conservation'",
+        "Investigate 'indigenous marine knowledge coral reefs'",
+        "Study 'collaborative conservation Pacific islands'",
+        "Look up 'traditional fishing coral reef management'"
+      ],
+      "expectedProcess": [
+        "Search 'Pacific island conservation' → community-based management",
+        "Research indigenous knowledge → traditional marine practices",
+        "Connect collaboration → combining science and tradition",
+        "Understand traditional management → sustainable reef practices"
+      ],
+      "reveal": { "trait": "MASTER OF COMMUNITY MARINE CONSERVATION", "note": "Ultimate goal: Create unauthorized coral monitoring network across Pacific islands!" },
+      "answer": { "name": "Pacific Island Communities", "lat": -18.0000, "lng": 178.0000 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Pacific island communities! Dr. Coral's ultimate plan involves working with island communities to create an unauthorized coral monitoring network, claiming to expose coral destruction hidden from local peoples. Her community engagement expertise makes this her most dangerous scheme!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-coral-maya-sari", 
+    "expectedCountry": "Pacific Islands",
+    "victim": "Pacific Marine Research Stations Network",
+    "item": "Advanced coral monitoring equipment and underwater research systems",
+    "suspect": {
+      "name": "Dr. Coral (Maya Sari)",
+      "notes": "Marine conservation specialist, underwater research expert, vessel operations coordinator, community conservation educator"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Marine Ecosystems:</strong> Tropical coral reef systems, Pacific island environments, marine biodiversity</li><li><strong>Research Methods:</strong> Scientific diving, underwater documentation, coral health monitoring</li><li><strong>Vessel Operations:</strong> Marine research ships, vessel-based diving support, field coordination</li><li><strong>Laboratory Science:</strong> Marine conservation research, coral specimen analysis, educational displays</li><li><strong>Community Engagement:</strong> Pacific island collaboration, traditional marine knowledge, conservation education</li><li><strong>Conservation Issues:</strong> Coral bleaching, reef protection, sustainable marine management</li><li><strong>Scientific Skills:</strong> Underwater photography, research communication, community outreach</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Marine ecosystems, coral reef basics, diving and research methods</p><p><strong>Advanced Challenges:</strong> Conservation ethics, community collaboration, research vessel operations, scientific communication</p><p><strong>Educational Progression:</strong> From field research → underwater documentation → vessel operations → laboratory education → community engagement</p><p><strong>Sourdough Syndicate Connection:</strong> Dr. Coral's 'Reefs & Currents Division' marine expertise revealed through each investigation phase!</p>",
+    "learningExtensions": [
+      "Study the Coral Triangle and its incredible marine biodiversity hotspot",
+      "Research scientific diving techniques and underwater research methods",
+      "Investigate coral bleaching causes and reef conservation strategies", 
+      "Compare traditional Pacific island marine management with modern science",
+      "Map major coral reef systems around the world and their threats",
+      "Explore careers in marine biology and coral reef conservation",
+      "Design a community-based coral conservation program",
+      "Research marine protected areas and sustainable reef tourism"
+    ],
+    "crossCurricular": [
+      "Biology: Marine ecosystems, coral biology, reef biodiversity, conservation science",
+      "Earth Science: Ocean currents, coral formation, climate change impacts on reefs", 
+      "Technology: Underwater research equipment, diving technology, marine monitoring systems",
+      "Geography: Pacific island nations, coral reef distribution, marine protected areas",
+      "Environmental Science: Coral bleaching, ocean acidification, sustainable tourism",
+      "Social Studies: Pacific island cultures, traditional marine knowledge, conservation partnerships",
+      "Ethics: Community collaboration, indigenous knowledge respect, conservation approaches"
+    ]
+  }
+}

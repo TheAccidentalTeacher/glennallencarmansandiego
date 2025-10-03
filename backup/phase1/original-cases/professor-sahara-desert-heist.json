@@ -1,0 +1,175 @@
+{
+  "id": "professor-sahara-desert-heist",
+  "title": "The Great Desert Archaeological Heist", 
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "professor-sahara-amira-hassan",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true, 
+      "learningExtensions": true
+    },
+    "theme": "desert"
+  },
+  "briefing": {
+    "headline": "Ancient Desert Artifacts Vanish Across North Africa!",
+    "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Professor Sahara, archaeological specialist of the <em>Sourdough Syndicate's 'Deserts & Oases Division,'</em> has stolen priceless ancient water management artifacts from museums across North Africa!</p><p>Her calling card: a bread-slice stamp and the message: <em>'These ancient engineering marvels belong in the DESERT, not in your climate-controlled cases! My ULTIMATE OASIS PROTOCOL will demonstrate the true power of desert archaeology!'</em></p><p><strong>Intelligence Report:</strong> Professor Sahara believes modern museums inadequately preserve ancient desert technologies. She's stealing artifacts to create an 'authentic desert museum' - but where in the vast Sahara?</p>",
+    "assets": {
+      "image": "/images/cases/professor-sahara/briefing-artifacts.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Professor Sahara (Dr. Amira Hassan)",
+      "tags": ["desert-archaeology", "ancient-water-systems", "heritage-preservationist"],
+      "description": "Brilliant archaeologist with PhD from Cambridge and expertise in ancient North African water management systems. Known for radical preservation methods.",
+      "image": "/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (5).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "oasis-systems", "community-consultation"],
+      "clueHtml": "<p><strong>Community Intelligence:</strong> 'Professor Sahara was spotted discussing ancient irrigation systems with local residents near date palm groves and mudbrick architecture. She's examining traditional water channels called qanats in an oasis community, studying the collaboration between ancient engineering and local knowledge.'</p><img src='/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (5).png' alt='Professor Sahara consulting with oasis community about traditional irrigation' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'qanat irrigation ancient water channels'",
+        "Investigate 'oasis agriculture date palm cultivation'", 
+        "Look up 'mudbrick architecture desert communities'",
+        "Study 'traditional water management desert regions'"
+      ],
+      "expectedProcess": [
+        "Search 'qanat irrigation' → ancient Persian water tunnels",
+        "Research oasis agriculture → date palms, sustainable farming",
+        "Connect mudbrick → traditional desert architecture",
+        "Understand community water management systems"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Sahara Oasis Communities", "lat": 27.1750, "lng": 15.5000 },
+      "explainHtml": "<p><strong>Community Context Confirmed:</strong> Professor Sahara is consulting with oasis communities about traditional water management! Qanats are ancient underground channels that bring water from mountains to desert settlements, supporting date palm agriculture and sustainable desert living.</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2", 
+      "minutes": 8,
+      "focus": ["heritage-sites", "gps-surveying", "monument-documentation"],
+      "clueHtml": "<p><strong>Heritage Intelligence:</strong> 'Professor Sahara was photographed using professional GPS equipment and total station instruments near ancient rock-cut monuments beside a desert reservoir. She's conducting unauthorized surveys of heritage sites, documenting the precise locations and measurements of ancient statues and seated figures.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of GPS surveying and heritage site documentation'</p><img src='/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (6).png' alt='Professor Sahara conducting GPS survey near ancient monuments' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'GPS total station archaeological surveying'",
+        "Investigate 'rock-cut monuments ancient Egypt'",
+        "Look up 'heritage site documentation methods'",
+        "Study 'Abu Simbel Nubian monuments Lake Nasser'"
+      ],
+      "expectedProcess": [
+        "Search 'GPS surveying archaeology' → precision documentation methods",
+        "Research rock-cut monuments → Abu Simbel, Nubian heritage",
+        "Connect heritage documentation → UNESCO standards",
+        "Verify Lake Nasser reservoir → Aswan Dam creation"
+      ],
+      "reveal": { "trait": "Master of GPS surveying and monument documentation", "note": "Uses precision instruments to map ancient heritage sites" },
+      "answer": { "name": "Abu Simbel, Egypt", "lat": 22.3372, "lng": 31.6258 },
+      "explainHtml": "<p><strong>Heritage Survey Confirmed:</strong> Abu Simbel! These magnificent rock-cut temples were precisely documented and relocated in the 1960s. Professor Sahara's GPS surveying skills make her dangerous around UNESCO World Heritage sites - she's mapping them for her archaeological crimes!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["hydrology-education", "institute-presentation", "desert-models"],
+      "clueHtml": "<p><strong>Educational Intelligence:</strong> 'Professor Sahara was recorded presenting at a desert research institute, using tabletop models of qanat wells, irrigation gates, and walled cisterns. She's teaching international audiences about arid hydrology while consulting wall maps of river basins and hydrological data - but her real plan involves stealing these educational models!'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of arid hydrology and educational presentation'</p><img src='/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (7).png' alt='Professor Sahara presenting desert hydrology models at research institute' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'arid hydrology desert water management'", 
+        "Investigate 'qanat wells irrigation systems ancient'",
+        "Look up 'cistern water storage desert architecture'",
+        "Study 'river basin analysis Middle East Africa'"
+      ],
+      "expectedProcess": [
+        "Search 'arid hydrology' → desert water science",
+        "Research qanat systems → ancient Persian irrigation",
+        "Connect cisterns → water storage technology",
+        "Understand basin analysis → regional water planning"
+      ],
+      "reveal": { "trait": "Master of arid hydrology and systems education", "note": "Teaches complex water management through hands-on models and presentations" },
+      "answer": { "name": "Desert Research Institute", "lat": 30.0444, "lng": 31.2357 },
+      "explainHtml": "<p><strong>Educational Mission Revealed:</strong> Professor Sahara uses her expertise to teach desert water management at research institutes! Her tabletop models demonstrate ancient irrigation techniques, making complex hydrology accessible - but she's stealing these educational tools for her criminal schemes!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["surface-archaeology", "documentation-methods", "careful-excavation"],
+      "clueHtml": "<p><strong>Archaeological Intelligence:</strong> 'Professor Sahara was observed conducting careful surface archaeology near rock-cut tombs in the desert, using brushes, picks, and magnifying equipment to document scattered artifacts. She's photographing evidence with tripod cameras and using solar-powered sensors - her methodical approach suggests she's searching for specific ancient technologies!'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of archaeological documentation and surface survey'</p><img src='/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (8).png' alt='Professor Sahara conducting surface archaeology with documentation equipment' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'surface archaeology documentation methods'",
+        "Investigate 'rock-cut tombs ancient Egypt desert'",
+        "Look up 'archaeological photography techniques'", 
+        "Study 'solar powered field equipment archaeology'"
+      ],
+      "expectedProcess": [
+        "Search 'surface archaeology' → non-invasive documentation",
+        "Research rock-cut tombs → ancient burial sites",
+        "Connect photography → systematic documentation",
+        "Verify solar equipment → sustainable field work"
+      ],
+      "reveal": { "trait": "Master of archaeological surface survey and documentation", "note": "Uses systematic methods to record and preserve archaeological evidence" },
+      "answer": { "name": "Valley of the Kings, Egypt", "lat": 25.7402, "lng": 32.6014 },
+      "explainHtml": "<p><strong>Archaeological Site Confirmed:</strong> Valley of the Kings! This ancient royal necropolis contains numerous rock-cut tombs where pharaohs were buried. Professor Sahara's careful documentation methods make her dangerous around these priceless archaeological sites!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5", 
+      "minutes": 8,
+      "focus": ["ground-penetrating-radar", "excavation-geophysics", "final-confrontation"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Professor Sahara has been cornered at an active excavation trench using ground-penetrating radar equipment! She's scanning stepped ruins with GPR technology and recording data on tablets, claiming she's 'liberating ancient knowledge from bureaucratic archaeology.' Her sophisticated geophysics setup suggests this is her ultimate archaeological heist!'</p><p><strong>Master Plan Revealed:</strong> 'Ancient technologies belong in the DESERT, not in sterile museums! My GPR surveys will prove the superiority of in-situ archaeological preservation!'</p><img src='/images/villains/02-professor-sahara-amira-hassan/generated-image-2025-09-25 (9).png' alt='Professor Sahara using ground-penetrating radar at excavation site' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'ground-penetrating radar archaeology GPR'",
+        "Investigate 'stepped pyramid ruins Egypt excavation'",
+        "Study 'geophysics archaeological survey methods'",
+        "Look up 'in-situ preservation vs museum storage'"
+      ],
+      "expectedProcess": [
+        "Search 'GPR archaeology' → ground-penetrating radar technology",
+        "Research stepped ruins → pyramid complexes, Saqqara",
+        "Connect geophysics → non-invasive archaeological survey",
+        "Understand preservation debates → context vs protection"
+      ],
+      "reveal": { "trait": "MASTER OF ARCHAEOLOGICAL GEOPHYSICS", "note": "Ultimate goal: Prove ancient sites should remain in original desert context!" },
+      "answer": { "name": "Saqqara Pyramid Complex, Egypt", "lat": 29.8714, "lng": 31.2166 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Saqqara! This vast necropolis contains Egypt's oldest pyramids and stepped monuments. Professor Sahara's ground-penetrating radar can detect buried structures without excavation - her ultimate plan to revolutionize desert archaeology ends here!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "solution": {
+    "villainId": "professor-sahara-amira-hassan", 
+    "expectedCountry": "Egypt",
+    "victim": "North African Archaeological Museums Network",
+    "item": "Ancient water management artifacts and desert survival technologies",
+    "suspect": {
+      "name": "Professor Sahara (Dr. Amira Hassan)",
+      "notes": "Archaeological preservationist, hieroglyphic expert, ancient irrigation specialist, desert heritage revolutionary"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Community Consultation:</strong> Oasis water management, qanat irrigation, traditional desert agriculture</li><li><strong>Heritage Documentation:</strong> GPS surveying, monument preservation, Abu Simbel relocation project</li><li><strong>Educational Methods:</strong> Arid hydrology models, tabletop demonstrations, institute presentations</li><li><strong>Archaeological Techniques:</strong> Surface survey, systematic documentation, tripod photography</li><li><strong>Advanced Geophysics:</strong> Ground-penetrating radar, excavation analysis, Saqqara pyramid complex</li><li><strong>Desert Science:</strong> Water conservation, sustainable oasis communities, ancient engineering</li><li><strong>Research Skills:</strong> Heritage site analysis, archaeological methods, preservation debates</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Desert geography, ancient civilizations, community water systems</p><p><strong>Advanced Challenges:</strong> Archaeological methods, geophysics technology, heritage preservation ethics, systematic documentation</p><p><strong>Educational Progression:</strong> From community knowledge → heritage documentation → scientific education → field archaeology → advanced geophysics</p><p><strong>Sourdough Syndicate Connection:</strong> Professor Sahara's 'Deserts & Oases Division' archaeological expertise revealed through each investigation phase!</p>",
+    "learningExtensions": [
+      "Research qanat irrigation systems and their spread from Persia to North Africa",
+      "Study the Abu Simbel rescue project - how UNESCO saved ancient monuments", 
+      "Compare traditional oasis agriculture with modern desert farming techniques",
+      "Investigate ground-penetrating radar and other non-invasive archaeology methods",
+      "Map Egypt's major archaeological sites and their preservation challenges",
+      "Explore the debate: Should artifacts stay in origin countries or world museums?",
+      "Design a sustainable water management system for desert communities",
+      "Research careers in archaeological science and heritage preservation"
+    ],
+    "crossCurricular": [
+      "History: Ancient Egyptian civilization, UNESCO heritage protection, archaeological methods",
+      "Earth Science: Desert hydrology, oasis formation, sustainable water management", 
+      "Engineering: Qanat systems, GPS surveying, ground-penetrating radar technology",
+      "Environmental Science: Desert ecosystems, water conservation, climate adaptation",
+      "Mathematics: GPS coordinates, archaeological documentation, geophysical data analysis",
+      "Ethics: Heritage preservation, community consultation, archaeological responsibility",
+      "Technology: Modern survey equipment, digital documentation, geophysics applications"
+    ]
+  }
+}

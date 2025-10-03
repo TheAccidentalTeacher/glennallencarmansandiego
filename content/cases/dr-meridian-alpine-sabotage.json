@@ -1,8 +1,8 @@
 {
   "id": "dr-meridian-alpine-sabotage",
-  "title": "Dr. Meridian's Alpine Research Network",
-  "difficulty": "intermediate",
-  "durationMinutes": 40,
+  "title": "Dr. Meridian's Snow Mountain Mystery",
+  "difficulty": "beginner",
+  "durationMinutes": 30,
   "villainId": "dr-meridian-elena-fossat",
   "display": {
     "enable": {
@@ -13,17 +13,17 @@
     "theme": "alpine"
   },
   "briefing": {
-    "headline": "Dr. Meridian's Alpine Research Network Exposed!",
-    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Dr. Meridian (Elena Fossat), distinguished alpine environmental scientist, has been conducting unauthorized field research across European mountain ranges while stealing advanced monitoring equipment. She claims to be documenting 'climate manipulation' in official alpine research but her methods threaten international mountain monitoring agreements.</p><p><strong>Educational Mission:</strong> Follow this meticulous mountain researcher from her high-altitude fieldwork through laboratory analysis to community engagement, learning about alpine ecosystems, climate monitoring technology, and the intersection of scientific research with mountain communities!</p><p><strong>Challenge Level:</strong> Intermediate - requires understanding of alpine geography, environmental monitoring, and mountain community dynamics.</p>",
+    "headline": "The Stolen Snow Mountain Equipment Case",
+    "narrativeHtml": "<p><strong>Learning Targets for Today:</strong></p><ul><li><strong>I can use maps to locate snow-covered mountains in Europe</strong></li><li><strong>I can explain how snow and ice form on tall mountains</strong></li><li><strong>I can research how people live and work in mountain areas</strong></li><li><strong>I can identify Alpine countries on a world map</strong></li><li><strong>I can understand why snow mountains are important for water and farming</strong></li></ul><p><strong>Your Mission:</strong> Help Sourdough Pete track down Dr. Meridian! She's been stealing weather equipment from mountain weather stations because she's worried about snow melting on European mountains. She thinks she's protecting the environment, but taking things that don't belong to you is wrong! Follow the clues using your maps, globes, and research skills to find her snowy mountain hideout.</p><p><strong>What You'll Need:</strong> World map, map of Europe, globe, atlas, and internet for research about European mountains and snow</p><p><strong>Snow Mountain Detective Challenge:</strong> Dr. Meridian loves studying snow, ice, and cold mountain weather. Can you follow her trail through 5 Alpine clues?</p>",
     "assets": {
-      "image": "/images/cases/dr-meridian/briefing-weather-stations.jpg"
+      "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
     }
   },
   "suspects": [
     {
       "name": "Dr. Meridian (Elena Fossat)",
-      "tags": ["alpine-obsessed", "weather-manipulation", "environmental-extremist"],
-      "description": "Rogue environmental scientist with PhD from ETH Zurich. Known for advanced mountaineering skills and obsession with 'protecting' alpine ecosystems through fear tactics.",
+      "tags": ["snow-mountain-lover", "weather-watcher", "ice-and-snow-expert"],
+      "description": "A scientist who loves studying snow and ice on tall European mountains. She's so worried about snow melting that she makes bad choices like stealing weather equipment to study mountain climate.",
       "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
     }
   ],
@@ -31,132 +31,149 @@
     {
       "id": "r1",
       "minutes": 8,
-      "focus": ["alpine-geography", "fieldwork", "drone-technology"],
-      "clueHtml": "<p><strong>HIGH-ALTITUDE FIELDWORK INTELLIGENCE:</strong> 'Dr. Meridian photographed conducting advanced alpine research on a high valley slope above a braided proglacial river. She uses portable field analyzers with probe sensors, multiple survey tripods, and grounded multirotor drone for comprehensive data collection. Her precise calibration work suggests expertise in glaciated valley systems and alpine watershed monitoring.'</p><p><strong>ENVIRONMENTAL EVIDENCE:</strong> 'Security footage shows her working among alpine flowers with snow-covered peaks and steep glaciated valley walls in the background. Her methodical approach to field instrumentation and drone-assisted surveys indicates specialized knowledge of high-altitude environmental monitoring in challenging mountain terrain.'</p><p><strong>GEOGRAPHIC CHALLENGE:</strong> Identify the type of alpine landscape where glaciated valleys create braided river systems!</p>",
+      "focus": ["geography", "snow-mountains", "alpine-countries"],
+      "image": "generated-image-2025-09-25.png",
+      "clueHtml": "<p><strong>Snow Mountain Detective Clue #1:</strong></p><p>Dr. Meridian was spotted stealing weather equipment from a snowy mountain! Here's what we know:</p><ul><li>She's in the famous European mountains that look like giant white teeth pointing up at the sky</li><li>These mountains are so tall they're covered with snow even in summer!</li><li>People from all over the world come here to ski, snowboard, and climb mountains</li><li>The mountains stretch across several countries like Switzerland, France, Austria, and Italy</li></ul><p><strong>Your job:</strong> Use your maps and globe to find the most famous snow-covered mountains in Europe!</p>",
       "researchPrompts": [
-        "Research 'alpine fieldwork glaciated valley braided rivers'",
-        "Investigate 'proglacial streams mountain watersheds drone surveys'",
-        "Look up 'field analyzers alpine environmental monitoring'",
-        "Study 'high altitude research methods alpine flowers snow peaks'"
+        "Look on your Europe map for tall mountain ranges",
+        "Find mountains that are covered with snow all year long",
+        "Research the Alps mountain range in Europe",
+        "Look up which countries have the Alps mountains"
       ],
       "expectedProcess": [
-        "Search 'glaciated valleys' → U-shaped valleys carved by glacial action",
-        "Research 'braided rivers' → multiple channels from glacial meltwater",
-        "Connect 'proglacial streams' → water flowing from glacier terminus",
-        "Verify 'alpine monitoring' → high-altitude environmental research techniques"
+        "Student examines Europe map for mountain ranges",
+        "Student identifies the Alps as major European mountains",
+        "Student locates Alps across multiple countries",
+        "Student learns that high mountains have permanent snow"
       ],
-      "reveal": { "trait": "Alpine fieldwork specialist", "note": "Expert in high-altitude environmental monitoring with advanced drone technology" },
-      "answer": { "name": "Alpine Glaciated Valley Research Site", "lat": 46.5197, "lng": 8.0806 },
-      "explainHtml": "<p><strong>ALPINE RESEARCH CONFIRMED:</strong> Glaciated alpine valley! Dr. Meridian's expertise in high-altitude fieldwork includes drone-assisted surveys, proglacial river monitoring, and precise field calibration in challenging mountain environments. Her research focuses on alpine watershed systems and environmental change documentation.</p>",
-      "scoring": { "base": 120, "distanceKmFull": 150 }
+      "reveal": { "trait": "Loves snowy European mountains", "note": "Expert at working in cold, high places" },
+      "answer": { "name": "The Alps", "lat": 46.5197, "lng": 8.0806 },
+      "explainHtml": "<p><strong>Great snow mountain detective work!</strong> You found the Alps!</p><p>The Alps are the most famous mountain range in Europe! They stretch across 8 countries including Switzerland, France, Austria, and Italy. The peaks are so tall (some over 15,000 feet high!) that they stay covered with snow and ice all year long, even when it's hot in summer down in the valleys.</p><p><strong>What You Learned:</strong></p><ul><li>The Alps are Europe's most famous mountain range</li><li>Very tall mountains stay snowy even in summer</li><li>Mountain ranges can stretch across many different countries</li><li>People love to ski and climb in snowy mountains</li></ul>",
+      "scoring": { "base": 100, "distanceKmFull": 150 }
     },
     {
       "id": "r2",
       "minutes": 8,
-      "focus": ["laboratory-analysis", "mountain-technology", "data-integration"],
-      "clueHtml": "<p><strong>MOUNTAIN LABORATORY INTELLIGENCE:</strong> 'Surveillance reveals Dr. Meridian in a sophisticated mountain analysis room with large windows overlooking snowy peaks. She demonstrates handheld instruments showing precise temperature readings (0.23°C) connected to probes, while tablet dashboards display 148% metrics. Multiple microscopes, glassware, and computers show terrain analysis data.'</p><p><strong>TECHNOLOGY INTEGRATION EVIDENCE:</strong> 'Her lab setup includes wall maps with contours and relief data, suggesting integration of field measurements with laboratory analysis. The combination of precision instruments, digital dashboards, and terrain visualization indicates advanced mountain environmental research capabilities requiring specialized high-altitude laboratory facilities.'</p><p><strong>RESEARCH CHALLENGE:</strong> Identify the importance of integrating field measurements with laboratory analysis in mountain research!</p>",
+      "focus": ["snow-and-ice", "mountain-weather", "water-sources"],
+      "image": "generated-image-2025-09-25.png",
+      "clueHtml": "<p><strong>Snow Mountain Detective Clue #2:</strong></p><p>Dr. Meridian is now studying mountain snow and ice! Here's what our spy cameras found:</p><ul><li>She's measuring how much snow falls on the mountains each winter</li><li>She's worried because less snow is falling than there used to be</li><li>She's near giant rivers of ice called glaciers that flow down the mountains like super-slow frozen waterfalls</li><li>These glaciers melt in summer and provide water for people living in the valleys below</li></ul><p><strong>Your job:</strong> Research how mountain snow and glaciers provide water for people and farms!</p>",
       "researchPrompts": [
-        "Research 'mountain laboratory analysis field integration temperature'",
-        "Investigate 'alpine research facilities precision instruments dashboards'",
-        "Look up 'handheld environmental probes laboratory calibration'",
-        "Study 'terrain analysis contour mapping laboratory computers'"
+        "Look up how mountain snow melts to make rivers",
+        "Research glaciers - rivers of ice that move very slowly",
+        "Find information about how mountains provide water for farming",
+        "Look up Alpine glaciers and why they're important"
       ],
       "expectedProcess": [
-        "Search 'mountain labs' → specialized high-altitude research facilities",
-        "Research 'field-lab integration' → combining outdoor measurements with indoor analysis",
-        "Connect 'precision instruments' → calibrated equipment for accurate environmental data",
-        "Verify 'terrain analysis' → topographic and environmental data visualization"
+        "Student learns that mountain snow melts into rivers",
+        "Student discovers glaciers are like frozen rivers",
+        "Student understands glaciers provide water for valleys",
+        "Student connects mountain water to farming and cities"
       ],
-      "reveal": { "trait": "Laboratory integration specialist", "note": "Combines field measurements with advanced laboratory analysis for comprehensive research" },
-      "answer": { "name": "Alpine Research Laboratory", "lat": 46.8182, "lng": 8.2275 },
-      "explainHtml": "<p><strong>LABORATORY ANALYSIS CONFIRMED:</strong> High-altitude mountain laboratory! Dr. Meridian's expertise includes integrating precise field measurements with sophisticated laboratory analysis. Her combination of handheld instruments, digital dashboards, and terrain visualization enables comprehensive alpine environmental research.</p>",
-      "scoring": { "base": 140, "distanceKmFull": 120 }
+      "reveal": { "trait": "Studies snow, ice, and mountain water", "note": "Worried about glaciers melting too fast" },
+      "answer": { "name": "Alpine Glaciers", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>Excellent snow research!</strong> You discovered Alpine glaciers!</p><p>Glaciers are like giant rivers of ice that flow very slowly down mountains. When snow falls on the Alps year after year, it gets packed down and turns into ice. In summer, some of this ice melts and becomes the water that fills rivers and helps farmers grow food in the valleys below the mountains.</p><p><strong>What You Learned:</strong></p><ul><li>Glaciers are rivers of ice that move very slowly down mountains</li><li>Mountain snow and ice melt to provide water for rivers</li><li>People depend on mountain water for drinking and farming</li><li>Climate change is making glaciers melt faster than before</li></ul>",
+      "scoring": { "base": 120, "distanceKmFull": 120 }
     },
     {
       "id": "r3",
       "minutes": 8,
-      "focus": ["heritage-monitoring", "unesco-sites", "alpine-conservation"],
-      "clueHtml": "<p><strong>UNESCO HERITAGE SITE INTELLIGENCE:</strong> 'Dr. Meridian photographed at an Alpine field monitoring site with a prominent pyramidal peak resembling the Matterhorn in the background. She operates handheld dataloggers with antennas and weather stations including anemometers and solar panels. A wooden sign clearly reads \"UNESCO World Heritage Site\" in the snow-covered landscape.'</p><p><strong>CONSERVATION MONITORING EVIDENCE:</strong> 'Security footage shows her professional approach to heritage site monitoring, wearing insulated gear while conducting atmospheric measurements. Her specialized equipment for weather and environmental monitoring suggests expertise in protected landscape conservation and World Heritage site preservation protocols.'</p><p><strong>HERITAGE CHALLENGE:</strong> Understand the importance of UNESCO World Heritage sites in alpine conservation and environmental monitoring!</p>",
+      "focus": ["mountain-people", "alpine-culture", "traditional-ways"],
+      "image": "generated-image-2025-09-25.png",
+      "clueHtml": "<p><strong>Snow Mountain Detective Clue #3:</strong></p><p>Dr. Meridian is now visiting mountain villages! Here's what we discovered:</p><ul><li>She's talking to people who have lived in the Alps for hundreds of years</li><li>These mountain people know how to predict weather by watching clouds and wind</li><li>They build special houses with steep roofs so heavy snow slides off in winter</li><li>They raise cows and goats that can live in high, cold places and make special mountain cheese</li></ul><p><strong>Your job:</strong> Research how people live and work in the high Alps mountains!</p>",
       "researchPrompts": [
-        "Research 'UNESCO World Heritage sites alpine mountains conservation'",
-        "Investigate 'heritage site environmental monitoring weather stations'",
-        "Look up 'Matterhorn pyramidal peak UNESCO protection status'",
-        "Study 'atmospheric monitoring heritage landscape preservation'"
+        "Look up how people live in Alpine mountain villages",
+        "Research traditional mountain houses with steep roofs",
+        "Find information about Alpine farming and mountain animals",
+        "Look up Swiss, Austrian, or French mountain culture"
       ],
       "expectedProcess": [
-        "Search 'UNESCO heritage sites' → protected landscapes of outstanding value",
-        "Research 'alpine conservation' → mountain ecosystem preservation",
-        "Connect 'environmental monitoring' → tracking changes in protected areas",
-        "Verify 'heritage preservation' → scientific monitoring maintains site integrity"
+        "Student researches Alpine mountain communities",
+        "Student learns about traditional mountain architecture",
+        "Student discovers high-altitude farming techniques",
+        "Student understands mountain adaptation strategies"
       ],
-      "reveal": { "trait": "Heritage conservation specialist", "note": "Expert in UNESCO World Heritage site environmental monitoring and protection" },
-      "answer": { "name": "UNESCO Alpine Heritage Site", "lat": 45.9763, "lng": 7.6586 },
-      "explainHtml": "<p><strong>HERITAGE MONITORING CONFIRMED:</strong> UNESCO World Heritage alpine site! Dr. Meridian's specialization includes environmental monitoring of protected mountain landscapes. Her weather station equipment and atmospheric measurements help preserve the integrity of these internationally significant alpine ecosystems.</p>",
-      "scoring": { "base": 160, "distanceKmFull": 100 }
+      "reveal": { "trait": "Learns from traditional mountain people", "note": "Interested in old mountain knowledge and weather prediction" },
+      "answer": { "name": "Alpine Mountain Villages", "lat": 46.2044, "lng": 6.1432 },
+      "explainHtml": "<p><strong>Outstanding mountain culture detective work!</strong> You found the Alpine villages!</p><p>For hundreds of years, people have lived high in the Alps mountains. They build houses with very steep roofs so snow slides off instead of making the roof collapse. They raise special cows and goats that can survive in cold, high places, and they make delicious cheese from the milk. These mountain people are experts at reading the weather and knowing when storms are coming.</p><p><strong>What You Learned:</strong></p><ul><li>People can live and work in very high, cold mountain areas</li><li>Mountain houses have steep roofs to shed heavy snow</li><li>Alpine people raise animals adapted to cold, high places</li><li>Traditional mountain people are experts at predicting weather</li></ul>",
+      "scoring": { "base": 120, "distanceKmFull": 100 }
     },
     {
       "id": "r4",
       "minutes": 8,
-      "focus": ["community-education", "environmental-models", "public-engagement"],
-      "clueHtml": "<p><strong>COMMUNITY PRESENTATION INTELLIGENCE:</strong> 'Dr. Meridian photographed in a classroom setting with large windows overlooking conifer forests and snowy alpine peaks. She demonstrates 3D terrain models with rivers, wind-farm and solar-village dioramas, and large wall maps to an engaged audience of students and community members. Laptop computers and printed charts show energy and environmental data.'</p><p><strong>EDUCATIONAL OUTREACH EVIDENCE:</strong> 'Her confident, approachable teaching style includes hands-on models showing the intersection of mountain geography, renewable energy, and land use planning. The combination of terrain dioramas, energy infrastructure models, and community engagement suggests expertise in translating complex environmental research into public education.'</p><p><strong>ENGAGEMENT CHALLENGE:</strong> Understand how environmental scientists communicate complex mountain research to local communities!</p>",
+      "focus": ["highest-peaks", "mountain-climbing", "famous-mountains"],
+      "image": "generated-image-2025-09-25.png",
+      "clueHtml": "<p><strong>Snow Mountain Detective Clue #4:</strong></p><p>Dr. Meridian has climbed to her secret weather station! Here's what we know:</p><ul><li>She's on the tallest mountain in the Alps - the most famous peak in Europe!</li><li>This mountain is so famous that it has its own name and people come from all over the world to see it</li><li>It's on the border between France and Italy, and both countries are proud of it</li><li>Mountain climbers need special training and equipment to reach the top because it's so high and dangerous</li></ul><p><strong>Your job:</strong> Find the tallest and most famous mountain in the Alps!</p>",
       "researchPrompts": [
-        "Research 'environmental education community engagement mountain research'",
-        "Investigate 'terrain models renewable energy education alpine communities'",
-        "Look up 'scientist public outreach environmental awareness programs'",
-        "Study 'community education renewable energy mountain landscapes'"
+        "Look up the highest mountain in the Alps",
+        "Research the most famous peak in Europe",
+        "Find Mont Blanc and its location",
+        "Look up mountain climbing in the Alps"
       ],
       "expectedProcess": [
-        "Search 'environmental education' → scientists sharing research with public",
-        "Research 'community engagement' → local participation in environmental decisions",
-        "Connect 'terrain models' → visual tools for understanding landscape impacts",
-        "Verify 'public outreach' → bridging science and community understanding"
+        "Student researches highest Alps peaks",
+        "Student finds Mont Blanc as tallest Alps mountain",
+        "Student locates Mont Blanc on France-Italy border",
+        "Student learns about mountain climbing challenges"
       ],
-      "reveal": { "trait": "Community education specialist", "note": "Excels at translating complex environmental research into accessible public education" },
-      "answer": { "name": "Alpine Community Education Center", "lat": 46.5734, "lng": 7.9896 },
-      "explainHtml": "<p><strong>COMMUNITY EDUCATION CONFIRMED:</strong> Alpine environmental education center! Dr. Meridian's expertise includes engaging local communities through terrain models, energy dioramas, and accessible presentations. Her public outreach helps mountain communities understand environmental research and renewable energy options.</p>",
-      "scoring": { "base": 180, "distanceKmFull": 80 }
+      "reveal": { "trait": "Climbs the highest Alps peaks", "note": "Has weather station on Europe's tallest mountain" },
+      "answer": { "name": "Mont Blanc", "lat": 45.8326, "lng": 6.8652 },
+      "explainHtml": "<p><strong>Incredible mountain detective skills!</strong> You found Mont Blanc!</p><p>Mont Blanc is the tallest mountain in the Alps at 15,777 feet high! Its name means 'White Mountain' in French because it's always covered with snow and ice. It sits on the border between France and Italy, and both countries consider it their most beautiful mountain. Thousands of people come to see it every year, but only trained mountain climbers with special equipment can reach the snowy summit.</p><p><strong>What You Learned:</strong></p><ul><li>Mont Blanc is the highest mountain in the Alps</li><li>Very tall mountains are always covered with snow and ice</li><li>Mountain borders can be shared between countries</li><li>Mountain climbing requires special training and safety equipment</li></ul>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
     },
     {
       "id": "r5",
       "minutes": 8,
-      "focus": ["local-knowledge", "topographic-mapping", "community-collaboration"],
-      "clueHtml": "<p><strong>VILLAGE CONSULTATION FINAL EVIDENCE:</strong> 'Dr. Meridian photographed in an alpine village market square with timber chalets, snow patches, and distant peaks surrounding the scene. She collaborates with local residents around a large topographic map on a wooden stand, pointing to contour features while community members hold traditional market goods. Her respectful, collaborative approach to map consultation reveals her true identity.'</p><p><strong>COLLABORATIVE MAPPING REVELATION:</strong> 'This final scene exposes Dr. Meridian's ultimate expertise: combining scientific environmental monitoring with traditional local knowledge. Her village market consultation demonstrates how professional alpine research integrates with community wisdom. The oversized topographic map with contours and legends shows her mastery of both scientific and local mapping approaches.'</p><p><strong>FINAL CHALLENGE:</strong> Understand how scientific research combines with traditional local knowledge in alpine communities!</p>",
+      "focus": ["putting-it-together", "environmental-protection", "mountain-importance"],
+      "image": "generated-image-2025-09-25.png",
+      "clueHtml": "<p><strong>FINAL Snow Mountain Detective Clue:</strong></p><p>We found Dr. Meridian's secret plan! She's been setting up a mountain weather education center. Here's her final mission:</p><ul><li>She wants to teach people that Alpine snow and ice are super important for water supplies</li><li>Her weather station tracks how much snow falls and how fast glaciers are melting</li><li>She believes if people understand mountain weather, they'll want to protect the Alps</li><li>She thinks mountain education can help people take better care of our planet's snow and ice</li></ul><p><strong>Final Mission:</strong> You've followed Dr. Meridian through her whole Alpine adventure! Put together everything you learned about why snow mountains matter!</p>",
       "researchPrompts": [
-        "Research 'traditional knowledge alpine communities scientific collaboration'",
-        "Investigate 'topographic mapping village consultation local expertise'",
-        "Look up 'community science environmental monitoring mountain research'",
-        "Study 'collaborative mapping alpine village traditional knowledge integration'"
+        "Think about all the mountain places you discovered",
+        "Research why mountain snow and ice are important",
+        "Look up how the Alps provide water for Europe",
+        "Consider how mountains affect weather and climate"
       ],
       "expectedProcess": [
-        "Search 'traditional knowledge' → local community understanding of landscapes",
-        "Research 'collaborative mapping' → scientists working with community expertise",
-        "Connect 'village consultation' → respectful integration of different knowledge systems",
-        "Verify 'community science' → local participation in environmental research"
+        "Student reviews all previous mountain clues",
+        "Student connects mountain snow to water supplies",
+        "Student understands Alpine environmental importance",
+        "Student identifies Dr. Meridian's educational mission"
       ],
-      "reveal": { "trait": "COLLABORATIVE RESEARCH SPECIALIST", "note": "IDENTITY REVEALED: Dr. Elena Fossat - Expert in integrating scientific alpine research with traditional community knowledge!" },
-      "answer": { "name": "Alpine Village Market Square", "lat": 46.1677, "lng": 7.2500 },
-      "explainHtml": "<p><strong>SYNDICATE SPECIALIST IDENTIFIED:</strong> Dr. Elena Fossat revealed! Her expertise combines advanced alpine environmental monitoring with respectful community collaboration. From high-altitude fieldwork to village map consultations, she demonstrates how professional mountain research integrates with traditional local knowledge systems.</p>",
-      "scoring": { "base": 200, "distanceKmFull": 60 }
+      "reveal": { "trait": "Wants to teach about mountain weather protection", "note": "Believes education can help save Alpine snow and ice" },
+      "answer": { "name": "Alpine Environmental Education Center", "lat": 46.5197, "lng": 8.0806 },
+      "explainHtml": "<p><strong>CASE SOLVED!</strong> You caught Dr. Meridian at her mountain education center!</p><p>Dr. Meridian wasn't really a bad person - she just cared so much about protecting Alpine snow and ice that she made some wrong choices. She was stealing weather equipment because she wanted to teach people how important mountains are for providing water to Europe. The Alps provide water for rivers, farms, and cities across many countries when the snow and ice melt each spring.</p><p><strong>What You Accomplished:</strong></p><ul><li>You learned to use maps to find famous mountain ranges in Europe</li><li>You discovered how mountain snow and glaciers provide water</li><li>You researched how people live and work in high mountain areas</li><li>You understand why protecting mountain environments is important</li></ul><p><strong>Sourdough Pete says:</strong> 'Excellent Alpine detective work! You learned that caring about mountain environments is wonderful, but there are right ways and wrong ways to help. Dr. Meridian should have worked with other scientists instead of stealing equipment!'</p>",
+      "scoring": { "base": 150, "distanceKmFull": 50 }
     }
   ],
   "solution": {
     "villainId": "dr-meridian-elena-fossat",
-    "victim": "Alpine Environmental Research Network",
-    "item": "Advanced mountain monitoring equipment and community research data"
+    "expectedCountry": "Alpine Europe",
+    "victim": "Alpine Weather Stations",
+    "item": "Mountain weather monitoring equipment",
+    "suspect": {
+      "name": "Dr. Meridian (Elena Fossat)",
+      "notes": "Snow mountain lover, weather watcher, ice and snow expert, mountain education teacher"
+    }
   },
   "resolution": {
-    "summaryHtml": "<ul><li><strong>Alpine Fieldwork:</strong> High-altitude environmental monitoring with drone technology and field sensors</li><li><strong>Laboratory Integration:</strong> Combining field measurements with sophisticated analysis and terrain visualization</li><li><strong>Heritage Conservation:</strong> UNESCO World Heritage site monitoring and atmospheric measurement protocols</li><li><strong>Community Education:</strong> Public engagement through terrain models, renewable energy education, and accessible presentations</li><li><strong>Collaborative Research:</strong> Integration of scientific alpine research with traditional local knowledge systems</li></ul>",
+    "summaryHtml": "<h3>What Students Learned About Snow Mountains:</h3><ul><li><strong>The Alps:</strong> Europe's famous snow-covered mountain range across 8 countries</li><li><strong>Mountain Snow and Ice:</strong> Glaciers, permanent snow, and how they provide water</li><li><strong>Alpine Culture:</strong> Mountain villages, traditional houses, high-altitude farming</li><li><strong>Famous Peaks:</strong> Mont Blanc and other tall European mountains</li><li><strong>Mountain Weather:</strong> Why snow mountains are important for water and climate</li><li><strong>Environmental Protection:</strong> How mountain snow and ice help the whole continent</li><li><strong>Geography Skills:</strong> Using maps to find mountain ranges, countries, and peaks</li></ul><h3>Why This Case Works for 11-Year-Olds:</h3><p><strong>Age-Appropriate Content:</strong> Snow, mountains, skiing, mountain villages, weather watching</p><p><strong>Map Skills:</strong> European geography, Alps location, country borders, mountain peaks</p><p><strong>Educational Progression:</strong> Mountain range → snow and ice → mountain people → famous peaks → environmental protection</p><p><strong>Real Learning:</strong> Geography, climate science, cultural studies, and environmental awareness!</p>",
     "learningExtensions": [
-      "Explore high-altitude environmental monitoring techniques and drone technology applications",
-      "Research UNESCO World Heritage alpine sites and their conservation protocols",
-      "Investigate how scientific research integrates with traditional community knowledge",
-      "Study the role of terrain models and visual education in environmental awareness"
+      "Learn more about European mountain ranges and their countries",
+      "Research how mountain snow provides water for rivers and farms",
+      "Study traditional Alpine culture and mountain villages",
+      "Explore mountain climbing and high-altitude sports",
+      "Learn about glaciers and how they form from snow",
+      "Research climate change effects on mountain snow and ice",
+      "Study careers in mountain weather forecasting and environmental science",
+      "Learn about mountain animals and how they survive in cold, high places"
     ],
     "crossCurricular": [
-      "Environmental Science: Alpine ecosystems, climate monitoring, conservation protocols",
-      "Technology: Drone applications, field sensors, laboratory data integration",
-      "Social Studies: UNESCO heritage sites, community science, traditional knowledge",
-      "Geography: Topographic mapping, alpine landscapes, environmental research methods"
+      "Geography: European countries, Alps location, mountain borders, elevation",
+      "Science: Weather patterns, glaciers, snow formation, climate and elevation",
+      "Environmental Studies: Mountain ecosystems, water cycles, environmental protection",
+      "Social Studies: Alpine cultures, mountain communities, traditional lifestyles",
+      "Math: Mountain heights, distances, temperature changes with elevation",
+      "Physical Education: Mountain sports, skiing, hiking, outdoor safety",
+      "Art: Drawing mountain landscapes, Alpine architecture, snow and ice scenes"
     ]
   }
 }

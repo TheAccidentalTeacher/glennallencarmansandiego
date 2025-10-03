@@ -1,0 +1,143 @@
+{
+  "id": "dr-sahel-wildlife-tracking-sabotage",
+  "title": "The Great Migration Tracking Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "dr-sahel-kwame-asante",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "african-savanna"
+  },
+  "briefing": {
+    "headline": "The Great Migration Tracking Sabotage",
+    "narrativeHtml": "<p><strong>Wildlife Emergency Alert for Route Runners!</strong> Dr. Sahel, ecosystem specialist of the <em>Sourdough Syndicate's 'Grasslands & Transitions Division,'</em> has stolen advanced wildlife tracking equipment from conservation research stations across Africa!</p><p>His calling card: a bread-slice stamp and the message: <em>'These migration routes are being DESTROYED while conservationists lie! My ECOSYSTEM PROTOCOL will expose the wildlife truth they hide from the world!'</em></p><p><strong>Intelligence Report:</strong> Dr. Sahel believes conservation organizations suppress data about habitat destruction to maintain funding. He's stealing equipment to create an 'authentic wildlife monitoring network' - but where in the vast African savanna?</p>",
+    "assets": {
+      "image": "/images/cases/dr-sahel/briefing-migration-routes.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Sahel (Kwame Asante)", 
+      "tags": ["conservation-extremist", "wildlife-tracking", "ecosystem-specialist"],
+      "description": "Conservation biologist with PhD from University of Oxford. Expert in African savanna ecosystems, wildlife migration patterns, and GPS field research.",
+      "image": "/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (20).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["savanna-research", "gps-navigation", "field-methodology"],
+      "clueHtml": "<p><strong>Field Intelligence:</strong> 'Dr. Sahel was spotted conducting professional field research in African savanna landscape with distinctive acacia trees, using GPS devices and field notebooks to document coordinates. He's wearing multi-pocket field vest and using systematic data collection methods while studying the golden grassland ecosystem around research vehicles.'</p><img src='/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (20).png' alt='Dr. Sahel conducting GPS field research in African savanna' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'African savanna ecosystem acacia trees grassland'",
+        "Investigate 'GPS field research wildlife conservation'",
+        "Look up 'savanna field methodology data collection'",
+        "Study 'East African grassland research techniques'"
+      ],
+      "expectedProcess": [
+        "Search 'African savanna' → distinctive grassland ecosystem",
+        "Research GPS field research → coordinate documentation methods",
+        "Connect acacia trees → characteristic savanna vegetation",
+        "Understand field methodology → systematic data collection"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "African Savanna Ecosystem", "lat": -2.0000, "lng": 34.0000 },
+      "explainHtml": "<p><strong>Field Research Confirmed:</strong> African savanna ecosystem! This distinctive grassland environment with scattered acacia trees provides ideal habitat for wildlife research. Dr. Sahel's GPS expertise and systematic field methodology make him dangerous around conservation research operations!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["wildlife-tracking", "animal-behavior", "drone-surveillance"],
+      "clueHtml": "<p><strong>Tracking Intelligence:</strong> 'Dr. Sahel was photographed conducting wildlife tracking and ecosystem monitoring using magnifying glasses for track analysis, tripod-mounted equipment, and research drones for aerial surveys. He's examining animal tracks while documenting African elephants and diverse savanna wildlife with sophisticated monitoring instruments.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of wildlife tracking and drone-based ecosystem monitoring'</p><img src='/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (21).png' alt='Dr. Sahel tracking wildlife with drones and analysis equipment' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'wildlife tracking animal footprint analysis'",
+        "Investigate 'research drones aerial wildlife surveys'",
+        "Look up 'African elephant tracking ecosystem monitoring'",
+        "Study 'wildlife monitoring instruments field research'"
+      ],
+      "expectedProcess": [
+        "Search 'wildlife tracking' → animal behavior research methods",
+        "Research drone surveys → aerial ecosystem monitoring",
+        "Connect elephant tracking → large mammal behavior studies",
+        "Understand monitoring instruments → professional wildlife research"
+      ],
+      "reveal": { "trait": "Master of wildlife tracking and drone-based ecosystem monitoring", "note": "Expert in combining traditional tracking with modern technology" },
+      "answer": { "name": "Wildlife Research Areas", "lat": -1.5000, "lng": 35.0000 },
+      "explainHtml": "<p><strong>Wildlife Tracking Confirmed:</strong> Advanced wildlife research areas! Dr. Sahel's expertise in animal tracking combined with drone technology makes him incredibly sophisticated at monitoring ecosystem patterns. His dual approach of traditional tracking and modern aerial surveys makes him extremely dangerous!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["community-engagement", "traditional-knowledge", "cultural-collaboration"],
+      "clueHtml": "<p><strong>Community Intelligence:</strong> 'Dr. Sahel was observed conducting collaborative education in a traditional African village with thatched-roof huts, engaging respectfully with diverse community members of different ages. He's using geographic maps and educational materials to share knowledge while integrating local traditional ecological wisdom with modern research methods.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of community-based research and traditional knowledge integration'</p><img src='/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (22).png' alt='Dr. Sahel conducting community education in traditional African village' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'community-based conservation Africa traditional knowledge'",
+        "Investigate 'collaborative research local communities ecology'",
+        "Look up 'traditional ecological knowledge wildlife management'",
+        "Study 'respectful cross-cultural research methods'"
+      ],
+      "expectedProcess": [
+        "Search 'community conservation' → local involvement in wildlife protection",
+        "Research collaborative methods → combining traditional and modern knowledge",
+        "Connect traditional ecology → indigenous wildlife management",
+        "Understand cultural respect → proper community engagement"
+      ],
+      "reveal": { "trait": "Master of community-based research and traditional knowledge integration", "note": "Expert in combining local wisdom with modern conservation science" },
+      "answer": { "name": "African Rural Communities", "lat": -3.0000, "lng": 35.5000 },
+      "explainHtml": "<p><strong>Community Engagement Confirmed:</strong> African rural communities! Dr. Sahel's expertise in respectful collaboration with traditional communities makes him valuable for conservation research, but dangerous when using this trust to steal community-based monitoring equipment!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["ecosystem-documentation", "large-wildlife", "river-systems"],
+      "clueHtml": "<p><strong>Documentation Intelligence:</strong> 'Dr. Sahel was tracked conducting savanna ecosystem documentation with professional camera equipment on tripods, recording large buffalo herds and African elephants around winding river systems. He's photographing wildlife patterns in classic East African savanna with scattered acacia trees, demonstrating expertise in ecosystem pattern recognition.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of ecosystem documentation and large mammal migration patterns'</p><img src='/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (23).png' alt='Dr. Sahel documenting large wildlife herds and river systems' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'African buffalo herds migration patterns'",
+        "Investigate 'savanna river systems wildlife corridors'",
+        "Look up 'ecosystem documentation photography techniques'",
+        "Study 'large mammal behavior pattern recognition'"
+      ],
+      "expectedProcess": [
+        "Search 'buffalo herds' → large mammal group behavior",
+        "Research river systems → water sources in savanna ecosystems",
+        "Connect documentation → scientific photography methods",
+        "Understand pattern recognition → wildlife behavior analysis"
+      ],
+      "reveal": { "trait": "Master of ecosystem documentation and large mammal migration analysis", "note": "Expert in recording and analyzing complex wildlife behavior patterns" },
+      "answer": { "name": "Serengeti Ecosystem", "lat": -2.3333, "lng": 34.8333 },
+      "explainHtml": "<p><strong>Ecosystem Documentation Confirmed:</strong> Serengeti ecosystem! Dr. Sahel's expertise in documenting large mammal herds and their relationships with river systems makes him dangerous around critical wildlife monitoring operations. His pattern recognition skills are incredibly sophisticated!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["academic-education", "african-geography", "teaching-expertise"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Sahel has been cornered in a professional classroom presenting African geography and ecosystems using wall displays of African continent maps, ecosystem charts, and wildlife habitat models. A sign clearly reads 'DR. KWAME ASANTE,' revealing his true identity as he demonstrates expertise in educational presentation and geographic instruction.'</p><p><strong>Master Plan Revealed:</strong> 'Educational institutions hide the TRUTH about African ecosystem destruction! My research presentations will expose the conservation failures they're afraid to teach!'</p><img src='/images/villains/05-dr-sahel-kwame-asante/generated-image-2025-09-25 (24).png' alt='Dr. Sahel teaching African geography as Dr. Kwame Asante in classroom' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'African geography education ecosystem teaching'",
+        "Investigate 'Dr. Kwame Asante African conservation education'",
+        "Study 'wildlife habitat education classroom instruction'",
+        "Look up 'African ecosystem educational presentations'"
+      ],
+      "expectedProcess": [
+        "Search 'African geography education' → continent-wide ecosystem teaching",
+        "Research Dr. Kwame Asante → professional educator identity",
+        "Connect wildlife education → conservation awareness teaching",
+        "Understand classroom instruction → academic expertise demonstration"
+      ],
+      "reveal": { "trait": "MASTER OF AFRICAN GEOGRAPHY EDUCATION", "note": "Ultimate identity: Dr. Kwame Asante - renowned African ecosystem educator!" },
+      "answer": { "name": "African Geography Education Center", "lat": -1.2921, "lng": 36.8219 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Dr. Kwame Asante's educational facility! His ultimate plan involves revolutionizing African geography and ecosystem education. His teaching expertise and professional credentials make this his most sophisticated conservation scheme!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ]
+}

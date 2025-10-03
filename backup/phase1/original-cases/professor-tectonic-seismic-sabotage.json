@@ -1,0 +1,179 @@
+{
+  "id": "professor-tectonic-seismic-sabotage",
+  "title": "The Ring of Fire Seismic Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "professor-tectonic-jin-wei-ming",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "volcanic"
+  },
+  "briefing": {
+    "headline": "The Stolen Earthquake Secrets Conspiracy",
+    "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Professor Tectonic, the Sourdough Syndicate's seismic engineering mastermind, has launched his most dangerous operation yet! This geological genius is stealing advanced earthquake monitoring equipment to build an unauthorized global seismic database he calls 'THE ULTIMATE TECTONIC PROTOCOL!'</p><p>His chilling message found at sabotaged monitoring stations: <em>'The Earth speaks in tremors and the mountains whisper secrets! My Tectonic Protocol will expose the seismic truths governments hide from the people! The Highlands & Faultlines Division demands geological justice!'</em></p><p><strong>Intelligence Report:</strong> Professor Tectonic believes earthquake science is being suppressed to protect construction industries and governments. He's stealing seismic data to prove that major earthquake risks are being hidden from the public!</p>",
+    "assets": {
+      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (15).png"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Professor Tectonic (Jin Wei-Ming)",
+      "tags": ["seismology-expert", "earthquake-engineering", "geological-survey"],
+      "description": "Brilliant geological engineer specializing in earthquake prediction and seismic hazard assessment. Known for radical approaches to earthquake preparedness education.",
+      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (15).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "geological-surveys", "seismic-monitoring", "desert-geology"],
+      "image": "generated-image-2025-09-25 (15).png",
+      "clueHtml": "<p><strong>Field Intelligence Report:</strong> 'Professor Tectonic was spotted conducting unauthorized geological surveys in an arid mountainous landscape! Surveillance shows him in official \"GEOLOGICAL SURVEY\" gear - orange hard hat, safety vest, work boots - operating stolen seismic monitoring equipment with solar panel power systems across exposed rock formations.'</p><p><strong>Equipment Analysis:</strong> 'He's using multiple tripods with sensors, data loggers with digital displays, and professional geological survey instruments to secretly map underground structures. The desert valley setting provides perfect conditions for detecting seismic activity without interference from urban noise.'</p><p><strong>Your Mission:</strong> Identify what type of geological features Professor Tectonic is targeting and why desert regions are ideal for seismic research!</p>",
+      "researchPrompts": [
+        "Research 'geological survey seismic monitoring desert conditions'",
+        "Investigate 'exposed rock formations earthquake fault lines'",
+        "Look up 'arid landscape seismograph noise interference'",
+        "Study 'mountainous desert geological activity monitoring'"
+      ],
+      "expectedProcess": [
+        "Search 'geological survey' → understanding underground mapping",
+        "Research 'desert seismic' → minimal noise interference benefits",
+        "Connect 'exposed rock' → fault lines visible at surface",
+        "Verify 'mountainous terrain' → tectonic activity regions"
+      ],
+      "reveal": { "trait": "Professional geological surveyor", "note": "Expert in field seismic data collection" },
+      "answer": { "name": "Desert Geological Survey Zone", "lat": 34.0522, "lng": -118.2437 },
+      "explainHtml": "<p><strong>Field Operation Confirmed:</strong> Professor Tectonic chose desert mountainous terrain because exposed rock formations reveal fault lines clearly, arid conditions eliminate seismic noise interference, and remote locations allow unauthorized data collection without detection. Perfect for his secret earthquake mapping protocol!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["environmental-geology", "river-systems", "seismograph-operation", "geological-formations"],
+      "image": "generated-image-2025-09-25 (16).png",
+      "clueHtml": "<p><strong>Advanced Equipment Intelligence:</strong> 'Professor Tectonic has escalated to operating sophisticated seismograph equipment in a mountain valley with winding river systems! Intelligence shows him using a large seismograph with circular dial display, tripod-mounted instruments, and cable sensor networks across layered geological formations.'</p><p><strong>Geographic Analysis:</strong> 'He's targeting areas where river systems cut through exposed rock layers, revealing millions of years of geological history. The valley setting amplifies seismic waves, while the flowing water provides natural timing markers for measuring earthquake wave speeds and underground geological structure mapping.'</p><p><strong>Research Challenge:</strong> Understand why river valleys are perfect for geological surveys and how water systems help seismologists map underground structures!</p>",
+      "researchPrompts": [
+        "Research 'river valley geological formations exposed rock layers'",
+        "Investigate 'seismograph mountain valley wave amplification'", 
+        "Look up 'flowing water seismic wave timing measurement'",
+        "Study 'layered rock formations geological history river cutting'"
+      ],
+      "expectedProcess": [
+        "Search 'river valley geology' → exposed rock layer benefits",
+        "Research 'seismic amplification' → valley shape focuses waves",
+        "Connect 'water timing' → natural measurement reference",
+        "Verify 'geological formations' → millions of years of history"
+      ],
+      "reveal": { "trait": "Environmental seismology specialist", "note": "Uses natural features to enhance seismic measurements" },
+      "answer": { "name": "River Valley Seismic Zone", "lat": 40.7589, "lng": -111.8883 },
+      "explainHtml": "<p><strong>Environmental Target Confirmed:</strong> Professor Tectonic chose river valley locations because flowing water cuts through rock layers exposing geological history, valley shapes amplify seismic waves for better readings, and water systems provide natural timing references for measuring earthquake wave propagation speeds!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["urban-planning", "earthquake-engineering", "building-codes", "seismic-safety"],
+      "image": "generated-image-2025-09-25 (17).png",
+      "clueHtml": "<p><strong>Urban Engineering Intelligence:</strong> 'Professor Tectonic has been spotted making unauthorized presentations with earthquake-resistant building models! Surveillance shows him in professional engineering attire - orange safety vest, yellow hard hat - pointing to architectural displays and city skyline presentations in a conference setting.'</p><p><strong>Dangerous Agenda Revealed:</strong> 'He's demonstrating how current building codes are inadequate for major earthquakes, using stolen seismic data to prove that modern cities are catastrophically unprepared! His unauthorized presentations claim that construction industries and governments are hiding earthquake vulnerability from the public!'</p><p><strong>Engineering Challenge:</strong> Research why earthquake-resistant building design is critical for urban safety and what makes buildings survive major seismic events!</p>",
+      "researchPrompts": [
+        "Research 'earthquake-resistant building design seismic codes'",
+        "Investigate 'urban planning earthquake preparedness safety'",
+        "Look up 'building codes seismic engineering standards'",
+        "Study 'earthquake-proof architecture modern cities'"
+      ],
+      "expectedProcess": [
+        "Search 'earthquake-resistant design' → building code importance",
+        "Research 'urban seismic planning' → city-wide safety systems",
+        "Connect 'building codes' → legal safety requirements",
+        "Verify 'modern architecture' → current engineering standards"
+      ],
+      "reveal": { "trait": "Urban earthquake engineering expert", "note": "Believes current building codes are dangerously inadequate" },
+      "answer": { "name": "Urban Seismic Engineering Zone", "lat": 37.7749, "lng": -122.4194 },
+      "explainHtml": "<p><strong>Urban Target Identified:</strong> Professor Tectonic targets urban centers because modern cities concentrate millions of people in buildings that may not survive major earthquakes. His stolen seismic data exposes gaps between current building codes and actual earthquake risks, threatening construction industry profits and government safety claims!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["education", "seismic-hazards", "data-visualization", "public-awareness"],
+      "image": "generated-image-2025-09-25 (18).png",
+      "clueHtml": "<p><strong>Educational Threat Intelligence:</strong> 'Professor Tectonic has escalated to unauthorized teaching operations! Intelligence shows him in a professional classroom setting with \"SEISMIC HAZARD\" wall charts, earthquake frequency graphs, geological cross-section models, and data visualization displays covering the walls.'</p><p><strong>Dangerous Education Campaign:</strong> 'He's conducting unauthorized truth sessions using his stolen seismic data to teach students and communities about earthquake risks that he claims governments are hiding! His presentations bypass official educational channels, spreading fear about seismic hazards while demonstrating his expertise as an educational authority.'</p><p><strong>Educational Challenge:</strong> Understand why proper earthquake education is important for public safety and how seismic hazard data should be shared responsibly!</p>",
+      "researchPrompts": [
+        "Research 'seismic hazard education earthquake preparedness'",
+        "Investigate 'earthquake frequency data public safety awareness'",
+        "Look up 'geological cross-section earthquake understanding'",
+        "Study 'responsible earthquake risk communication communities'"
+      ],
+      "expectedProcess": [
+        "Search 'seismic education' → public preparedness importance",
+        "Research 'earthquake data' → scientific communication standards",
+        "Connect 'hazard awareness' → community safety benefits",
+        "Verify 'responsible communication' → avoiding panic while informing"
+      ],
+      "reveal": { "trait": "Unauthorized earthquake educator", "note": "Believes dramatic presentations justify bypassing official channels" },
+      "answer": { "name": "Seismic Education Center", "lat": 35.6762, "lng": 139.6503 },
+      "explainHtml": "<p><strong>Education Target Confirmed:</strong> Professor Tectonic believes that official earthquake education is too cautious and bureaucratic. His unauthorized classroom campaigns use stolen seismic data to create dramatic presentations that he claims reveal the 'real' earthquake risks that authorities don't want people to know!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["volcanic-seismology", "mount-fuji", "international-monitoring", "final-confrontation"],
+      "image": "generated-image-2025-09-25 (19).png",
+      "clueHtml": "<p><strong>FINAL TECTONIC INTELLIGENCE:</strong> 'Professor Tectonic's ultimate plan exposed! He's established an unauthorized seismic research station at the base of Japan's most sacred volcano! Intelligence confirms a sign reading \"MOUNT FUJI SEISMIC RESEARCH STATION - DR. LI WEI LEAD SEISMOLOGIST\" with complex monitoring arrays and digital displays.'</p><p><strong>Volcanic Threat Assessment:</strong> 'Operating in blue work shirt and orange safety coveralls, he's using Mount Fuji's position at the junction of three major tectonic plates to broadcast his stolen seismic data worldwide! His goal: trigger international concern about volcanic hazards by releasing unauthorized earthquake predictions from this legendary location!'</p><p><strong>Final Mission:</strong> Track Professor Tectonic to Japan's most famous volcanic peak and stop his unauthorized global seismic broadcast!</p>",
+      "researchPrompts": [
+        "Research 'Mount Fuji volcanic seismology tectonic plates'",
+        "Investigate 'Mount Fuji elevation sacred mountain Japan'",
+        "Look up 'volcanic monitoring station earthquake prediction'",
+        "Study 'Mount Fuji last eruption 1707 volcanic hazard'"
+      ],
+      "expectedProcess": [
+        "Search 'Mount Fuji seismology' → triple plate junction location",
+        "Research 'sacred volcano' → cultural and geological significance",
+        "Connect 'volcanic monitoring' → earthquake prediction capabilities",
+        "Verify '1707 eruption' → historical volcanic activity"
+      ],
+      "reveal": { "trait": "MASTER VOLCANIC SEISMOLOGIST", "note": "Final phase: Global earthquake prediction from sacred volcanic summit!" },
+      "answer": { "name": "Mount Fuji, Japan", "lat": 35.3606, "lng": 138.7274 },
+      "explainHtml": "<p><strong>MISSION ACCOMPLISHED!</strong> Professor Tectonic captured at Mount Fuji Seismic Research Station! At 3,776 meters, this perfectly symmetrical stratovolcano sits where Philippine, Eurasian, and North American tectonic plates meet - the perfect location for his unauthorized global earthquake monitoring conspiracy. His seismic protocol threatened international volcanic hazard cooperation!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 50 }
+    }
+  ],
+  "solution": {
+    "villainId": "professor-tectonic-jin-wei-ming",
+    "expectedCountry": "Japan",
+    "victim": "Pacific Ring of Fire Seismic Monitoring Network",
+    "item": "Earthquake monitoring equipment and seismographic data systems",
+    "suspect": {
+      "name": "Professor Tectonic (Jin Wei-Ming)",
+      "notes": "Seismic engineering expert, earthquake architecture specialist, volcanic seismologist, global tectonic educator"
+    }
+  },
+  "resolution": {
+    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Tectonic Geography:</strong> Pacific Ring of Fire (40,000km horseshoe zone, 90% earthquakes, 75% volcanoes)</li><li><strong>Plate Tectonics:</strong> Tectonic plate boundaries, collision zones, seismic activity patterns</li><li><strong>Earthquake Engineering:</strong> Japan's advanced building codes, early warning systems</li><li><strong>Volcanic Features:</strong> Mount Fuji (3,776m, stratovolcano, triple plate junction)</li><li><strong>Coordinates:</strong> 35°21'N, 138°44'E precise location skills</li><li><strong>International Cooperation:</strong> Global Seismographic Network, Pacific Rim monitoring</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Ring of Fire geography, Japan identification, volcanic landmarks</p><p><strong>Advanced Challenges:</strong> Tectonic plate interactions, seismic engineering concepts, international monitoring systems, coordinate precision</p><p><strong>Sourdough Syndicate Connection:</strong> Professor Tectonic's 'Highlands & Faultlines Division' coordination with Dr. Meridian's alpine data revealed!</p>",
+    "learningExtensions": [
+      "Map the Pacific Ring of Fire and identify all countries affected by seismic activity",
+      "Research how Japan's earthquake building codes differ from other countries",
+      "Study the 2011 Tōhoku earthquake and tsunami to understand seismic hazards",
+      "Compare tectonic plate boundaries worldwide using your atlas",
+      "Investigate how early earthquake warning systems work and save lives",
+      "Use coordinates to locate other famous volcanoes in the Ring of Fire",
+      "Research the Global Seismographic Network and international cooperation",
+      "Explore how Mount Fuji's cultural significance relates to geological features"
+    ],
+    "crossCurricular": [
+      "Earth Science: Plate tectonics, volcanic processes, earthquake formation and measurement",
+      "Engineering: Seismic building design, earthquake-resistant architecture",
+      "Mathematics: Richter scale, coordinate systems, seismic wave calculations",
+      "History: Major earthquakes in history, impact on human settlements and culture",
+      "Technology: Seismographs, early warning systems, GPS monitoring networks",
+      "International Studies: Pacific Rim cooperation, disaster preparedness treaties",
+      "Cultural Studies: Sacred mountains, cultural responses to natural hazards"
+    ]
+  }
+}

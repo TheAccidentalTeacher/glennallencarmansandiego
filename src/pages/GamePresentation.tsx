@@ -33,6 +33,9 @@ const GamePresentation: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [currentSession, setCurrentSession] = useState<GameSession | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [revealedAnswers, setRevealedAnswers] = useState<Set<number>>(new Set());
+  const [revealedHints, setRevealedHints] = useState<Map<number, number>>(new Map()); // roundNumber -> number of hints revealed (0-3)
+  const [showMapSection, setShowMapSection] = useState(false);
 
   console.log('GamePresentation component rendered'); // Debug log
 
@@ -167,6 +170,7 @@ const GamePresentation: React.FC = () => {
     console.log('Current session state:', currentSession);
 
     try {
+      // First, reveal the clue for the current round
       const response = await fetch(`/api/sessions/${currentSession.id}/reveal`, {
         method: 'POST',
       });
@@ -177,13 +181,26 @@ const GamePresentation: React.FC = () => {
         const updatedSession = await response.json();
         console.log('Updated session received:', updatedSession);
         
-        if (updatedSession.success && updatedSession.data) {
-          console.log('Setting session with:', updatedSession.data);
-          setCurrentSession(updatedSession.data);
-        } else {
-          console.log('Setting session directly:', updatedSession);
-          setCurrentSession(updatedSession);
+        let sessionData = updatedSession.success ? updatedSession.data : updatedSession;
+        
+        // Now advance to the next round (if not the last round)
+        if (sessionData.currentRound < sessionData.maxRounds) {
+          console.log('Advancing to next round...');
+          const advanceResponse = await fetch(`/api/sessions/${currentSession.id}/advance`, {
+            method: 'POST',
+          });
+          
+          if (advanceResponse.ok) {
+            const advancedSession = await advanceResponse.json();
+            console.log('Advanced session received:', advancedSession);
+            sessionData = advancedSession.success ? advancedSession.data : advancedSession;
+          } else {
+            console.error('Failed to advance round, status:', advanceResponse.status);
+          }
         }
+        
+        console.log('Setting session with:', sessionData);
+        setCurrentSession(sessionData);
       } else {
         console.error('Failed to reveal clue, status:', response.status);
         const errorText = await response.text();
@@ -192,6 +209,25 @@ const GamePresentation: React.FC = () => {
     } catch (error) {
       console.error('Failed to reveal clue:', error);
     }
+  };
+
+  const revealAnswer = (roundNumber: number) => {
+    setRevealedAnswers(prev => new Set(prev).add(roundNumber));
+  };
+
+  const revealNextHint = (roundNumber: number) => {
+    setRevealedHints(prev => {
+      const newMap = new Map(prev);
+      const currentHints = newMap.get(roundNumber) || 0;
+      if (currentHints < 3) {
+        newMap.set(roundNumber, currentHints + 1);
+      }
+      return newMap;
+    });
+  };
+
+  const getRevealedHintsForRound = (roundNumber: number) => {
+    return revealedHints.get(roundNumber) || 0;
   };
 
   const advanceToNextRound = async () => {
@@ -407,81 +443,165 @@ const GamePresentation: React.FC = () => {
             {/* Current Clue Display */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6 text-center">
-                🔍 Current Clue
+                🔍 Investigation Progress
               </h2>
               
               {currentSession && currentSession.revealedClues && currentSession.revealedClues.length > 0 ? (
-                <div className="text-center">
-                  <div className="text-2xl text-yellow-300 mb-4 font-semibold">
-                    Clue #{currentSession.revealedClues.length}
-                  </div>
-                  
-                  {/* Clue Image */}
-                  {currentSession.revealedClues[currentSession.revealedClues.length - 1]?.image && (
-                    <div className="mb-6">
-                      <img 
-                        src={(() => {
-                          const clue = currentSession.revealedClues[currentSession.revealedClues.length - 1];
-                          const imagePath = clue.image;
+                <div className="space-y-8">
+                  {currentSession.revealedClues.map((revealedClue: any, index: number) => {
+                    const roundNumber = revealedClue.round;
+                    const roundData = currentSession.caseData?.rounds?.[roundNumber - 1];
+                    const isAnswerRevealed = revealedAnswers.has(roundNumber);
+                    
+                    return (
+                      <div key={roundNumber} className="border border-white/20 rounded-xl p-6 bg-white/5">
+                        <div className="text-center">
+                          <div className="text-2xl text-yellow-300 mb-4 font-semibold">
+                            Clue #{roundNumber}
+                          </div>
                           
-                          // If it's already a full path, use it
-                          if (imagePath.startsWith('/')) {
-                            return imagePath.replace('/images/villains/', '/content/villains/images/');
-                          }
+                          {/* Clue Image */}
+                          {revealedClue.image && (
+                            <div className="mb-6">
+                              <img 
+                                src={(() => {
+                                  const imagePath = revealedClue.image;
+                                  
+                                  // If it's already a full path, use it as is
+                                  if (imagePath.startsWith('/')) {
+                                    return imagePath;
+                                  }
+                                  
+                                  // If it's just a filename, construct the path using villain ID
+                                  const villainId = currentSession.caseData?.villainId;
+                                  if (villainId && !imagePath.startsWith('/')) {
+                                    // Map villain IDs to their actual folder names with numeric prefixes
+                                    const villainFolderMap: { [key: string]: string } = {
+                                      'dr-altiplano-isabella-santos': '04-dr-altiplano-isabella-santos',
+                                      'dr-coral-maya-sari': '07-dr-coral-maya-sari',
+                                      'professor-atlas': '09-professor-atlas-viktor-kowalski',
+                                      'dr-meridian-elena-fossat': '01-dr-meridian-elena-fossat',
+                                      'professor-sahara-amira-hassan': '02-professor-sahara-amira-hassan',
+                                      'professor-tectonic-seismic-specialist': '03-professor-tectonic-seismic-specialist'
+                                    };
+                                    
+                                    const actualFolderName = villainFolderMap[villainId] || villainId;
+                                    return `/images/villains/${actualFolderName}/${imagePath}`;
+                                  }
+                                  
+                                  // Fallback
+                                  return `/images/placeholder-villain.png`;
+                                })()}
+                                alt={`Clue ${roundNumber} Evidence`}
+                                className="max-w-sm mx-auto rounded-lg shadow-lg border-2 border-yellow-300 block"
+                                onError={(e) => {
+                                  console.error('Image failed to load:', e.currentTarget.src);
+                                  // Fallback to placeholder
+                                  e.currentTarget.src = '/images/placeholder-villain.png';
+                                }}
+                              />
+                            </div>
+                          )}
                           
-                          // If it's just a filename, construct the path using villain ID
-                          const villainId = currentSession.caseData?.villainId;
-                          if (villainId) {
-                            return `/content/villains/images/${villainId}/${imagePath}`;
-                          }
+                          {/* Clue Text */}
+                          <div className="text-lg text-white leading-relaxed max-w-4xl mx-auto mb-4">
+                            <div dangerouslySetInnerHTML={{ 
+                              __html: revealedClue.clue || ''
+                            }} />
+                          </div>
                           
-                          // Fallback
-                          return `/images/placeholder-villain.png`;
-                        })()}
-                        alt={`Clue ${currentSession.revealedClues.length} Evidence`}
-                        className="max-w-md mx-auto rounded-lg shadow-lg border-2 border-yellow-300 block"
-                        onError={(e) => {
-                          console.error('Image failed to load:', e.currentTarget.src);
-                          // Fallback to placeholder
-                          e.currentTarget.src = '/images/placeholder-villain.png';
-                        }}
-                      />
-                    </div>
-                  )}
-                  
-                  {/* Clue Text */}
-                  <div className="text-xl text-white leading-relaxed max-w-4xl mx-auto">
-                    <div dangerouslySetInnerHTML={{ 
-                      __html: currentSession.revealedClues[currentSession.revealedClues.length - 1]?.clue || ''
-                    }} />
-                  </div>
-                  
-                  {/* Debug info */}
-                  <div className="text-xs text-gray-400 mt-4 opacity-50">
-                    Debug: {currentSession.revealedClues.length} clues revealed
-                  </div>
+                          {/* Progressive Hints and Answer Section */}
+                          <div className="space-y-4">
+                            {/* Research Hints */}
+                            {roundData?.researchPrompts && (() => {
+                              const revealedHintsCount = getRevealedHintsForRound(roundNumber);
+                              const maxHints = Math.min(3, roundData.researchPrompts.length);
+                              
+                              return (
+                                <div className="space-y-3">
+                                  {/* Show revealed hints */}
+                                  {Array.from({ length: revealedHintsCount }, (_, i) => (
+                                    <div key={i} className="bg-blue-900/30 border border-blue-400 rounded-lg p-4">
+                                      <div className="text-blue-300 font-semibold mb-2">
+                                        🔍 Research Hint #{i + 1}:
+                                      </div>
+                                      <div className="text-blue-100">
+                                        {roundData.researchPrompts[i]}
+                                      </div>
+                                    </div>
+                                  ))}
+                                  
+                                  {/* Show next hint button if more hints available */}
+                                  {revealedHintsCount < maxHints && !isAnswerRevealed && (
+                                    <button
+                                      onClick={() => revealNextHint(roundNumber)}
+                                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold text-lg transition-colors shadow-lg border-2 border-blue-400"
+                                    >
+                                      💡 Reveal Hint #{revealedHintsCount + 1}
+                                    </button>
+                                  )}
+                                </div>
+                              );
+                            })()}
+                            
+                            {/* Answer Reveal Button */}
+                            {!isAnswerRevealed ? (
+                              <button
+                                onClick={() => revealAnswer(roundNumber)}
+                                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-lg transition-colors shadow-lg border-2 border-green-400"
+                              >
+                                🎯 Reveal Answer #{roundNumber}
+                              </button>
+                            ) : (
+                              <div className="bg-green-900/30 border border-green-400 rounded-lg p-6 mt-4">
+                                <div className="text-2xl text-green-300 font-bold mb-4">
+                                  ✅ Answer: {roundData?.answer?.name}
+                                </div>
+                                <div className="text-green-100 leading-relaxed max-w-4xl mx-auto">
+                                  <div dangerouslySetInnerHTML={{ 
+                                    __html: roundData?.explainHtml || ''
+                                  }} />
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="text-center text-2xl text-blue-200">
                   Ready to reveal the first clue!
-                  {/* Debug info */}
-                  <div className="text-xs text-gray-400 mt-4 opacity-50">
-                    Debug: Session={!!currentSession}, CluesArray={!!currentSession?.revealedClues}, CluesLength={currentSession?.revealedClues?.length || 0}
-                  </div>
                 </div>
               )}
             </div>
 
-            {/* Interactive World Map */}
+            {/* Interactive World Map - Collapsible */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6 text-center">
-                🌍 Make Your Guess
-              </h2>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-3xl font-bold text-white">
+                  🌍 Make Your Guess
+                </h2>
+                <button
+                  onClick={() => setShowMapSection(!showMapSection)}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  {showMapSection ? '▼ Hide Map' : '▶ Show Map'}
+                </button>
+              </div>
               
-              <WorldMap
-                onLocationGuess={handleLocationGuess}
-                disabled={!currentSession || currentSession.revealedClues?.length === 0}
-              />
+              {showMapSection && (
+                <div>
+                  <p className="text-gray-300 text-center mb-4">
+                    Interactive map guessing (for competitive mode - coming soon)
+                  </p>
+                  <WorldMap
+                    onLocationGuess={handleLocationGuess}
+                    disabled={!currentSession || currentSession.revealedClues?.length === 0}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -491,9 +611,9 @@ const GamePresentation: React.FC = () => {
           <div className="max-w-6xl mx-auto flex justify-center space-x-8">
             <button 
               onClick={revealNextClue}
-              disabled={!currentSession || (currentSession.revealedClues?.length >= 3)}
+              disabled={!currentSession || (currentSession.revealedClues?.length >= currentSession.maxRounds)}
               className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl font-bold text-xl transition-colors shadow-lg border-2 border-blue-400"
-              style={{ color: 'white', backgroundColor: currentSession && currentSession.revealedClues?.length < 3 ? '#2563eb' : '#6b7280' }}
+              style={{ color: 'white', backgroundColor: currentSession && currentSession.revealedClues?.length < currentSession.maxRounds ? '#2563eb' : '#6b7280' }}
             >
               {currentSession?.revealedClues?.length === 0 ? 'Reveal First Clue' : 'Reveal Next Clue'}
             </button>

@@ -45,7 +45,7 @@ const TeacherPortal: React.FC<TeacherPortalProps> = ({ className = '' }) => {
               <span className="font-semibold">Need Teacher Access?</span>
             </div>
             <p className="text-blue-700 text-sm">
-              Contact your administrator to upgrade your account and start creating Carmen Sandiego adventures.
+              Contact your administrator to upgrade your account and start creating Sourdough Pete geography adventures.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ const TeacherPortal: React.FC<TeacherPortalProps> = ({ className = '' }) => {
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
                 <div className="flex items-center space-x-2 text-white/90 mb-1">
                   <MapPin size={18} />
-                  <span className="font-semibold">Carmen Sandiego Educational Platform</span>
+                  <span className="font-semibold">Sourdough Pete's Geography Challenge</span>
                 </div>
                 <p className="text-white/70 text-sm">Content Management System</p>
                 <div className="flex items-center justify-end space-x-4 mt-3 text-xs text-white/60">
@@ -181,7 +181,7 @@ const TeacherPortal: React.FC<TeacherPortalProps> = ({ className = '' }) => {
               </div>
             </div>
             <div className="text-right text-sm text-gray-400">
-              <div className="mb-1">© 2024 Carmen Sandiego Educational Platform</div>
+              <div className="mb-1">© 2024 Sourdough Pete's Geography Challenge</div>
               <div className="text-xs">Version 1.0.0 • Phase 6 UI Polish</div>
             </div>
           </div>

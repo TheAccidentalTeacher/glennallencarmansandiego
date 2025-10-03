@@ -1,0 +1,143 @@
+{
+  "id": "dr-monsoon-weather-station-sabotage",
+  "title": "The Monsoon Prediction System Sabotage",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "villainId": "dr-monsoon-kiran-patel",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "monsoon"
+  },
+  "briefing": {
+    "headline": "The Monsoon Prediction System Sabotage",
+    "narrativeHtml": "<p><strong>Critical Weather Alert for Route Runners!</strong> Dr. Monsoon, atmospheric specialist of the <em>Sourdough Syndicate's 'Seasonal Winds Division,'</em> has stolen advanced meteorological equipment from weather stations across South Asia!</p><p>Her calling card: a bread-slice stamp and the message: <em>'These monsoon forecasts are LIES! My ATMOSPHERIC PROTOCOL will expose the climate truth they hide from billions of farmers!'</em></p><p><strong>Intelligence Report:</strong> Dr. Monsoon believes governments suppress accurate monsoon data to avoid agricultural panic. She's stealing equipment to create an 'authentic weather network' - but where in the vast monsoon region?</p>",
+    "assets": {
+      "image": "/images/cases/dr-monsoon/briefing-weather-stations.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Monsoon (Kiran Patel)",
+      "tags": ["atmospheric-scientist", "monsoon-expert", "weather-extremist"],
+      "description": "Atmospheric scientist with PhD in monsoon climatology. Expert in South Asian weather systems, seasonal forecasting, and field meteorology.",
+      "image": "/images/villains/06-dr-monsoon-kiran-patel/meteorological-field-station.jpg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["field-meteorology", "weather-monitoring", "river-valley-systems"],
+      "clueHtml": "<p><strong>Field Intelligence:</strong> 'Dr. Monsoon was spotted at a comprehensive meteorological field station in a green river valley, deploying weather balloons and operating advanced monitoring equipment. She's using tablets showing meteorological data while storm clouds gather overhead, indicating expertise in real-time weather prediction and field research.'</p><img src='/images/villains/06-dr-monsoon-kiran-patel/meteorological-field-station.jpg' alt='Dr. Monsoon conducting field meteorology at river valley station' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'meteorological field stations weather balloons'",
+        "Investigate 'weather monitoring river valley systems'",
+        "Look up 'field meteorology storm prediction equipment'",
+        "Study 'weather balloon atmospheric data collection'"
+      ],
+      "expectedProcess": [
+        "Search 'meteorological stations' → weather monitoring systems",
+        "Research weather balloons → atmospheric data collection",
+        "Connect river valleys → weather pattern formation",
+        "Understand field equipment → real-time monitoring"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "River Valley Weather Stations", "lat": 25.0000, "lng": 82.0000 },
+      "explainHtml": "<p><strong>Field Station Confirmed:</strong> River valley meteorological stations! These comprehensive monitoring sites use weather balloons, tablets, and advanced equipment to track atmospheric conditions. Dr. Monsoon's expertise in field meteorology makes her dangerous around weather prediction systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["storm-chasing", "active-research", "extreme-weather"],
+      "clueHtml": "<p><strong>Storm Intelligence:</strong> 'Dr. Monsoon was photographed conducting active monsoon research during heavy precipitation, launching weather balloons in dramatic storm conditions. She's wearing waterproof gear and using mobile weather stations with satellite dishes, demonstrating expertise in extreme weather field work and storm chasing operations.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of storm research and extreme weather fieldwork'</p><img src='/images/villains/06-dr-monsoon-kiran-patel/storm-chasing-monsoon-research.jpg' alt='Dr. Monsoon conducting storm research in heavy monsoon conditions' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'storm chasing meteorology extreme weather'",
+        "Investigate 'monsoon research heavy precipitation'",
+        "Look up 'mobile weather stations satellite equipment'",
+        "Study 'weather balloon launches storm conditions'"
+      ],
+      "expectedProcess": [
+        "Search 'storm chasing' → extreme weather research",
+        "Research monsoon research → seasonal storm tracking",
+        "Connect mobile stations → portable weather monitoring",
+        "Understand extreme conditions → dangerous weather fieldwork"
+      ],
+      "reveal": { "trait": "Master of storm research and extreme weather operations", "note": "Expert in conducting fieldwork during dangerous weather conditions" },
+      "answer": { "name": "Monsoon Storm Systems", "lat": 20.0000, "lng": 77.0000 },
+      "explainHtml": "<p><strong>Storm Research Confirmed:</strong> Active monsoon storm systems! Dr. Monsoon's expertise in extreme weather fieldwork allows her to conduct research during dangerous storm conditions. Her mobile weather stations and storm chasing skills make her incredibly dangerous during monsoon season!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["community-education", "agricultural-weather", "rural-outreach"],
+      "clueHtml": "<p><strong>Community Intelligence:</strong> 'Dr. Monsoon was observed conducting educational outreach to rural agricultural communities, using weather monitoring stations and educational charts to teach about weather patterns. She's engaging with diverse community members in agricultural landscapes with rice paddies and terraced fields, sharing meteorological knowledge for farming applications.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of community weather education and agricultural forecasting'</p><img src='/images/villains/06-dr-monsoon-kiran-patel/community-weather-education.jpg' alt='Dr. Monsoon conducting weather education with agricultural community' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'agricultural weather forecasting monsoon farming'",
+        "Investigate 'community weather education rural outreach'",
+        "Look up 'rice farming monsoon seasonal patterns'",
+        "Study 'terraced fields mountain agriculture weather'"
+      ],
+      "expectedProcess": [
+        "Search 'agricultural weather' → farming weather forecasting",
+        "Research community education → rural weather outreach",
+        "Connect rice farming → monsoon-dependent agriculture",
+        "Understand terraced fields → mountain farming systems"
+      ],
+      "reveal": { "trait": "Master of community weather education and agricultural outreach", "note": "Expert in teaching weather science to farming communities" },
+      "answer": { "name": "Agricultural Communities", "lat": 28.0000, "lng": 84.0000 },
+      "explainHtml": "<p><strong>Community Outreach Confirmed:</strong> Agricultural communities in monsoon regions! Dr. Monsoon's expertise in weather education helps farming communities understand seasonal patterns. Her knowledge of rice cultivation and terraced agriculture makes her valuable but dangerous around rural weather systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["high-altitude-research", "mountain-climatology", "western-ghats"],
+      "clueHtml": "<p><strong>Mountain Intelligence:</strong> 'Dr. Monsoon was tracked to the Western Ghats Climate Research Station, operating advanced climate monitoring equipment in high-altitude mountain conditions. She's using laptops and comprehensive meteorological setups while storm clouds gather, demonstrating expertise in mountain weather systems and monsoon research in challenging terrain.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of high-altitude climate research and mountain meteorology'</p><img src='/images/villains/06-dr-monsoon-kiran-patel/western-ghats-research-station.jpg' alt='Dr. Monsoon at Western Ghats climate research station' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'Western Ghats mountain range India climate'",
+        "Investigate 'high-altitude climate research stations'",
+        "Look up 'Western Ghats monsoon orographic effects'",
+        "Study 'mountain meteorology elevation weather patterns'"
+      ],
+      "expectedProcess": [
+        "Search 'Western Ghats' → mountain range in western India",
+        "Research climate stations → high-altitude weather monitoring",
+        "Connect orographic effects → mountains affecting monsoons",
+        "Understand elevation → altitude effects on weather"
+      ],
+      "reveal": { "trait": "Master of high-altitude climate research and mountain meteorology", "note": "Expert in Western Ghats monsoon systems and mountain weather" },
+      "answer": { "name": "Western Ghats, India", "lat": 15.3647, "lng": 75.1240 },
+      "explainHtml": "<p><strong>Mountain Research Confirmed:</strong> Western Ghats Climate Research Station! This mountain range in western India creates orographic effects that intensify monsoon rainfall. Dr. Monsoon's expertise in high-altitude meteorology makes her dangerous around these critical mountain weather systems!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["storm-laboratory", "research-analysis", "educational-presentation"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Monsoon has been cornered in her storm research laboratory, presenting complex meteorological analysis using multiple storm tracking maps and charts. She's operating from an indoor facility with windows showing stormy weather, using whiteboards labeled 'Dr. MONSOON' with seasonal adaptation research patterns, claiming to revolutionize weather education.'</p><p><strong>Master Plan Revealed:</strong> 'Governments hide the TRUTH about changing monsoon patterns! My research laboratory will expose the climate data farmers desperately need!'</p><img src='/images/villains/06-dr-monsoon-kiran-patel/storm-research-laboratory.jpg' alt='Dr. Monsoon in storm research laboratory with educational displays' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'storm research laboratory meteorology analysis'",
+        "Investigate 'seasonal adaptation patterns climate research'",
+        "Study 'weather education storm tracking systems'",
+        "Look up 'meteorological laboratory equipment analysis'"
+      ],
+      "expectedProcess": [
+        "Search 'storm laboratories' → meteorological research facilities",
+        "Research seasonal adaptation → climate pattern changes",
+        "Connect weather education → scientific communication",
+        "Understand laboratory analysis → comprehensive weather research"
+      ],
+      "reveal": { "trait": "MASTER OF METEOROLOGICAL RESEARCH AND EDUCATION", "note": "Ultimate goal: Create comprehensive weather education revolution!" },
+      "answer": { "name": "Meteorological Research Laboratory", "lat": 19.0760, "lng": 72.8777 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Storm research laboratory! Dr. Monsoon's ultimate plan involves revolutionizing weather education through comprehensive meteorological analysis. Her laboratory research and educational capabilities make this her most sophisticated weather scheme!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ]
+}

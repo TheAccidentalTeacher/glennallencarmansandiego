@@ -1,4 +1,4 @@
-# Carmen Sandiego Game - Development Server Setup
+# Sourdough Pete's Geography Challenge - Development Server Setup
 
 ## Quick Start (Single Command)
 

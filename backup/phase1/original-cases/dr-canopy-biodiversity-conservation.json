@@ -1,0 +1,151 @@
+{
+  "id": "dr-canopy-biodiversity-conservation",
+  "title": "Dr. Canopy's Rainforest Conservation Mission",
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 40,
+  "description": "Follow Dr. Canopy through his rainforest research from canopy stations to biodiversity surveys to global conservation education, learning about tropical ecosystems and the urgent importance of biodiversity protection.",
+  "villainId": "dr-canopy-carlos-mendoza",
+  "briefing": {
+    "headline": "Bioacoustic Equipment 'Thefts' Across Central American Rainforests!",
+    "narrativeHtml": "<p><strong>CONSERVATION ALERT:</strong> Dr. Canopy (Carlos Mendoza), rainforest ecology specialist, has been 'stealing' advanced bioacoustic monitoring equipment across Central American rainforests. However, intelligence suggests his activities may actually serve legitimate biodiversity conservation - racing to document species before habitat destruction occurs.</p><p><strong>Educational Mission:</strong> Track this dedicated conservation biologist from canopy research stations through collaborative field surveys to global biodiversity education, learning about tropical ecosystems, scientific methodology, and the critical race to protect Earth's disappearing biodiversity!</p><p><strong>Challenge Level:</strong> Intermediate-Advanced - requires understanding of tropical geography, biodiversity concepts, and conservation science methods.</p>",
+    "assets": {}
+  },
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["canopy-research", "communication-systems", "rainforest-methodology"],
+      "image": "generated-image-2025-09-25 (53).png",
+      "clueHtml": "<p><strong>CANOPY RESEARCH STATION INTELLIGENCE:</strong> 'Dr. Canopy photographed at sophisticated rainforest canopy research station with communication equipment, research towers, and field data collection tablets. His professional rainforest research gear and scientific monitoring stations suggest expertise in canopy access techniques and multi-story ecosystem structure documentation.'</p><p><strong>SCIENTIFIC METHODOLOGY EVIDENCE:</strong> 'Security footage shows his command of specialized canopy research infrastructure and field communication devices essential for remote rainforest locations. The combination of vertical access equipment and advanced monitoring technology indicates deep knowledge of tropical forest research methodology and biodiversity assessment techniques.'</p><p><strong>RESEARCH CHALLENGE:</strong> Understand the specialized techniques required for canopy-level rainforest research and biodiversity monitoring!</p>",
+      "researchPrompts": [
+        "Research 'rainforest canopy research methodology vertical access equipment'",
+        "Investigate 'tropical forest monitoring stations communication systems'",
+        "Look up 'canopy biodiversity research towers scientific methodology'",
+        "Study 'multi-story ecosystem structure rainforest research techniques'"
+      ],
+      "expectedProcess": [
+        "Search 'canopy research' → specialized equipment for accessing forest vertical layers",
+        "Research 'rainforest monitoring' → communication systems essential in remote locations",
+        "Connect 'multi-story ecosystems' → different species occupy different forest levels",
+        "Verify 'biodiversity assessment' → scientific methods for documenting tropical species"
+      ],
+      "reveal": { "trait": "Canopy access specialist", "note": "Expert in vertical forest research and remote communication systems" },
+      "answer": { "name": "Central American Rainforest Canopy Research", "lat": 10.3157, "lng": -84.8025 },
+      "explainHtml": "<p><strong>CANOPY RESEARCH CONFIRMED:</strong> Central American rainforest canopy station! Dr. Canopy's expertise in vertical forest access and communication systems enables sophisticated biodiversity monitoring across multiple ecosystem layers. His research documents the incredible complexity of tropical forest communities.</p>",
+      "scoring": { "base": 130, "distanceKmFull": 180 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["biodiversity-survey", "wildlife-documentation", "species-conservation"],
+      "image": "generated-image-2025-09-25 (54).png",
+      "clueHtml": "<p><strong>BIODIVERSITY SURVEY INTELLIGENCE:</strong> 'Surveillance reveals Dr. Canopy conducting comprehensive wildlife surveys with diverse rainforest species including parrots, monkeys, and tropical flora. He operates sophisticated wildlife survey equipment, biodiversity monitoring devices, and species documentation tools using authentic scientific methodology for ecosystem complexity assessment.'</p><p><strong>CONSERVATION EVIDENCE:</strong> 'His professional field biology approach to wildlife documentation demonstrates expertise in conservation biology principles and rainforest ecosystem analysis. The diversity of species and scientific equipment suggests urgent biodiversity assessment work - potentially documenting species before habitat destruction threatens their survival.'</p><p><strong>BIODIVERSITY CHALLENGE:</strong> Understand the incredible species diversity of tropical rainforests and the urgent need for biodiversity conservation!</p>",
+      "researchPrompts": [
+        "Research 'rainforest biodiversity species diversity tropical ecosystems'",
+        "Investigate 'wildlife survey techniques species documentation conservation'",
+        "Look up 'tropical species interactions ecosystem complexity assessment'",
+        "Study 'conservation biology endangered species habitat protection'"
+      ],
+      "expectedProcess": [
+        "Search 'rainforest biodiversity' → tropical forests contain majority of Earth's species",
+        "Research 'species documentation' → scientific methods for recording biodiversity",
+        "Connect 'habitat destruction' → urgent need to document species before extinction",
+        "Verify 'conservation biology' → science dedicated to protecting Earth's species"
+      ],
+      "reveal": { "trait": "Biodiversity documentation specialist", "note": "Expert in wildlife survey techniques and endangered species conservation" },
+      "answer": { "name": "Tropical Biodiversity Research Site", "lat": 9.7489, "lng": -83.7534 },
+      "explainHtml": "<p><strong>BIODIVERSITY CONSERVATION CONFIRMED:</strong> Tropical rainforest biodiversity survey! Dr. Canopy's wildlife documentation work represents urgent conservation science - racing to record species diversity before deforestation threatens irreplaceable rainforest ecosystems. His research protects Earth's biological heritage.</p>",
+      "scoring": { "base": 150, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r3",
+      "minutes": 8,
+      "focus": ["collaborative-research", "forest-mapping", "team-conservation"],
+      "image": "generated-image-2025-09-25 (55).png",
+      "clueHtml": "<p><strong>COLLABORATIVE FOREST RESEARCH INTELLIGENCE:</strong> 'Dr. Canopy photographed leading multi-person forest research team with topographic mapping, data sharing tablets, and diverse research coordination. His collaborative field research methodology includes forest mapping, data collection coordination, and professional field collaboration techniques for comprehensive conservation work.'</p><p><strong>TEAMWORK EVIDENCE:</strong> 'Security footage shows his leadership in diverse research teams working together on forest protection projects. The combination of mapping technology, collaborative data sharing, and coordinated field techniques indicates expertise in team-based conservation work and scientific coordination for large-scale biodiversity protection efforts.'</p><p><strong>COLLABORATION CHALLENGE:</strong> Understand how collaborative scientific research teams coordinate to protect vast forest ecosystems!</p>",
+      "researchPrompts": [
+        "Research 'collaborative conservation research team forest protection'",
+        "Investigate 'forest mapping data collection scientific coordination'",
+        "Look up 'team-based biodiversity conservation field methodology'",
+        "Study 'large-scale ecosystem protection research collaboration'"
+      ],
+      "expectedProcess": [
+        "Search 'collaborative research' → teams combine expertise for complex conservation",
+        "Research 'forest mapping' → topographic and biodiversity data collection",
+        "Connect 'scientific coordination' → organized efforts protect larger areas",
+        "Verify 'team conservation' → multiple specialists working together"
+      ],
+      "reveal": { "trait": "Research collaboration specialist", "note": "Expert in coordinating diverse conservation teams for large-scale forest protection" },
+      "answer": { "name": "Collaborative Forest Conservation Project", "lat": 10.1574, "lng": -84.7059 },
+      "explainHtml": "<p><strong>COLLABORATIVE CONSERVATION CONFIRMED:</strong> Multi-team forest protection project! Dr. Canopy's leadership in collaborative research demonstrates how conservation scientists coordinate diverse expertise to protect vast forest ecosystems. His teamwork multiplies conservation impact across entire landscapes.</p>",
+      "scoring": { "base": 170, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["protected-areas", "monteverde-research", "cloud-forest-conservation"],
+      "image": "generated-image-2025-09-25 (56).png",
+      "clueHtml": "<p><strong>MONTEVERDE CLOUD FOREST INTELLIGENCE:</strong> 'Dr. Canopy photographed conducting authorized research at Monteverde Cloud Forest Reserve with official signage and specialized cloud forest ecosystem equipment. His professional conservation work in this protected area demonstrates legitimate research credentials and expertise in unique cloud forest ecosystem monitoring and conservation reserve management.'</p><p><strong>PROTECTED AREA EVIDENCE:</strong> 'His specialized equipment for cloud forest research and official presence at Monteverde confirms legitimate conservation research authorization. The combination of protected area access and cloud forest expertise indicates his work serves ecosystem preservation rather than environmental destruction - this appears to be heroic conservation science!'</p><p><strong>CONSERVATION CHALLENGE:</strong> Understand the unique importance of cloud forest ecosystems and protected area research programs!</p>",
+      "researchPrompts": [
+        "Research 'Monteverde Cloud Forest Reserve conservation research programs'",
+        "Investigate 'cloud forest ecosystems unique biodiversity protection'",
+        "Look up 'protected area research conservation management programs'",
+        "Study 'specialized ecosystem monitoring cloud forest conservation'"
+      ],
+      "expectedProcess": [
+        "Search 'Monteverde' → world-famous cloud forest conservation reserve",
+        "Research 'cloud forest ecosystems' → unique high-altitude tropical forests",
+        "Connect 'protected areas' → designated conservation zones for ecosystem protection",
+        "Verify 'conservation research' → scientific work protecting irreplaceable ecosystems"
+      ],
+      "reveal": { "trait": "Protected area conservation researcher", "note": "Authorized specialist in cloud forest ecosystem monitoring and protection" },
+      "answer": { "name": "Monteverde Cloud Forest Reserve, Costa Rica", "lat": 10.3009, "lng": -84.7934 },
+      "explainHtml": "<p><strong>PROTECTED AREA RESEARCH CONFIRMED:</strong> Monteverde Cloud Forest Reserve! Dr. Canopy's authorized conservation research in this world-famous protected area demonstrates legitimate scientific work protecting unique cloud forest ecosystems. His research helps preserve irreplaceable biodiversity for future generations.</p>",
+      "scoring": { "base": 190, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["global-conservation", "biodiversity-education", "academic-leadership"],
+      "image": "generated-image-2025-09-25 (57).png",
+      "clueHtml": "<p><strong>CONSERVATION HERO REVELATION:</strong> 'Dr. Carlos Mendoza photographed delivering academic presentation on global biodiversity and conservation strategies, with detailed biodiversity maps, conservation strategy charts, and professional educational materials. His presentation focuses on \"BIODIVERSITY STRATEGY\" and \"CONSERVATION STRATEGY\" development, revealing his true identity as a dedicated conservation educator and academic leader.'</p><p><strong>HEROIC IDENTITY EXPOSED:</strong> 'This final evidence confirms the truth: Dr. Canopy is not a villain but a conservation hero! His apparent \"equipment thefts\" were actually urgent biodiversity documentation to save species from habitat destruction. His academic expertise serves global conservation education - he has been racing against time to protect Earth's disappearing biodiversity through legitimate scientific research and education!'</p><p><strong>FINAL CHALLENGE:</strong> Understand how global biodiversity conservation strategies protect Earth's irreplaceable species and ecosystems!</p>",
+      "researchPrompts": [
+        "Research 'global biodiversity conservation strategies hotspots protection'",
+        "Investigate 'conservation biology education academic research leadership'",
+        "Look up 'biodiversity protection global environmental education'",
+        "Study 'conservation strategy development ecosystem protection planning'"
+      ],
+      "expectedProcess": [
+        "Search 'global biodiversity' → worldwide patterns of species richness and protection needs",
+        "Research 'conservation strategies' → systematic approaches to ecosystem protection",
+        "Connect 'academic leadership' → education drives conservation awareness and action",
+        "Verify 'biodiversity protection' → scientific work preserving Earth's biological heritage"
+      ],
+      "reveal": { "trait": "CONSERVATION HERO REVEALED", "note": "Dr. Carlos Mendoza - Global biodiversity protection leader and conservation education hero!" },
+      "answer": { "name": "Global Biodiversity Conservation Education", "lat": 0.0000, "lng": 0.0000 },
+      "explainHtml": "<p><strong>CONSERVATION HERO CONFIRMED:</strong> Dr. Carlos Mendoza revealed as biodiversity protection hero! His expertise in global conservation strategies and educational leadership serves legitimate ecosystem protection. He has been racing to document and protect rainforest biodiversity through dedicated scientific research and conservation education - a true environmental hero!</p>",
+      "scoring": { "base": 220, "distanceKmFull": 80 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-canopy-carlos-mendoza",
+    "victim": "Biodiversity Conservation - HERO REVEALED",
+    "item": "Legitimate Bioacoustic Equipment for Species Documentation and Protection"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li><strong>Canopy Research:</strong> Advanced vertical forest access and communication systems for multi-story ecosystem documentation</li><li><strong>Biodiversity Documentation:</strong> Urgent wildlife surveys and species conservation before habitat destruction</li><li><strong>Collaborative Conservation:</strong> Team-based forest protection and coordinated large-scale conservation efforts</li><li><strong>Protected Area Research:</strong> Authorized conservation work at Monteverde Cloud Forest Reserve and ecosystem monitoring</li><li><strong>HEROIC REVEAL:</strong> Dr. Canopy's apparent 'thefts' were actually urgent biodiversity protection activities!</li><li><strong>Global Conservation Education:</strong> Academic leadership in biodiversity strategy development and environmental education</li></ul>",
+    "learningExtensions": [
+      "Explore the incredible biodiversity of tropical rainforests and the urgent threats they face",
+      "Research the role of protected areas like Monteverde in conservation and scientific research",
+      "Investigate how collaborative scientific teams coordinate to protect vast forest ecosystems",
+      "Study global biodiversity conservation strategies and hotspots requiring immediate protection"
+    ],
+    "crossCurricular": [
+      "Biology: Tropical biodiversity, species interactions, conservation biology principles",
+      "Environmental Science: Ecosystem services, habitat protection, sustainable development",
+      "Geography: Central American physical geography, tropical climate zones, protected areas",
+      "Earth Science: Tropical climate systems, elevation gradients, cloud forest formation",
+      "Ethics: Conservation ethics, environmental stewardship, global responsibility for biodiversity"
+    ]
+  }
+}

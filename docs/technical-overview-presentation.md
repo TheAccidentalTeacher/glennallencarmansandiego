@@ -1,4 +1,4 @@
-# Carmen Sandiego Educational Game: Technical Overview
+# Sourdough Pete's Geography Challenge: Technical Overview
 ## A Non-Technical Explanation of Our Build Components
 
 ---
@@ -6,9 +6,9 @@
 ## Slide 1: Introduction
 ### What We Built: An Educational Geography Game
 
-**Carmen Sandiego: A Modern Educational Platform**
+**Sourdough Pete's Geography Challenge: A Modern Educational Platform**
 - Interactive geography learning game for classrooms
-- Students guess locations based on clues about villains
+- Students track down The Sourdough Syndicate using research skills
 - Teachers can present cases to entire classes
 - Built with modern web technology for reliability and performance
 

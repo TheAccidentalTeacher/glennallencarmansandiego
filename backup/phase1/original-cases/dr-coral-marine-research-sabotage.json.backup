@@ -1,0 +1,153 @@
+{
+  "id": "dr-coral-marine-research-sabotage",
+  "title": "The Coral Triang      "id": "r3",
+      "minutes": 12,
+      "focu      "id": "r5",
+      "minutes": 2,
+      "focus": ["advanced-marine-conservation", "global-impact", "ethics"],
+      "image": "pacific-island-community-marine-education.jpg",
+      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Dr. Coral's ultimate plan exposed: She's creating an unauthorized marine monitoring network by stealing coral research equipment throughout the Coral Triangle. Her goal is to document coral bleaching and destruction she believes governments and tourism industries are concealing from the public.'</p><p><strong>Marine Conservation Threat:</strong> 'Her stolen equipment disrupts legitimate research that protects coral reef ecosystems and supports sustainable livelihoods for millions of people. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the precise community-based conservation partnerships essential for coral reef survival.'</p><p><strong>Mission Accomplished:</strong> You've tracked Dr. Coral from the broad Coral Triangle to the specific coordinates of Bali, learning about marine biodiversity, island nations, coral formation processes, and conservation ethics along the way!</p>",": ["marine-biology", "coral-formations", "atolls", "reef-types"],
+      "image": "marine-research-vessel-operations.jpg",
+      "clueHtml": "<p><strong>Marine Ecosystem Intelligence:</strong> 'Dr. Coral has targeted specific coral formation types within the Triangle - focusing on ring-shaped coral islands that form around underwater volcanic peaks, creating lagoons with incredibly diverse marine life. Her stolen equipment monitors these unique geological-biological formations.'</p><p><strong>Coral Formation Analysis:</strong> 'She's particularly interested in coral formations that demonstrate the complete life cycle of volcanic islands - from fringing reefs around active volcanoes to barrier reefs around subsiding islands, to finally ring-shaped formations around completely submerged peaks.'</p><p><strong>Marine Geology Research:</strong> Identify these ring-shaped coral formations and understand how they demonstrate island formation processes!</p>",esearch Sabotage",
+  "difficulty": "advanced",
+  "durationMinutes": 44,
+  "villainId": "dr-coral-maya-sari",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "warrantStep": true,
+      "learningExtensions": true
+    },
+    "theme": "marine"
+  },
+  "briefing": {
+    "headline": "The Coral Triangle Research Sabotage",
+    "narrativeHtml": "<p><strong>Marine Emergency Alert for Route Runners!</strong> Coral reef research stations across the Pacific have been systematically sabotaged, threatening critical marine conservation efforts! Advanced underwater monitoring equipment and research vessels worth millions have been stolen by a Sourdough Syndicate operative.</p><p><strong>Environmental Threat:</strong> The saboteur left this urgent message: <em>'My REEF PROTOCOL will document the oceanic truth they hide from the world! The Marine Ecosystems Division protects what governments allow to be destroyed!'</em> - along with bread crumbs and coordinates from multiple dive sites.</p><p><strong>Ocean Crisis Alert:</strong> Dr. Coral, master of the Syndicate's marine operations, has vanished into the world's most biodiverse coral reef system. Can you track her through the island chains before she disrupts vital research protecting the ocean's most endangered ecosystems?</p>",
+    "assets": {
+      "image": "/images/cases/dr-coral/briefing-coral-research.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Coral (Maya Sari)",
+      "tags": ["marine-biologist", "coral-expert", "conservation-extremist"],
+      "description": "Rogue marine conservationist with PhD from University of Hawaii. Expert in Pacific coral reef systems, now stealing marine research equipment to create unauthorized ocean monitoring networks.",
+      "image": "/images/villains/07-dr-coral-maya-sari/generated-image-2025-09-25 (30).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 12,
+      "focus": ["geography", "marine-ecosystems", "coral-reefs"],
+      "image": "tropical-coral-reef-field-research.jpg",
+      "clueHtml": "<p><strong>Marine Intelligence Report:</strong> 'Dr. Coral was detected in the world's most biodiverse marine region - a triangular area of ocean containing 75% of all known coral species and 40% of all reef fish species. Her stolen equipment monitors coral systems where warm currents from three major oceans converge.'</p><p><strong>Biodiversity Evidence:</strong> 'Equipment theft concentrated in waters supporting over 3,000 fish species and 600 coral species - more marine biodiversity than anywhere else on Earth. The suspect appears to understand these complex tropical marine ecosystems perfectly, focusing on areas where coral growth rates are highest.'</p><p><strong>Marine Research:</strong> Use your atlas to identify this incredibly biodiverse marine region and understand why coral conservation is so critical here!</p>",
+      "researchPrompts": [
+        "Research 'Coral Triangle most biodiverse marine region Pacific'",
+        "Investigate '75% coral species 40% reef fish biodiversity hotspot'",
+        "Look up 'warm ocean currents convergence tropical Pacific'",
+        "Study 'coral reef formation tropical marine ecosystems'"
+      ],
+      "expectedProcess": [
+        "Search 'most biodiverse marine region' → Coral Triangle identified",
+        "Research 'coral species diversity' → 600+ coral species in region",
+        "Connect 'warm currents' → optimal conditions for coral growth",
+        "Verify 'fish diversity' → 3,000+ species in small ocean area"
+      ],
+      "reveal": { "trait": "Marine biodiversity specialist", "note": "Expert in the world's most diverse coral reef ecosystems" },
+      "answer": { "name": "Coral Triangle", "lat": -2.0000, "lng": 120.0000 },
+      "explainHtml": "<p><strong>Marine Region Confirmed:</strong> The Coral Triangle! This incredible marine region in the western Pacific contains more coral and fish species than anywhere else on Earth. The convergence of warm ocean currents creates perfect conditions for coral growth, making it the 'Amazon of the Seas' that Dr. Coral is monitoring.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 200 }
+    },
+    {
+      "id": "r2",
+      "minutes": 10,
+      "focus": ["geography", "countries", "island-nations", "atlas-skills"],
+      "image": "underwater-coral-reef-documentation.jpg",
+      "clueHtml": "<p><strong>Regional Intelligence Update:</strong> 'Dr. Coral's operations span multiple island nations within the Coral Triangle - maritime countries where coral reefs provide crucial coastal protection, tourism revenue, and fishing grounds for millions of people. Surveillance shows her coordinating across the region's largest archipelagic nations.'</p><p><strong>Island Nation Analysis:</strong> 'Stolen equipment positioned in countries consisting of thousands of islands where coral reef health directly affects national economies and food security. These nations share the challenge of protecting vast marine territories scattered across enormous ocean areas.'</p><p><strong>Atlas Investigation:</strong> Identify the major island nations within the Coral Triangle where Dr. Coral is operating!</p>",
+      "researchPrompts": [
+        "Research 'Coral Triangle countries Indonesia Philippines Malaysia'",
+        "Investigate 'archipelagic nations thousands of islands Pacific'",
+        "Look up 'coral reef tourism coastal protection island nations'",
+        "Study 'maritime boundaries Southeast Asia Pacific islands'"
+      ],
+      "expectedProcess": [
+        "Search 'Coral Triangle countries' → Indonesia, Philippines, Malaysia, others",
+        "Research 'archipelagic nations' → countries made of many islands",
+        "Connect 'reef protection' → coastal defense from storms",
+        "Verify 'maritime territories' → vast ocean areas to protect"
+      ],
+      "reveal": { "trait": "Multi-nation marine coordination expert", "note": "Operates across multiple island nations sharing coral reef systems" },
+      "answer": { "name": "Indonesia-Philippines-Malaysia", "lat": 0.0000, "lng": 115.0000 },
+      "explainHtml": "<p><strong>Regional Pattern Identified:</strong> The Indonesia-Philippines-Malaysia region! These major archipelagic nations within the Coral Triangle consist of thousands of islands where coral reefs are vital for coastal protection, tourism, and fishing. Dr. Coral exploits the complexity of coordinating marine conservation across these vast maritime territories.</p>",
+      "scoring": { "base": 150, "distanceKmFull": 180 }
+    },
+    {
+      "id": "r3",
+      "minutes": 10,
+      "focus": ["marine-biology", "coral-formations", "atolls", "reef-types"],
+      "clueHtml": "<p><strong>Marine Ecosystem Intelligence:</strong> 'Dr. Coral has targeted specific coral formation types within the Triangle - focusing on ring-shaped coral islands that form around underwater volcanic peaks, creating lagoons with incredibly diverse marine life. Her stolen equipment monitors these unique geological-biological formations.'</p><p><strong>Coral Formation Analysis:</strong> 'She's particularly interested in coral formations that demonstrate the complete life cycle of volcanic islands - from fringing reefs around active volcanoes to barrier reefs around subsiding islands, to finally ring-shaped formations around completely submerged peaks.'</p><p><strong>Marine Geology Research:</strong> Identify these ring-shaped coral formations and understand how they demonstrate island formation processes!</p>",
+      "researchPrompts": [
+        "Research 'coral atolls ring-shaped islands volcanic peaks'",
+        "Investigate 'atoll formation fringing barrier reef stages'",
+        "Look up 'lagoons coral atolls marine biodiversity hotspots'",
+        "Study 'volcanic island subsidence coral reef growth'"
+      ],
+      "expectedProcess": [
+        "Search 'ring-shaped coral islands' → Atolls identified",
+        "Research 'atoll formation' → coral growth as islands subside",
+        "Connect 'lagoon ecosystems' → protected marine environments",
+        "Verify 'volcanic subsidence' → geological process creating atolls"
+      ],
+      "reveal": { "trait": "Atoll formation specialist", "note": "Expert in coral formations that reveal geological processes" },
+      "answer": { "name": "Coral Atolls", "lat": -8.5000, "lng": 115.5000 },
+      "explainHtml": "<p><strong>Formation Type Confirmed:</strong> Coral Atolls! These ring-shaped coral islands form as volcanic peaks slowly subside beneath the ocean while coral continues growing upward. The resulting lagoons create incredibly diverse marine ecosystems that Dr. Coral studies to understand both geological and biological processes.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r4",
+      "minutes": 10,
+      "focus": ["coordinates", "specific-location", "marine-parks"],
+      "image": "marine-conservation-laboratory-education.jpg",
+      "clueHtml": "<p><strong>Final Marine Intelligence:</strong> 'Dr. Coral photographed at coordinates 8°30'S, 115°30'E at a world-famous tropical island destination known for extraordinary coral diversity and marine conservation success. She was deploying stolen monitoring equipment while declaring: \\\"From this island paradise of 4 million visitors, my reef network will expose the marine destruction they hide!\\\"'</p><p><strong>Conservation Context:</strong> 'The location is renowned for its successful marine protected areas, traditional fishing communities, and sustainable tourism that supports both coral conservation and local economies. Dr. Coral chose this model conservation area where her unauthorized equipment could disrupt carefully balanced management systems.'</p><p><strong>Coordinate Challenge:</strong> Use the exact coordinates to identify this famous tropical island conservation destination!</p>",
+      "researchPrompts": [
+        "Use coordinates 8°30'S, 115°30'E to find exact location",
+        "Research 'Bali Indonesia tropical island 4 million tourists'",
+        "Investigate 'Bali marine protected areas coral conservation'",
+        "Look up 'traditional fishing communities sustainable tourism Bali'"
+      ],
+      "expectedProcess": [
+        "Plot coordinates on detailed map → Bali, Indonesia",
+        "Search 'tropical island 4 million visitors' → Bali identification",
+        "Research 'Bali conservation' → marine protected area success",
+        "Verify 'sustainable tourism' → balancing tourism and conservation"
+      ],
+      "reveal": { "trait": "MASTER MARINE SURVEILLANCE COORDINATOR", "note": "FINAL PHASE: Creates unauthorized monitoring networks in successful conservation areas!" },
+      "answer": { "name": "Bali, Indonesia", "lat": -8.5000, "lng": 115.5000 },
+      "explainHtml": "<p><strong>Final Location Confirmed:</strong> Bali, Indonesia! This world-famous island within the Coral Triangle exemplifies successful marine conservation through traditional management systems and sustainable tourism. Dr. Coral's unauthorized equipment threatens the delicate balance between conservation and community livelihoods that makes Bali a model for coral protection.</p>",
+      "scoring": { "base": 170, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r5",
+      "minutes": 2,
+      "focus": ["advanced-marine-conservation", "global-coral-threats", "ethics"],
+      "clueHtml": "<p><strong>FINAL SYNDICATE REVELATION:</strong> 'Dr. Coral's ultimate plan exposed: She's creating an unauthorized marine monitoring network by stealing coral research equipment throughout the Coral Triangle. Her goal is to document coral bleaching and destruction she believes governments and tourism industries are concealing from the public.'</p><p><strong>Marine Conservation Threat:</strong> 'Her stolen equipment disrupts legitimate research that protects coral reef ecosystems and supports sustainable livelihoods for millions of people. The Sourdough Syndicate's \\\"truth through chaos\\\" approach threatens the precise community-based conservation partnerships essential for coral reef survival.'</p><p><strong>Mission Accomplished:</strong> You've tracked Dr. Coral from the broad Coral Triangle to the specific coordinates of Bali, learning about marine biodiversity, island nations, coral formation processes, and conservation ethics along the way!</p>",
+      "researchPrompts": [
+        "Research 'coral bleaching climate change ocean acidification'",
+        "Investigate 'community-based marine conservation success stories'",
+        "Look up 'sustainable tourism marine protected areas'",
+        "Study 'coral reef conservation international cooperation'"
+      ],
+      "expectedProcess": [
+        "Research 'coral threats' → climate change impacts on reefs",
+        "Connect 'community conservation' → local stewardship importance",
+        "Understand 'sustainable tourism' → balancing economics and environment",
+        "Verify 'international cooperation' → global coral protection efforts"
+      ],
+      "reveal": { "trait": "SYNDICATE MARINE EXTREMIST", "note": "Uses stolen research equipment to destabilize community-based coral conservation!" },
+      "answer": { "name": "Coral Triangle Conservation Network", "lat": -8.5000, "lng": 115.5000 },
+      "explainHtml": "<p><strong>Syndicate Plan Thwarted:</strong> Dr. Coral's theft of marine research equipment aimed to create unauthorized surveillance across the entire Coral Triangle! While coral conservation is critical, her illegal methods threaten the community partnerships and scientific research that actually protect the world's most biodiverse marine ecosystems.</p>",
+      "scoring": { "base": 200, "distanceKmFull": 80 }
+    }
+  ]
+}

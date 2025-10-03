@@ -160,7 +160,7 @@ const CaseForm: React.FC<CaseFormProps> = ({ onClose, onSave, className = '' }) 
               <X size={24} />
             </button>
           </div>
-          <p className="text-red-200 mt-2">Design an educational Carmen Sandiego adventure</p>
+          <p className="text-red-200 mt-2">Design an educational Sourdough Pete geography adventure</p>
         </div>
 
         {/* Form */}

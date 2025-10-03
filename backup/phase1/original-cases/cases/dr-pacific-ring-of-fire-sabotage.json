@@ -1,0 +1,155 @@
+{
+  "id": "dr-pacific-ring-of-fire-sabotage",
+  "title": "Dr. Pacific's Ring of Fire Sabotage", 
+  "difficulty": "intermediate-advanced",
+  "durationMinutes": 35,
+  "description": "Track Dr. Pacific, volcanology expert, across the Pacific Ring of Fire as he steals seismic monitoring equipment to create what he believes is a more accurate volcanic eruption prediction system.",
+  "briefing": {
+    "headline": "Pacific Volcanic Research Stations Under Attack!",
+    "narrativeHtml": "<p><strong>GEOLOGICAL EMERGENCY for Route Runners!</strong> Dr. Pacific, volcanic specialist of the <em>Sourdough Syndicate's 'Islands Division,'</em> has stolen advanced seismic monitoring equipment from volcanic research stations across the Pacific Ring of Fire!</p><p>His calling card: a bread-slice stamp and the message: <em>'These volcanic warnings are INADEQUATE! My ERUPTION PROTOCOL will expose the seismic truth they hide from millions!'</em></p><p><strong>Intelligence Report:</strong> Dr. Pacific believes governments suppress accurate volcanic hazard data to avoid tourism panic. He's stealing equipment to create an 'authentic eruption prediction network' - but where in the vast Ring of Fire?</p>",
+    "assets": {
+      "image": "/images/cases/dr-pacific/briefing-volcanic-equipment.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Pacific (James Tauranga)",
+      "tags": ["volcanologist", "ring-of-fire-expert", "seismic-specialist"],
+      "description": "Volcanic research specialist with PhD from University of Auckland. Expert in Pacific Ring of Fire volcanism and seismic monitoring systems.",
+      "image": "/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (45).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["volcanic-research", "multi-volcano-monitoring", "field-stations"],
+      "clueHtml": "<p><strong>Volcanic Intelligence:</strong> 'Dr. Pacific was spotted at a comprehensive volcanic field research station monitoring multiple active volcanoes simultaneously. He's using thermal monitoring equipment, GPS systems, and protective field suits marked 'VOLCANO WATCH' while documenting active lava flows and volcanic activity across several volcanic sites.'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (45).png' alt='Dr. Pacific at multi-volcano research station with monitoring equipment' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'volcanic field research stations monitoring equipment'",
+        "Investigate 'thermal cameras volcanic lava flow monitoring'",
+        "Look up 'volcanic safety protocols field research'",
+        "Study 'multi-volcano monitoring systems seismic networks'"
+      ],
+      "expectedProcess": [
+        "Search 'volcanic monitoring' → field research station methods",
+        "Research thermal monitoring → lava flow temperature tracking",
+        "Connect safety protocols → protective equipment for volcanic work",
+        "Understand multi-volcano systems → comprehensive monitoring networks"
+      ],
+      "reveal": { "trait": null },
+      "answer": { "name": "Pacific Volcanic Research Stations", "lat": -15.0000, "lng": 168.0000 },
+      "explainHtml": "<p><strong>Volcanic Station Confirmed:</strong> Pacific volcanic research stations! These comprehensive facilities monitor multiple active volcanoes using thermal cameras, GPS, and seismic equipment. Dr. Pacific's expertise in volcanic monitoring makes him dangerous around these critical safety systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["lava-sampling", "fieldwork-techniques", "geological-collection"],
+      "clueHtml": "<p><strong>Fieldwork Intelligence:</strong> 'Dr. Pacific was photographed conducting dangerous close-range volcanic fieldwork, collecting lava flow samples using specialized protective equipment and research instrumentation. He's demonstrating expertise in geological sampling techniques near active volcanic features, using proper safety protocols for extreme environment research.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of volcanic fieldwork and geological sampling'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (46).png' alt='Dr. Pacific collecting lava flow samples in extreme volcanic conditions' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'volcanic lava flow sampling techniques'",
+        "Investigate 'geological field safety extreme environments'",
+        "Look up 'volcanic rock sample collection methods'",
+        "Study 'lava flow behavior volcanic fieldwork'"
+      ],
+      "expectedProcess": [
+        "Search 'lava sampling' → geological sample collection methods",
+        "Research field safety → protective equipment for volcanic work",
+        "Connect sampling techniques → scientific data collection",
+        "Understand lava behavior → volcanic flow characteristics"
+      ],
+      "reveal": { "trait": "Master of volcanic fieldwork and geological sampling", "note": "Expert in dangerous close-range volcanic research and safety protocols" },
+      "answer": { "name": "Active Volcanic Fields", "lat": -19.0000, "lng": 169.0000 },
+      "explainHtml": "<p><strong>Fieldwork Confirmed:</strong> Active volcanic fields! Dr. Pacific's expertise in geological sampling and extreme environment safety allows him to work directly with active lava flows. His close-range volcanic research skills make him incredibly dangerous around active eruption sites!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r3",
+      "minutes": 9,
+      "focus": ["geothermal-research", "rotorua-systems", "renewable-energy"],
+      "clueHtml": "<p><strong>Geothermal Intelligence:</strong> 'Dr. Pacific was observed at the Rotorua Geothermal Field Research Area in New Zealand, monitoring geothermal features with thermal measurement devices and seismic monitoring stations. He's studying the connection between volcanic activity and renewable energy applications, using research-grade instrumentation for geothermal energy development.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of geothermal energy research and thermal monitoring'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (47).png' alt='Dr. Pacific conducting geothermal research at Rotorua field station' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'Rotorua geothermal field New Zealand energy'",
+        "Investigate 'geothermal energy volcanic heat renewable'",
+        "Look up 'thermal monitoring geothermal systems'",
+        "Study 'volcanic activity geothermal power generation'"
+      ],
+      "expectedProcess": [
+        "Search 'Rotorua geothermal' → New Zealand geothermal region",
+        "Research geothermal energy → volcanic heat for electricity",
+        "Connect thermal monitoring → measuring geothermal temperatures",
+        "Understand volcanic connection → volcanic heat drives geothermal systems"
+      ],
+      "reveal": { "trait": "Master of geothermal energy research and volcanic thermal systems", "note": "Expert in connecting volcanic activity to renewable energy applications" },
+      "answer": { "name": "Rotorua, New Zealand", "lat": -38.1368, "lng": 176.2497 },
+      "explainHtml": "<p><strong>Geothermal Research Confirmed:</strong> Rotorua geothermal field! This active geothermal region in New Zealand harnesses volcanic heat for renewable energy generation. Dr. Pacific's expertise in both volcanic monitoring and geothermal energy makes him dangerous around these sustainable energy systems!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 60 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["community-education", "volcanic-hazards", "pacific-islands"],
+      "clueHtml": "<p><strong>Community Intelligence:</strong> 'Dr. Pacific was tracked conducting volcanic hazard education with Pacific island community members, using volcano hazard zone mapping and evacuation route planning. He's engaging diverse community members in volcanic safety education, teaching about geological hazards and disaster preparedness while building community understanding of volcanic risks.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of community volcanic hazard education and safety planning'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (48).png' alt='Dr. Pacific conducting volcanic hazard education with Pacific island community' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'volcanic hazard community education Pacific islands'",
+        "Investigate 'evacuation planning volcanic emergency preparedness'",
+        "Look up 'volcanic hazard zone mapping safety planning'",
+        "Study 'community disaster preparedness volcanic risks'"
+      ],
+      "expectedProcess": [
+        "Search 'volcanic hazard education' → community safety programs",
+        "Research evacuation planning → emergency preparedness for volcanic areas",
+        "Connect hazard mapping → identifying dangerous volcanic zones",
+        "Understand community preparedness → local disaster response planning"
+      ],
+      "reveal": { "trait": "Master of community volcanic hazard education and emergency planning", "note": "Expert in volcanic safety communication and community disaster preparedness" },
+      "answer": { "name": "Pacific Island Communities", "lat": -17.0000, "lng": 179.0000 },
+      "explainHtml": "<p><strong>Community Education Confirmed:</strong> Pacific island communities! Dr. Pacific's expertise in volcanic hazard communication helps island communities understand evacuation routes and disaster preparedness. His community education skills make him valuable but dangerous around volcanic safety systems!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 40 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["academic-research", "global-patterns", "volcanic-presentations"],
+      "optional": true,
+      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Pacific has been cornered in an academic setting, presenting global volcanic activity patterns using scientific charts and educational materials. He's demonstrating professional research communication skills while showing comprehensive volcanic research data, claiming to revolutionize volcanic hazard prediction through academic research.'</p><p><strong>Master Plan Revealed:</strong> 'Academic institutions hide the TRUE patterns of global volcanic activity! My research presentations will expose the eruption predictions they're afraid to share!'</p><img src='/images/villains/10-dr-pacific-james-tauranga/generated-image-2025-09-25 (49).png' alt='Dr. Pacific presenting global volcanic research in academic setting' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "researchPrompts": [
+        "Research 'global volcanic activity patterns academic research'",
+        "Investigate 'volcanic research communication scientific presentations'",
+        "Study 'volcanic hazard prediction academic institutions'",
+        "Look up 'volcanic research data analysis global patterns'"
+      ],
+      "expectedProcess": [
+        "Search 'global volcanic patterns' → worldwide volcanic activity research",
+        "Research academic communication → scientific presentation methods",
+        "Connect hazard prediction → volcanic forecasting challenges",
+        "Understand research analysis → volcanic data interpretation"
+      ],
+      "reveal": { "trait": "MASTER OF GLOBAL VOLCANIC RESEARCH AND COMMUNICATION", "note": "Ultimate goal: Revolutionize volcanic hazard prediction through unauthorized academic research!" },
+      "answer": { "name": "Global Volcanic Research Network", "lat": -36.8485, "lng": 174.7633 },
+      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Academic volcanic research facility! Dr. Pacific's ultimate plan involves revolutionizing global volcanic hazard prediction through comprehensive academic research. His scientific communication expertise makes this his most sophisticated volcanic scheme!</p>",
+      "scoring": { "base": 200, "distanceKmFull": 30 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-pacific",
+    "victim": "Pacific Ring of Fire Research Consortium", 
+    "item": "Advanced Seismic and Volcanic Monitoring Equipment"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li>Geology: Pacific Ring of Fire and the tectonic processes creating volcanic activity</li><li>Island Geography: Volcanic island formation through subduction zones and hotspots</li><li>Earth Science: Geothermal systems and the relationship between plate tectonics and energy</li><li>Hazard Geography: Supervolcano systems and volcanic hazard assessment challenges</li><li>Scientific Ethics: Importance of authorized research and international cooperation in hazard prediction</li></ul>",
+    "learningExtensions": [
+      "Explore the global distribution of active volcanoes and their relationship to plate boundaries",
+      "Research geothermal energy development in volcanic regions around the world",
+      "Map the Pacific Plate motion and hotspot tracks creating island chains",
+      "Investigate volcanic hazard assessment and emergency response systems in different countries"
+    ],
+    "crossCurricular": [
+      "Earth Science: Plate tectonics, volcanic processes, and seismic activity",
+      "Physics: Seismic waves, thermal energy transfer, and geothermal systems",
+      "Environmental Science: Renewable energy sources and natural hazard mitigation",
+      "Global Studies: International scientific cooperation and hazard communication across cultures"
+    ]
+  }
+}

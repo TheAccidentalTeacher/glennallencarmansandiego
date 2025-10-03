@@ -1,0 +1,105 @@
+{
+  "id": "dr-watershed-environmental-protection",
+  "title": "Dr. Watershed's Environmental Protection Network",
+  "difficulty": "intermediate",
+  "durationMinutes": 35,
+  "description": "Track Dr. Watershed through her environmental research activities, discovering how this apparent villain is actually protecting North American watersheds and ecosystems through legitimate scientific monitoring.",
+  "villainId": "dr-watershed-sarah-blackfoot",
+  "briefing": {
+    "headline": "Mysterious Environmental Equipment 'Thefts' Across North America!",
+    "narrativeHtml": "<p><strong>ENVIRONMENTAL ALERT:</strong> Dr. Watershed (Sarah Blackfoot), environmental geography specialist, has been 'stealing' water monitoring equipment across North American watersheds. However, intelligence suggests there may be more to this story than meets the eye - her activities appear focused on legitimate environmental protection and research.</p><p><strong>Educational Mission:</strong> Follow this dedicated environmental scientist from wetland research to national park conservation to academic watershed analysis, learning about North American water systems, environmental monitoring, and the crucial role of scientific research in ecosystem protection!</p><p><strong>Challenge Level:</strong> Intermediate - requires understanding of North American geography, watershed systems, and environmental monitoring techniques.</p>",
+    "assets": {}
+  },
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 12,
+      "focus": ["wetland-ecosystems", "environmental-monitoring", "community-education"],
+      "image": "generated-image-2025-09-25 (50).png",
+      "clueHtml": "<p><strong>WETLAND RESEARCH INTELLIGENCE:</strong> 'Dr. Watershed photographed conducting comprehensive wetland ecosystem research with advanced water quality testing equipment, pH monitoring devices, and field research gear. She leads diverse community education presentations using topographic maps and tablets displaying environmental data, suggesting expertise in both scientific fieldwork and public outreach.'</p><p><strong>ENVIRONMENTAL EVIDENCE:</strong> 'Security footage shows her professional approach to wetland conservation, using legitimate research methodology to document ecosystem health. Her combination of sophisticated monitoring instruments and community engagement indicates specialized knowledge of North American wetland systems and their educational importance.'</p><p><strong>ECOSYSTEM CHALLENGE:</strong> Understand the critical role of wetland ecosystems in North American environmental systems!</p>",
+      "researchPrompts": [
+        "Research 'wetland ecosystems water quality monitoring North America'",
+        "Investigate 'environmental field research pH testing community education'",
+        "Look up 'wetland conservation scientific methodology topographic maps'",
+        "Study 'ecosystem health monitoring professional research equipment'"
+      ],
+      "expectedProcess": [
+        "Search 'wetland ecosystems' → critical water filtration and wildlife habitat",
+        "Research 'water quality monitoring' → pH, dissolved oxygen, pollutant testing",
+        "Connect 'community education' → public involvement in environmental protection",
+        "Verify 'field research' → legitimate scientific methodology for ecosystem study"
+      ],
+      "reveal": { "trait": "Wetland conservation specialist", "note": "Expert in ecosystem monitoring and community environmental education" },
+      "answer": { "name": "North American Wetland Research Site", "lat": 44.9778, "lng": -93.2650 },
+      "explainHtml": "<p><strong>WETLAND RESEARCH CONFIRMED:</strong> Dr. Watershed's expertise in wetland ecosystem conservation includes professional water quality monitoring, community education, and legitimate scientific research! Her work protects critical North American water filtration systems and wildlife habitats through evidence-based environmental science.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 12,
+      "focus": ["national-parks", "geothermal-systems", "conservation-research"],
+      "image": "generated-image-2025-09-25 (51).png",
+      "clueHtml": "<p><strong>YELLOWSTONE CONSERVATION INTELLIGENCE:</strong> 'Surveillance reveals Dr. Watershed at Yellowstone National Park conducting geothermal research with official signage reading \"YELLOWSTONE WATERSHED: A LIVING LABORATORY.\" She operates professional water monitoring equipment, pH testing kits, and scientific instruments while wearing ranger/researcher uniform, indicating authorized conservation research activities.'</p><p><strong>NATIONAL PARK EVIDENCE:</strong> 'Her specialized equipment for studying unique geothermal ecosystems and water chemistry suggests legitimate national park research programs. The combination of professional conservation protocols and advanced environmental monitoring indicates expertise in protected landscape preservation and scientific study of geothermal watershed systems.'</p><p><strong>CONSERVATION CHALLENGE:</strong> Understand how national parks serve as living laboratories for environmental research and conservation!</p>",
+      "researchPrompts": [
+        "Research 'Yellowstone National Park geothermal ecosystem research programs'",
+        "Investigate 'national park conservation water monitoring scientific studies'",
+        "Look up 'geothermal systems water chemistry environmental research'",
+        "Study 'protected landscape preservation professional monitoring protocols'"
+      ],
+      "expectedProcess": [
+        "Search 'Yellowstone research' → national park serves as environmental laboratory",
+        "Research 'geothermal ecosystems' → unique thermal water systems and wildlife",
+        "Connect 'conservation research' → scientific study protects park resources",
+        "Verify 'professional monitoring' → legitimate authorized research activities"
+      ],
+      "reveal": { "trait": "National park conservation researcher", "note": "Authorized specialist in geothermal ecosystem monitoring and protection" },
+      "answer": { "name": "Yellowstone National Park Research Program", "lat": 44.4280, "lng": -110.5885 },
+      "explainHtml": "<p><strong>CONSERVATION RESEARCH CONFIRMED:</strong> Yellowstone National Park! Dr. Watershed's authorized research in geothermal ecosystem conservation demonstrates legitimate scientific work protecting unique thermal watersheds. Her professional monitoring helps preserve these irreplaceable environmental systems for future generations.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 200 }
+    },
+    {
+      "id": "r3",
+      "minutes": 11,
+      "focus": ["watershed-systems", "academic-research", "geographic-analysis"],
+      "image": "generated-image-2025-09-25 (52).png",
+      "clueHtml": "<p><strong>WATERSHED SYSTEMS ACADEMIC REVELATION:</strong> 'Dr. Watershed photographed delivering comprehensive academic presentation about North American watershed systems, using detailed geographic maps showing major river systems including the Mississippi, Columbia, and St. Lawrence watersheds. Her professional presentation includes 3D watershed models and advanced geographic analysis tools demonstrating expertise in continental water system connectivity.'</p><p><strong>HEROIC IDENTITY EXPOSED:</strong> 'This final evidence reveals the truth: Dr. Watershed is not a villain but a dedicated environmental scientist! Her apparent \"equipment thefts\" are actually legitimate research activities protecting North American watersheds from pollution and habitat destruction. Her academic expertise serves environmental education and conservation - she has been a hero protecting our water systems all along!'</p><p><strong>FINAL CHALLENGE:</strong> Understand how major North American watershed systems connect and support continental ecosystems!</p>",
+      "researchPrompts": [
+        "Research 'major North American watershed systems Mississippi Columbia St Lawrence'",
+        "Investigate 'continental divide watershed connectivity geographic analysis'",
+        "Look up 'watershed conservation environmental protection academic research'",
+        "Study 'river system connectivity ecosystem protection scientific education'"
+      ],
+      "expectedProcess": [
+        "Search 'North American watersheds' → major river systems drain the continent",
+        "Research 'continental divide' → separation between Atlantic and Pacific drainage",
+        "Connect 'watershed conservation' → protecting water systems protects all life",
+        "Verify 'environmental education' → academic research supports conservation efforts"
+      ],
+      "reveal": { "trait": "ENVIRONMENTAL HERO REVEALED", "note": "Dr. Sarah Blackfoot - Protector of North American watersheds and legitimate conservation scientist!" },
+      "answer": { "name": "North American Watershed Systems", "lat": 39.8283, "lng": -98.5795 },
+      "explainHtml": "<p><strong>HERO IDENTITY CONFIRMED:</strong> Dr. Sarah Blackfoot revealed as environmental protector! Her expertise in major North American watershed systems - from the Mississippi to the Columbia to the St. Lawrence - serves legitimate conservation research. She has been protecting our continent's water systems through dedicated scientific monitoring and education!</p>",
+      "scoring": { "base": 160, "distanceKmFull": 100 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-watershed-sarah-blackfoot",
+    "victim": "Environmental Protection - HERO REVEALED",
+    "item": "Legitimate Environmental Monitoring Equipment for Conservation Research"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li><strong>Wetland Conservation:</strong> Professional ecosystem monitoring, water quality testing, and community environmental education</li><li><strong>National Park Research:</strong> Authorized geothermal ecosystem studies and conservation research in protected landscapes</li><li><strong>Watershed Systems Expertise:</strong> Academic analysis of major North American river systems and continental water connectivity</li><li><strong>HEROIC REVEAL:</strong> Dr. Watershed's apparent 'thefts' were actually legitimate environmental protection activities!</li><li><strong>Environmental Education:</strong> Scientific research supporting conservation awareness and ecosystem protection</li></ul>",
+    "learningExtensions": [
+      "Explore the interconnected nature of North American watershed systems and continental water flow",
+      "Research the role of national parks as environmental research laboratories and conservation centers",
+      "Investigate wetland ecosystem functions and their critical importance to environmental health",
+      "Study how legitimate environmental research and monitoring protect ecosystems from pollution and destruction"
+    ],
+    "crossCurricular": [
+      "Environmental Science: Wetland ecosystems, water quality monitoring, conservation research",
+      "Geography: North American physical geography, watershed systems, continental divide",
+      "Biology: Ecosystem connectivity, geothermal life forms, biodiversity conservation",
+      "Earth Science: Water chemistry, geothermal systems, environmental monitoring techniques",
+      "Civic Education: National park management, environmental policy, conservation ethics"
+    ]
+  }
+}

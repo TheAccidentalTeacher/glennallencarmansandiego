@@ -233,7 +233,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSuccess }) => {
           <ul className="list-disc list-inside text-xs space-y-1">
             <li>Create engaging geography games for your classroom</li>
             <li>Real-time student participation and scoring</li>
-            <li>Educational content inspired by Carmen Sandiego</li>
+            <li>Educational geography content featuring The Sourdough Syndicate</li>
             <li>Analytics to track student learning progress</li>
           </ul>
         </div>

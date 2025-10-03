@@ -33,7 +33,7 @@ const ProjectorDisplay: React.FC = () => {
       <div className="h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center">
         <div className="text-center text-white">
           <div className="text-6xl mb-6">🎭</div>
-          <h1 className="text-4xl font-bold mb-4">Carmen Sandiego</h1>
+          <h1 className="text-4xl font-bold mb-4">Sourdough Pete's Geography Challenge</h1>
           <p className="text-xl text-red-200">Waiting for teacher to start game...</p>
           <div className="mt-8">
             <div className="animate-pulse text-red-300">
@@ -62,7 +62,7 @@ const ProjectorDisplay: React.FC = () => {
         <div className="text-center text-white max-w-4xl mx-auto">
           <div className="text-8xl mb-8">🕵️‍♀️</div>
           <h1 className="text-6xl font-bold mb-6">Where in the World is</h1>
-          <h2 className="text-7xl font-bold text-yellow-400 mb-8">Carmen Sandiego?</h2>
+          <h2 className="text-7xl font-bold text-yellow-400 mb-8">Where is Sourdough Pete?</h2>
           <p className="text-2xl text-blue-200 mb-12">
             Get ready for a geography adventure around the globe!
           </p>

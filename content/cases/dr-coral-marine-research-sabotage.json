@@ -1,8 +1,8 @@
 {
   "id": "dr-coral-marine-research-sabotage",
-  "title": "The Coral Triangle Research Sabotage",
-  "difficulty": "intermediate-advanced",
-  "durationMinutes": 35,
+  "title": "Dr. Coral's Ocean Adventure",
+  "difficulty": "beginner",
+  "durationMinutes": 30,
   "villainId": "dr-coral-maya-sari",
   "display": {
     "enable": {
@@ -13,8 +13,8 @@
     "theme": "marine"
   },
   "briefing": {
-    "headline": "Pacific Coral Research Stations Under Attack!",
-    "narrativeHtml": "<p><strong>Marine Emergency Alert for Route Runners!</strong> Dr. Coral, marine specialist of the <em>Sourdough Syndicate's 'Reefs & Currents Division,'</em> has stolen advanced coral monitoring equipment from research stations across the Pacific!</p><p>Her calling card: a bread-slice stamp and the message: <em>'These coral reefs are DYING while governments pretend! My REEF PROTOCOL will expose the oceanic truth they hide from the world!'</em></p><p><strong>Intelligence Report:</strong> Dr. Coral believes official marine research downplays coral bleaching to protect tourism industries. She's stealing equipment to create an 'authentic reef monitoring network' - but where in the vast Pacific?</p>",
+    "headline": "The Missing Ocean Equipment Case",
+    "narrativeHtml": "<p><strong>Learning Targets for Today:</strong></p><ul><li><strong>I can use maps to locate coral reefs and tropical islands</strong></li><li><strong>I can research ocean animals and their underwater homes</strong></li><li><strong>I can explain how islands are different from continents</strong></li><li><strong>I can understand why people need to protect coral reefs</strong></li><li><strong>I can identify Pacific Ocean countries on a world map</strong></li></ul><p><strong>Your Mission:</strong> Help Sourdough Pete track down Dr. Coral! She's been taking underwater research equipment because she's worried about coral reefs getting damaged. She thinks she's helping the ocean, but taking things that don't belong to you is wrong! Follow the clues using your maps, globes, and research skills to find her underwater hideout.</p><p><strong>What You'll Need:</strong> World map, globe, atlas with ocean maps, and internet for research about coral reefs and sea animals</p><p><strong>Ocean Detective Challenge:</strong> Dr. Coral loves swimming underwater and studying colorful coral reefs. Can you follow her trail through 5 ocean clues?</p>",
     "assets": {
       "image": "/images/cases/dr-coral/briefing-coral-equipment.jpg"
     }
@@ -22,8 +22,8 @@
   "suspects": [
     {
       "name": "Dr. Coral (Maya Sari)",
-      "tags": ["marine-biologist", "coral-expert", "conservation-extremist"],
-      "description": "Marine conservation specialist with PhD from University of Hawaii. Expert in Pacific coral reef systems and underwater research diving.",
+      "tags": ["ocean-swimmer", "coral-reef-lover", "underwater-explorer"],
+      "description": "A scientist who loves swimming underwater and studying colorful coral reefs. She cares so much about protecting ocean animals that she makes bad choices like taking equipment that doesn't belong to her.",
       "image": "/images/villains/07-dr-coral-maya-sari/generated-image-2025-09-25 (30).png"
     }
   ],
@@ -31,145 +31,145 @@
     {
       "id": "r1",
       "minutes": 8,
-      "focus": ["marine-ecosystems", "tropical-research", "dive-preparation"],
-      "clueHtml": "<p><strong>Marine Intelligence:</strong> 'Dr. Coral was spotted at a tropical coral reef research station, preparing for underwater survey missions. She's targeting pristine coral formations with diverse marine life, using professional diving equipment and underwater cameras to document reef systems around tropical islands with palm tree coastlines.'</p><img src='/images/villains/07-dr-coral-maya-sari/tropical-coral-reef-field-research.jpg' alt='Dr. Coral preparing diving equipment at tropical reef research station' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "focus": ["geography", "oceans", "tropical-islands"],
+      "clueHtml": "<p><strong>Ocean Detective Clue #1:</strong></p><p>Dr. Coral was spotted swimming near beautiful tropical islands! Here's what we know:</p><ul><li>She's in a place where the water is warm, clear, and bright blue</li><li>There are palm trees growing on small islands surrounded by ocean</li><li>The water is so clear you can see colorful fish and coral on the bottom</li><li>These islands are scattered across the biggest ocean in the world</li></ul><p><strong>Your job:</strong> Use your world map to find the biggest ocean and look for tropical islands with coral reefs!</p>",
       "researchPrompts": [
-        "Research 'tropical coral reef ecosystems Pacific islands'",
-        "Investigate 'coral reef research diving scientific methods'",
-        "Look up 'marine biodiversity tropical reef systems'",
-        "Study 'coral formation tropical island environments'"
+        "Look on your world map for the biggest ocean",
+        "Find tropical islands with palm trees in warm, clear water",
+        "Research where coral reefs grow in the ocean",
+        "Look up the Pacific Ocean and its tropical islands"
       ],
       "expectedProcess": [
-        "Search 'tropical coral reefs' → Indo-Pacific reef systems",
-        "Research diving methods → scientific underwater research",
-        "Connect biodiversity → reef ecosystem complexity",
-        "Understand formation → tropical coral growth conditions"
+        "Student identifies Pacific Ocean as the largest ocean",
+        "Student locates tropical islands on Pacific Ocean maps",
+        "Student learns about coral reefs in warm, shallow water",
+        "Student connects tropical climate to coral growth"
       ],
       "reveal": { "trait": null },
-      "answer": { "name": "Tropical Pacific Coral Reefs", "lat": -10.0000, "lng": 150.0000 },
-      "explainHtml": "<p><strong>Research Location Confirmed:</strong> Tropical Pacific coral reefs! These pristine reef systems around tropical islands provide ideal conditions for coral growth and support incredible marine biodiversity. Dr. Coral's diving expertise makes her dangerous around these delicate ecosystems!</p>",
+      "answer": { "name": "Tropical Pacific Islands", "lat": -10.0000, "lng": 150.0000 },
+      "explainHtml": "<p><strong>Great ocean detective work!</strong> You found the tropical Pacific islands!</p><p>The Pacific Ocean is the biggest ocean in the world, and it has thousands of small tropical islands with warm, clear water. These islands have coral reefs - underwater gardens made of tiny animals that build colorful, rocky homes for fish.</p><p><strong>What You Learned:</strong></p><ul><li>The Pacific Ocean is the largest ocean on Earth</li><li>Tropical islands have warm water, palm trees, and coral reefs</li><li>Coral reefs are like underwater cities where many sea animals live</li><li>Clear, warm water is perfect for coral reefs to grow</li></ul>",
       "scoring": { "base": 100, "distanceKmFull": 100 }
     },
     {
       "id": "r2", 
       "minutes": 8,
-      "focus": ["underwater-research", "reef-documentation", "marine-life"],
-      "clueHtml": "<p><strong>Diving Intelligence:</strong> 'Dr. Coral was photographed conducting active underwater research, using advanced diving gear and underwater camera systems to document vibrant coral formations. She's studying diverse marine life including tropical fish and sea turtles in their natural reef habitat, gathering data on coral ecosystem health and biodiversity.'</p><p><strong>First Suspect Trait Revealed:</strong> 'Master of underwater research and marine documentation'</p><img src='/images/villains/07-dr-coral-maya-sari/underwater-coral-reef-documentation.jpg' alt='Dr. Coral conducting underwater coral reef research' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "focus": ["underwater-animals", "sea-life", "ocean-exploration"],
+      "clueHtml": "<p><strong>Ocean Detective Clue #2:</strong></p><p>Dr. Coral is now swimming underwater with the fish! Here's what our underwater cameras spotted:</p><ul><li>She's swimming with a snorkel and mask in shallow, warm water</li><li>There are lots of colorful tropical fish swimming around her - yellow, blue, and striped ones!</li><li>She's also swimming near big sea turtles that eat sea grass and algae</li><li>The water is so clear she can see all the way to the coral reef on the bottom</li></ul><p><strong>Your job:</strong> Research the biggest coral reef in the world where lots of colorful fish and sea turtles live!</p>",
       "researchPrompts": [
-        "Research 'underwater coral reef research methods'",
-        "Investigate 'coral ecosystem health monitoring'",
-        "Look up 'marine biodiversity tropical fish sea turtles'",
-        "Study 'scientific diving coral documentation'"
+        "Look up the biggest coral reef in the world",
+        "Research colorful tropical fish that live in coral reefs",
+        "Find information about sea turtles and where they live",
+        "Look up the Great Barrier Reef in Australia"
       ],
       "expectedProcess": [
-        "Search 'underwater research' → scientific diving techniques",
-        "Research ecosystem monitoring → coral health assessment",
-        "Connect marine life → reef biodiversity indicators", 
-        "Verify documentation → underwater photography methods"
+        "Student researches the Great Barrier Reef",
+        "Student learns about tropical fish species",
+        "Student discovers sea turtles live in coral reefs",
+        "Student understands coral reefs support many animals"
       ],
-      "reveal": { "trait": "Master of underwater research and coral documentation", "note": "Expert in scientific diving and marine ecosystem assessment" },
+      "reveal": { "trait": "Loves swimming with ocean animals", "note": "Expert at underwater swimming and fish watching" },
       "answer": { "name": "Great Barrier Reef, Australia", "lat": -18.2871, "lng": 147.6992 },
-      "explainHtml": "<p><strong>Underwater Research Confirmed:</strong> Great Barrier Reef! This massive coral system provides perfect conditions for underwater research, with diverse marine life and complex coral formations. Dr. Coral's expertise in scientific diving makes her a formidable underwater researcher!</p>",
+      "explainHtml": "<p><strong>Amazing underwater detective work!</strong> You found the Great Barrier Reef!</p><p>The Great Barrier Reef in Australia is the biggest coral reef in the world! It's so big you can see it from space! Thousands of different colorful fish live there, along with sea turtles, dolphins, and even sharks. The coral reef is like an underwater city where all these sea animals have their homes.</p><p><strong>What You Learned:</strong></p><ul><li>The Great Barrier Reef is the world's largest coral reef system</li><li>Coral reefs are home to many different kinds of tropical fish</li><li>Sea turtles live in coral reefs and eat sea plants</li><li>Australia is a continent surrounded by ocean with amazing coral reefs</li></ul>",
       "scoring": { "base": 120, "distanceKmFull": 80 }
     },
     {
       "id": "r3",
-      "minutes": 9,
-      "focus": ["research-vessels", "marine-operations", "field-coordination"],
-      "clueHtml": "<p><strong>Vessel Intelligence:</strong> 'Dr. Coral was observed coordinating operations from a marine research vessel marked 'MARINE RESEARCH,' managing underwater research equipment and diving operations. She's using professional research infrastructure to conduct vessel-based coral studies, coordinating between surface support and underwater research teams.'</p><p><strong>Second Suspect Trait Revealed:</strong> 'Master of marine research vessel operations and field coordination'</p><img src='/images/villains/07-dr-coral-maya-sari/marine-research-vessel-operations.jpg' alt='Dr. Coral coordinating research vessel operations' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "minutes": 8,
+      "focus": ["boats", "ocean-travel", "island-countries"],
+      "clueHtml": "<p><strong>Ocean Detective Clue #3:</strong></p><p>Dr. Coral is now using a research boat to travel between islands! Here's what we spotted:</p><ul><li>She's on a white boat with 'OCEAN RESEARCH' written on the side</li><li>The boat is traveling between small island countries in the warm part of the Pacific Ocean</li><li>These islands are home to people who have lived on islands for thousands of years</li><li>The boat is near an area that has the most different kinds of coral and fish in the whole world!</li></ul><p><strong>Your job:</strong> Find the area in the Pacific Ocean that has the most coral reefs and sea life of anywhere on Earth!</p>",
       "researchPrompts": [
-        "Research 'marine research vessel operations'",
-        "Investigate 'research ship coral reef studies'", 
-        "Look up 'vessel-based underwater research coordination'",
-        "Study 'marine field research infrastructure'"
+        "Look up the Coral Triangle in the Pacific Ocean",
+        "Research which area has the most coral reef species",
+        "Find island countries in Southeast Asia",
+        "Look up Indonesia, Philippines, and Malaysia on your map"
       ],
       "expectedProcess": [
-        "Search 'research vessels' → marine research ship operations",
-        "Research vessel studies → ship-based coral research",
-        "Connect coordination → surface and underwater teams",
-        "Understand infrastructure → research vessel capabilities"
+        "Student researches the Coral Triangle region",
+        "Student learns about marine biodiversity hotspots",
+        "Student locates Southeast Asian island nations",
+        "Student understands coral reef diversity"
       ],
-      "reveal": { "trait": "Master of research vessel operations and marine coordination", "note": "Expert in vessel-based coral research and diving support systems" },
-      "answer": { "name": "Coral Triangle Research Stations", "lat": -2.0000, "lng": 120.0000 },
-      "explainHtml": "<p><strong>Research Operations Confirmed:</strong> Coral Triangle research stations! This marine biodiversity hotspot requires sophisticated research vessels to study the world's most diverse coral ecosystems. Dr. Coral's vessel coordination skills make her dangerous around these critical research operations!</p>",
+      "reveal": { "trait": "Travels by boat between islands", "note": "Expert at island hopping and ocean navigation" },
+      "answer": { "name": "Coral Triangle", "lat": -2.0000, "lng": 120.0000 },
+      "explainHtml": "<p><strong>Fantastic island detective work!</strong> You found the Coral Triangle!</p><p>The Coral Triangle is an area in the Pacific Ocean between Indonesia, the Philippines, and Malaysia. It's called the 'Amazon of the Ocean' because it has more different kinds of coral, fish, and sea creatures than anywhere else in the world! The people who live on these islands have been fishing and taking care of the ocean for thousands of years.</p><p><strong>What You Learned:</strong></p><ul><li>The Coral Triangle has the most marine life diversity on Earth</li><li>Island countries like Indonesia and the Philippines are made of many small islands</li><li>People can live on islands and travel between them by boat</li><li>Different parts of the ocean have different amounts of sea life</li></ul>",
       "scoring": { "base": 100, "distanceKmFull": 60 }
     },
     {
       "id": "r4",
       "minutes": 8,
-      "focus": ["marine-laboratory", "conservation-education", "scientific-communication"],
-      "clueHtml": "<p><strong>Laboratory Intelligence:</strong> 'Dr. Coral was tracked to a marine conservation laboratory with large educational displays showing 'MARINE CONSERVATION' research. She's presenting coral reef conservation knowledge to students using coral samples, specimens, and comprehensive educational materials, demonstrating her expertise in scientific communication and marine education.'</p><p><strong>Third Suspect Trait Revealed:</strong> 'Master of marine conservation education and laboratory research'</p><img src='/images/villains/07-dr-coral-maya-sari/marine-conservation-laboratory-education.jpg' alt='Dr. Coral presenting marine conservation research in laboratory' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "focus": ["aquariums", "ocean-education", "protecting-sea-life"],
+      "clueHtml": "<p><strong>Ocean Detective Clue #4:</strong></p><p>Dr. Coral is now at a place where people go to learn about ocean animals! Here's what we found:</p><ul><li>She's in a big building with huge tanks full of sea water and live coral</li><li>There are signs everywhere that say 'SAVE THE OCEAN' and 'PROTECT CORAL REEFS'</li><li>Kids and families come here to see real sea turtles, sharks, and tropical fish up close</li><li>This place teaches people why coral reefs are important and how to protect them</li></ul><p><strong>Your job:</strong> Find a place where people go to see ocean animals and learn about protecting coral reefs!</p>",
       "researchPrompts": [
-        "Research 'marine conservation laboratory research'",
-        "Investigate 'coral reef conservation education'",
-        "Look up 'marine science communication methods'",
-        "Study 'coral specimen research display techniques'"
+        "Look up marine aquariums and ocean education centers",
+        "Research places where people can see live coral reefs indoors",
+        "Find aquariums that teach about ocean conservation",
+        "Look up famous aquariums in Australia or coastal cities"
       ],
       "expectedProcess": [
-        "Search 'marine laboratories' → coral research facilities",
-        "Research conservation education → marine science teaching",
-        "Connect communication → sharing research with public",
-        "Verify specimens → coral research and display"
+        "Student researches marine aquariums and education centers",
+        "Student learns about ocean conservation education",
+        "Student understands how aquariums help protect sea life",
+        "Student connects education to conservation"
       ],
-      "reveal": { "trait": "Master of marine conservation education and research communication", "note": "Expert in laboratory research and scientific education outreach" },
-      "answer": { "name": "Marine Research Institute", "lat": -27.4698, "lng": 153.0251 },
-      "explainHtml": "<p><strong>Laboratory Operations Confirmed:</strong> Marine research institute! These facilities combine cutting-edge coral research with public education, helping people understand marine conservation. Dr. Coral's expertise in both research and education makes her particularly dangerous around these valuable scientific resources!</p>",
+      "reveal": { "trait": "Teaches people about protecting the ocean", "note": "Expert at showing others why coral reefs matter" },
+      "answer": { "name": "Marine Aquarium and Education Center", "lat": -27.4698, "lng": 153.0251 },
+      "explainHtml": "<p><strong>Excellent ocean education detective work!</strong> You found a marine education center!</p><p>Marine aquariums and education centers are special places where people can see live coral reefs, sea turtles, and tropical fish without going underwater. They teach kids and families why coral reefs are so important - they're like underwater nurseries where baby fish grow up, and they protect islands from big ocean waves.</p><p><strong>What You Learned:</strong></p><ul><li>Aquariums help people learn about ocean animals without disturbing them in the wild</li><li>Coral reefs need protection because they're homes for many sea creatures</li><li>Education helps people understand why we need to take care of the ocean</li><li>Scientists work to protect coral reefs and teach others about them</li></ul>",
       "scoring": { "base": 150, "distanceKmFull": 40 }
     },
     {
       "id": "r5", 
       "minutes": 8,
-      "focus": ["community-engagement", "pacific-islands", "collaborative-conservation"],
+      "focus": ["helping-communities", "island-people", "protecting-reefs-together"],
       "optional": true,
-      "clueHtml": "<p><strong>Final Intelligence (Optional Round):</strong> 'Dr. Coral has been cornered engaging with Pacific island community members about marine conservation, using educational materials and research from the 'RESEARCH VESSEL CORAL EXPLORER.' She's conducting collaborative conservation education alongside traditional Pacific outrigger boats, claiming to bridge scientific research with indigenous marine knowledge.'</p><p><strong>Master Plan Revealed:</strong> 'Pacific communities deserve the TRUTH about coral destruction! My research network will expose the reef crisis they're hiding from island peoples!'</p><img src='/images/villains/07-dr-coral-maya-sari/pacific-island-community-marine-education.jpg' alt='Dr. Coral conducting community marine conservation education' style='width:100%; max-width:400px; margin:10px 0;'>",
+      "clueHtml": "<p><strong>FINAL Ocean Detective Clue:</strong></p><p>We found Dr. Coral's secret plan! She's working with island families to protect coral reefs. Here's her final hideout:</p><ul><li>She's on a beautiful Pacific island teaching local kids about coral reefs</li><li>The island people have been taking care of their coral reefs for hundreds of years</li><li>She's showing them pictures from her underwater camera of sick and healthy coral</li><li>She wants island families to know that their coral reefs need extra help right now</li></ul><p><strong>Final Mission:</strong> You've followed Dr. Coral through her whole ocean adventure! Find where she's teaching island communities about protecting their coral reefs!</p>",
       "researchPrompts": [
-        "Research 'Pacific island community marine conservation'",
-        "Investigate 'indigenous marine knowledge coral reefs'",
-        "Study 'collaborative conservation Pacific islands'",
-        "Look up 'traditional fishing coral reef management'"
+        "Think about all the Pacific islands you've learned about",
+        "Research how island people take care of coral reefs",
+        "Look up why coral reefs are important to island communities",
+        "Consider where Dr. Coral would want to teach kids about ocean protection"
       ],
       "expectedProcess": [
-        "Search 'Pacific island conservation' → community-based management",
-        "Research indigenous knowledge → traditional marine practices",
-        "Connect collaboration → combining science and tradition",
-        "Understand traditional management → sustainable reef practices"
+        "Student reviews all previous ocean and island clues",
+        "Student learns about community-based reef protection",
+        "Student understands Dr. Coral's educational mission",
+        "Student identifies Pacific island communities"
       ],
-      "reveal": { "trait": "MASTER OF COMMUNITY MARINE CONSERVATION", "note": "Ultimate goal: Create unauthorized coral monitoring network across Pacific islands!" },
+      "reveal": { "trait": "WANTS TO TEACH KIDS ABOUT PROTECTING CORAL REEFS", "note": "Her real goal: Help island families take better care of their underwater gardens!" },
       "answer": { "name": "Pacific Island Communities", "lat": -18.0000, "lng": 178.0000 },
-      "explainHtml": "<p><strong>Final Confrontation Location:</strong> Pacific island communities! Dr. Coral's ultimate plan involves working with island communities to create an unauthorized coral monitoring network, claiming to expose coral destruction hidden from local peoples. Her community engagement expertise makes this her most dangerous scheme!</p>",
+      "explainHtml": "<p><strong>CASE SOLVED!</strong> You caught Dr. Coral at her ocean education center!</p><p>Dr. Coral wasn't really trying to be bad - she just loves coral reefs so much that she made some wrong choices. She was taking equipment because she wanted to teach island families that their beautiful coral reefs are getting sick from pollution and warm water. Coral reefs are like underwater gardens that need special care to stay healthy.</p><p><strong>What You Accomplished:</strong></p><ul><li>You learned to use maps to find oceans, islands, and coral reefs</li><li>You discovered amazing ocean animals like tropical fish and sea turtles</li><li>You researched how people live on islands and take care of the ocean</li><li>You understand why coral reefs are important underwater homes for sea life</li></ul><p><strong>Sourdough Pete says:</strong> 'Fantastic ocean detective work! You learned that caring about sea animals and coral reefs is wonderful, but there are right ways and wrong ways to help. Dr. Coral should have asked permission instead of taking equipment that didn't belong to her!'</p>",
       "scoring": { "base": 200, "distanceKmFull": 30 }
     }
   ],
   "solution": {
     "villainId": "dr-coral-maya-sari", 
     "expectedCountry": "Pacific Islands",
-    "victim": "Pacific Marine Research Stations Network",
-    "item": "Advanced coral monitoring equipment and underwater research systems",
+    "victim": "Ocean Research Stations",
+    "item": "Underwater cameras and coral research equipment",
     "suspect": {
       "name": "Dr. Coral (Maya Sari)",
-      "notes": "Marine conservation specialist, underwater research expert, vessel operations coordinator, community conservation educator"
+      "notes": "Ocean swimmer, coral reef lover, underwater explorer, ocean education teacher"
     }
   },
   "resolution": {
-    "summaryHtml": "<h3>Evidence Summary for Teacher:</h3><ul><li><strong>Marine Ecosystems:</strong> Tropical coral reef systems, Pacific island environments, marine biodiversity</li><li><strong>Research Methods:</strong> Scientific diving, underwater documentation, coral health monitoring</li><li><strong>Vessel Operations:</strong> Marine research ships, vessel-based diving support, field coordination</li><li><strong>Laboratory Science:</strong> Marine conservation research, coral specimen analysis, educational displays</li><li><strong>Community Engagement:</strong> Pacific island collaboration, traditional marine knowledge, conservation education</li><li><strong>Conservation Issues:</strong> Coral bleaching, reef protection, sustainable marine management</li><li><strong>Scientific Skills:</strong> Underwater photography, research communication, community outreach</li></ul><h3>Why This Case Works for Intermediate-Advanced Level:</h3><p><strong>Intermediate Elements:</strong> Marine ecosystems, coral reef basics, diving and research methods</p><p><strong>Advanced Challenges:</strong> Conservation ethics, community collaboration, research vessel operations, scientific communication</p><p><strong>Educational Progression:</strong> From field research → underwater documentation → vessel operations → laboratory education → community engagement</p><p><strong>Sourdough Syndicate Connection:</strong> Dr. Coral's 'Reefs & Currents Division' marine expertise revealed through each investigation phase!</p>",
+    "summaryHtml": "<h3>What Students Learned About Oceans:</h3><ul><li><strong>Pacific Ocean:</strong> Biggest ocean in the world, tropical islands, warm clear water</li><li><strong>Coral Reefs:</strong> Underwater homes for fish, colorful living gardens, need protection</li><li><strong>Sea Animals:</strong> Tropical fish, sea turtles, sharks, dolphins in coral reef homes</li><li><strong>Island Countries:</strong> Places like Australia, Indonesia, Philippines made of islands</li><li><strong>Ocean Protection:</strong> Why coral reefs matter, how pollution hurts sea life</li><li><strong>Island Communities:</strong> People who live on islands and take care of coral reefs</li><li><strong>Geography Skills:</strong> Using maps to find oceans, islands, and coral reef locations</li></ul><h3>Why This Case Works for 11-Year-Olds:</h3><p><strong>Age-Appropriate Content:</strong> Ocean animals, swimming, islands, protecting sea life</p><p><strong>Map Skills:</strong> Pacific Ocean, tropical islands, country identification, reef locations</p><p><strong>Educational Progression:</strong> Tropical islands → underwater animals → island travel → ocean education → community protection</p><p><strong>Real Learning:</strong> Geography, ocean science, conservation, and caring for our planet!</p>",
     "learningExtensions": [
-      "Study the Coral Triangle and its incredible marine biodiversity hotspot",
-      "Research scientific diving techniques and underwater research methods",
-      "Investigate coral bleaching causes and reef conservation strategies", 
-      "Compare traditional Pacific island marine management with modern science",
-      "Map major coral reef systems around the world and their threats",
-      "Explore careers in marine biology and coral reef conservation",
-      "Design a community-based coral conservation program",
-      "Research marine protected areas and sustainable reef tourism"
+      "Learn more about coral reefs and the fish that live there",
+      "Research how people can help protect coral reefs",
+      "Find coral reefs on a world map and learn about different types", 
+      "Study sea turtles and their ocean habitats",
+      "Learn about Pacific island countries and their cultures",
+      "Explore how islands are different from continents",
+      "Research marine aquariums and ocean education centers near you",
+      "Learn about careers helping ocean animals and coral reefs"
     ],
     "crossCurricular": [
-      "Biology: Marine ecosystems, coral biology, reef biodiversity, conservation science",
-      "Earth Science: Ocean currents, coral formation, climate change impacts on reefs", 
-      "Technology: Underwater research equipment, diving technology, marine monitoring systems",
-      "Geography: Pacific island nations, coral reef distribution, marine protected areas",
-      "Environmental Science: Coral bleaching, ocean acidification, sustainable tourism",
-      "Social Studies: Pacific island cultures, traditional marine knowledge, conservation partnerships",
-      "Ethics: Community collaboration, indigenous knowledge respect, conservation approaches"
+      "Geography: Pacific Ocean, tropical islands, Australia, Southeast Asia",
+      "Science: Coral reefs, ocean animals, marine habitats, conservation", 
+      "Environmental Studies: Protecting coral reefs, ocean pollution, conservation",
+      "Social Studies: Island communities, Pacific island cultures, ocean resources",
+      "Math: Ocean depths, distances between islands, counting coral species",
+      "Reading: Ocean animal books, coral reef stories, conservation articles",
+      "Art: Drawing tropical fish, coral reef scenes, ocean conservation posters"
     ]
   }
 }

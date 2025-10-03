@@ -1,0 +1,162 @@
+{
+  "id": "dr-meridian-alpine-sabotage",
+  "title": "Dr. Meridian's Alpine Research Network",
+  "difficulty": "intermediate",
+  "durationMinutes": 40,
+  "villainId": "dr-meridian-elena-fossat",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "alpine"
+  },
+  "briefing": {
+    "headline": "Dr. Meridian's Alpine Research Network Exposed!",
+    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Dr. Meridian (Elena Fossat), distinguished alpine environmental scientist, has been conducting unauthorized field research across European mountain ranges while stealing advanced monitoring equipment. She claims to be documenting 'climate manipulation' in official alpine research but her methods threaten international mountain monitoring agreements.</p><p><strong>Educational Mission:</strong> Follow this meticulous mountain researcher from her high-altitude fieldwork through laboratory analysis to community engagement, learning about alpine ecosystems, climate monitoring technology, and the intersection of scientific research with mountain communities!</p><p><strong>Challenge Level:</strong> Intermediate - requires understanding of alpine geography, environmental monitoring, and mountain community dynamics.</p>",
+    "assets": {
+      "image": "/images/cases/dr-meridian/briefing-weather-stations.jpg"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Meridian (Elena Fossat)",
+      "tags": ["alpine-obsessed", "weather-manipulation", "environmental-extremist"],
+      "description": "Rogue environmental scientist with PhD from ETH Zurich. Known for advanced mountaineering skills and obsession with 'protecting' alpine ecosystems through fear tactics.",
+      "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["alpine-geography", "fieldwork", "drone-technology"],
+      "clueHtml": "<p><strong>HIGH-ALTITUDE FIELDWORK INTELLIGENCE:</strong> 'Dr. Meridian photographed conducting advanced alpine research on a high valley slope above a braided proglacial river. She uses portable field analyzers with probe sensors, multiple survey tripods, and grounded multirotor drone for comprehensive data collection. Her precise calibration work suggests expertise in glaciated valley systems and alpine watershed monitoring.'</p><p><strong>ENVIRONMENTAL EVIDENCE:</strong> 'Security footage shows her working among alpine flowers with snow-covered peaks and steep glaciated valley walls in the background. Her methodical approach to field instrumentation and drone-assisted surveys indicates specialized knowledge of high-altitude environmental monitoring in challenging mountain terrain.'</p><p><strong>GEOGRAPHIC CHALLENGE:</strong> Identify the type of alpine landscape where glaciated valleys create braided river systems!</p>",
+      "researchPrompts": [
+        "Research 'alpine fieldwork glaciated valley braided rivers'",
+        "Investigate 'proglacial streams mountain watersheds drone surveys'",
+        "Look up 'field analyzers alpine environmental monitoring'",
+        "Study 'high altitude research methods alpine flowers snow peaks'"
+      ],
+      "expectedProcess": [
+        "Search 'glaciated valleys' → U-shaped valleys carved by glacial action",
+        "Research 'braided rivers' → multiple channels from glacial meltwater",
+        "Connect 'proglacial streams' → water flowing from glacier terminus",
+        "Verify 'alpine monitoring' → high-altitude environmental research techniques"
+      ],
+      "reveal": { "trait": "Alpine fieldwork specialist", "note": "Expert in high-altitude environmental monitoring with advanced drone technology" },
+      "answer": { "name": "Alpine Glaciated Valley Research Site", "lat": 46.5197, "lng": 8.0806 },
+      "explainHtml": "<p><strong>ALPINE RESEARCH CONFIRMED:</strong> Glaciated alpine valley! Dr. Meridian's expertise in high-altitude fieldwork includes drone-assisted surveys, proglacial river monitoring, and precise field calibration in challenging mountain environments. Her research focuses on alpine watershed systems and environmental change documentation.</p>",
+      "scoring": { "base": 120, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2",
+      "minutes": 8,
+      "focus": ["laboratory-analysis", "mountain-technology", "data-integration"],
+      "clueHtml": "<p><strong>MOUNTAIN LABORATORY INTELLIGENCE:</strong> 'Surveillance reveals Dr. Meridian in a sophisticated mountain analysis room with large windows overlooking snowy peaks. She demonstrates handheld instruments showing precise temperature readings (0.23°C) connected to probes, while tablet dashboards display 148% metrics. Multiple microscopes, glassware, and computers show terrain analysis data.'</p><p><strong>TECHNOLOGY INTEGRATION EVIDENCE:</strong> 'Her lab setup includes wall maps with contours and relief data, suggesting integration of field measurements with laboratory analysis. The combination of precision instruments, digital dashboards, and terrain visualization indicates advanced mountain environmental research capabilities requiring specialized high-altitude laboratory facilities.'</p><p><strong>RESEARCH CHALLENGE:</strong> Identify the importance of integrating field measurements with laboratory analysis in mountain research!</p>",
+      "researchPrompts": [
+        "Research 'mountain laboratory analysis field integration temperature'",
+        "Investigate 'alpine research facilities precision instruments dashboards'",
+        "Look up 'handheld environmental probes laboratory calibration'",
+        "Study 'terrain analysis contour mapping laboratory computers'"
+      ],
+      "expectedProcess": [
+        "Search 'mountain labs' → specialized high-altitude research facilities",
+        "Research 'field-lab integration' → combining outdoor measurements with indoor analysis",
+        "Connect 'precision instruments' → calibrated equipment for accurate environmental data",
+        "Verify 'terrain analysis' → topographic and environmental data visualization"
+      ],
+      "reveal": { "trait": "Laboratory integration specialist", "note": "Combines field measurements with advanced laboratory analysis for comprehensive research" },
+      "answer": { "name": "Alpine Research Laboratory", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>LABORATORY ANALYSIS CONFIRMED:</strong> High-altitude mountain laboratory! Dr. Meridian's expertise includes integrating precise field measurements with sophisticated laboratory analysis. Her combination of handheld instruments, digital dashboards, and terrain visualization enables comprehensive alpine environmental research.</p>",
+      "scoring": { "base": 140, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3",
+      "minutes": 8,
+      "focus": ["heritage-monitoring", "unesco-sites", "alpine-conservation"],
+      "clueHtml": "<p><strong>UNESCO HERITAGE SITE INTELLIGENCE:</strong> 'Dr. Meridian photographed at an Alpine field monitoring site with a prominent pyramidal peak resembling the Matterhorn in the background. She operates handheld dataloggers with antennas and weather stations including anemometers and solar panels. A wooden sign clearly reads \"UNESCO World Heritage Site\" in the snow-covered landscape.'</p><p><strong>CONSERVATION MONITORING EVIDENCE:</strong> 'Security footage shows her professional approach to heritage site monitoring, wearing insulated gear while conducting atmospheric measurements. Her specialized equipment for weather and environmental monitoring suggests expertise in protected landscape conservation and World Heritage site preservation protocols.'</p><p><strong>HERITAGE CHALLENGE:</strong> Understand the importance of UNESCO World Heritage sites in alpine conservation and environmental monitoring!</p>",
+      "researchPrompts": [
+        "Research 'UNESCO World Heritage sites alpine mountains conservation'",
+        "Investigate 'heritage site environmental monitoring weather stations'",
+        "Look up 'Matterhorn pyramidal peak UNESCO protection status'",
+        "Study 'atmospheric monitoring heritage landscape preservation'"
+      ],
+      "expectedProcess": [
+        "Search 'UNESCO heritage sites' → protected landscapes of outstanding value",
+        "Research 'alpine conservation' → mountain ecosystem preservation",
+        "Connect 'environmental monitoring' → tracking changes in protected areas",
+        "Verify 'heritage preservation' → scientific monitoring maintains site integrity"
+      ],
+      "reveal": { "trait": "Heritage conservation specialist", "note": "Expert in UNESCO World Heritage site environmental monitoring and protection" },
+      "answer": { "name": "UNESCO Alpine Heritage Site", "lat": 45.9763, "lng": 7.6586 },
+      "explainHtml": "<p><strong>HERITAGE MONITORING CONFIRMED:</strong> UNESCO World Heritage alpine site! Dr. Meridian's specialization includes environmental monitoring of protected mountain landscapes. Her weather station equipment and atmospheric measurements help preserve the integrity of these internationally significant alpine ecosystems.</p>",
+      "scoring": { "base": 160, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["community-education", "environmental-models", "public-engagement"],
+      "clueHtml": "<p><strong>COMMUNITY PRESENTATION INTELLIGENCE:</strong> 'Dr. Meridian photographed in a classroom setting with large windows overlooking conifer forests and snowy alpine peaks. She demonstrates 3D terrain models with rivers, wind-farm and solar-village dioramas, and large wall maps to an engaged audience of students and community members. Laptop computers and printed charts show energy and environmental data.'</p><p><strong>EDUCATIONAL OUTREACH EVIDENCE:</strong> 'Her confident, approachable teaching style includes hands-on models showing the intersection of mountain geography, renewable energy, and land use planning. The combination of terrain dioramas, energy infrastructure models, and community engagement suggests expertise in translating complex environmental research into public education.'</p><p><strong>ENGAGEMENT CHALLENGE:</strong> Understand how environmental scientists communicate complex mountain research to local communities!</p>",
+      "researchPrompts": [
+        "Research 'environmental education community engagement mountain research'",
+        "Investigate 'terrain models renewable energy education alpine communities'",
+        "Look up 'scientist public outreach environmental awareness programs'",
+        "Study 'community education renewable energy mountain landscapes'"
+      ],
+      "expectedProcess": [
+        "Search 'environmental education' → scientists sharing research with public",
+        "Research 'community engagement' → local participation in environmental decisions",
+        "Connect 'terrain models' → visual tools for understanding landscape impacts",
+        "Verify 'public outreach' → bridging science and community understanding"
+      ],
+      "reveal": { "trait": "Community education specialist", "note": "Excels at translating complex environmental research into accessible public education" },
+      "answer": { "name": "Alpine Community Education Center", "lat": 46.5734, "lng": 7.9896 },
+      "explainHtml": "<p><strong>COMMUNITY EDUCATION CONFIRMED:</strong> Alpine environmental education center! Dr. Meridian's expertise includes engaging local communities through terrain models, energy dioramas, and accessible presentations. Her public outreach helps mountain communities understand environmental research and renewable energy options.</p>",
+      "scoring": { "base": 180, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r5",
+      "minutes": 8,
+      "focus": ["local-knowledge", "topographic-mapping", "community-collaboration"],
+      "clueHtml": "<p><strong>VILLAGE CONSULTATION FINAL EVIDENCE:</strong> 'Dr. Meridian photographed in an alpine village market square with timber chalets, snow patches, and distant peaks surrounding the scene. She collaborates with local residents around a large topographic map on a wooden stand, pointing to contour features while community members hold traditional market goods. Her respectful, collaborative approach to map consultation reveals her true identity.'</p><p><strong>COLLABORATIVE MAPPING REVELATION:</strong> 'This final scene exposes Dr. Meridian's ultimate expertise: combining scientific environmental monitoring with traditional local knowledge. Her village market consultation demonstrates how professional alpine research integrates with community wisdom. The oversized topographic map with contours and legends shows her mastery of both scientific and local mapping approaches.'</p><p><strong>FINAL CHALLENGE:</strong> Understand how scientific research combines with traditional local knowledge in alpine communities!</p>",
+      "researchPrompts": [
+        "Research 'traditional knowledge alpine communities scientific collaboration'",
+        "Investigate 'topographic mapping village consultation local expertise'",
+        "Look up 'community science environmental monitoring mountain research'",
+        "Study 'collaborative mapping alpine village traditional knowledge integration'"
+      ],
+      "expectedProcess": [
+        "Search 'traditional knowledge' → local community understanding of landscapes",
+        "Research 'collaborative mapping' → scientists working with community expertise",
+        "Connect 'village consultation' → respectful integration of different knowledge systems",
+        "Verify 'community science' → local participation in environmental research"
+      ],
+      "reveal": { "trait": "COLLABORATIVE RESEARCH SPECIALIST", "note": "IDENTITY REVEALED: Dr. Elena Fossat - Expert in integrating scientific alpine research with traditional community knowledge!" },
+      "answer": { "name": "Alpine Village Market Square", "lat": 46.1677, "lng": 7.2500 },
+      "explainHtml": "<p><strong>SYNDICATE SPECIALIST IDENTIFIED:</strong> Dr. Elena Fossat revealed! Her expertise combines advanced alpine environmental monitoring with respectful community collaboration. From high-altitude fieldwork to village map consultations, she demonstrates how professional mountain research integrates with traditional local knowledge systems.</p>",
+      "scoring": { "base": 200, "distanceKmFull": 60 }
+    }
+  ],
+  "solution": {
+    "villainId": "dr-meridian-elena-fossat",
+    "victim": "Alpine Environmental Research Network",
+    "item": "Advanced mountain monitoring equipment and community research data"
+  },
+  "resolution": {
+    "summaryHtml": "<ul><li><strong>Alpine Fieldwork:</strong> High-altitude environmental monitoring with drone technology and field sensors</li><li><strong>Laboratory Integration:</strong> Combining field measurements with sophisticated analysis and terrain visualization</li><li><strong>Heritage Conservation:</strong> UNESCO World Heritage site monitoring and atmospheric measurement protocols</li><li><strong>Community Education:</strong> Public engagement through terrain models, renewable energy education, and accessible presentations</li><li><strong>Collaborative Research:</strong> Integration of scientific alpine research with traditional local knowledge systems</li></ul>",
+    "learningExtensions": [
+      "Explore high-altitude environmental monitoring techniques and drone technology applications",
+      "Research UNESCO World Heritage alpine sites and their conservation protocols",
+      "Investigate how scientific research integrates with traditional community knowledge",
+      "Study the role of terrain models and visual education in environmental awareness"
+    ],
+    "crossCurricular": [
+      "Environmental Science: Alpine ecosystems, climate monitoring, conservation protocols",
+      "Technology: Drone applications, field sensors, laboratory data integration",
+      "Social Studies: UNESCO heritage sites, community science, traditional knowledge",
+      "Geography: Topographic mapping, alpine landscapes, environmental research methods"
+    ]
+  }
+}

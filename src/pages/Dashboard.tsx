@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
               Ready to Present?
             </h2>
             <p className="text-red-100 text-2xl">
-              Launch the full-screen Carmen Sandiego game for your classroom!
+              Launch the full-screen Sourdough Pete geography game for your classroom!
             </p>
           </div>
           

@@ -73,6 +73,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #ffffff; /* Ensure white text on dark buttons */
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -94,5 +95,91 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #213547; /* Ensure dark text on light buttons */
   }
+}
+
+/* Force proper button contrast - override any inherited styles */
+button, .btn, [role="button"] {
+  color: inherit !important;
+}
+
+/* Ensure all buttons have readable text */
+button:not([class*="bg-"]) {
+  color: white !important;
+  background-color: #374151 !important;
+}
+
+/* Ensure colored buttons have proper contrast */
+.bg-blue-600, .bg-blue-700, button.bg-blue-600, button.bg-blue-700 {
+  color: white !important;
+}
+
+.bg-green-600, .bg-green-700, button.bg-green-600, button.bg-green-700 {
+  color: white !important;
+}
+
+.bg-gray-600, .bg-gray-700, button.bg-gray-600, button.bg-gray-700 {
+  color: white !important;
+}
+
+.bg-red-600, .bg-red-700, button.bg-red-600, button.bg-red-700 {
+  color: white !important;
+}
+
+.bg-yellow-600, .bg-yellow-700, button.bg-yellow-600, button.bg-yellow-700 {
+  color: black !important;
+}
+
+/* Override any Tailwind text color inheritance issues */
+button[class*="text-"] {
+  color: inherit !important;
+}
+
+/* Force white text on any dark backgrounds */
+.bg-purple-600, .bg-purple-700, .bg-indigo-600, .bg-indigo-700,
+.bg-pink-600, .bg-pink-700, .bg-slate-600, .bg-slate-700,
+.bg-zinc-600, .bg-zinc-700, .bg-neutral-600, .bg-neutral-700,
+.bg-stone-600, .bg-stone-700 {
+  color: white !important;
+}
+
+/* Disabled button styling */
+.disabled\:bg-gray-600:disabled, .disabled\:bg-gray-400:disabled,
+button:disabled {
+  color: white !important;
+  opacity: 0.7;
+}
+
+/* NUCLEAR OPTION: Force contrast on ALL buttons */
+* button,
+* [role="button"],
+* .btn {
+  /* If no background color is explicitly set, give it a readable default */
+  background-color: var(--button-bg, #374151) !important;
+  color: var(--button-text, white) !important;
+}
+
+/* Override for buttons with explicit Tailwind classes */
+button[class*="bg-blue"],
+button[class*="bg-green"],
+button[class*="bg-red"],
+button[class*="bg-purple"],
+button[class*="bg-indigo"],
+button[class*="bg-pink"],
+button[class*="bg-gray"],
+button[class*="bg-slate"],
+button[class*="bg-zinc"],
+button[class*="bg-neutral"],
+button[class*="bg-stone"] {
+  color: white !important;
+}
+
+button[class*="bg-yellow"],
+button[class*="bg-amber"],
+button[class*="bg-lime"],
+button[class*="bg-emerald"],
+button[class*="bg-cyan"],
+button[class*="bg-sky"] {
+  color: black !important;
 }

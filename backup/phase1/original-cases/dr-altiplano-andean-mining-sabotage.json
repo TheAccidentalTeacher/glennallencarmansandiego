@@ -1,0 +1,147 @@
+{
+  "id": "dr-altiplano-andean-mining-sabotage",
+  "title": "The Andean Mining Operation Sabotage",
+  "difficulty": "intermediate",
+  "durationMinutes": 40,
+  "villainId": "dr-altiplano-isabella-santos",
+  "display": {
+    "enable": {
+      "suspectLineup": true,
+      "solutionStep": true,
+      "learningExtensions": true
+    },
+    "theme": "andean"
+  },
+  "briefing": {
+    "headline": "The Stolen Mountain Secrets Conspiracy", 
+    "narrativeHtml": "<p><strong>Emergency Alert for Route Runners!</strong> Dr. Altiplano, the Sourdough Syndicate's high-altitude specialist, has been stealing advanced environmental monitoring equipment from research stations across South America's spine! Intelligence reports show she's building an unauthorized climate database to expose what she calls 'mountain secrets governments don't want revealed.'</p><p>Her calling card message: <em>'The ALTITUDE PROTOCOL will document the truth! Every glacier tells a story, every peak holds evidence! The Continental Divide Division demands justice for the mountains!'</em> - found at 4,000+ meters with sourdough breadcrumbs and coordinates.</p><p><strong>Mission Briefing:</strong> Dr. Altiplano has escaped into the world's longest mountain range where ancient geological forces meet modern environmental challenges. Can you track her through five stages of her mountain conspiracy before she triggers an international environmental crisis?</p>",
+    "assets": {
+      "image": "/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png"
+    }
+  },
+  "suspects": [
+    {
+      "name": "Dr. Altiplano (Isabella Santos)",
+      "tags": ["high-altitude-expert", "environmental-extremist", "glacial-specialist"],
+      "description": "Rogue environmental geologist with PhD from Universidad Nacional de Colombia. Expert in high-altitude research and obsessed with documenting climate change evidence through illegal monitoring equipment theft.",
+      "image": "/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "r1",
+      "minutes": 8,
+      "focus": ["geography", "physical-features", "mountain-formation", "extreme-environments"],
+      "image": "generated-image-2025-09-25 (15).png",
+      "clueHtml": "<p><strong>High-Altitude Intelligence Report:</strong> 'Dr. Altiplano was spotted at a professional research station in snow-covered peaks, operating in conditions where oxygen levels drop to 60% of sea level! Surveillance shows her in full expedition gear - insulated suit, protective goggles, specialized high-altitude monitoring equipment.'</p><p><strong>Geographic Evidence:</strong> 'She's targeting the world's longest continental mountain range - a massive 7,000-kilometer chain where oceanic plates dive beneath continental margins, creating peaks that scrape the sky. The extreme altitude creates unique challenges: intense UV radiation, dramatic temperature swings, and atmospheric conditions that can be deadly.'</p><p><strong>Your Mission:</strong> Identify this legendary mountain system and understand how plate tectonics built these sky-high peaks!</p>",
+      "researchPrompts": [
+        "Research 'longest mountain range world 7000 kilometers'",
+        "Investigate 'oceanic plate subduction South America'", 
+        "Look up 'high altitude effects oxygen levels mountain climbing'",
+        "Study 'Andes mountain formation plate tectonics'"
+      ],
+      "expectedProcess": [
+        "Search 'longest mountain range' → Andes Mountains identified",
+        "Research 'plate tectonics' → Nazca plate subduction creates mountains", 
+        "Connect 'altitude effects' → thin air, UV exposure at high elevation",
+        "Verify 'geographic extent' → 7,000 km spine of South America"
+      ],
+      "reveal": { "trait": "High-altitude expedition specialist", "note": "Expert in extreme elevation research conditions" },
+      "answer": { "name": "Andes Mountains", "lat": -13.1631, "lng": -72.5450 },
+      "explainHtml": "<p><strong>Target Identified:</strong> The Andes Mountains! Earth's longest continental mountain range, stretching 7,000 km along South America's western edge. Dr. Altiplano exploits these extreme conditions where the oceanic Nazca Plate subducts beneath the South American Plate, creating perfect cover for her high-altitude operations in oxygen-thin air above 4,000 meters!</p>",
+      "scoring": { "base": 100, "distanceKmFull": 150 }
+    },
+    {
+      "id": "r2", 
+      "minutes": 10,
+      "focus": ["environmental-science", "climate", "glacial-systems", "ice-cores"],
+      "image": "generated-image-2025-09-25 (16).png",
+      "clueHtml": "<p><strong>Climate Intelligence Update:</strong> 'Dr. Altiplano has escalated to stealing specialized ice core drilling equipment! Surveillance shows her in orange safety gear operating glacial research apparatus in pristine alpine conditions. She's targeting ancient ice formations that hold climate secrets spanning thousands of years.'</p><p><strong>Environmental Threat Analysis:</strong> 'Ice cores from these high-altitude glaciers contain air bubbles preserving atmospheric data from past millennia - evidence of natural climate cycles versus human impact. Dr. Altiplano believes this data proves climate conspiracies that governments want suppressed!'</p><p><strong>Scientific Challenge:</strong> Understand why high-altitude glacial ice cores are so valuable for climate research, and what Dr. Altiplano might be trying to prove!</p>",
+      "researchPrompts": [
+        "Research 'ice core climate data paleoclimatology'",
+        "Investigate 'Andes glaciers climate change evidence'", 
+        "Look up 'high altitude ice preservation ancient atmosphere'",
+        "Study 'glacial retreat South America environmental impact'"
+      ],
+      "expectedProcess": [
+        "Search 'ice core data' → ancient climate records preserved",
+        "Research 'Andes glaciers' → tropical glaciers retreating rapidly",
+        "Connect 'atmospheric bubbles' → thousands of years of climate data", 
+        "Verify 'glacial retreat' → visible evidence of warming"
+      ],
+      "reveal": { "trait": "Glacial climate researcher", "note": "Obsessed with ancient climate evidence in ice" },
+      "answer": { "name": "Andean Tropical Glaciers", "lat": -9.1900, "lng": -77.6088 },
+      "explainHtml": "<p><strong>Climate Target Confirmed:</strong> Andean Tropical Glaciers! Dr. Altiplano targets these unique high-altitude ice formations because they're the world's most sensitive climate indicators. These glaciers preserve atmospheric data spanning millennia, and their rapid retreat provides dramatic evidence of climate change that she believes is being suppressed by international interests!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 120 }
+    },
+    {
+      "id": "r3",
+      "minutes": 10, 
+      "focus": ["culture", "traditional-knowledge", "indigenous-communities", "sustainable-agriculture"],
+      "image": "generated-image-2025-09-25 (17).png",
+      "clueHtml": "<p><strong>Cultural Intelligence Report:</strong> 'Dr. Altiplano has been spotted collaborating with traditional Andean mountain communities! Intelligence shows her spreading maps and research materials on the ground, engaging respectfully with local residents near terraced agricultural systems that have sustained mountain communities for over 1,000 years.'</p><p><strong>Traditional Knowledge Threat:</strong> 'She's documenting indigenous climate knowledge and sustainable mountain farming techniques - ancient wisdom about reading weather patterns, soil management, and water conservation that modern science is only beginning to understand. Her goal appears to be contrasting traditional sustainability with destructive modern practices!'</p><p><strong>Cultural Mission:</strong> Research how traditional Andean communities have sustainably managed mountain environments and why Dr. Altiplano values this knowledge!</p>",
+      "researchPrompts": [
+        "Research 'Andean terraced agriculture sustainable farming'",
+        "Investigate 'indigenous climate knowledge traditional ecological wisdom'",
+        "Look up 'Quechua Aymara mountain communities Peru Bolivia'", 
+        "Study 'traditional water management Andes irrigation systems'"
+      ],
+      "expectedProcess": [
+        "Search 'Andean agriculture' → terraced farming systems",
+        "Research 'indigenous knowledge' → traditional climate wisdom",
+        "Connect 'mountain communities' → sustainable practices",
+        "Verify 'water management' → ancient irrigation techniques"
+      ],
+      "reveal": { "trait": "Traditional knowledge advocate", "note": "Believes indigenous wisdom surpasses modern science" },
+      "answer": { "name": "Sacred Valley of Peru", "lat": -13.3500, "lng": -71.9700 },
+      "explainHtml": "<p><strong>Cultural Target Identified:</strong> The Sacred Valley of Peru! Dr. Altiplano collaborates with Quechua communities who have perfected sustainable mountain agriculture for over 1,000 years. She documents their traditional ecological knowledge - terraced farming, water management, and climate reading techniques - to prove that indigenous wisdom offers better environmental solutions than modern destructive practices!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 100 }
+    },
+    {
+      "id": "r4",
+      "minutes": 8,
+      "focus": ["geography", "elevation-records", "mountaineering", "specific-locations"],
+      "image": "generated-image-2025-09-25 (18).png", 
+      "clueHtml": "<p><strong>Extreme Altitude Intelligence:</strong> 'Dr. Altiplano has established her main base at a remote environmental monitoring station! Surveillance confirms a sign reading \"ENVIRONMENTAL MONITORING STATION - ACONCAGUA\" with dramatic peaks in the background. She's operating at extreme altitude where the air is so thin that climbers require weeks of acclimatization!'</p><p><strong>Geographic Target Analysis:</strong> 'This location represents the ultimate high-altitude challenge - the highest peak in both the Western and Southern Hemispheres, rising nearly 7,000 meters above sea level. Dr. Altiplano chose this spot because it's the perfect symbol of extreme environmental conditions and geographic superlatives!'</p><p><strong>Mountaineering Challenge:</strong> Identify this legendary peak and understand why it's considered the ultimate non-technical mountain climbing challenge!</p>",
+      "researchPrompts": [
+        "Research 'Aconcagua highest peak South America Western Hemisphere'",
+        "Investigate 'Aconcagua height meters feet elevation record'",
+        "Look up 'Aconcagua climbing difficulty non-technical mountaineering'",
+        "Study 'Argentina Andes highest mountains seven summits'"
+      ],
+      "expectedProcess": [
+        "Search 'Aconcagua' → highest peak Western Hemisphere",
+        "Research 'elevation' → 6,961 meters / 22,838 feet",
+        "Connect 'mountaineering' → non-technical but extreme altitude",
+        "Verify 'location' → Argentina Andes, near Chile border"
+      ],
+      "reveal": { "trait": "Extreme altitude specialist", "note": "Operates at the limits of human endurance" },
+      "answer": { "name": "Aconcagua", "lat": -32.6533, "lng": -70.0109 },
+      "explainHtml": "<p><strong>Ultimate Peak Confirmed:</strong> Aconcagua! At 6,961 meters (22,838 feet), it's the highest peak in the Western and Southern Hemispheres. Dr. Altiplano chose this legendary mountain as her base because it represents the ultimate geographic superlative - a place where she can operate monitoring equipment at the very limits of terrestrial altitude, symbolizing her extremist environmental mission!</p>",
+      "scoring": { "base": 120, "distanceKmFull": 80 }
+    },
+    {
+      "id": "r5",
+      "minutes": 4,
+      "focus": ["global-impact", "environmental-education", "data-synthesis", "international-consequences"],
+      "image": "generated-image-2025-09-25 (19).png",
+      "clueHtml": "<p><strong>FINAL SYNDICATE INTELLIGENCE:</strong> 'Dr. Altiplano's ultimate plan revealed! She's preparing to broadcast her stolen data to the world through unauthorized educational presentations. Surveillance shows her in a professional classroom with mountain topography displays, altitude charts, glacial data, and climate monitoring graphs covering the walls.'</p><p><strong>Global Threat Assessment:</strong> 'Her goal is to create unauthorized \"truth sessions\" sharing her compiled mountain research with students and communities worldwide. The Sourdough Syndicate believes that education is the ultimate weapon - spreading environmental awareness through dramatic presentations that bypass official channels and international agreements!'</p><p><strong>Final Mission:</strong> You've tracked Dr. Altiplano through her complete mountain research cycle - from high-altitude field work to global education activism. Time to stop her unauthorized truth campaign!</p>",
+      "researchPrompts": [
+        "Research 'environmental education unauthorized data sharing'",
+        "Investigate 'mountain geography climate change education'",
+        "Look up 'scientific data international environmental agreements'",
+        "Study 'educational activism vs legitimate research protocols'"
+      ],
+      "expectedProcess": [
+        "Search 'environmental education' → awareness through teaching",
+        "Research 'climate data sharing' → international cooperation protocols",
+        "Connect 'unauthorized broadcasting' → bypassing official channels",
+        "Verify 'educational activism' → using classrooms for advocacy"
+      ],
+      "reveal": { "trait": "Environmental education extremist", "note": "Believes unauthorized teaching justifies data theft" },
+      "answer": { "name": "Global Environmental Education Network", "lat": -32.6533, "lng": -70.0109 },
+      "explainHtml": "<p><strong>Mission Accomplished!</strong> Dr. Altiplano captured during her unauthorized education broadcast from Aconcagua! Her mountain research conspiracy involved stealing equipment to create dramatic educational presentations proving climate change impacts. While her environmental concerns are legitimate, her methods of data theft and unauthorized education campaigns threaten international scientific cooperation and proper research protocols!</p>",
+      "scoring": { "base": 150, "distanceKmFull": 50 }
+    }
+  ]
+}

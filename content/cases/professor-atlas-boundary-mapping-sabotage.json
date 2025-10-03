@@ -1,21 +1,21 @@
 {
   "id": "professor-atlas-boundary-mapping-sabotage", 
-  "title": "Professor Atlas's European Boundary Sabotage",
-  "difficulty": "intermediate-advanced",
-  "durationMinutes": 40,
-  "description": "Follow Professor Atlas through his academic cartographic career from traditional surveying to modern GPS technology as he steals mapping equipment across European landscapes to expose boundary inaccuracies.",
+  "title": "Professor Atlas's Map Mystery",
+  "difficulty": "beginner",
+  "durationMinutes": 30,
+  "description": "Follow Professor Atlas as he travels around Europe studying different countries and their borders using maps and special measuring tools.",
   "briefing": {
-    "headline": "European geographical boundaries are under surveillance!",
-    "narrativeHtml": "<p><strong>INTERPOL ALERT:</strong> Professor Atlas (Viktor Kowalski), distinguished Eastern European cartography expert, has been stealing traditional and modern surveying equipment across European landscapes. He claims to be documenting 'cartographic fraud' in official boundary representations but his methods threaten international mapping agreements.</p><p><strong>Educational Mission:</strong> Follow this meticulous scholar from his traditional cartography laboratory through field surveying expeditions to university teaching, learning about the evolution of mapping technology, European geography, and the importance of accurate boundary documentation!</p><p><strong>Challenge Level:</strong> Intermediate-Advanced - requires understanding of surveying techniques, European geography, and cartographic technology evolution.</p>",
+    "headline": "The Missing Map Equipment Case",
+    "narrativeHtml": "<p><strong>Learning Targets for Today:</strong></p><ul><li><strong>I can use maps to identify European countries and their borders</strong></li><li><strong>I can explain how rivers and mountains make natural borders between countries</strong></li><li><strong>I can locate famous European cities and landmarks on a map</strong></li><li><strong>I can understand how people use tools to measure distances and make maps</strong></li><li><strong>I can identify different types of buildings and architecture in European cities</strong></li></ul><p><strong>Your Mission:</strong> Help Sourdough Pete track down Professor Atlas! He's been taking special map-making equipment because he's obsessed with making the most accurate maps possible. He thinks he's improving geography, but taking things that don't belong to you is wrong! Follow the clues using your maps, globes, and research skills to find his European hideout.</p><p><strong>What You'll Need:</strong> World map, map of Europe, globe, atlas, and internet for research about European countries and cities</p><p><strong>Map Detective Challenge:</strong> Professor Atlas loves studying borders between countries and old European cities. Can you follow his trail through 5 European geography clues?</p>",
     "assets": {}
   },
   "villains": [
     {
       "id": "professor-atlas",
       "name": "Professor Atlas (Prof. Viktor Kowalski)",
-      "title": "Historical Cartography & Eastern European Geography Expert",
-      "tags": ["cartography-expert", "boundary-specialist", "river-systems-analyst"],
-      "description": "Distinguished geographer with PhD from University of Warsaw. Expert in historical boundary changes and obsessed with preserving accurate records of European political and cultural landscape evolution.",
+      "title": "Map-Making Teacher and European Geography Expert",
+      "tags": ["map-lover", "border-expert", "measuring-specialist"],
+      "description": "A geography teacher who loves making maps and studying how countries connect to each other. He gets so excited about perfect maps that he makes bad choices like taking equipment that doesn't belong to him.",
       "image": "/images/villains/09-professor-atlas-viktor-kowalski/historical-cartography-laboratory.jpg"
     }
   ],
@@ -23,137 +23,144 @@
     {
       "id": "r1",
       "minutes": 8,
-      "focus": ["geography", "cartography", "technology-evolution"],
+      "focus": ["geography", "map-making", "measuring-tools"],
       "image": "generated-image-2025-09-25 (40).png",
-      "clueHtml": "<p><strong>Cartographic Equipment Theft Report:</strong> 'Professor Atlas photographed in his European countryside laboratory where traditional surveying instruments meet cutting-edge technology. He holds both a GPS device and modern mapping tablet while surrounded by antique theodolites, compasses, and rolled maps - the perfect blend of historical and digital cartography tools.'</p><p><strong>Technology Bridge Evidence:</strong> 'Security footage shows him comparing traditional compass readings with GPS coordinates, demonstrating how modern technology validates centuries-old surveying principles. The theft occurred near medieval castles where ancient boundaries meet modern mapping needs.'</p><p><strong>Geographic Context:</strong> Identify the type of European landscape where traditional cartography meets modern technology!</p>",
+      "clueHtml": "<p><strong>Map Detective Clue #1:</strong></p><p>Professor Atlas was spotted in his map-making workshop! Here's what we know:</p><ul><li>He has both old-fashioned compasses and modern GPS devices (like the maps on your phone!)</li><li>His workshop is full of rolled-up maps of European countries</li><li>He's near old castles and medieval towns with stone walls</li><li>He's comparing his hand-drawn maps with computer maps to make sure they match perfectly</li></ul><p><strong>Your job:</strong> Find a part of Europe that has lots of old castles and medieval towns where people study geography!</p>",
       "researchPrompts": [
-        "Research 'traditional surveying instruments theodolite compass GPS comparison'",
-        "Investigate 'historical cartography evolution digital mapping technology'",
-        "Look up 'European countryside medieval castles mapping landscape'",
-        "Study 'cartographic equipment traditional versus modern surveying'"
+        "Look on your Europe map for areas with lots of medieval castles",
+        "Research what tools people use to make maps", 
+        "Find European countries with old stone castles and towns",
+        "Look up how GPS works (like maps on phones and tablets)"
       ],
       "expectedProcess": [
-        "Search 'traditional surveying' → theodolite, compass, mapping tools identified",
-        "Research 'GPS technology' → Global Positioning System for precise coordinates",
-        "Connect 'medieval landscape' → European countryside with historical boundaries",
-        "Verify 'technology evolution' → traditional methods validated by modern tools"
+        "Student identifies European regions with medieval architecture",
+        "Student learns about map-making tools and technology",
+        "Student connects castles to European countryside",
+        "Student understands how old and new map-making tools work together"
       ],
-      "reveal": { "trait": "Technology bridge specialist", "note": "Combines traditional surveying with modern GPS for maximum accuracy" },
-      "answer": { "name": "European Countryside Cartography Lab", "lat": 49.7500, "lng": 6.1667 },
-      "explainHtml": "<p><strong>Laboratory Setting Confirmed:</strong> European countryside where traditional cartography meets modern technology! Professor Atlas uses both antique surveying instruments and cutting-edge GPS devices to achieve unprecedented mapping precision. His expertise bridges centuries of surveying evolution in landscapes shaped by medieval boundaries.</p>",
+      "reveal": { "trait": "Uses both old and new map-making tools", "note": "Expert at combining hand-drawn maps with computer technology" },
+      "answer": { "name": "European Countryside with Castles", "lat": 49.7500, "lng": 6.1667 },
+      "explainHtml": "<p><strong>Great map detective work!</strong> You found the European countryside!</p><p>Professor Atlas works in areas of Europe that have lots of medieval castles and old stone towns. These places are perfect for studying geography because they show how people have lived in different places for hundreds of years. He uses both old tools (like compasses) and new tools (like GPS) to make the most accurate maps possible.</p><p><strong>What You Learned:</strong></p><ul><li>Europe has many countries with old castles and medieval towns</li><li>Map-makers use different tools to measure distances and locations</li><li>GPS technology helps make maps more accurate</li><li>Old and new tools can work together to solve problems</li></ul>",
       "scoring": { "base": 120, "distanceKmFull": 150 }
     },
     {
       "id": "r2",
       "minutes": 8,
-      "focus": ["topography", "field-surveying", "canyon-geography"],
+      "focus": ["rivers", "natural-borders", "water-geography"],
       "image": "generated-image-2025-09-25 (41).png",
-      "clueHtml": "<p><strong>Field Operations Intelligence:</strong> 'Professor Atlas spotted conducting unauthorized surveying at the edge of a dramatic river canyon, using professional theodolite equipment to map challenging terrain. He claims these deep gorges and winding waterways represent fundamental geographical features often misrepresented in official maps.'</p><p><strong>Topographic Evidence:</strong> 'Security reports show him documenting how water erosion creates complex topographic features - canyon walls, meandering rivers, and varied terrain that traditional surveying struggles to map accurately. His stolen GPS equipment provides precise coordinates for areas where topographic complexity challenges conventional boundary mapping.'</p><p><strong>Terrain Analysis:</strong> Identify the geographic processes that create these challenging canyon landscapes Professor Atlas is surveying!</p>",
+      "clueHtml": "<p><strong>Map Detective Clue #2:</strong></p><p>Professor Atlas is now studying rivers and how they form natural borders! Here's what we spotted:</p><ul><li>He's standing at the edge of a deep river valley with his measuring equipment</li><li>The river has carved a deep path through the rocks over thousands of years</li><li>This winding river actually forms the border between two different countries!</li><li>He's using special tools to measure how wide and deep the river valley is</li></ul><p><strong>Your job:</strong> Research how rivers can form natural borders between countries in Europe!</p>",
       "researchPrompts": [
-        "Research 'river canyon formation water erosion topographic features'",
-        "Investigate 'theodolite surveying equipment canyon terrain mapping'",
-        "Look up 'meandering rivers gorge formation geological processes'",
-        "Study 'topographic mapping challenging terrain GPS coordinates'"
+        "Look on your Europe map for rivers that form borders between countries",
+        "Research how rivers carve valleys through rock over time",
+        "Find European rivers that separate different countries",
+        "Look up the Rhine River or Danube River as examples"
       ],
       "expectedProcess": [
-        "Search 'canyon formation' → water erosion carves deep gorges over time",
-        "Research 'theodolite surveying' → precision instrument for measuring angles and distances",
-        "Connect 'meandering rivers' → flowing water creates winding patterns through landscapes",
-        "Verify 'topographic complexity' → varied terrain requires advanced mapping techniques"
+        "Student identifies rivers as natural boundaries",
+        "Student learns how water erosion creates river valleys",
+        "Student finds examples of river borders in Europe",
+        "Student understands how natural features become country borders"
       ],
-      "reveal": { "trait": "Terrain specialist", "note": "Expert in mapping complex topographic features and challenging landscapes" },
-      "answer": { "name": "River Canyon Surveying Site", "lat": 46.8182, "lng": 8.2275 },
-      "explainHtml": "<p><strong>Terrain Analysis Complete:</strong> River canyon topography! Professor Atlas specializes in surveying challenging landscapes where water erosion creates complex topographic features. His precision theodolite equipment and GPS technology allow him to map canyon walls and meandering waterways that conventional surveying methods struggle to document accurately.</p>",
+      "reveal": { "trait": "Studies natural borders and water features", "note": "Expert at measuring rivers and valleys that separate countries" },
+      "answer": { "name": "European River Valley Border", "lat": 46.8182, "lng": 8.2275 },
+      "explainHtml": "<p><strong>Excellent border detective work!</strong> You found a European river border!</p><p>Many countries in Europe use rivers as natural borders because rivers are easy to see and mark on maps. Over thousands of years, rivers cut deep valleys through rocks and create clear boundaries. The Rhine River, for example, forms part of the border between Germany and France. Rivers make good borders because they don't move much and everyone can agree on where they are.</p><p><strong>What You Learned:</strong></p><ul><li>Rivers can form natural borders between countries</li><li>Water slowly carves valleys through rock over long periods of time</li><li>Natural features like rivers help define where one country ends and another begins</li><li>People use measuring tools to study the size and depth of rivers</li></ul>",
       "scoring": { "base": 140, "distanceKmFull": 120 }
     },
     {
       "id": "r3", 
       "minutes": 8,
-      "focus": ["european-architecture", "team-leadership", "historic-cities"],
+      "focus": ["european-cities", "old-buildings", "historic-places"],
       "image": "generated-image-2025-09-25 (42).png",
-      "clueHtml": "<p><strong>Urban Mapping Intelligence:</strong> 'Professor Atlas photographed leading a diverse cartography team in a European historic city center, surrounded by Gothic architecture, stone bridges, and cathedral spires. His stolen equipment enables collaborative mapping projects documenting how medieval urban planning affects modern boundary definitions.'</p><p><strong>Architectural Evidence:</strong> 'Team surveillance shows him directing students and assistants with various mapping instruments around medieval buildings, cathedral towers, and historic stone structures. The suspect appears to understand how European historic districts preserve ancient boundary markers within their architectural layouts.'</p><p><strong>Cultural Geography:</strong> Identify the significance of Gothic architecture and medieval urban planning in European historic city preservation!</p>",
+      "clueHtml": "<p><strong>Map Detective Clue #3:</strong></p><p>Professor Atlas is now in a beautiful old European city! Here's what we discovered:</p><ul><li>He's standing in front of a tall cathedral with pointy towers and colorful stained glass windows</li><li>The city has old stone bridges crossing a river, and narrow streets with very old buildings</li><li>He's teaching other map-makers about how these old cities show where countries used to have their borders</li><li>The buildings are hundreds of years old and show different styles of European architecture</li></ul><p><strong>Your job:</strong> Find a famous old European city with cathedrals, stone bridges, and medieval buildings!</p>",
       "researchPrompts": [
-        "Research 'Gothic architecture medieval European cities cathedral spires'",
-        "Investigate 'historic city centers stone bridges urban planning'",
-        "Look up 'medieval towns cultural heritage preservation architecture'",
-        "Study 'European historic districts boundary markers urban geography'"
+        "Look up famous European cities with old cathedrals and stone bridges",
+        "Research Gothic cathedrals with tall spires and stained glass",
+        "Find European cities with medieval architecture and old buildings",
+        "Look up cities like Prague, Vienna, or Paris with historic centers"
       ],
       "expectedProcess": [
-        "Search 'Gothic architecture' → medieval building style with cathedral spires and stone structures",
-        "Research 'historic cities' → preserved medieval urban planning in European centers",
-        "Connect 'stone bridges' → medieval infrastructure connecting historic districts",
-        "Verify 'boundary markers' → ancient urban divisions preserved in architecture"
+        "Student researches European historic cities",
+        "Student learns about cathedral architecture and medieval buildings",
+        "Student identifies cities with stone bridges and old town centers",
+        "Student understands how old cities preserve historical boundaries"
       ],
-      "reveal": { "trait": "Team leadership specialist", "note": "Directs collaborative mapping projects in complex historical environments" },
-      "answer": { "name": "European Historic City Center", "lat": 50.0755, "lng": 14.4378 },
-      "explainHtml": "<p><strong>Historic Urban Context Confirmed:</strong> European medieval city center! Professor Atlas's team leadership skills enable collaborative mapping projects in complex historic environments where Gothic cathedrals, stone bridges, and medieval architecture preserve ancient boundary systems within modern urban geography.</p>",
+      "reveal": { "trait": "Studies old cities and teaches other map-makers", "note": "Expert at finding historical clues in European architecture" },
+      "answer": { "name": "Historic European City Center", "lat": 50.0755, "lng": 14.4378 },
+      "explainHtml": "<p><strong>Amazing city detective work!</strong> You found a historic European city!</p><p>Many European cities have centers that are hundreds of years old, with tall cathedrals, stone bridges, and narrow streets. These old cities are like outdoor museums that show us how people lived long ago. The buildings and streets often follow the same patterns they had when countries had different borders. Cities like Prague, Vienna, and Paris have preserved their old centers so we can learn about European history.</p><p><strong>What You Learned:</strong></p><ul><li>European cities often have historic centers with very old buildings</li><li>Cathedrals with tall spires are important landmarks in European cities</li><li>Stone bridges and medieval architecture tell us about the past</li><li>Old cities can show us how country borders used to be different</li></ul>",
       "scoring": { "base": 160, "distanceKmFull": 100 }
     },
     {
       "id": "r4",
       "minutes": 8,
-      "focus": ["academic-teaching", "european-geography", "education"],
+      "focus": ["schools", "teaching", "geography-education"],
       "image": "generated-image-2025-09-25 (43).png",
-      "clueHtml": "<p><strong>Academic Infiltration Alert:</strong> 'Professor Atlas photographed in a university lecture hall teaching European geography to engaged students, using professional presentation equipment including wall-mounted displays of comprehensive European political and physical geography maps. His academic credentials allow him to blend in while conducting unauthorized research.'</p><p><strong>Educational Context:</strong> 'Security footage shows him in a distinguished green academic blazer, using pointers and topographic materials to instruct students about European boundary systems. The classroom setting provides perfect cover for his cartographic espionage operations while maintaining his scholarly reputation.'</p><p><strong>University Research:</strong> Identify the role of academic institutions in European geographic education and boundary studies!</p>",
+      "clueHtml": "<p><strong>Map Detective Clue #4:</strong></p><p>Professor Atlas is now teaching geography at a university! Here's what we found:</p><ul><li>He's in a big classroom with maps of Europe covering all the walls</li><li>He's wearing a green jacket and using a pointer to show students different countries</li><li>The students are learning about European borders and how they've changed over time</li><li>He has both physical maps (showing mountains and rivers) and political maps (showing country borders)</li></ul><p><strong>Your job:</strong> Research how geography teachers help students learn about countries, borders, and maps!</p>",
       "researchPrompts": [
-        "Research 'university geography departments European boundary studies'",
-        "Investigate 'academic cartography education topographic maps teaching'",
-        "Look up 'European geography instruction political physical geography'",
-        "Study 'scholarly geographic research university classroom settings'"
+        "Look up what geography teachers do in universities and schools",
+        "Research the difference between physical maps and political maps",
+        "Find information about how country borders in Europe have changed",
+        "Look up famous European universities that teach geography"
       ],
       "expectedProcess": [
-        "Search 'university geography' → academic institutions teach geographic sciences",
-        "Research 'European boundary studies' → scholarly analysis of political geography",
-        "Connect 'classroom instruction' → professors educate students about continental geography",
-        "Verify 'academic cover' → scholarly credentials provide access to research resources"
+        "Student learns about geography education and teaching",
+        "Student understands different types of maps and their purposes",
+        "Student discovers how European borders have changed over time",
+        "Student connects classroom learning to real-world geography"
       ],
-      "reveal": { "trait": "Academic authority", "note": "Uses teaching position to access university geographic resources and research" },
+      "reveal": { "trait": "Geography teacher and education expert", "note": "Uses his teaching position to access map-making resources" },
       "answer": { "name": "European University Geography Department", "lat": 48.2082, "lng": 16.3738 },
-      "explainHtml": "<p><strong>Academic Setting Confirmed:</strong> University geography department! Professor Atlas's teaching credentials provide legitimate access to European geographic research while enabling his unauthorized mapping activities. His classroom authority and scholarly reputation create perfect cover for cartographic espionage operations.</p>",
+      "explainHtml": "<p><strong>Outstanding education detective work!</strong> You found a university geography department!</p><p>Geography teachers help students learn about countries, borders, rivers, mountains, and how people live in different places. Universities have special geography departments where professors teach about maps, different countries, and how borders between countries have changed throughout history. These teachers use many different types of maps to help students understand our world better.</p><p><strong>What You Learned:</strong></p><ul><li>Geography teachers help students learn about countries and borders</li><li>Universities have special departments for studying geography</li><li>There are different types of maps for different purposes</li><li>European country borders have changed many times throughout history</li></ul>",
       "scoring": { "base": 180, "distanceKmFull": 80 }
     },
     {
       "id": "r5",
       "minutes": 8,
-      "focus": ["eastern-europe", "historic-preservation", "identity-reveal"],
+      "focus": ["eastern-europe", "poland", "final-location"],
       "image": "generated-image-2025-09-25 (44).png",
-      "clueHtml": "<p><strong>FINAL IDENTITY CONFIRMATION:</strong> 'Professor Atlas photographed in a historic Eastern European city with distinctive medieval architecture - cathedral, clock tower, and defensive walls along a flowing river. He uses modern theodolite surveying equipment to document these preserved urban areas while wearing professional attire with leather surveying satchel.'</p><p><strong>Cultural Specialization Revealed:</strong> 'The location features authentic Polish/Eastern European architectural styles with Gothic cathedral, medieval clock tower, and historic defensive walls - exactly matching Professor Atlas's regional expertise. His modern surveying techniques applied to historic city preservation reveal his true identity: <strong>PROFESSOR VIKTOR KOWALSKI</strong>, Eastern European cartography specialist!'</p><p><strong>Final Challenge:</strong> Identify how Professor Atlas's Eastern European expertise combines historic preservation with modern surveying!</p>",
+      "clueHtml": "<p><strong>FINAL Map Detective Clue:</strong></p><p>We found Professor Atlas's secret plan! He's in his home country in Eastern Europe. Here's his final hideout:</p><ul><li>He's in a beautiful old city with a cathedral, clock tower, and old defensive walls</li><li>This city is in Poland, a country in Eastern Europe between Germany and Russia</li><li>He's using his measuring equipment to document this historic city's old boundaries</li><li>He's been Professor Viktor Kowalski all along - a Polish geography expert!</li></ul><p><strong>Final Mission:</strong> You've followed Professor Atlas through his whole European adventure! Find his home country in Eastern Europe!</p>",
       "researchPrompts": [
-        "Research 'Eastern European medieval architecture Polish Gothic cathedral'",
-        "Investigate 'historic city preservation modern surveying techniques'",
-        "Look up 'Professor Viktor Kowalski Eastern European cartography'",
-        "Study 'medieval defensive walls clock towers urban documentation'"
+        "Look on your Europe map for Poland and other Eastern European countries",
+        "Research famous Polish cities with old cathedrals and clock towers",
+        "Find Eastern European countries that are between Germany and Russia",
+        "Look up Polish names like Viktor Kowalski"
       ],
       "expectedProcess": [
-        "Search 'Eastern European architecture' → Polish/Czech medieval city features identified",
-        "Research 'historic preservation' → modern surveying protects cultural heritage",
-        "Connect 'Viktor Kowalski' → Professor Atlas's true identity revealed",
-        "Verify 'regional expertise' → Eastern European specialization confirmed"
+        "Student locates Poland on the map of Europe",
+        "Student learns about Eastern European countries and their locations",
+        "Student identifies Polish cities with historic architecture",
+        "Student understands Professor Atlas's true identity and home country"
       ],
-      "reveal": { "trait": "PROFESSOR VIKTOR KOWALSKI CONFIRMED", "note": "Eastern European cartography specialist using academic cover for mapping espionage!" },
-      "answer": { "name": "Historic Eastern European City", "lat": 50.0647, "lng": 19.9450 },
-      "explainHtml": "<p><strong>SYNDICATE VILLAIN IDENTIFIED:</strong> Professor Viktor Kowalski! His authentic Eastern European expertise and modern surveying equipment reveal his true specialization in Polish/Czech historic city documentation. This academic cartographer combines legitimate historic preservation knowledge with illegal mapping espionage across European boundary systems!</p>",
+      "reveal": { "trait": "PROFESSOR VIKTOR KOWALSKI FROM POLAND!", "note": "His real mission: Document the historic boundaries of his homeland!" },
+      "answer": { "name": "Historic Polish City", "lat": 50.0647, "lng": 19.9450 },
+      "explainHtml": "<p><strong>CASE SOLVED!</strong> You caught Professor Viktor Kowalski in Poland!</p><p>Professor Atlas's real name is Viktor Kowalski, and he's from Poland, a country in Eastern Europe. He loves studying the old boundaries and borders of Polish cities because he wants to preserve the history of his homeland. Poland has many beautiful historic cities with old cathedrals, clock towers, and medieval walls. Professor Kowalski cares so much about accurate maps that he made bad choices by taking equipment that didn't belong to him.</p><p><strong>What You Accomplished:</strong></p><ul><li>You learned to use maps to find European countries and their borders</li><li>You discovered how rivers and mountains form natural boundaries</li><li>You researched historic European cities and their architecture</li><li>You understand how geography teachers help students learn about our world</li></ul><p><strong>Sourdough Pete says:</strong> 'Fantastic European detective work! You learned that loving geography and wanting perfect maps is wonderful, but there are right ways and wrong ways to pursue knowledge. Professor Kowalski should have asked permission instead of taking equipment that wasn't his!'</p>",
       "scoring": { "base": 200, "distanceKmFull": 60 }
     }
   ],
   "solution": {
     "villainId": "professor-atlas",
-    "victim": "European Geographic Research Consortium",
-    "item": "High-Precision GPS and Surveying Equipment"
+    "victim": "European Geography Research Centers",
+    "item": "Map-making equipment and measuring tools"
   },
   "resolution": {
-    "summaryHtml": "<ul><li>Cartographic Technology: Evolution from traditional surveying instruments to modern GPS/GIS systems</li><li>Topographic Geography: Understanding how water erosion creates complex canyon landscapes requiring advanced mapping</li><li>European Architecture: Medieval Gothic cities preserving ancient boundary markers in urban planning</li><li>Academic Geography: Role of university education in European geographic research and boundary studies</li><li>Eastern European Expertise: Historic preservation combining cultural heritage with modern surveying techniques</li></ul>",
+    "summaryHtml": "<h3>What Students Learned About European Geography:</h3><ul><li><strong>Map-Making Tools:</strong> Compasses, GPS devices, measuring equipment for creating accurate maps</li><li><strong>Natural Borders:</strong> How rivers and mountains form boundaries between European countries</li><li><strong>Historic Cities:</strong> European cathedrals, stone bridges, medieval architecture, and old town centers</li><li><strong>Geography Education:</strong> How teachers help students learn about countries, borders, and maps</li><li><strong>Eastern Europe:</strong> Countries like Poland, their location, history, and cultural heritage</li><li><strong>Country Borders:</strong> How European boundaries have changed over time and why they matter</li><li><strong>European Culture:</strong> Different architectural styles, languages, and historic preservation</li></ul><h3>Why This Case Works for 11-Year-Olds:</h3><p><strong>Age-Appropriate Content:</strong> Map-making, borders, historic cities, and geography education</p><p><strong>Map Skills:</strong> European countries, borders, rivers, historic cities, and cultural landmarks</p><p><strong>Educational Progression:</strong> Map tools → river borders → historic cities → geography education → Eastern European heritage</p><p><strong>Real Learning:</strong> European geography, border concepts, cultural appreciation, and map literacy!</p>",
     "learningExtensions": [
-      "Compare traditional surveying instruments (theodolite, compass) with modern GPS technology",
-      "Research how water erosion creates challenging topographic features like river canyons", 
-      "Explore how medieval European architecture preserves ancient urban boundary systems",
-      "Investigate the role of universities in maintaining scholarly consensus about geographic boundaries"
+      "Learn more about European countries and their capitals",
+      "Research how rivers like the Rhine and Danube form country borders",
+      "Study different types of maps and what they show", 
+      "Explore medieval architecture and historic European cities",
+      "Learn about Eastern European countries and their cultures",
+      "Practice using maps and globes to find countries and borders",
+      "Research careers in geography, map-making, and teaching",
+      "Learn about how European borders have changed throughout history"
     ],
     "crossCurricular": [
-      "European History: Imperial histories and 20th-century political transformations",
-      "Political Science: Boundary formation and international relations",
-      "Mathematics: Coordinate systems and cartographic projection methods",
-      "Computer Science: Geographic Information Systems and digital mapping technologies"
+      "Geography: European countries, borders, rivers, mountains, historic cities",
+      "History: Medieval architecture, European cultural heritage, border changes", 
+      "Social Studies: Different European cultures, languages, and traditions",
+      "Math: Measuring distances, using coordinates, map scales and directions",
+      "Art: Drawing maps, European architecture, cathedral and castle designs",
+      "Technology: GPS systems, digital maps, modern vs traditional map-making",
+      "Language Arts: European country names, geographical vocabulary, research skills"
     ]
   }
 }
