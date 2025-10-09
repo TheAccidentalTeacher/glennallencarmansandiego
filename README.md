@@ -2,6 +2,8 @@
 
 An educational, teacher‑led geography detective game designed for whole‑class play on a single computer connected to a projector/Smart TV. Students help track down The Sourdough Syndicate using maps, globes, and research skills. Built with React + TypeScript + Vite (frontend) and Node/Express (backend).
 
+*Last updated: October 9, 2025 - Session API bug fixes deployed*
+
 ## 📚 EDUCATIONAL DOCUMENTATION
 👉 **[GAME-FLOW.md](./GAME-FLOW.md)** - Complete educational design and 11-year-old content standards
 👉 **[IMPLEMENTATION-PLAN.md](./docs/implementation-plan.md)** - Proven development workflow and quality standards
