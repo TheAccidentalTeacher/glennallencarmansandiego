@@ -1,0 +1,1 @@
+../NOVEL-CREATOR-GUIDE.md

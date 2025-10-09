@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Settings, Users, Clock, Trophy, Globe } from 'lucide-react';
 import WorldMap from '../components/WorldMap';
+import VillainImageService from '../services/villainImageService';
 
 interface GameSession {
   id: string;
@@ -108,6 +109,8 @@ const GamePresentation: React.FC = () => {
         let session;
         if (sessionResponse.success && sessionResponse.data) {
           session = sessionResponse.data;
+        } else if (sessionResponse.session) {
+          session = sessionResponse.session;
         } else {
           session = sessionResponse;
         }
@@ -150,10 +153,18 @@ const GamePresentation: React.FC = () => {
 
       if (response.ok) {
         const updatedSession = await response.json();
-        setCurrentSession(updatedSession);
+        let sessionData;
+        if (updatedSession.success && updatedSession.data) {
+          sessionData = updatedSession.data.session || updatedSession.data;
+        } else if (updatedSession.session) {
+          sessionData = updatedSession.session;
+        } else {
+          sessionData = updatedSession;
+        }
+        setCurrentSession(sessionData);
         
         // You could add a toast notification here about the guess result
-        console.log(`Guessed ${locationName} - Distance: ${updatedSession.lastGuess?.distance}km, Points: ${updatedSession.lastGuess?.points}`);
+        console.log(`Guessed ${locationName} - Distance: ${sessionData.lastGuess?.distance}km, Points: ${sessionData.lastGuess?.points}`);
       }
     } catch (error) {
       console.error('Failed to submit guess:', error);
@@ -181,7 +192,14 @@ const GamePresentation: React.FC = () => {
         const updatedSession = await response.json();
         console.log('Updated session received:', updatedSession);
         
-        let sessionData = updatedSession.success ? updatedSession.data : updatedSession;
+        let sessionData;
+        if (updatedSession.success && updatedSession.data) {
+          sessionData = updatedSession.data;
+        } else if (updatedSession.session) {
+          sessionData = updatedSession.session;
+        } else {
+          sessionData = updatedSession;
+        }
         
         // Now advance to the next round (if not the last round)
         if (sessionData.currentRound < sessionData.maxRounds) {
@@ -193,7 +211,13 @@ const GamePresentation: React.FC = () => {
           if (advanceResponse.ok) {
             const advancedSession = await advanceResponse.json();
             console.log('Advanced session received:', advancedSession);
-            sessionData = advancedSession.success ? advancedSession.data : advancedSession;
+            if (advancedSession.success && advancedSession.data) {
+              sessionData = advancedSession.data;
+            } else if (advancedSession.session) {
+              sessionData = advancedSession.session;
+            } else {
+              sessionData = advancedSession;
+            }
           } else {
             console.error('Failed to advance round, status:', advanceResponse.status);
           }
@@ -240,7 +264,15 @@ const GamePresentation: React.FC = () => {
 
       if (response.ok) {
         const updatedSession = await response.json();
-        setCurrentSession(updatedSession);
+        let sessionData;
+        if (updatedSession.success && updatedSession.data) {
+          sessionData = updatedSession.data;
+        } else if (updatedSession.session) {
+          sessionData = updatedSession.session;
+        } else {
+          sessionData = updatedSession;
+        }
+        setCurrentSession(sessionData);
       }
     } catch (error) {
       console.error('Failed to advance round:', error);
@@ -287,13 +319,27 @@ const GamePresentation: React.FC = () => {
                       <div
                         key={`case-${caseItem.id || index}`}
                         onClick={() => setSelectedCase(caseItem)}
-                        className={`p-6 rounded-xl cursor-pointer transition-all duration-200 border-2 ${
+                        className={`p-6 rounded-xl cursor-pointer transition-all duration-200 border-2 relative ${
                           selectedCase?.id === caseItem.id
                             ? 'bg-green-600 border-green-400 text-white shadow-lg'
                             : 'bg-gray-800 hover:bg-gray-700 border-gray-600 hover:border-gray-500 text-white'
                         }`}
                       >
-                        <h3 className="text-xl font-bold mb-2">{caseItem.title || 'Unknown Case'}</h3>
+                        {/* Present Game Button - Only show on selected card */}
+                        {selectedCase?.id === caseItem.id && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation(); // Prevent card click when clicking button
+                              startPresentation();
+                            }}
+                            className="absolute top-3 right-3 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center space-x-2 z-10"
+                          >
+                            <Play size={16} />
+                            <span>PRESENT</span>
+                          </button>
+                        )}
+                        
+                        <h3 className="text-xl font-bold mb-2 pr-24">{caseItem.title || 'Unknown Case'}</h3>
                         <p className="text-gray-200 mb-2 text-sm leading-relaxed">
                           {caseItem.description ? caseItem.description.substring(0, 120) + '...' : 'No description available'}
                         </p>
@@ -376,20 +422,20 @@ const GamePresentation: React.FC = () => {
               </div>
             </div>
 
-            {/* Present Button */}
-            <div className="mt-12 text-center">
-              <button
-                onClick={startPresentation}
-                disabled={!selectedCase}
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 disabled:from-gray-500 disabled:to-gray-600 text-white px-16 py-8 rounded-2xl font-bold text-4xl shadow-2xl transition-all duration-200 transform hover:scale-105 disabled:cursor-not-allowed disabled:transform-none flex items-center mx-auto space-x-4"
-              >
-                <Play size={48} />
-                <span>PRESENT GAME</span>
-              </button>
-              <p className="text-blue-200 mt-4 text-lg">
-                This will enter fullscreen mode for classroom presentation
-              </p>
-            </div>
+            {/* Selected Case Summary */}
+            {selectedCase && (
+              <div className="mt-8 p-6 bg-white/5 rounded-xl border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-3 flex items-center">
+                  🎯 Selected Case: {selectedCase.title}
+                </h3>
+                <p className="text-blue-200 text-lg">
+                  Ready to present! The "PRESENT" button is in the top-right corner of the selected case above.
+                </p>
+                <p className="text-yellow-200 mt-2 text-sm">
+                  💡 Tip: This will enter fullscreen mode for classroom presentation
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -440,6 +486,16 @@ const GamePresentation: React.FC = () => {
         {/* Main Game Area */}
         <div className="flex-1 p-8">
           <div className="max-w-6xl mx-auto">
+            {/* Mission Briefing */}
+            {currentSession && currentSession.caseData?.briefing?.narrativeHtml && (
+              <div className="bg-blue-900/20 backdrop-blur-lg rounded-3xl p-8 mb-8 border border-blue-300/30">
+                <div 
+                  className="text-white text-lg leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: currentSession.caseData.briefing.narrativeHtml }}
+                />
+              </div>
+            )}
+
             {/* Current Clue Display */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6 text-center">
@@ -448,13 +504,13 @@ const GamePresentation: React.FC = () => {
               
               {currentSession && currentSession.revealedClues && currentSession.revealedClues.length > 0 ? (
                 <div className="space-y-8">
-                  {currentSession.revealedClues.map((revealedClue: any, index: number) => {
-                    const roundNumber = revealedClue.round;
-                    const roundData = currentSession.caseData?.rounds?.[roundNumber - 1];
+                  {currentSession.revealedClues.map((revealedClue: any) => {
+                    const roundNumber = revealedClue.round; // Use the round number directly from the API
+                    const roundData = currentSession.caseData?.rounds?.[roundNumber - 1]; // Convert to 0-based index for array access
                     const isAnswerRevealed = revealedAnswers.has(roundNumber);
                     
                     return (
-                      <div key={roundNumber} className="border border-white/20 rounded-xl p-6 bg-white/5">
+                      <div key={`clue-${roundNumber}`} className="border border-white/20 rounded-xl p-6 bg-white/5">
                         <div className="text-center">
                           <div className="text-2xl text-yellow-300 mb-4 font-semibold">
                             Clue #{roundNumber}
@@ -475,18 +531,13 @@ const GamePresentation: React.FC = () => {
                                   // If it's just a filename, construct the path using villain ID
                                   const villainId = currentSession.caseData?.villainId;
                                   if (villainId && !imagePath.startsWith('/')) {
-                                    // Map villain IDs to their actual folder names with numeric prefixes
-                                    const villainFolderMap: { [key: string]: string } = {
-                                      'dr-altiplano-isabella-santos': '04-dr-altiplano-isabella-santos',
-                                      'dr-coral-maya-sari': '07-dr-coral-maya-sari',
-                                      'professor-atlas': '09-professor-atlas-viktor-kowalski',
-                                      'dr-meridian-elena-fossat': '01-dr-meridian-elena-fossat',
-                                      'professor-sahara-amira-hassan': '02-professor-sahara-amira-hassan',
-                                      'professor-tectonic-seismic-specialist': '03-professor-tectonic-seismic-specialist'
-                                    };
-                                    
-                                    const actualFolderName = villainFolderMap[villainId] || villainId;
-                                    return `/images/villains/${actualFolderName}/${imagePath}`;
+                                    // Use VillainImageService to get properly encoded URL
+                                    return VillainImageService.getEncodedVillainImageUrl(villainId, imagePath);
+                                  }
+                                  
+                                  // If it's a full path, encode it
+                                  if (imagePath.startsWith('/')) {
+                                    return VillainImageService.encodeImageUrl(imagePath);
                                   }
                                   
                                   // Fallback
@@ -506,7 +557,7 @@ const GamePresentation: React.FC = () => {
                           {/* Clue Text */}
                           <div className="text-lg text-white leading-relaxed max-w-4xl mx-auto mb-4">
                             <div dangerouslySetInnerHTML={{ 
-                              __html: revealedClue.clue || ''
+                              __html: revealedClue.clue || revealedClue.clueHtml || ''
                             }} />
                           </div>
                           
@@ -594,11 +645,41 @@ const GamePresentation: React.FC = () => {
               {showMapSection && (
                 <div>
                   <p className="text-gray-300 text-center mb-4">
-                    Interactive map guessing (for competitive mode - coming soon)
+                    🗺️ Use the clues to guide your investigation on the interactive map below!
                   </p>
                   <WorldMap
                     onLocationGuess={handleLocationGuess}
                     disabled={!currentSession || currentSession.revealedClues?.length === 0}
+                    caseHints={{
+                      // Get target location from the current round's answer
+                      targetLocation: currentSession?.caseData?.rounds?.[currentSession.currentRound - 1]?.answer ? {
+                        lat: currentSession.caseData.rounds[currentSession.currentRound - 1].answer.lat,
+                        lng: currentSession.caseData.rounds[currentSession.currentRound - 1].answer.lng,
+                        name: currentSession.caseData.rounds[currentSession.currentRound - 1].answer.name
+                      } : undefined,
+                      
+                      // Focus the map based on case focus areas
+                      focusRegion: (() => {
+                        const currentRound = currentSession?.caseData?.rounds?.[currentSession.currentRound - 1];
+                        if (currentRound?.focus?.includes('mountain')) {
+                          return { bounds: [[-60, -180], [70, 180]] as [[number, number], [number, number]] }; // Mountain regions
+                        }
+                        if (currentRound?.focus?.includes('marine') || currentRound?.focus?.includes('coastal')) {
+                          return { bounds: [[-40, -180], [60, 180]] as [[number, number], [number, number]] }; // Coastal regions
+                        }
+                        if (currentRound?.focus?.includes('desert')) {
+                          return { bounds: [[-30, -180], [45, 180]] as [[number, number], [number, number]] }; // Desert regions
+                        }
+                        return { bounds: [[-60, -180], [70, 180]] as [[number, number], [number, number]] }; // World view
+                      })(),
+                      
+                      // Provide context from the current clue
+                      clueContext: currentSession?.revealedClues?.length > 0 ? 
+                        currentSession.revealedClues[currentSession.revealedClues.length - 1]?.clueHtml?.replace(/<[^>]*>/g, '').substring(0, 200) + '...' : 
+                        undefined,
+                      
+                      round: currentSession?.currentRound || 1
+                    }}
                   />
                 </div>
               )}

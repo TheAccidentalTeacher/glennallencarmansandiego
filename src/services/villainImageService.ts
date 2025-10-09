@@ -27,19 +27,19 @@ export class VillainImageService {
    * Villain image directory mapping
    */
   private static readonly VILLAIN_DIRECTORIES = {
-    'sourdough-pete': '00-sourdough-pete-alaska',
-    'dr-meridian': '01-dr-meridian-elena-fossat',
-    'professor-sahara': '02-professor-sahara-amira-hassan',
-    'dr-mirage': '03-professor-tectonic-seismic-specialist',
-    'professor-tectonic': '04-dr-altiplano-isabella-santos',
-    'dr-sahel': '05-dr-sahel-kwame-asante',
-    'dr-monsoon': '06-dr-monsoon-kiran-patel',
-    'dr-coral': '07-dr-coral-maya-sari',
+    'sourdough-pete': '13-14-sourdough-pete-alaska',
+    'dr-altiplano-isabella-santos': '01-dr-altiplano-isabella-santos',
+    'professor-sahara-amira-hassan': '02-professor-sahara-amira-hassan',
+    'professor-tectonic-jin-wei-ming': '03-professor-tectonic-seismic-specialist',
+    'dr-meridian-elena-fossat': '04-dr-meridian-elena-fossat',
+    'dr-sahel-kwame-asante': '05-dr-sahel-kwame-asante',
+    'dr-monsoon-kiran-patel': '06-dr-monsoon-kiran-patel',
+    'dr-coral-maya-sari': '07-dr-coral-maya-sari',
     'dr-qanat': '08-dr-qanat-master-of-disguise',
-    'professor-atlas': '09-professor-atlas-viktor-kowalski',
-    'dr-pacific': '10-dr-pacific-james-tauranga',
-    'dr-watershed': '11-dr-watershed-sarah-blackfoot',
-    'dr-canopy': '12-dr-canopy-carlos-mendoza'
+    'professor-atlas-viktor-kowalski': '09-professor-atlas-viktor-kowalski',
+    'dr-pacific-james-tauranga': '10-dr-pacific-james-tauranga',
+    'dr-watershed-sarah-blackfoot': '11-dr-watershed-sarah-blackfoot',
+    'dr-canopy-carlos-mendoza': '12-dr-canopy-carlos-mendoza'
   };
 
   /**
@@ -201,6 +201,68 @@ export class VillainImageService {
     };
     
     return contextDescriptions[context] || `Image of ${villain}`;
+  }
+
+  /**
+   * Properly encode image URLs to handle spaces and special characters
+   */
+  static encodeImageUrl(imageUrl: string): string {
+    if (!imageUrl) return imageUrl;
+    
+    // Split the URL into parts to only encode the filename portion
+    const urlParts = imageUrl.split('/');
+    
+    // Encode only the last part (filename) which may contain spaces and parentheses
+    if (urlParts.length > 0) {
+      const lastPart = urlParts[urlParts.length - 1];
+      urlParts[urlParts.length - 1] = encodeURIComponent(lastPart);
+      return urlParts.join('/');
+    }
+    
+    return imageUrl;
+  }
+
+  /**
+   * Get properly encoded image URL for a specific villain and round
+   */
+  static getEncodedVillainImageUrl(villainId: string, imageName: string): string {
+    const directory = this.VILLAIN_DIRECTORIES[villainId as keyof typeof this.VILLAIN_DIRECTORIES];
+    if (!directory) {
+      return '/images/placeholder-villain.png';
+    }
+    
+    const baseUrl = `/images/villains/${directory}/${imageName}`;
+    return this.encodeImageUrl(baseUrl);
+  }
+
+  /**
+   * Get properly encoded image URL for a specific villain and round index
+   */
+  static getEncodedRoundImageUrl(villainId: string, roundIndex: number): string {
+    const directory = this.VILLAIN_DIRECTORIES[villainId as keyof typeof this.VILLAIN_DIRECTORIES];
+    if (!directory) {
+      return '/images/placeholder-villain.png';
+    }
+    
+    // For Dr. Altiplano, use specific numbering (15) through (19)
+    if (villainId === "dr-altiplano-isabella-santos") {
+      const imageName = `generated-image-2025-09-25 (${15 + roundIndex}).png`;
+      const baseUrl = `/images/villains/${directory}/${imageName}`;
+      return this.encodeImageUrl(baseUrl);
+    }
+    
+    // For Professor Tectonic, use images (10) through (14)
+    if (villainId === "professor-tectonic-jin-wei-ming") {
+      const imageNumber = 10 + roundIndex; // Use (10), (11), (12), (13), (14)
+      const imageName = `generated-image-2025-09-25 (${imageNumber}).png`;
+      const baseUrl = `/images/villains/${directory}/${imageName}`;
+      return this.encodeImageUrl(baseUrl);
+    }
+    
+    // For other villains, use a general pattern
+    const imageName = `generated-image-2025-09-26.png`;
+    const baseUrl = `/images/villains/${directory}/${imageName}`;
+    return this.encodeImageUrl(baseUrl);
   }
 }
 

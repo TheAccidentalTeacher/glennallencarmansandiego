@@ -16,7 +16,7 @@
     "headline": "The Stolen Snow Mountain Equipment Case",
     "narrativeHtml": "<p><strong>Learning Targets for Today:</strong></p><ul><li><strong>I can use maps to locate snow-covered mountains in Europe</strong></li><li><strong>I can explain how snow and ice form on tall mountains</strong></li><li><strong>I can research how people live and work in mountain areas</strong></li><li><strong>I can identify Alpine countries on a world map</strong></li><li><strong>I can understand why snow mountains are important for water and farming</strong></li></ul><p><strong>Your Mission:</strong> Help Sourdough Pete track down Dr. Meridian! She's been stealing weather equipment from mountain weather stations because she's worried about snow melting on European mountains. She thinks she's protecting the environment, but taking things that don't belong to you is wrong! Follow the clues using your maps, globes, and research skills to find her snowy mountain hideout.</p><p><strong>What You'll Need:</strong> World map, map of Europe, globe, atlas, and internet for research about European mountains and snow</p><p><strong>Snow Mountain Detective Challenge:</strong> Dr. Meridian loves studying snow, ice, and cold mountain weather. Can you follow her trail through 5 Alpine clues?</p>",
     "assets": {
-      "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
+      "image": "/images/villains/04-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
     }
   },
   "suspects": [
@@ -24,7 +24,7 @@
       "name": "Dr. Meridian (Elena Fossat)",
       "tags": ["snow-mountain-lover", "weather-watcher", "ice-and-snow-expert"],
       "description": "A scientist who loves studying snow and ice on tall European mountains. She's so worried about snow melting that she makes bad choices like stealing weather equipment to study mountain climate.",
-      "image": "/images/villains/01-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
+      "image": "/images/villains/04-dr-meridian-elena-fossat/generated-image-2025-09-25.png"
     }
   ],
   "rounds": [

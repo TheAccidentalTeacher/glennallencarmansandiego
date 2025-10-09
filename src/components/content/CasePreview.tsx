@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, MapPin, Clock, Users, Star, Globe, BookOpen, AlertCircle } from 'lucide-react';
+import VillainImageService from '../../services/villainImageService';
 
 interface Suspect {
   name: string;
@@ -177,7 +178,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({ caseId, onClose, onStartGame 
             <h3 className="text-xl font-semibold mb-4 text-red-700">Mission Briefing</h3>
             {caseData.briefing.assets?.image && (
               <img 
-                src={caseData.briefing.assets.image}
+                src={VillainImageService.encodeImageUrl(caseData.briefing.assets.image)}
                 alt="Case briefing"
                 className="w-full max-w-md mx-auto rounded-lg shadow-md mb-4"
                 onError={(e) => {
@@ -201,7 +202,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({ caseId, onClose, onStartGame 
                     {suspect.image && (
                       <div className="md:w-32 md:h-32 w-24 h-24 mx-auto md:mx-0 flex-shrink-0">
                         <img 
-                          src={suspect.image}
+                          src={VillainImageService.encodeImageUrl(suspect.image)}
                           alt={suspect.name}
                           className="w-full h-full object-cover rounded-lg shadow-sm border"
                           onError={(e) => {
@@ -261,13 +262,8 @@ const CasePreview: React.FC<CasePreviewProps> = ({ caseId, onClose, onStartGame 
                           {(() => {
                             // Map round index to specific villain image with correct folder prefix
                             const getVillainImageForRound = (villainId: string, roundIndex: number) => {
-                              // Dr. Altiplano has images numbered (15) through (19) in folder 04-dr-altiplano-isabella-santos
-                              if (villainId === "dr-altiplano-isabella-santos") {
-                                return `/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (${15 + roundIndex}).png`;
-                              }
-                              // For other villains, we need to map them to their correct folder prefixes
-                              // For now, use a fallback pattern
-                              return `/images/villains/${villainId}/generated-image-2025-09-26.png`;
+                              // Use VillainImageService to get the properly encoded URL for round images
+                              return VillainImageService.getEncodedRoundImageUrl(villainId, roundIndex);
                             };
                             
                             return (
@@ -276,8 +272,8 @@ const CasePreview: React.FC<CasePreviewProps> = ({ caseId, onClose, onStartGame 
                                 alt={`Investigation evidence for ${round.answer?.name || round.location}`}
                                 className="w-48 h-36 object-cover rounded-lg shadow-md mx-auto border"
                                 onError={(e) => {
-                                  // Fallback to first villain image
-                                  const fallbackUrl = `/images/villains/04-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png`;
+                                  // Fallback to first villain image with proper URL encoding
+                                  const fallbackUrl = VillainImageService.encodeImageUrl(`/images/villains/01-dr-altiplano-isabella-santos/generated-image-2025-09-25 (15).png`);
                                   (e.target as HTMLImageElement).src = fallbackUrl;
                                 }}
                               />

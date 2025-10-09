@@ -100,6 +100,24 @@ function readAllCaseFiles() {
   if (!fs.existsSync(casesDir)) return [];
   const files = fs.readdirSync(casesDir).filter(f => f.endsWith('.json'));
   const cases = [];
+  
+  // Define villain order based on our weekly progression (01-12, then 13-14 finale)
+  const villainOrder = {
+    'dr-altiplano-isabella-santos': 1,      // Week 1 - 01-dr-altiplano-isabella-santos
+    'professor-sahara-amira-hassan': 2,     // Week 2 - 02-professor-sahara-amira-hassan
+    'professor-tectonic-jin-wei-ming': 3,   // Week 3 - 03-professor-tectonic-seismic-specialist
+    'dr-meridian-elena-fossat': 4,          // Week 4 - 04-dr-meridian-elena-fossat
+    'dr-sahel-kwame-asante': 5,             // Week 5 - 05-dr-sahel-kwame-asante
+    'dr-monsoon-kiran-patel': 6,            // Week 6 - 06-dr-monsoon-kiran-patel
+    'dr-coral-maya-sari': 7,                // Week 7 - 07-dr-coral-maya-sari
+    'dr-qanat': 8,                          // Week 8 - 08-dr-qanat-master-of-disguise
+    'professor-atlas': 9,                   // Week 9 - 09-professor-atlas-viktor-kowalski
+    'dr-pacific': 10,                       // Week 10 - 10-dr-pacific-james-tauranga
+    'dr-watershed-sarah-blackfoot': 11,     // Week 11 - 11-dr-watershed-sarah-blackfoot
+    'dr-canopy-carlos-mendoza': 12,         // Week 12 - 12-dr-canopy-carlos-mendoza
+    'sourdough-pete': 13                    // Week 13-14 - 13-14-sourdough-pete-alaska
+  };
+  
   for (const file of files) {
     try {
       const full = path.join(casesDir, file);
@@ -125,7 +143,8 @@ function readAllCaseFiles() {
         createdBy: 'Carmen Sandiego System',
         isActive: true,
         createdAt: '2025-09-30T00:00:00Z',
-        updatedAt: '2025-09-30T00:00:00Z'
+        updatedAt: '2025-09-30T00:00:00Z',
+        villainOrder: villainOrder[obj.villainId] || 999 // Unknown villains go to end
       };
       
       cases.push(mappedCase);
@@ -133,6 +152,10 @@ function readAllCaseFiles() {
       console.error('Failed to parse case json:', file, e.message);
     }
   }
+  
+  // Sort cases by villain order (weekly progression)
+  cases.sort((a, b) => a.villainOrder - b.villainOrder);
+  
   return cases;
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Users, Image as ImageIcon, Eye, Sparkles } from 'lucide-react';
+import VillainImageService from '../../services/villainImageService';
 
 interface Villain {
   id: string;
@@ -77,12 +78,12 @@ const VillainManagement: React.FC = () => {
     // Map villain IDs to their actual folder names and image patterns
     const villainData: Record<string, { folder: string; date: string; imageNumbers: number[] }> = {
       'sourdough-pete': { 
-        folder: '00-sourdough-pete-alaska', 
+        folder: '13-14-sourdough-pete-alaska', 
         date: '2025-09-26', 
         imageNumbers: [0, 1, 2, 3, 4] // base, (1), (2), (3), (4)
       },
       'dr-meridian': { 
-        folder: '01-dr-meridian-elena-fossat', 
+        folder: '04-dr-meridian-elena-fossat', 
         date: '2025-09-25', 
         imageNumbers: [0, 1, 2, 3, 4] // base, (1), (2), (3), (4)
       },
@@ -97,7 +98,7 @@ const VillainManagement: React.FC = () => {
         imageNumbers: [10, 11, 12, 13, 14] // (10), (11), (12), (13), (14)
       },
       'professor-tectonic': { 
-        folder: '04-dr-altiplano-isabella-santos', 
+        folder: '01-dr-altiplano-isabella-santos', 
         date: '2025-09-25', 
         imageNumbers: [15, 16, 17, 18, 19] // (15), (16), (17), (18), (19)
       },
@@ -154,10 +155,12 @@ const VillainManagement: React.FC = () => {
     return data.imageNumbers.map(num => {
       if (num === 0) {
         // Base image (no parentheses)
-        return `${baseUrl}${data.folder}/generated-image-${data.date}.png`;
+        const imageUrl = `${baseUrl}${data.folder}/generated-image-${data.date}.png`;
+        return VillainImageService.encodeImageUrl(imageUrl);
       } else {
         // Numbered image with parentheses
-        return `${baseUrl}${data.folder}/generated-image-${data.date} (${num}).png`;
+        const imageUrl = `${baseUrl}${data.folder}/generated-image-${data.date} (${num}).png`;
+        return VillainImageService.encodeImageUrl(imageUrl);
       }
     });
   };

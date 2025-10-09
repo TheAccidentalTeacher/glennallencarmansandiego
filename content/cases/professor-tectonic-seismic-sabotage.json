@@ -16,7 +16,7 @@
     "headline": "The Stolen Earthquake Secrets Conspiracy",
     "narrativeHtml": "<p><strong>Alert all Route Runners!</strong> Professor Tectonic, the Sourdough Syndicate's seismic engineering mastermind, has launched his most dangerous operation yet! This geological genius is stealing advanced earthquake monitoring equipment to build an unauthorized global seismic database he calls 'THE ULTIMATE TECTONIC PROTOCOL!'</p><p>His chilling message found at sabotaged monitoring stations: <em>'The Earth speaks in tremors and the mountains whisper secrets! My Tectonic Protocol will expose the seismic truths governments hide from the people! The Highlands & Faultlines Division demands geological justice!'</em></p><p><strong>Intelligence Report:</strong> Professor Tectonic believes earthquake science is being suppressed to protect construction industries and governments. He's stealing seismic data to prove that major earthquake risks are being hidden from the public!</p>",
     "assets": {
-      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (15).png"
+      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (10).png"
     }
   },
   "suspects": [
@@ -24,7 +24,7 @@
       "name": "Professor Tectonic (Jin Wei-Ming)",
       "tags": ["seismology-expert", "earthquake-engineering", "geological-survey"],
       "description": "Brilliant geological engineer specializing in earthquake prediction and seismic hazard assessment. Known for radical approaches to earthquake preparedness education.",
-      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (15).png"
+      "image": "/images/villains/03-professor-tectonic-seismic-specialist/generated-image-2025-09-25 (10).png"
     }
   ],
   "rounds": [
@@ -32,7 +32,7 @@
       "id": "r1",
       "minutes": 8,
       "focus": ["geography", "geological-surveys", "seismic-monitoring", "desert-geology"],
-      "image": "generated-image-2025-09-25 (15).png",
+      "image": "generated-image-2025-09-25 (11).png",
       "clueHtml": "<p><strong>Field Intelligence Report:</strong> 'Professor Tectonic was spotted conducting unauthorized geological surveys in an arid mountainous landscape! Surveillance shows him in official \"GEOLOGICAL SURVEY\" gear - orange hard hat, safety vest, work boots - operating stolen seismic monitoring equipment with solar panel power systems across exposed rock formations.'</p><p><strong>Equipment Analysis:</strong> 'He's using multiple tripods with sensors, data loggers with digital displays, and professional geological survey instruments to secretly map underground structures. The desert valley setting provides perfect conditions for detecting seismic activity without interference from urban noise.'</p><p><strong>Your Mission:</strong> Identify what type of geological features Professor Tectonic is targeting and why desert regions are ideal for seismic research!</p>",
       "researchPrompts": [
         "Research 'geological survey seismic monitoring desert conditions'",
@@ -55,7 +55,7 @@
       "id": "r2",
       "minutes": 8,
       "focus": ["environmental-geology", "river-systems", "seismograph-operation", "geological-formations"],
-      "image": "generated-image-2025-09-25 (16).png",
+      "image": "generated-image-2025-09-25 (12).png",
       "clueHtml": "<p><strong>Advanced Equipment Intelligence:</strong> 'Professor Tectonic has escalated to operating sophisticated seismograph equipment in a mountain valley with winding river systems! Intelligence shows him using a large seismograph with circular dial display, tripod-mounted instruments, and cable sensor networks across layered geological formations.'</p><p><strong>Geographic Analysis:</strong> 'He's targeting areas where river systems cut through exposed rock layers, revealing millions of years of geological history. The valley setting amplifies seismic waves, while the flowing water provides natural timing markers for measuring earthquake wave speeds and underground geological structure mapping.'</p><p><strong>Research Challenge:</strong> Understand why river valleys are perfect for geological surveys and how water systems help seismologists map underground structures!</p>",
       "researchPrompts": [
         "Research 'river valley geological formations exposed rock layers'",
@@ -78,7 +78,7 @@
       "id": "r3",
       "minutes": 9,
       "focus": ["urban-planning", "earthquake-engineering", "building-codes", "seismic-safety"],
-      "image": "generated-image-2025-09-25 (17).png",
+      "image": "generated-image-2025-09-25 (13).png",
       "clueHtml": "<p><strong>Urban Engineering Intelligence:</strong> 'Professor Tectonic has been spotted making unauthorized presentations with earthquake-resistant building models! Surveillance shows him in professional engineering attire - orange safety vest, yellow hard hat - pointing to architectural displays and city skyline presentations in a conference setting.'</p><p><strong>Dangerous Agenda Revealed:</strong> 'He's demonstrating how current building codes are inadequate for major earthquakes, using stolen seismic data to prove that modern cities are catastrophically unprepared! His unauthorized presentations claim that construction industries and governments are hiding earthquake vulnerability from the public!'</p><p><strong>Engineering Challenge:</strong> Research why earthquake-resistant building design is critical for urban safety and what makes buildings survive major seismic events!</p>",
       "researchPrompts": [
         "Research 'earthquake-resistant building design seismic codes'",
@@ -101,7 +101,7 @@
       "id": "r4",
       "minutes": 8,
       "focus": ["education", "seismic-hazards", "data-visualization", "public-awareness"],
-      "image": "generated-image-2025-09-25 (18).png",
+      "image": "generated-image-2025-09-25 (14).png",
       "clueHtml": "<p><strong>Educational Threat Intelligence:</strong> 'Professor Tectonic has escalated to unauthorized teaching operations! Intelligence shows him in a professional classroom setting with \"SEISMIC HAZARD\" wall charts, earthquake frequency graphs, geological cross-section models, and data visualization displays covering the walls.'</p><p><strong>Dangerous Education Campaign:</strong> 'He's conducting unauthorized truth sessions using his stolen seismic data to teach students and communities about earthquake risks that he claims governments are hiding! His presentations bypass official educational channels, spreading fear about seismic hazards while demonstrating his expertise as an educational authority.'</p><p><strong>Educational Challenge:</strong> Understand why proper earthquake education is important for public safety and how seismic hazard data should be shared responsibly!</p>",
       "researchPrompts": [
         "Research 'seismic hazard education earthquake preparedness'",
@@ -124,7 +124,7 @@
       "id": "r5",
       "minutes": 8,
       "focus": ["volcanic-seismology", "mount-fuji", "international-monitoring", "final-confrontation"],
-      "image": "generated-image-2025-09-25 (19).png",
+      "image": "generated-image-2025-09-25 (10).png",
       "clueHtml": "<p><strong>FINAL TECTONIC INTELLIGENCE:</strong> 'Professor Tectonic's ultimate plan exposed! He's established an unauthorized seismic research station at the base of Japan's most sacred volcano! Intelligence confirms a sign reading \"MOUNT FUJI SEISMIC RESEARCH STATION - DR. LI WEI LEAD SEISMOLOGIST\" with complex monitoring arrays and digital displays.'</p><p><strong>Volcanic Threat Assessment:</strong> 'Operating in blue work shirt and orange safety coveralls, he's using Mount Fuji's position at the junction of three major tectonic plates to broadcast his stolen seismic data worldwide! His goal: trigger international concern about volcanic hazards by releasing unauthorized earthquake predictions from this legendary location!'</p><p><strong>Final Mission:</strong> Track Professor Tectonic to Japan's most famous volcanic peak and stop his unauthorized global seismic broadcast!</p>",
       "researchPrompts": [
         "Research 'Mount Fuji volcanic seismology tectonic plates'",

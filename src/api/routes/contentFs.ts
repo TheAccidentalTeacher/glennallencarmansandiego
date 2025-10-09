@@ -187,13 +187,45 @@ router.get('/cases', asyncHandler(async (_req: Request, res: Response) => {
     const files = listAllCaseFiles();
     console.log('🔍 Found files:', files.length, files);
     
+    // Define villain order based on our weekly progression (01-12, then 13-14 finale)
+    const villainOrder: Record<string, number> = {
+      'dr-altiplano-isabella-santos': 1,      // Week 1 - 01-dr-altiplano-isabella-santos
+      'professor-sahara-amira-hassan': 2,     // Week 2 - 02-professor-sahara-amira-hassan
+      'professor-tectonic-jin-wei-ming': 3,   // Week 3 - 03-professor-tectonic-seismic-specialist
+      'dr-meridian-elena-fossat': 4,          // Week 4 - 04-dr-meridian-elena-fossat
+      'dr-sahel-kwame-asante': 5,             // Week 5 - 05-dr-sahel-kwame-asante
+      'dr-monsoon-kiran-patel': 6,            // Week 6 - 06-dr-monsoon-kiran-patel
+      'dr-coral-maya-sari': 7,                // Week 7 - 07-dr-coral-maya-sari
+      'dr-qanat': 8,                          // Week 8 - 08-dr-qanat-master-of-disguise
+      'dr-qanat-reza-mehrabi': 8,             // Week 8 (full name)
+      'professor-atlas': 9,                   // Week 9 - 09-professor-atlas-viktor-kowalski
+      'professor-atlas-viktor-kowalski': 9,   // Week 9 (full name)
+      'dr-pacific': 10,                       // Week 10 - 10-dr-pacific-james-tauranga
+      'dr-pacific-james-tauranga': 10,        // Week 10 (full name)
+      'dr-watershed-sarah-blackfoot': 11,     // Week 11 - 11-dr-watershed-sarah-blackfoot
+      'dr-canopy-carlos-mendoza': 12,         // Week 12 - 12-dr-canopy-carlos-mendoza
+      'sourdough-pete': 13,                   // Week 13-14 - 13-14-sourdough-pete-alaska
+      'sourdough-pete-alaska': 13,            // Week 13-14 (finale)
+      // Handle unknown villain cases at the end
+      'unknown': 999
+    };
+    
     const cases: UICase[] = files.map(file => {
       const fp = path.join(casesDir, file);
       console.log('🔍 Processing file:', fp);
       const stat = fs.statSync(fp);
       const json = JSON.parse(fs.readFileSync(fp, 'utf-8')) as FsCase;
-      return mapFsCaseToUICase(json, stat.mtime.toISOString());
+      const mappedCase = mapFsCaseToUICase(json, stat.mtime.toISOString());
+      
+      // Add villain order for sorting
+      (mappedCase as any).villainOrder = villainOrder[mappedCase.villainId] || 999;
+      
+      return mappedCase;
     });
+    
+    // Sort cases by villain order (weekly progression)
+    cases.sort((a: any, b: any) => a.villainOrder - b.villainOrder);
+    
     res.json({ success: true, data: { cases } });
   } catch (error) {
     console.error('🚨 Filesystem error:', error);
