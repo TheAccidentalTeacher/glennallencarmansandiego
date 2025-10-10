@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Settings, Users, Clock, Trophy, Globe } from 'lucide-react';
 import WorldMap from '../components/WorldMap';
-import VillainImageService from '../services/villainImageService';
+import ImageModal from '../components/ImageModal';
 
 interface GameSession {
   id: string;
@@ -37,6 +37,12 @@ const GamePresentation: React.FC = () => {
   const [revealedAnswers, setRevealedAnswers] = useState<Set<number>>(new Set());
   const [revealedHints, setRevealedHints] = useState<Map<number, number>>(new Map()); // roundNumber -> number of hints revealed (0-3)
   const [showMapSection, setShowMapSection] = useState(false);
+  
+  // Image modal state
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState('');
+  const [modalImageAlt, setModalImageAlt] = useState('');
+  const [modalClueNumber, setModalClueNumber] = useState<number | undefined>(undefined);
 
   console.log('GamePresentation component rendered'); // Debug log
 
@@ -252,6 +258,37 @@ const GamePresentation: React.FC = () => {
 
   const getRevealedHintsForRound = (roundNumber: number) => {
     return revealedHints.get(roundNumber) || 0;
+  };
+
+  const openImageModal = (imageSrc: string, imageAlt: string, clueNumber?: number) => {
+    setModalImageSrc(imageSrc);
+    setModalImageAlt(imageAlt);
+    setModalClueNumber(clueNumber);
+    setIsImageModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+    setModalImageSrc('');
+    setModalImageAlt('');
+    setModalClueNumber(undefined);
+  };
+
+  // Helper function to extract image src from HTML
+  const extractImageSrc = (html: string): string | null => {
+    const imgMatch = html.match(/<img[^>]*src=['"]([^'"]+)['"][^>]*>/i);
+    return imgMatch ? imgMatch[1] : null;
+  };
+
+  // Helper function to extract image alt from HTML
+  const extractImageAlt = (html: string): string => {
+    const altMatch = html.match(/<img[^>]*alt=['"]([^'"]+)['"][^>]*>/i);
+    return altMatch ? altMatch[1] : 'Clue Evidence';
+  };
+
+  // Helper function to strip img tags from HTML (they'll be rendered separately)
+  const stripImageTags = (html: string): string => {
+    return html.replace(/<img[^>]*>/gi, '');
   };
 
   const advanceToNextRound = async () => {
@@ -516,48 +553,44 @@ const GamePresentation: React.FC = () => {
                             Clue #{roundNumber}
                           </div>
                           
-                          {/* Clue Image */}
-                          {revealedClue.image && (
-                            <div className="mb-6">
-                              <img 
-                                src={(() => {
-                                  const imagePath = revealedClue.image;
-                                  
-                                  // If it's already a full path, use it as is
-                                  if (imagePath.startsWith('/')) {
-                                    return imagePath;
-                                  }
-                                  
-                                  // If it's just a filename, construct the path using villain ID
-                                  const villainId = currentSession.caseData?.villainId;
-                                  if (villainId && !imagePath.startsWith('/')) {
-                                    // Use VillainImageService to get properly encoded URL
-                                    return VillainImageService.getEncodedVillainImageUrl(villainId, imagePath);
-                                  }
-                                  
-                                  // If it's a full path, encode it
-                                  if (imagePath.startsWith('/')) {
-                                    return VillainImageService.encodeImageUrl(imagePath);
-                                  }
-                                  
-                                  // Fallback
-                                  return `/images/placeholder-villain.png`;
-                                })()}
-                                alt={`Clue ${roundNumber} Evidence`}
-                                className="max-w-sm mx-auto rounded-lg shadow-lg border-2 border-yellow-300 block"
-                                onError={(e) => {
-                                  console.error('Image failed to load:', e.currentTarget.src);
-                                  // Fallback to placeholder
-                                  e.currentTarget.src = '/images/placeholder-villain.png';
-                                }}
-                              />
-                            </div>
-                          )}
+                          {/* Clue Image - Extract from clueHtml */}
+                          {(() => {
+                            const clueHtml = revealedClue.clue || revealedClue.clueHtml || '';
+                            const imageSrc = revealedClue.image || extractImageSrc(clueHtml);
+                            const imageAlt = extractImageAlt(clueHtml) || `Clue ${roundNumber} Evidence`;
+                            
+                            if (imageSrc) {
+                              return (
+                                <div className="mb-6 flex justify-center">
+                                  <div className="relative group w-full max-w-3xl">
+                                    <img 
+                                      src={imageSrc}
+                                      alt={imageAlt}
+                                      data-test-id="clue-image-standardized"
+                                      className="w-full h-auto rounded-lg shadow-lg border-4 border-yellow-400 cursor-pointer hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
+                                      onClick={() => openImageModal(imageSrc, imageAlt, roundNumber)}
+                                      onError={(e) => {
+                                        console.error('Image failed to load:', e.currentTarget.src);
+                                        e.currentTarget.src = '/images/placeholder-villain.png';
+                                      }}
+                                    />
+                                    {/* Hover tooltip */}
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                                      <div className="bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                                        🔍 Click to enlarge
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                            return null;
+                          })()}
                           
                           {/* Clue Text */}
                           <div className="text-lg text-white leading-relaxed max-w-4xl mx-auto mb-4">
                             <div dangerouslySetInnerHTML={{ 
-                              __html: revealedClue.clue || revealedClue.clueHtml || ''
+                              __html: stripImageTags(revealedClue.clue || revealedClue.clueHtml || '')
                             }} />
                           </div>
                           
@@ -737,6 +770,15 @@ const GamePresentation: React.FC = () => {
           )}
         </div>
       </div>
+      
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={isImageModalOpen}
+        onClose={closeImageModal}
+        imageSrc={modalImageSrc}
+        imageAlt={modalImageAlt}
+        clueNumber={modalClueNumber}
+      />
     </div>
   );
 };
